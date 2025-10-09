@@ -1,0 +1,38 @@
+
+### Alternative Prompt Options
+
+**For DALL-E 3/ChatGPT (Concise):**
+"Create a fantasy map parchment style. Show continents like Earth but stylized. Mark key ports with glowing red dots: Gracewind Harbor near Ireland, Windward Sanctuary in Jamaica, Salamorn's Deep in Greece, Turtle Shell Arsenal in Korea, Nzinga's Floating Citadel in Angola, Coral Crown Atolls in Maldives. Add magical ocean currents and constellations."
+
+**For Midjourney (Atmospheric):**
+"Visualize an ancient, weathered sea chart revealing a world similar to Earth but infused with magic. Highlight strategic ports with vibrant crimson markers across all oceanic regions. Show mystical ocean patterns and faint star constellations mapping celestial magic in the style of Tomislav Jagnjic."
+
+---
+
+## Narrative Integration Framework
+
+### 4-Book Series Structure
+
+**Book 1: "The Tidereader's Awakening"**
+- Focus: Talia discovers Salamorn's Deep, learns guild history
+- Battle Integration: Artemisia's deception tactics
+- Key Locations: Gracewind Harbor, Salamorn's Deep
+
+**Book 2: "Stormcrow's Warning"**
+- Focus: Joan of Arc's battlefield magic traditions
+- Battle Integration: Orléans siege tactics applied to modern conflict
+- Key Locations: Clisson's Blackwater Bay, Innovation Harbor
+
+**Book 3: "The Rootwalker's Last Stand"**
+- Focus: Indigenous magical traditions vs. modern destruction
+- Battle Integration: Apache resistance tactics, Iroquois war councils
+- Key Locations: Windward Sanctuary, Aloha's Last Stand Harbor
+
+**Book 4: "New World Order's Choice"**
+- Focus: Breaking the historical cycle vs. fulfilling prophecy
+- Battle Integration: All guild traditions unite
+- Key Locations: Coral Crown Atolls, Nzinga's Floating Citadel
+
+### Dialogue Integration Examples
+
+**Strategic Planning Scene**
