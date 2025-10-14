@@ -87,7 +87,7 @@
 - **Voice**: Visceral, poetic, hungry (short sentences, organic metaphors)
 
 #### The Thrown Vessel / Ruin
-- **Origins**: Once Auren, Kiln warrior cast out for a single crack
+- **Origins**: Once Kaelen, Kiln warrior cast out for a single crack
 - **Abilities**: Wields blade from kiln fragments, ribs archive lost warriors
 - **Arc**: Exiled warrior → Witness to collapse → Living weapon
 - **Voice**: Blunt, rhythmic, anchored to physicality (bone, sword, salt)
