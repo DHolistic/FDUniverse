@@ -250,7 +250,7 @@ Until they threw him.
 Until he felt himself falling, not into ash, but into salt and rot.
 The Salt Marshes opened to him like a mouth. The mud swallowed his once-perfect frame, staining the glaze, infecting the fracture. The Kiln’s voice echoed above:
 "Nothing imperfect may stand."
-Auren’s sword sank into the marsh, its inscriptions—once blessings—corrupting into accusations.
+Kaelen’s sword sank into the marsh, its inscriptions—once blessings—corrupting into accusations.
 The crack along his ribs spread.
 But it did not break.
 The Kiln had cast him away.
@@ -265,17 +265,17 @@ And he would make The Kiln pay for forgetting him.
 ________________________________________
 II. First Encounter: The Thrown Vessel vs. The Unfired
 "A crack is only dangerous if it spreads."
-The first time Auren saw The Unfired, he mistook them for just another error.
+The first time Kaelen saw The Unfired, he mistook them for just another error.
 The marsh had twisted plenty of broken things—the Unfired was no different, their body still soft, resisting hardening, trembling like wet clay.
 He had seen failures before.
 They did not last long.
 But as he watched—The Unfired moved. Not weakly. Not lost. But deliberately—their fingers pressing into the air as if touching something unseen.
-Auren tightened his grip on his sword.
+Kaelen tightened his grip on his sword.
 "You don’t belong here." His voice was kiln-cracked, rough from years of silence.
 The Unfired turned. They did not flinch.
 "Neither do you."
 Heat pulsed through the salt. For a moment, neither of them spoke.
-Auren had fought rebels before. Had cut down the ones who whispered of Audemar, of imperfection, of flaw worship. But The Unfired’s presence did not feel like rebellion.
+Kaelen had fought rebels before. Had cut down the ones who whispered of Audemar, of imperfection, of flaw worship. But The Unfired’s presence did not feel like rebellion.
 It felt like a correction.
 "Do you know what happens to things that refuse to set?" he asked, stepping forward.
 The Unfired’s eyes followed the crack along his ribs.
@@ -283,7 +283,7 @@ The Unfired’s eyes followed the crack along his ribs.
 Silence again.
 Then—a shift.
 The ground beneath them rippled—not water, not sand, but language, twisting into glyphs neither had seen before.
-Auren took another step. His sword gleamed—its cracks glowing like burning scripture.
+Kaelen took another step. His sword gleamed—its cracks glowing like burning scripture.
 The Unfired raised a hand. It dripped clay, but did not shake.
 The Kiln had discarded both of them.
 But now, something new was forming.
@@ -328,7 +328,7 @@ Absolutely—let’s explore **The Thrown Vessel’s origin** in full cinematic 
 ## **I. Origin Scene: The Thrown Vessel’s Fall**
 *"Perfection cracks before it breaks."*
 
-The Kiln had chosen Auren to be its warrior—a creation molded in unyielding symmetry, designed to hold strength without flaw.  
+The Kiln had chosen Kaelen to be its warrior—a creation molded in unyielding symmetry, designed to hold strength without flaw.  
 
 But in the final firing, something **fractured**.  
 
@@ -353,7 +353,7 @@ The **Salt Marshes** opened to him like a mouth. The mud swallowed his **once-pe
 
 *"Nothing imperfect may stand."*
 
-Auren’s sword **sank into the marsh**, its inscriptions—once blessings—**corrupting into accusations**.  
+Kaelen’s sword **sank into the marsh**, its inscriptions—once blessings—**corrupting into accusations**.  
 The crack along his ribs **spread**.  
 But it did not break.  
 The Kiln had **cast him away**.  
@@ -371,7 +371,7 @@ And he would make The Kiln **pay for forgetting him**.
 ## **II. First Encounter: The Thrown Vessel vs. The Unfired**
 *"A crack is only dangerous if it spreads."*
 
-The first time Auren saw **The Unfired**, he mistook them for **just another error**.  
+The first time Kaelen saw **The Unfired**, he mistook them for **just another error**.  
 
 The marsh had twisted plenty of broken things—the Unfired was no different, their body still **soft**, resisting hardening, trembling like wet clay.  
 
@@ -380,7 +380,7 @@ They did not last long.
 
 But as he **watched**—The Unfired **moved**. Not weakly. Not lost. But **deliberately**—their fingers pressing into the air as if touching **something unseen**.  
 
-Auren tightened his grip on his sword.  
+Kaelen tightened his grip on his sword.  
 
 *"You don’t belong here."* His voice was **kiln-cracked**, rough from years of silence.  
 
@@ -390,7 +390,7 @@ The Unfired turned. They did not flinch.
 
 Heat pulsed through the salt. **For a moment, neither of them spoke.**  
 
-Auren had fought rebels before. Had cut down the ones who whispered of Audemar, of imperfection, of flaw worship. But The Unfired’s presence did not feel like rebellion.  
+Kaelen had fought rebels before. Had cut down the ones who whispered of Audemar, of imperfection, of flaw worship. But The Unfired’s presence did not feel like rebellion.  
 
 It felt like **a correction**.
 *"Do you know what happens to things that refuse to set?"* he asked, stepping forward.  
@@ -401,7 +401,7 @@ Silence again.
 Then—a shift.  
 The ground beneath them **rippled**—not water, not sand, but **language**, twisting into **glyphs neither had seen before**.  
 
-Auren took another step. His sword gleamed—its cracks glowing **like burning scripture**.  
+Kaelen took another step. His sword gleamed—its cracks glowing **like burning scripture**.  
 
 The Unfired raised a hand. **It dripped clay**, but did not shake.  
 The Kiln had discarded **both of them**.  
@@ -442,7 +442,7 @@ ________________________________________
 📌 Role in the Story: They hold the last pieces of Audemar’s lost language, keeping it alive in whispers.
 ________________________________________
 5. NEW CHARACTER: The Thrown Vessel (The Warrior Castaway)
-•	Name: Originally Auren, now The Thrown Vessel.
+•	Name: Originally Kaelen, now The Thrown Vessel.
 •	Origins: Once a devoted warrior of The Kiln, he was meant to be perfectly fired—a creation with no flaws.
 •	The First Crack: But during his final forging, his glaze fractured—an imperfection The Kiln refused to accept.
 •	Punishment: Cast into the salt marshes, left to rot with other failed creations.
