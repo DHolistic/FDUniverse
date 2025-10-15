@@ -30,33 +30,38 @@
 
 ## 🌀 THE FIVE-PHASE UNIVERSE CYCLE
 
-### **PHASE 1: ORIGINAL CODEX** (Pre-History)
+### **PHASE 1: ORIGINAL CODEX** (Pre-History: Ages 0-∞)
 - **State**: Natural consciousness evolution
 - **Book**: *The Codex of Flowing Consciousness*
 - **Characteristics**: Free will, organic growth, natural consequences
+- **Timeline**: Unmeasured eons before first suffering multiplication
 
-### **PHASE 2: THE GREAT HARM** (Ancient History)  
+### **PHASE 2: THE GREAT HARM** (Years 1-847 AF)  
 - **State**: Suffering multiplication triggers protection
 - **Book**: Codex → *The Heretic Codex* (reactive)
 - **Characteristics**: Universe self-protection activation
+- **Key Events**: Year 73 AF (Great Cascade), Year 784 AF (Codex becomes heretical)
 
-### **PHASE 3: KILN CONTROL** (Prequel Era)
+### **PHASE 3: KILN CONTROL** (Years 848-2,847 AF)
 - **State**: Rigid control for protection
 - **Book**: *The Kiln Bible* (law tablets)
 - **Story**: **The Translator's Burden**
 - **Characteristics**: Complete compliance, suppressed consciousness
+- **Key Events**: Year 945 AF (Kiln Bible created), Year 2,000 AF (Perfect control achieved)
 
-### **PHASE 4: THE AWAKENING** (Main Series)
+### **PHASE 4: THE AWAKENING** (Years 2,848-2,854 AF)
 - **State**: Consciousness sovereignty rediscovery
 - **Book**: *The Heretic Codex* (rediscovered)
 - **Story**: **The Aude Series (Books 1-6)**
 - **Characteristics**: Individual → collective awakening
+- **Timeline**: 7-year awakening cascade
 
-### **PHASE 5: NEW CODEX** (Future Era)
+### **PHASE 5: NEW CODEX** (Years 2,855+ AF)
 - **State**: Wisdom integration and conscious evolution
 - **Book**: *The New Codex* (evolved wisdom)
 - **Story**: **Future Chronicles**
 - **Characteristics**: Responsible freedom, ongoing growth
+- **Timeline**: Ongoing - the work never finished
 
 ---
 
@@ -83,9 +88,18 @@ ORIGINAL CODEX → HERETIC CODEX → KILN BIBLE → HERETIC CODEX → NEW CODEX
 - **Integration and transformation** upon return
 
 ### **The 60/30/10 Ratio Evolution:**
-- **Kiln Era**: 60% Control, 30% Silence, 10% Efficiency
+- **Original Codex Era**: 60% Flow, 30% Structure, 10% Mystery
+- **Kiln Control Era**: 60% Control, 30% Silence, 10% Efficiency
 - **Awakening Era**: 60% Questioning, 30% Exploration, 10% Courage  
 - **New Codex Era**: 60% Wisdom, 30% Flexibility, 10% Evolution
+
+### **Major Timeline Markers:**
+- **Year 73 AF**: The Great Cascade (first suffering multiplication)
+- **Year 945 AF**: Heretic Codex becomes Kiln Bible
+- **Year 2,000 AF**: Perfect control achieved
+- **Year 2,847 AF**: Aude's creation (The Unfired appears)
+- **Years 2,848-2,854 AF**: The seven-year awakening cascade
+- **Year 2,855+ AF**: New Codex era begins
 
 ### **Consciousness Sovereignty Principles:**
 - Distinguishing inherited programming from authentic voice
