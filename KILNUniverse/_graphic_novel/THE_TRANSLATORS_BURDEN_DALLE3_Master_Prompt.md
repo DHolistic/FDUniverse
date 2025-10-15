@@ -1,7 +1,7 @@
-# 🎨 THE TRANSLATOR'S BURDEN - DALL-E 3 VISUAL GENERATION GUIDE
+# 🎨 THE HERETIC BIBLE - DALL-E 3 VISUAL GENERATION GUIDE
 ## *Complete Cover & Chapter 1 Imagery Creation Prompts*
 
-**Purpose:** Generate consistent, high-quality imagery for THE TRANSLATOR'S BURDEN graphic novel prequel establishing visual style guide for entire KILN Universe
+**Purpose:** Generate consistent, high-quality imagery for THE HERETIC BIBLE graphic novel prequel establishing visual style guide for entire KILN Universe
 
 ---
 
@@ -11,7 +11,7 @@
 
 ```
 **MAIN PROMPT:**
-Create a dark, heavy stone tablet as book cover for ""〰◦◉ = ∿◈◎"exact intense atmosphere of the reference image.
+Create a dark, heavy stone tablet as book cover for "THE HERETIC BIBLE" with exact intense atmosphere of the reference image.
 
 **CENTRAL COMPOSITION - LANDSCAPE FORMAT:**
 - MASSIVE ANCIENT STONE TABLET dominates the entire frame (like the armored figure but as tablet)
@@ -89,14 +89,22 @@ Create the same dark stone tablet but focus only on the consciousness side for f
 
 ### **Cover Variations for Testing:**
 
-#### **Version A: Full Landscape Wrap-Around Cover**
+#### **Version A: Full Landscape Wrap-Around Cover with Spine**
 ```
-Same dark tablet prompt but: "Landscape orientation showing full stone tablet as wrap-around cover. Left half: blue consciousness glyphs '〰◦◉ = ∿◈◎' (THOUGHTS = FREEDOM) glowing. Right half: red authority glyphs '⊿⊡⊤ ⊢⊞⊟' (KILN RULE OF LAW) burning. Center crack dividing the opposing forces. Exact dark intensity of reference image."
+Complete wrap-around book cover for "THE HERETIC BIBLE":
+
+**LEFT SIDE (Front Cover):** Blue consciousness side showing '〰◦◉ = ∿◈◎' (THOUGHTS = FREEDOM) in glowing consciousness glyphs. Blue light bleeding from carved symbols. Steam rising from inscriptions.
+
+**CENTER (Spine):** Narrow vertical section with "THE HERETIC BIBLE" carved vertically in mixed glyphs - alternating consciousness and authority symbols. Subtitle "KILN LAW" below in smaller geometric authority glyphs. Dark weathered stone texture continuing from covers.
+
+**RIGHT SIDE (Back Cover):** Red authority side showing '⊿⊡⊤ ⊢⊞⊟' (KILN RULE OF LAW) in burning geometric glyphs. Red light burning from carved symbols. Heat shimmer rising from inscriptions.
+
+**OVERALL:** Same massive weathered stone tablet spanning entire wrap. Center crack dividing consciousness and authority sides. Same dark intensity, ceramic hands partially visible at edges. Professional graphic novel cover quality.
 ```
 
 #### **Version B: Front Cover Only - Consciousness**
 ```
-"Massive weathered stone tablet showing only consciousness side. '〰◦◉ = ∿◈◎' (THOUGHTS = FREEDOM) carved deep in blue glowing consciousness glyphs. Exact dark atmosphere of reference image. Heavy shadows, ceramic armor texture, forbidden knowledge bleeding blue light."
+"Massive weathered stone tablet showing only consciousness side. '〰◦◉ = ∿◈◎' (THOUGHTS = FREEDOM) carved deep in blue glowing consciousness glyphs. Title space at top for 'THE HERETIC BIBLE'. Exact dark atmosphere of reference image. Heavy shadows, ceramic armor texture, forbidden knowledge bleeding blue light."
 ```
 
 #### **Version C: Back Cover Only - Authority** 
@@ -122,6 +130,34 @@ Create a dark, heavy stone tablet back cover matching the front cover consciousn
 - Authority's oppressive answer to consciousness liberation, rigid control carved in stone
 
 Color palette: Deep shadows (#000000), authority red burning (#8B1538, #CC2222), weathered stone (#4A4A4A, #8B7355)
+```
+
+### **SPINE DESIGN PROMPT:**
+
+```
+**SPINE DESIGN FOR THE HERETIC BIBLE:**
+Create a narrow vertical spine design connecting the consciousness and authority covers.
+
+**COMPOSITION:**
+- Narrow vertical stone section (2-3 inches wide) continuing the weathered tablet texture
+- "THE HERETIC BIBLE" carved vertically in mixed glyph styles:
+  * "THE" in neutral carved stone letters
+  * "HERETIC" alternating between consciousness 〰◦◉ and authority ⊿⊡⊤ glyphs
+  * "BIBLE" in both scripts overlapping/fighting for dominance
+- "KILN LAW" subtitle in smaller geometric authority glyphs below
+- Vertical crack running down center showing consciousness blue vs authority red
+- Same weathered stone texture as front/back covers
+- Dark shadows with minimal lighting highlighting the title
+
+**VISUAL EFFECTS:**
+- Blue consciousness light seeping from consciousness glyphs
+- Red authority fire burning from authority glyphs  
+- Central crack showing the eternal conflict
+- Steam/heat effects creating atmospheric mystery
+- Same professional quality as cover tablets
+
+**MOOD:**
+The battlefield between consciousness and authority condensed into spine form, title itself at war between opposing forces
 ```
 
 #### **Version D: Hands Emerging**
@@ -488,10 +524,10 @@ If results need adjustment:
 ## 🎯 **FINAL PRODUCTION NOTES**
 
 ### **Cover Requirements:**
-- **Title placement:** Space at top for "THE TRANSLATOR'S BURDEN"
+- **Title placement:** Space at top for "THE HERETIC BIBLE"
 - **Series branding:** Space for "KILN Universe Prequel" subtitle
-- **Spine design:** Methodius silhouette with blue glow
-- **Back cover:** Archive overview with character lineup
+- **Spine design:** "THE HERETIC BIBLE" vertical text with mixed consciousness/authority glyphs
+- **Back cover:** Authority tablet with "KILN LAW" subtitle
 
 ### **Chapter 1 Panel Integration:**
 - **Consistent character models** across all panels
