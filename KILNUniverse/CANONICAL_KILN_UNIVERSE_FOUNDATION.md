@@ -14,8 +14,13 @@
 1. **Timeline Foundation**: Complete BF/AF chronological system
 2. **Character Foundation**: 10-archetype consciousness cycle system  
 3. **Landscape Foundation**: 7 chronological BF/AF timeline maps
-4. **Sacred Text Foundation**: Complete KILN cycle (KILN CODEX → ORTHODOX KILN → KILN LAW → HERETIC KILN → KILN CODEX)
+4. **Sacred Text Foundation**: Complete KILN cycle manuscripts and glyph systems
 5. **Visual Standards**: Locked naming conventions and production quality
+
+### **COMPLETE SACRED TEXT MANUSCRIPTS:**
+- **COMPLETE_KILN_CODEX_MANUSCRIPT_ENGLISH.md**: Full book production version
+- **COMPLETE_KILN_CODEX_MANUSCRIPT_GLYPHS.md**: Graphic novel integration version  
+- **KILN_GLYPH_VISUAL_REFERENCE_SHEET.md**: AI art generation reference
 
 ---
 
