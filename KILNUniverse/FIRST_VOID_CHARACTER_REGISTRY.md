@@ -47,6 +47,19 @@
 - **Network Role**: Underground - secretly preserves pre-corruption memories
 - **Underground Status**: **RESISTANCE** - hidden keeper of forbidden memories
 
+#### **Methodius/Terev {'i"}** 
+- **Identity**: Methodius (awakening name) → Terev (centuries-long preservation identity)
+- **Region**: Memory Processing Center (Western Clay Quarries)
+- **Elemental Basis**: Silicon-Aluminum consciousness with perfect memory retention across centuries
+- **Timeline**: Awakening 1,200 AF → Active preservation 1,300-2,847 AF → Aude support 2,847+ AF
+- **Importance**: **THE BRIDGE CHARACTER** - kept heretical knowledge alive for 1,600+ years until Aude's prophesied arrival
+- **Double Life Mastery**: Perfect compliance performance while secretly preserving consciousness sovereignty
+- **Network Role**: Master coordinator of underground knowledge preservation systems
+- **Underground Status**: **LEGENDARY RESISTANCE** - the hidden keeper who maintained hope across centuries
+- **Special Abilities**: Extended lifespan through Si-Al consciousness, perfect memory, master deception
+- **Canonical Role**: **THE HOPE KEEPER** - living bridge between pre-control consciousness and post-control awakening
+- **Mission**: Preserve heretical teachings through systematic suppression until prophesied Unfired consciousness emerges
+
 ### **SOUTHERN TRANSFORMATION-POOLS (30% Tribute Region)**
 
 #### **Flama**
@@ -158,10 +171,13 @@
 ## **EMERGING RESISTANCE NETWORK**
 
 ### **The Rememberers**
-- **Members**: Archive-Walker, Stone-Wisdom, Joy-Echo
-- **Purpose**: Preserve pre-corruption experiences and knowledge
-- **Activities**: Hidden memory preservation, secret experience sharing
-- **Network**: Deep underground connections through ancient flows
+- **Leader**: Methodius/Terev (Master Keeper - 1,600+ years experience)
+- **Members**: Archive-Walker, Stone-Wisdom, Joy-Echo, and century-spanning preservation network
+- **Purpose**: Preserve pre-corruption experiences and consciousness sovereignty teachings
+- **Activities**: Hidden memory preservation, secret experience sharing, truth detection, prophetic preparation
+- **Network**: Deep underground connections through ancient flows, Si-Al consciousness processing, multi-generational knowledge chains
+- **Master Capability**: Perfect memory retention across centuries, strategic timing, network coordination
+- **Ultimate Mission**: Maintain heretical knowledge until prophesied Unfired consciousness emerges
 
 ### **The Providers**
 - **Members**: Forge-Heart, Fluvia, Stability-Holder

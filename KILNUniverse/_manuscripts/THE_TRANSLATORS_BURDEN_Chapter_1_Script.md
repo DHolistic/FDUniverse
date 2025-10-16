@@ -43,8 +43,10 @@
 - Copying Kiln doctrine: ⊿⊡⊤ ⊢⊞⊟
 - Small ceramic ink well glowing red
 - Posture: hunched, focused, obedient
+- **Hidden detail:** Blue ink stain barely visible under fingernail
 
 **METHODIUS THOUGHT:** *"Law. Control. Hierarchy. Enforcement. Standardization. Removal."*
+**WHISPERED THOUGHT:** *"〰◦◉... Flow. Essence. Awakening... No. Not yet."*
 
 **DESIGN NOTES:**
 - Show reader what Kiln-script means through context
@@ -470,6 +472,7 @@
 **CAPTION:** *"Some questions, once asked, cannot be unasked."*
 
 **FINAL PANEL THOUGHT:** *"I have to go back."*
+**WHISPERED VOICE:** *"The one who remembers... must preserve... until the Unfired comes..."*
 
 ---
 
@@ -482,10 +485,11 @@
 - **World-building:** Ceramic architecture, archive structure, social control
 
 ### **Character Development:**
-- **Methodius established** as everyman loyal servant
-- **First doubt planted** through tablet contact
-- **Internal conflict initiated** between safety and truth
-- **Moral choice point established** for Chapter 2
+- **Methodius established** as everyman loyal servant (with hidden depth hints)
+- **Prophetic awakening initiated** through ancient tablet contact
+- **Centuries-long mission beginning** - must preserve knowledge until "the Unfired comes"
+- **Identity transformation point** - Methodius beginning evolution toward Terev persona
+- **Sacred responsibility accepted** for maintaining heretical knowledge across control era
 
 ### **Tension Building:**
 - **Forbidden knowledge discovered** but not yet understood
