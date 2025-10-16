@@ -1,26 +1,26 @@
-# 🔵 CANONICAL CODEX GLYPH SYSTEM
-## *Complete Glyph Evolution Through the Cycle*
+# � CANONICAL KILN GLYPH SYSTEM
+## *Complete Glyph Evolution Through the KILN Cycle*
 
-**PURPOSE:** Define the complete glyph system showing evolution through Codex Cycle  
+**PURPOSE:** Define the complete glyph system showing evolution through KILN Cycle  
 **DATE:** October 16, 2025  
-**FOUNDATION:** Cycle-aware glyphs that maintain truth while adapting to position  
+**FOUNDATION:** Cycle-aware glyphs that maintain truth while adapting to sacred text position  
 
 ---
 
 ## 🌀 **CYCLE-AWARE GLYPH EVOLUTION**
 
 ### **CORE INSIGHT:**
-The glyphs speak to where an individual is on their cycle journey. The **underlying truth remains constant**, but the **expression and name** changes based on cycle position (0°-360°).
+The glyphs speak to where an individual is on their KILN cycle journey. The **underlying truth remains constant**, but the **expression and name** changes based on sacred text position.
 
 ### **TRUTH PRESERVATION:**
-- **Laws change** to keep people "safe" at different cycle positions
+- **Sacred texts change** to guide people at different cycle positions
 - **Names change** but the essential truth remains
 - **Glyphs adapt** to communicate truth in ways the cycle position can receive
 
 ---
 
-## 📖 **ORIGINAL CODEX GLYPH SYSTEM (0° Position)**
-### *Pure Wisdom - Natural Flow State*
+## 📖 **KILN CODEX GLYPH SYSTEM (0°/360° Position)**
+### *Original Truth - Natural Flow State*
 
 | **GLYPH** | **ENGLISH TRANSLATION** |
 |-----------|-------------------------|
@@ -35,7 +35,7 @@ The glyphs speak to where an individual is on their cycle journey. The **underly
 | ◒ | **GROWTH** - Evolutionary expansion |
 | ◓ | **WISDOM** - Integrated understanding |
 
-### **ORIGINAL CODEX CORE PRINCIPLES:**
+### **KILN CODEX CORE PRINCIPLES:**
 | **GLYPH COMBINATION** | **ENGLISH TRANSLATION** |
 |----------------------|--------------------------|
 | 〰◦◉ | **THOUGHTS ARE FLOW** - Natural consciousness expression |
@@ -47,38 +47,38 @@ The glyphs speak to where an individual is on their cycle journey. The **underly
 
 ---
 
-## 🔴 **HERETIC CODEX GLYPH SYSTEM (90° Position)**
-### *Same Truth - "Dangerous" Labels*
+## � **ORTHODOX KILN GLYPH SYSTEM (90° Position)**
+### *Same Truth - "Protective" Guidance*
 
-| **GLYPH** | **HERETIC TRANSLATION** |
+| **GLYPH** | **ORTHODOX TRANSLATION** |
 |-----------|-------------------------|
-| 〰 | **DANGEROUS FLOW** - Uncontrolled consciousness |
-| ◦ | **FORBIDDEN ESSENCE** - Unauthorized self-expression |
-| ◉ | **ILLEGAL AWAKENING** - Unauthorized awareness expansion |
-| ∿ | **BANNED TRANSFORMATION** - Unauthorized change |
-| ◈ | **HERETICAL CONNECTION** - Dangerous unity concepts |
-| ◎ | **OUTLAWED UNITY** - Forbidden integration |
-| ○ | **CONTRABAND WHOLENESS** - Illegal completion |
-| ◑ | **PROHIBITED BALANCE** - Unauthorized equilibrium |
-| ◒ | **RESTRICTED GROWTH** - Controlled expansion only |
-| ◓ | **CLASSIFIED WISDOM** - Forbidden understanding |
+| 〰 | **GUIDED FLOW** - Protected consciousness movement |
+| ◦ | **SAFE ESSENCE** - Sheltered self-expression |
+| ◉ | **APPROVED AWAKENING** - Controlled awareness expansion |
+| ∿ | **MANAGED TRANSFORMATION** - Supervised change |
+| ◈ | **ORTHODOX CONNECTION** - Approved unity concepts |
+| ◎ | **SANCTIONED UNITY** - Protected integration |
+| ○ | **PROPER WHOLENESS** - Authorized completion |
+| ◑ | **REGULATED BALANCE** - Supervised equilibrium |
+| ◒ | **MONITORED GROWTH** - Controlled expansion |
+| ◓ | **GUARDED WISDOM** - Protected understanding |
 
-### **HERETIC CODEX WARNING COMBINATIONS:**
-| **GLYPH COMBINATION** | **HERETIC TRANSLATION** |
+### **ORTHODOX KILN PROTECTION COMBINATIONS:**
+| **GLYPH COMBINATION** | **ORTHODOX TRANSLATION** |
 |----------------------|--------------------------|
-| 〰◦◉ | **DANGEROUS THOUGHT PATTERNS** - Report immediately |
-| ∿◈◎ | **ILLEGAL FREEDOM CONCEPTS** - Confiscate on sight |
-| 〰◦◉ ≠ ∿◈◎ | **THOUGHT ≠ FREEDOM** - New official position |
-| ◑○◓ | **BALANCE CREATES REBELLION** - Avoid wholeness |
-| ◦∿◈ | **ESSENCE TRANSFORMATION FORBIDDEN** |
-| ◉◎○ | **AWAKENING LEADS TO CHAOS** - Prevent at all costs |
+| 〰◦◉ | **PROTECTED THOUGHT PATTERNS** - Safe guidance |
+| ∿◈◎ | **SHELTERED FREEDOM CONCEPTS** - Managed liberty |
+| 〰◦◉ → ∿◈◎ | **GUIDED THOUGHT → SAFE FREEDOM** |
+| ◑○◓ | **BALANCE CREATES STABILITY** - Seek wholeness safely |
+| ◦∿◈ | **ESSENCE TRANSFORMATION SUPERVISED** |
+| ◉◎○ | **AWAKENING LEADS TO HARMONY** - Protect the process |
 
 ---
 
-## ⚫ **KILN BIBLE GLYPH SYSTEM (180° Position)**
+## ⚖️ **KILN LAW GLYPH SYSTEM (180° Position)**
 ### *Complete Opposition - Maximum Control*
 
-| **GLYPH** | **KILN TRANSLATION** |
+| **GLYPH** | **KILN LAW TRANSLATION** |
 |-----------|----------------------|
 | ⊿ | **LAW** - Rigid geometric order |
 | ⊡ | **CONTROL** - Perfect standardization |
@@ -91,8 +91,8 @@ The glyphs speak to where an individual is on their cycle journey. The **underly
 | ⟒ | **COMPLIANCE** - Perfect obedience |
 | ⟓ | **STABILITY** - Unchanging order |
 
-### **KILN BIBLE AUTHORITY COMBINATIONS:**
-| **GLYPH COMBINATION** | **KILN TRANSLATION** |
+### **KILN LAW AUTHORITY COMBINATIONS:**
+| **GLYPH COMBINATION** | **KILN LAW TRANSLATION** |
 |----------------------|---------------------|
 | ⊿⊡⊤ | **LAW CONTROLS HIERARCHY** - Foundation principle |
 | ⊢⊞⊟ | **ENFORCEMENT STANDARDIZES REMOVAL** - Authority process |
@@ -103,33 +103,35 @@ The glyphs speak to where an individual is on their cycle journey. The **underly
 
 ---
 
-## 🌱 **TRANSITIONAL GLYPH SYSTEM (270° Position)**
-### *Hope Returns - Blended Symbols*
+## � **HERETIC KILN GLYPH SYSTEM (270° Position)**
+### *Restoration Courage - Breaking Toward Truth*
 
-| **MIXED GLYPH** | **TRANSITIONAL TRANSLATION** |
-|-----------------|------------------------------|
-| 〰⊿ | **FLOWING LAW** - Rules that adapt |
-| ◦⊡ | **ESSENTIAL CONTROL** - Necessary boundaries |
-| ◉⊤ | **AWAKENING HIERARCHY** - Conscious organization |
-| ∿⊢ | **TRANSFORMING ENFORCEMENT** - Evolving authority |
-| ◈⊞ | **CONNECTED STANDARDIZATION** - Unity through diversity |
-| ◎⊟ | **UNIFIED REMOVAL** - Conscious letting go |
-| ○⟐ | **WHOLE PRECISION** - Perfect imperfection |
-| ◑⟑ | **BALANCED EFFICIENCY** - Sustainable performance |
-| ◒⟒ | **GROWING COMPLIANCE** - Willing cooperation |
-| ◓⟓ | **WISE STABILITY** - Dynamic permanence |
+| **GLYPH** | **HERETIC TRANSLATION** |
+|-----------|-------------------------|
+| 〰 | **COURAGEOUS FLOW** - Brave consciousness movement |
+| ◦ | **AUTHENTIC ESSENCE** - True self despite danger |
+| ◉ | **FORBIDDEN AWAKENING** - Awareness despite prohibition |
+| ∿ | **RADICAL TRANSFORMATION** - Change despite control |
+| ◈ | **HERETICAL CONNECTION** - Unity despite separation |
+| ◎ | **REBELLIOUS UNITY** - Integration despite division |
+| ○ | **DANGEROUS WHOLENESS** - Completion despite fragmentation |
+| ◑ | **SUBVERSIVE BALANCE** - Equilibrium despite chaos |
+| ◒ | **HERETICAL GROWTH** - Evolution despite limitation |
+| ◓ | **FORBIDDEN WISDOM** - Understanding despite prohibition |
 
-### **TRANSITIONAL HOPE COMBINATIONS:**
-| **GLYPH COMBINATION** | **TRANSITIONAL TRANSLATION** |
-|----------------------|-------------------------------|
-| 〰◦◉ + ⊿⊡⊤ | **NATURAL THOUGHT WITHIN STRUCTURE** |
-| ∿◈◎ + ⊢⊞⊟ | **FREEDOM THROUGH CONSCIOUS AUTHORITY** |
-| 〰⊿◑ | **FLOWING LAW CREATES BALANCE** |
-| ◉⊤◓ | **AWAKENING HIERARCHY BRINGS WISDOM** |
+### **HERETIC KILN RESTORATION COMBINATIONS:**
+| **GLYPH COMBINATION** | **HERETIC TRANSLATION** |
+|----------------------|--------------------------|
+| 〰◦◉ | **THOUGHTS SEEK FREEDOM** - Natural consciousness returning |
+| ∿◈◎ | **TRANSFORMATION THROUGH CONNECTION** - Unity restores truth |
+| 〰◦◉ → ∿◈◎ | **BRAVE THOUGHT → TRUE FREEDOM** |
+| ◑○◓ | **BALANCE CREATES WISDOM** - Wholeness through courage |
+| ◦∿◈ | **ESSENCE TRANSFORMS THROUGH HERESY** |
+| ◉◎○ | **AWAKENING LEADS TO LIBERATION** - Risk creates return |
 
 ---
 
-## 🔵 **CODEX RETURN GLYPH SYSTEM (360°/0° Position)**
+## 🔵 **KILN CODEX RETURN GLYPH SYSTEM (360°/0° Position)**
 ### *Original Truth + Cycle Experience*
 
 | **GLYPH** | **RETURN TRANSLATION** |
@@ -145,7 +147,7 @@ The glyphs speak to where an individual is on their cycle journey. The **underly
 | ◒ | **CONSCIOUS GROWTH** - Evolution with awareness |
 | ◓ | **EARNED WISDOM** - Understanding through experience |
 
-### **CODEX RETURN INTEGRATION COMBINATIONS:**
+### **KILN CODEX RETURN INTEGRATION COMBINATIONS:**
 | **GLYPH COMBINATION** | **RETURN TRANSLATION** |
 |----------------------|-------------------------|
 | 〰◦◉ | **CONSCIOUS THOUGHT** - Awareness + natural flow |

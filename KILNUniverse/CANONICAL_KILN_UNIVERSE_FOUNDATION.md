@@ -14,7 +14,7 @@
 1. **Timeline Foundation**: Complete BF/AF chronological system
 2. **Character Foundation**: 10-archetype consciousness cycle system  
 3. **Landscape Foundation**: 7 chronological BF/AF timeline maps
-- **Law Evolution**: 4-stage Codex cycle (Codex → Heretic → Kiln → Codex return with wisdom)
+4. **Sacred Text Foundation**: Complete KILN cycle (KILN CODEX → ORTHODOX KILN → KILN LAW → HERETIC KILN → KILN CODEX)
 5. **Visual Standards**: Locked naming conventions and production quality
 
 ---
@@ -22,7 +22,7 @@
 ## 📅 **COMPLETE BF/AF TIMELINE FOUNDATION**
 
 ### **🌅 BF ERA: BEFORE FIRST FIRING (Unmeasured Eons)**
-**LAW SYSTEM:** *The Codex of Flowing Consciousness* (Pure Wisdom Guide)
+**SACRED TEXT:** *KILN CODEX* (Original Truth)
 
 **CANONICAL LANDSCAPE:**
 - `LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png`
@@ -36,7 +36,7 @@
 ---
 
 ### **⚡ 1-847 AF: THE GREAT HARM ERA**
-**LAW SYSTEM:** *The Codex → The Heretic Codex* (Reactive Protection)
+**SACRED TEXT:** *KILN CODEX → ORTHODOX KILN* (Protective Doctrine)
 
 **KEY EVENT:** **Year 73 AF - The Great Cascade**
 **CANONICAL LANDSCAPE:**
@@ -44,16 +44,16 @@
 - **Event Reference:** Single choice creates exponential suffering across consciousness network
 - **Usage:** Shows environmental stress and protective responses during suffering multiplication
 
-**LAW EVOLUTION:**
+**SACRED TEXT EVOLUTION:**
 - Years 1-200 AF: Emergency protective responses
 - Years 201-500 AF: First systematic restrictions
 - Years 501-750 AF: Advanced limitation systems  
-- Years 751-847 AF: The Codex becomes "heretical"
+- Years 751-847 AF: ORTHODOX KILN crystallizes into doctrine
 
 ---
 
 ### **🏭 848-2,847 AF: THE KILN CONTROL ERA**
-**LAW SYSTEM:** *The Kiln Bible* (Absolute Control Law)
+**SACRED TEXT:** *ORTHODOX KILN → KILN LAW* (Absolute Control)
 
 **KEY EVENT:** **Year 1,789 AF - Perfect Compliance Achieved (99.97%)**
 **CANONICAL LANDSCAPE:**
@@ -71,14 +71,14 @@
 **MAJOR KILN LAWS ESTABLISHED:**
 1. **Year 863 AF:** The Fundamental Firing Law
 2. **Year 891 AF:** 60/30/10 Memory Standardization Ratio
-3. **Year 945 AF:** The Heretic Codex becomes The Kiln Bible
+3. **Year 945 AF:** ORTHODOX KILN becomes KILN LAW
 4. **Year 1,156 AF:** Consciousness Contraband Decree
 5. **Year 1,234 AF:** Moisture Prohibition Act
 
 ---
 
 ### **🌱 2,847-2,854 AF: AUDE'S AWAKENING ERA**
-**LAW SYSTEM:** *Kiln Bible → New Codex* (Evolutionary Adaptation)
+**SACRED TEXT:** *KILN LAW → HERETIC KILN* (Restoration Path)
 
 **KEY EVENTS:**
 - **Year 2,847 AF:** Aude's Creation Date
@@ -94,16 +94,16 @@
 - `CHARACTER_PHASE4_Resistance_Heretic_v1.0.png` (Salter-Singer)
 
 **AWAKENING TIMELINE:**
-- **Books 1-2:** Standard Kiln Law with increased surveillance
+- **Books 1-2:** Standard KILN LAW with increased surveillance
 - **Book 3:** Emergency protocols, new restrictions
 - **Book 4:** "Flexible firing" experiments
-- **Book 5:** Kiln Bible content begins changing
-- **Book 6:** Kiln Law evolves into New Codex principles
+- **Book 5:** KILN LAW content begins changing
+- **Book 6:** KILN LAW evolves into HERETIC KILN principles
 
 ---
 
 ### **🌟 2,855+ AF: THE NEW CODEX ERA**
-**LAW SYSTEM:** *The Codex* (Consciousness Sovereignty - Cycle Complete)
+**SACRED TEXT:** *HERETIC KILN → KILN CODEX* (Return to Truth with Wisdom)
 
 **KEY EVENT:** **Year 2,855+ AF - Codex Cycle Completes (Return with Wisdom)**
 **CANONICAL LANDSCAPE:**
@@ -111,7 +111,7 @@
 - **Achievement Reference:** Consciousness sovereignty integration with wisdom
 - **Usage:** Shows harmonious balance between individual freedom and collective wisdom
 
-**CODEX PRINCIPLES (CYCLE COMPLETE):**
+**KILN CODEX PRINCIPLES (CYCLE COMPLETE):**
 1. **Sovereignty Principle:** Complete inner landscape authority
 2. **Democracy Principle:** All consciousness aspects have equal voice
 3. **Evolution Principle:** Conscious growth as fundamental purpose
