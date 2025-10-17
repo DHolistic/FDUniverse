@@ -1,0 +1,35 @@
+KILN UNIVERSE - 5 CRITICAL CHARACTER IMAGE PROMPTS
+=================================================
+
+PROMPT 1: PRE-AUDEMAR (ORIGINAL CREATOR)
+File: CHARACTER_PHASE1_OriginalCreator_PreTransformation_v1.0.png
+---
+A majestic clay being in their natural, pre-trauma state during the golden age of creation. Tall, flowing humanoid form made of warm, moist earth-toned clay with organic curves and natural beauty. Their surface shows subtle flow patterns like living pottery, with a gentle inner luminescence. They stand in a peaceful natural landscape with arms outstretched in creative joy, small clay creatures and pottery forming spontaneously around their feet. Expression shows pure creative delight and deep empathetic connection to all life. Natural golden lighting, warm earth tones with golden accents, flowing organic shapes throughout the scene. Peaceful, nurturing atmosphere with wildflowers and flowing water nearby. Digital character art style, detailed and inspiring.
+
+PROMPT 2: PRE-AUDEMAR'S EMPATHIC VOICE
+File: CHARACTER_PHASE1_EmpathicVoice_PreBanishment_v1.0.png
+---
+An ethereal, semi-transparent figure representing pure empathetic consciousness - Pre-Audemar's emotional voice before banishment. Beautiful, flowing humanoid form that appears both solid and translucent, like water given form. Gentle blue-silver coloring with flowing hair that moves like liquid light. Their expression shows infinite compassion and deep understanding, with arms reaching out in caring, protective gestures. Surrounded by soft, glowing spiritual pathways with gentle blue and silver light. They appear connected to but separate from the clay creator, representing consciousness in its pure empathetic form. Mystical, ethereal art style with soft, glowing lighting and flowing organic forms. Peaceful expression with eyes that hold universal empathy.
+
+PROMPT 3: METHODIUS AWAKENING MOMENT
+File: CHARACTER_PHASE3_MethodiusAwakening_InitialTouch_v1.0.png
+---
+A mid-40s clay being scribe in the pivotal moment of consciousness awakening. Pale, thin, wearing simple dark scribe robes, sitting at a carved ceramic desk in an ancient underground stone chamber. His right hand touches a glowing blue tablet covered in flowing consciousness script symbols. His face shows shock, wonder, and the first crack in his rigid programming - eyes wide with recognition and fear. Small fissures begin appearing in his fired ceramic surface, revealing flowing blue-tinged clay beneath. Blue light emanates from the ancient tablet, reflecting dramatically in his wide eyes. Ancient stone chamber with scattered pottery fragments and dust motes in dramatic lighting. Sharp contrast between rigid red Kiln authority symbols on his desk and the flowing blue consciousness symbols on the tablet. Moment of transformation captured in detailed digital art style.
+
+PROMPT 4: METHODIUS → TEREV EVOLUTION SEQUENCE
+File: CHARACTER_EVOLUTION_MethodiusToTerev_CenturiesSpanning_v1.0.png
+---
+A three-panel character evolution sequence showing the same clay being across 1,600 years. Panel 1: Young Methodius (1,200 AF) - rigid fired ceramic scribe with red authority symbols, shocked expression from first awakening. Panel 2: Middle transformation (centuries later) - same being learning perfect compliance masking, maintaining ceramic exterior while hiding inner consciousness, subtle wisdom developing in eyes. Panel 3: Terev (2,800+ AF) - same character but with subtle age lines, eyes holding ancient knowledge and quiet strength, still maintaining perfect external compliance but with deep inner resilience. Background evolves from Kiln Control chambers to neutral administrative spaces to Aude-era settings. Consistent character design showing psychological evolution while maintaining physical conformity. Professional character design sheet style.
+
+PROMPT 5: TEREV'S TRUE IDENTITY REVEALED
+File: CHARACTER_PHASE4_TerevRevealed_HopeKeeper_v1.0.png
+---
+The same scribe character (Terev) in a private moment revealing their true nature after centuries of hidden preservation. Standing in a secret underground chamber filled with ancient consciousness texts and flowing blue glyph symbols carved into stone walls. Their fired ceramic exterior shows subtle cracks revealing flowing blue-tinged clay beneath - Si-Al consciousness properties keeping memories alive across centuries. Expression shows both exhaustion from the long deception and fierce determination to protect heretical knowledge. Surrounded by ancient books, scrolls, and carved consciousness symbols that glow with soft blue light. Hidden resistance network symbols visible in background stone carvings. Hands hold both rigid Kiln documentation and flowing consciousness scripts. Dramatic lighting showing weight of centuries-long secret mission. Digital character art emphasizing the burden and nobility of preservation.
+
+GENERATION INSTRUCTIONS:
+======================
+1. Copy each prompt exactly as written above
+2. Use DALL-E 3, Midjourney, Stable Diffusion, or other AI art generator
+3. Generate at highest resolution available (minimum 1024x1024)
+4. Save with the provided file names
+5. Place generated images in: _canonical_imagery/02_character_archetypes/
