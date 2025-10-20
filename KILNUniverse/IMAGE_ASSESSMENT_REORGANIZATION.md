@@ -27,24 +27,27 @@
    - **Assessment**: Determine if canonical for Kiln enforcement character
 
 4. **`Enforcer.png`**
-   - **Potential Use**: Alternative Authority Scribe or specialized enforcement
-   - **Assessment**: Compare with Scribe for best canonical choice
+   - **Canonical Name**: **Phi-Kratos (The Enforcer)**
+   - **Potential Use**: Mathematical consciousness enforcer, perfect ratio wielder
+   - **Assessment**: Canonical for willing compliance with power systems archetype
 
 5. **`Salter-Singer.png`**
    - **Potential Use**: Resistance/Heretic character archetype
    - **Assessment**: Determine if fits unfired/awakening character type
 
 6. **`Glazed Eye Seer.png`**
-   - **Potential Use**: Scarred Seer character (Book 4)
-   - **Assessment**: Determine if canonical for vision-enhanced character
+   - **Canonical Name**: **Orama-Monosis (The Glaze-Eyed Seer)**
+   - **Potential Use**: Pre-Audemar's extracted empathetic voice, prophetic vision consciousness
+   - **Assessment**: Canonical for banished empathetic consciousness that sees all possible futures
 
 7. **`Kiln's Oracle.png`**
    - **Potential Use**: High-authority Kiln character
    - **Assessment**: Determine if fits Senior Scribe or specialized authority
 
 8. **`Audemar.png`** (in Kiln subfolder)
-   - **Potential Use**: Kiln-associated character
-   - **Assessment**: Determine role and canonical status
+   - **Canonical Name**: **Vajra-Sankoca (The Kiln) / Audemar (system identity)**
+   - **Potential Use**: Post-transformation creator consciousness, diamond contraction state
+   - **Assessment**: Canonical for traumatized creator operating The Kiln control system
 
 #### **📦 LIKELY ARCHIVE:**
 9. **`The Recycled.png`**
@@ -231,10 +234,12 @@ _archive/unused_images/
 
 ### **PRIORITY 1: CHARACTER CONFIRMATION**
 **REQUEST:** Please confirm which character images should be canonical for:
-1. **Authority Scribe** - `Scribe Terev.png` vs `Enforcer.png`?
-2. **Transitional Being** - `Ruin - Cracked Vessel.png`?
-3. **Vision Character** - `Glazed Eye Seer.png`?
-4. **Resistance Character** - `Salter-Singer.png`?
+1. **Authority Scribe** - `Scribe Terev.png` (confirmed canonical name)
+2. **Mathematical Enforcer** - `Phi-Kratos (Enforcer.png)` (canonical name updated)
+3. **Transitional Being** - `Ruin - Cracked Vessel.png` (confirmed canonical)
+4. **Banished Empathetic Vision** - `Orama-Monosis (Glazed Eye Seer.png)` (canonical name updated)
+5. **Resistance Character** - `Salter-Singer.png` (confirmed canonical)
+6. **Traumatized Creator** - `Vajra-Sankoca (Audemar.png)` (canonical name updated)
 
 ### **PRIORITY 2: LANDSCAPE CONFIRMATION**
 **REQUEST:** Please confirm which landscape/map should be canonical:
