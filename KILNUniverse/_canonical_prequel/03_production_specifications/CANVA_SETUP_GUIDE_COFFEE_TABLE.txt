@@ -1,0 +1,237 @@
+CANVA SETUP GUIDE - COFFEE TABLE GRAPHIC NOVEL (8.5" × 11")
+===============================================================
+
+## 🎨 **STEP-BY-STEP CANVA SETUP**
+
+### **STEP 1: CREATE NEW DESIGN**
+
+1. **Log into Canva Pro** (you'll need Pro for custom dimensions)
+2. **Click "Create a design"**
+3. **Select "Custom size"**
+4. **Enter dimensions**: 
+   - **Width**: 8.5 inches
+   - **Height**: 11 inches
+   - **Click "Create new design"**
+
+### **STEP 2: SET UP FACING PAGES**
+
+**Option A: Single Page Method (Recommended for Beginners)**
+- Work with **one page at a time**
+- Create **Left Page** template first
+- Create **Right Page** template second
+- **Duplicate and modify** for each scene
+
+**Option B: Spread Method (Advanced)**
+- **Custom size**: 17" × 11" (double width)
+- **Left half**: Text content (8.5" × 11")
+- **Right half**: Image content (8.5" × 11")
+
+---
+
+## 📄 **LEFT PAGE SETUP (Text Page)**
+
+### **STEP 1: Create Master Template**
+
+1. **Add background**: 
+   - Click **"Elements"** → **"Shapes"** → **Rectangle**
+   - Make it **off-white or cream** (#FDF6E3)
+   - **Resize to full page**
+
+2. **Set up margins**:
+   - **Left margin**: 1 inch (binding side)
+   - **Right margin**: 0.5 inch
+   - **Top/bottom margins**: 0.5 inch
+
+### **STEP 2: Add Text Elements**
+
+1. **Chapter Header**:
+   - Click **"Text"** → **"Add a heading"**
+   - **Font**: Playfair Display or Georgia (serif)
+   - **Size**: 24pt
+   - **Color**: Dark gray (#2C2C2C)
+   - **Position**: Top left, within margins
+
+2. **Scene Header**:
+   - **Add subheading**
+   - **Font**: Same as chapter header
+   - **Size**: 18pt
+   - **Position**: Below chapter header
+
+3. **Body Text**:
+   - Click **"Text"** → **"Add a little bit of body text"**
+   - **Font**: Georgia or similar serif
+   - **Size**: 12-14pt
+   - **Line spacing**: 1.5
+   - **Color**: Dark gray (#2C2C2C)
+   - **Alignment**: Left aligned
+   - **Width**: Stay within margins
+
+4. **Sacred Text Box**:
+   - **Add rectangle** with light blue background (#E3F2FD)
+   - **Add text** with italic formatting
+   - **Position**: Bottom of page
+
+### **STEP 3: Sample Text Layout**
+
+```
+Chapter 1: The Great Archive Discovery
+Scene 1: Archive Approach
+
+In the shadow of the Central Kiln Complex, where 
+geometric precision ruled every surface and steam 
+rose from controlled firing chambers, young Methodius 
+approached the Great Archive with the careful steps 
+of one who understood surveillance.
+
+[Continue with full narrative text...]
+
+┌────────────────────────────────────────┐
+│ From the Original Codex:               │
+│ "〰◦◉ ∿◈◎ ○◑◒"                        │
+│ "Flow toward connection through wholeness" │
+└────────────────────────────────────────┘
+```
+
+---
+
+## 🖼️ **RIGHT PAGE SETUP (Image Page)**
+
+### **STEP 1: Create Image Template**
+
+1. **Add background**: Same off-white as left page
+2. **Upload your image**:
+   - Click **"Uploads"**
+   - **"Upload files"**
+   - Select your scene image (e.g., `CHAPTER_1_Scene01_GreatArchive_Discovery_v1.0.png`)
+
+### **STEP 2: Position Image**
+
+1. **Drag image** to right page
+2. **Resize to fill page**:
+   - Leave **small margins** (0.25" on all sides)
+   - Or go **full bleed** to edges if desired
+3. **Ensure high resolution**:
+   - Right-click image → **"Replace"** → **"Upload"** if quality issues
+
+### **STEP 3: Add Caption (Optional)**
+
+1. **Add text box** at bottom
+2. **Caption text**: "The Great Archive - Repository of Consciousness"
+3. **Font**: Same as body text but smaller (10-11pt)
+4. **Position**: Center bottom with small margin
+
+---
+
+## 🔄 **CREATING YOUR BOOK SEQUENCE**
+
+### **METHOD 1: Page-by-Page (Recommended)**
+
+1. **Save your Left Page template**:
+   - Click **"File"** → **"Make a copy"**
+   - Rename: "Left Page Template"
+
+2. **Save your Right Page template**:
+   - Create right page
+   - Save as: "Right Page Template"
+
+3. **For each scene**:
+   - **Copy left page template**
+   - **Replace text content** with scene narrative
+   - **Copy right page template**
+   - **Replace image** with scene illustration
+   - **Name files**: "Chapter1_Scene1_Left" and "Chapter1_Scene1_Right"
+
+### **METHOD 2: Multi-Page Document**
+
+1. **Add pages**: Click **"+ Add page"** button
+2. **Duplicate your templates** for each scene
+3. **Modify content** for each scene
+4. **Keep consistent** formatting throughout
+
+---
+
+## 📋 **CANVA WORKFLOW CHECKLIST**
+
+### **SETUP PHASE:**
+- [ ] **Canva Pro account** activated (needed for custom dimensions)
+- [ ] **Custom dimensions** set to 8.5" × 11"
+- [ ] **Left page template** created with proper margins
+- [ ] **Right page template** created for images
+- [ ] **Text styles** saved for consistency
+
+### **CONTENT PHASE:**
+- [ ] **Upload all 60 scene images** to Canva media library
+- [ ] **Copy template** for each scene spread
+- [ ] **Replace text content** from provided narratives
+- [ ] **Replace images** with corresponding scene illustrations
+- [ ] **Check formatting** consistency across pages
+
+### **QUALITY CHECK:**
+- [ ] **Text readability** at intended size
+- [ ] **Image resolution** sufficient for printing
+- [ ] **Consistent margins** and spacing
+- [ ] **Proper page sequence** and organization
+
+---
+
+## 💾 **SAVING AND EXPORTING**
+
+### **SAVE TEMPLATES:**
+1. **File** → **"Make a copy"** for each template
+2. **Organize in folders** by chapter
+3. **Name consistently**: "Chapter1_Scene1_Left", etc.
+
+### **EXPORT FOR PRINTING:**
+1. **Click "Download"**
+2. **Select "PDF Print"** (highest quality)
+3. **Check "Crop marks and bleed"** if needed
+4. **Download each page** individually
+5. **Combine pages** in correct order for printing
+
+### **BATCH EXPORT:**
+1. **Select multiple pages** (if using multi-page method)
+2. **Download as PDF**
+3. **Choose "PDF Print"** for best quality
+
+---
+
+## 🎯 **CANVA-SPECIFIC TIPS**
+
+### **IMAGE QUALITY:**
+- **Upload images** at highest resolution available
+- **Use "Replace" function** rather than resize if quality drops
+- **Check preview** before downloading to ensure sharpness
+
+### **TEXT FORMATTING:**
+- **Create text styles** for consistency
+- **Use serif fonts** for body text (more readable)
+- **Save color palette** with your brand colors
+
+### **ORGANIZATION:**
+- **Create folders** for each chapter
+- **Name files consistently** for easy organization
+- **Save master templates** to avoid recreating formatting
+
+### **COLLABORATION:**
+- **Share templates** with team members if needed
+- **Use comments** for feedback and revisions
+- **Version control** by copying before major changes
+
+---
+
+## 🚀 **GETTING STARTED TODAY**
+
+### **IMMEDIATE ACTIONS:**
+1. **Sign up for Canva Pro** (free trial available)
+2. **Create your first template** using dimensions above
+3. **Upload your first scene image** to test quality
+4. **Create one sample spread** to validate approach
+5. **Refine template** based on results
+
+### **FIRST SCENE TO TEST:**
+- **Use**: `CHAPTER_1_Scene01_GreatArchive_Discovery_v1.0.png`
+- **With**: Provided narrative text from Archive Approach scene
+- **Format**: Coffee table 8.5" × 11" layout
+- **Goal**: Validate reading experience and visual impact
+
+**Once your first spread looks good, you can efficiently create all 60 scenes using the template system!**

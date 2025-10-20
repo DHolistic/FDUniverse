@@ -23,7 +23,7 @@
 - **KILN_GLYPH_VISUAL_REFERENCE_SHEET.md**: AI art generation reference
 
 ### **CANONICAL ORIGIN STORIES:**
-- **THE_ORIGIN_OF_60_30_10_RATIO_STORY.md**: Complete canonical origin of Pre-Audemar transformation and KILN system creation
+- **THE_ORIGIN_OF_60_30_10_RATIO_STORY.md**: Complete canonical origin of Sahaja/Samgama transformation into Vajra-Sankoca and KILN system creation
 
 ### **CANONICAL WORLD-BUILDING FOUNDATION:**
 - **KILN_UNIVERSE_REGIONAL_CLAY_FOLK_ORIGINS.md**: **CANONICAL** Regional clay folk formation system with periodic table consciousness integration
@@ -44,7 +44,7 @@
 - **KILN_UNIVERSE_REGIONAL_CLAY_FOLK_ORIGINS.md**: Five regional consciousness systems based on spiritual pathways
 
 **THE SPIRITUAL PATHWAYS FOUNDATION:**
-Before the fracture, Pre-Audemar and his empathetic voice walked five spiritual pathways across the landscape, creating the regional clay folk consciousness centers:
+Before the fracture, Sahaja/Samgama and his empathetic voice walked five spiritual pathways across the landscape, creating the regional clay folk consciousness centers:
 
 1. **Silicon-Aluminum Pathway (Memory Keepers)** - Western Clay Quarries
 2. **Titanium-Vanadium Pathway (Sacred Forge)** - Central Kiln Region  
@@ -68,7 +68,7 @@ Each region contributed specialized consciousness-enhanced clay for universal cr
 **CANONICAL CHARACTERS:**
 - `CHARACTER_PHASE1_Unfired_PureLove_v1.0.png` (Aude-Love)
 - `CHARACTER_PHASE1_OriginalCreator_PreKiln_v1.0.png` (Original Audemar) *[Future Creation]*
-- `CHARACTER_PHASE1_EmpathicVoice_PreBanishment_v1.0.png` (Pre-Audemar's empathetic voice) *[Future Creation]*
+- `CHARACTER_PHASE1_OramaMonosis_PreBanishment_v1.0.png` (Orama-Monosis empathetic voice) *[Future Creation]*
 
 ---
 

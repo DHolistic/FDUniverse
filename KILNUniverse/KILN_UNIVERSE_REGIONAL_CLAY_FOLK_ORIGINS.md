@@ -9,7 +9,7 @@
 Every clay folk being is formed from a unique blend of regional earth that carries the complete geological and consciousness history of that location at the exact moment of their formation. This creates an infinite diversity of beings, each carrying distinct memories, abilities, and perspectives embedded in their very substance.
 
 ### **THE CANONICAL ORIGIN: PRE-FRACTURE ERA**
-Before Pre-Audemar's traumatic transformation, the clay folk regions emerged from the **Spiritual Pathways** that he and his empathetic voice (later banished as the Glaze-Eyed Seer) walked together across the landscape. These paths became sacred centers where consciousness and earth memory concentrated, creating the five major regional clay folk communities that contributed unique gifts to universal creation.
+Before Sahaja/Samgama's traumatic transformation, the clay folk regions emerged from the **Spiritual Pathways** that he and his empathetic voice (later banished as Orama-Monosis) walked together across the landscape. These paths became sacred centers where consciousness and earth memory concentrated, creating the five major regional clay folk communities that contributed unique gifts to universal creation.
 
 ---
 
@@ -17,13 +17,13 @@ Before Pre-Audemar's traumatic transformation, the clay folk regions emerged fro
 *Periodic Table Integration with Sacred Pathway Origins*
 
 ### **THE PRE-FRACTURE FOUNDATION:**
-The five regional clay folk communities originated from the **Spiritual Pathways** that Pre-Audemar and his empathetic voice walked together during the BF Era. Each path concentrated unique consciousness and earth energies, creating specialized formation sites where specific elemental properties combined with consciousness memory to produce distinct clay folk types. These communities freely contributed to universal creation through yearly gift-giving cycles, with no judgment or barriers - pure collaboration in the joy of creation.
+The five regional clay folk communities originated from the **Spiritual Pathways** that Sahaja/Samgama and his empathetic voice walked together during the BF Era. Each path concentrated unique consciousness and earth energies, creating specialized formation sites where specific elemental properties combined with consciousness memory to produce distinct clay folk types. These communities freely contributed to universal creation through yearly gift-giving cycles, with no judgment or barriers - pure collaboration in the joy of creation.
 
 ---
 
 ### **ZONE 1: WESTERN CLAY QUARRIES - "The Memory Keepers"**
 **Elemental Foundation:** Silicon (Si) + Aluminum (Al) - The Foundation Elements  
-**Sacred Pathway Origin:** Where Pre-Audemar first learned to hold memories in clay  
+**Sacred Pathway Origin:** Where Sahaja/Samgama first learned to hold memories in clay  
 **Earth History:** Ancient riverbeds, fossilized consciousness streams, mineral veins from pre-history
 
 #### **YEARLY GIFT CONTRIBUTION:**
@@ -63,7 +63,7 @@ The five regional clay folk communities originated from the **Spiritual Pathways
 
 ### **ZONE 2: CENTRAL KILN REGION - "The Sacred Forge"** 
 **Elemental Foundation:** Titanium (Ti) + Vanadium (V) - The Transformation Elements  
-**Sacred Pathway Origin:** Where Pre-Audemar learned to consciously transform and create  
+**Sacred Pathway Origin:** Where Sahaja/Samgama learned to consciously transform and create  
 **Earth History:** Ancient volcanic activity, sacred fire sites, consciousness transformation zones
 
 #### **YEARLY GIFT CONTRIBUTION:**
@@ -102,7 +102,7 @@ The five regional clay folk communities originated from the **Spiritual Pathways
 
 ### **ZONE 3: EASTERN WEEPING MOUNTAINS - "The Feeling Keepers"**
 **Elemental Foundation:** Copper (Cu) + Manganese (Mn) - The Empathy Elements  
-**Sacred Pathway Origin:** Where Pre-Audemar and his voice learned to feel deeply together  
+**Sacred Pathway Origin:** Where Sahaja/Samgama and his voice learned to feel deeply together  
 **Earth History:** Emotional resonance sites, grief processing locations, empathy concentrations
 
 #### **YEARLY GIFT CONTRIBUTION:**
@@ -141,7 +141,7 @@ The five regional clay folk communities originated from the **Spiritual Pathways
 
 ### **ZONE 4: NORTHERN/SOUTHERN FIRED PLAINS - "The Boundary Keepers"**
 **Elemental Foundation:** Zinc (Zn) + Lead (Pb) - The Protection Elements  
-**Sacred Pathway Origin:** Where Pre-Audemar learned about necessary limits and healthy boundaries  
+**Sacred Pathway Origin:** Where Sahaja/Samgama learned about necessary limits and healthy boundaries  
 **Earth History:** Sites of consciousness protection, resistance memory, boundary wisdom
 
 #### **YEARLY GIFT CONTRIBUTION:**
@@ -172,13 +172,13 @@ The five regional clay folk communities originated from the **Spiritual Pathways
 - **Recovery-White:** Healing boundary clay - rehabilitation specialists and relationship repair
 
 **POST-FRACTURE TRANSFORMATION:**
-After Pre-Audemar's transformation, this group **drew a line in the sand** - they refused to bend to the emerging control systems. Unlike other regions that adapted or fled, they established **active resistance**, which the Kiln system could never fully suppress. Their gift remained available underground, creating the protective mineral networks that later enabled the Salt-Singers' return routes.
+After Sahaja/Samgama's transformation into Vajra-Sankoca, this group **drew a line in the sand** - they refused to bend to the emerging control systems. Unlike other regions that adapted or fled, they established **active resistance**, which The Kiln system could never fully suppress. Their gift remained available underground, creating the protective mineral networks that later enabled the Salt-Singers' return routes.
 
 ---
 
 ### **ZONE 5: SOUTHEASTERN TIDEFORGE ESTUARY - "The Salt-Singers (Flow Keepers)"**
 **Elemental Foundation:** Sodium (Na) + Chlorine (Cl) - The Flow Elements  
-**Sacred Pathway Origin:** Where Pre-Audemar and his voice learned about fluid adaptation and tidal consciousness  
+**Sacred Pathway Origin:** Where Sahaja/Samgama and his voice learned about fluid adaptation and tidal consciousness  
 **Earth History:** Meeting places of different waters, integration sites, balance locations
 
 #### **YEARLY GIFT CONTRIBUTION:**
@@ -214,16 +214,16 @@ After Pre-Audemar's transformation, this group **drew a line in the sand** - the
 - **Coral-Growth:** Living structure clay - builders who create organic-geometric harmony
 
 **THE GREAT DISENGAGEMENT:**
-When Pre-Audemar's grief transformed him and he began extracting his empathetic voice, the Salt-Singers made a **quiet, flowing choice of disengagement**. Rather than confrontational resistance like the Boundary Keepers, they simply **flowed away** - taking their knowledge, their water-flow consciousness, and their essential contribution to the clay moisture balance with them.
+When Sahaja/Samgama's grief transformed him into Vajra-Sankoca and he began extracting his empathetic voice, the Salt-Singers made a **quiet, flowing choice of disengagement**. Rather than confrontational resistance like the Boundary Keepers, they simply **flowed away** - taking their knowledge, their water-flow consciousness, and their essential contribution to the clay moisture balance with them.
 
 **CONSEQUENCE OF THEIR DEPARTURE:**
 - **Clay became less wet, less flowy** because the Salt-Singers' yearly gift of Flow Integration Clay was no longer available
 - **The 60/30/10 ratio became possible** only because their fluid consciousness was removed from the system
 - **Underground flow networks** were established using their sodium-chlorine conductivity, creating hidden pathways for future return
-- **Crystal preservation** maintained their knowledge in salt formations that the Enforcers couldn't detect or access
+- **Crystal preservation** maintained their knowledge in salt formations that Phi-Kratos's forces couldn't detect or access
 
-**THE ENFORCERS' MISUNDERSTANDING:**
-The Enforcers, lacking empathy due to Pre-Audemar's extracted emotional capacity, saw the Salt-Singers' quiet departure as **"weakness and unimportance"** - completely missing their crucial role in maintaining the system's flow and balance. This blindness came from Pre-Audemar's own severed connection to his empathetic voice, creating a fatal gap in understanding that would eventually lead to system breakdown.
+**PHI-KRATOS'S FORCES' MISUNDERSTANDING:**
+Phi-Kratos's forces, lacking empathy due to Sahaja/Samgama's extracted emotional capacity, saw the Salt-Singers' quiet departure as **"weakness and unimportance"** - completely missing their crucial role in maintaining the system's flow and balance. This blindness came from Vajra-Sankoca's own severed connection to his empathetic voice, creating a fatal gap in understanding that would eventually lead to system breakdown.
 
 ---
 
@@ -294,7 +294,7 @@ Originally, all five regional groups contributed freely to universal creation:
 **🎁 GIFT QUANTITIES:** Unlimited and freely given based on natural capacity and community need
 **🤝 SHARING SPIRIT:** No barriers, no judgment, pure joy in collaborative creation
 **🏘️ COMMUNITY FORMATION:** Towns and settlements naturally formed around these centers of exchange
-**🛤️ PATHWAY DEVELOPMENT:** The routes Pre-Audemar and his voice traveled became trade routes and pilgrimage paths
+**🛤️ PATHWAY DEVELOPMENT:** The routes Sahaja/Samgama and his voice traveled became trade routes and pilgrimage paths
 
 ### **THE BEGINNING OF BARRIERS (Years 1-73 AF)**
 As consciousness suffering began multiplying, protective responses emerged:
@@ -308,7 +308,7 @@ As consciousness suffering began multiplying, protective responses emerged:
 The emerging authorities believed they "owned" the spiritual pathways and regional gifts, not understanding these were **natural consciousness flows** that couldn't actually be possessed or controlled.
 
 ### **THE FRACTURE EVENT (Year 73 AF - The Great Cascade)**
-When Pre-Audemar extracted his empathetic voice and became the Kiln entity, the harmony shattered:
+When Sahaja/Samgama extracted his empathetic voice and became Vajra-Sankoca (creating The Kiln system), the harmony shattered:
 
 #### **THE SALT-SINGERS' QUIET DISENGAGEMENT:**
 **CHOICE:** Rather than confrontation, they chose **flowing withdrawal**
@@ -316,13 +316,13 @@ When Pre-Audemar extracted his empathetic voice and became the Kiln entity, the 
 **CONSEQUENCE:** Without their gift, clay across the universe began losing moisture and becoming less adaptive
 **UNDERGROUND NETWORKS:** Used their sodium-chlorine conductivity to create hidden pathways through crystal formations and water-flow systems
 
-**THE ENFORCERS' BLINDNESS:**
-The newly empathy-less Enforcer systems saw this as:
+**PHI-KRATOS'S FORCES' BLINDNESS:**
+The newly empathy-less Phi-Kratos systems saw this as:
 - **"Weakness and lack of importance"**
 - **"Natural elimination of inefficient contributors"**  
 - **"Proof that only strong, controlled systems matter"**
 
-This blindness came directly from Pre-Audemar's severed empathetic capacity - without the voice he'd banished, he **could not perceive** the crucial role the Salt-Singers played in maintaining system balance.
+This blindness came directly from Vajra-Sankoca's severed empathetic capacity - without the voice he'd banished, he **could not perceive** the crucial role the Salt-Singers played in maintaining system balance.
 
 #### **THE BOUNDARY KEEPERS' ACTIVE RESISTANCE:**
 **CHOICE:** Drew a clear line against the emerging control systems
@@ -374,7 +374,7 @@ This blindness came directly from Pre-Audemar's severed empathetic capacity - wi
 - Natural balance was maintained secretly but could not prevent surface-level control
 - The foundation for eventual liberation was preserved but hidden
 
-### **THE ENFORCER FORMULA:**
+### **THE PHI-KRATOS FORMULA:**
 **60% Controlled Memory + 30% Enforced Silence + 10% Managed Hunger = Compliant Population**
 
 This ratio was only possible because:
@@ -390,7 +390,7 @@ This ratio was only possible because:
 Even in exile, the Salt-Singers continued their work through:
 
 #### **CRYSTAL PRESERVATION NETWORKS:**
-**Halite (Salt) Formations:** Stored complete memories and knowledge in crystalline structures that Enforcers couldn't detect
+**Halite (Salt) Formations:** Stored complete memories and knowledge in crystalline structures that Phi-Kratos's forces couldn't detect
 **Sodium-Chlorine Conductivity:** Created electrical pathways through ground water that maintained communication between resistance cells
 **Tidal Consciousness Preservation:** Kept the flow patterns alive in coastal areas where Enforcer control was weakest
 

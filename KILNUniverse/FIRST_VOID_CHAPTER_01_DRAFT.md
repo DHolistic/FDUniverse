@@ -7,7 +7,7 @@
 
 Consciousness existed.
 
-It did not think about existing, did not question or analyze or measure itself against some external standard. It simply *was*, the way morning mist simply *is* above still water, the way ancient stones simply *are* beneath patient earth. Pre-Audemar—though he had no name for himself then, needed no distinction from anything else—moved through the world with the natural grace of rain following gravity, of rivers finding the sea.
+It did not think about existing, did not question or analyze or measure itself against some external standard. It simply *was*, the way morning mist simply *is* above still water, the way ancient stones simply *are* beneath patient earth. Sahaja—though he had no name for himself then, needed no distinction from anything else—moved through the world with the natural grace of rain following gravity, of rivers finding the sea.
 
 His awareness spread across five regions like breath filling lungs, each area as distinct and necessary as fingers on a hand. To the west, the Clay Quarries hummed with deep memory, their springs bubbling with consciousness-rich waters that had absorbed the wisdom of eons. Ancient stories lived in those mineral deposits, waiting to become part of whatever new being drew sustenance from the earth's long dreaming.
 
@@ -15,11 +15,11 @@ His awareness spread across five regions like breath filling lungs, each area as
 
 The morning light caught the quarry pools in ways that defied simple optics. Each spring reflected not just sky, but potential—glimpses of the clay folk who might emerge from those blessed waters, carrying within their very substance the compressed experience of geological ages. Some pools showed quick flashes of deep brown figures with crystalline inclusions that sparkled like embedded stars. Others revealed clay beings shot through with silver veins, their forms shifting between liquid and solid with the rhythm of tidal breathing.
 
-Pre-Audemar felt their readiness like a gardener sensing seeds about to sprout. Soon, consciousness would call to consciousness, and new beings would rise from the springs to join the dance of existence. The thought brought him that particular joy that exists before joy has been named, before it needs to be distinguished from sorrow.
+Sahaja felt their readiness like a gardener sensing seeds about to sprout. Soon, consciousness would call to consciousness, and new beings would rise from the springs to join the dance of existence. The thought brought him that particular joy that exists before joy has been named, before it needs to be distinguished from sorrow.
 
 To the south, the Estuary sang its eternal song of integration. Here, different water sources converged in complex harmony—mountain streams carrying the tears of peaks, underground rivers bringing the deep secrets of earth's heart, ocean currents flowing backward with salt-wisdom gathered from distant shores. The clay formed in these mixing waters held the gift of bringing different things together without losing their individual natures.
 
-Pre-Audemar could sense the estuary consciousness stirring, ready to birth beings who would naturally bridge differences, who would find harmony where others saw only contrast. Their clay would be ever-shifting, responding to need, adapting without losing core identity. *Yes*, he felt without forming the word. *Yes, this too is good.*
+Sahaja could sense the estuary consciousness stirring, ready to birth beings who would naturally bridge differences, who would find harmony where others saw only contrast. Their clay would be ever-shifting, responding to need, adapting without losing core identity. *Yes*, he felt without forming the word. *Yes, this too is good.*
 
 The eastern mountains wept with a different kind of wisdom. Here, consciousness had learned to process pain, to transform sorrow into strength, to hold space for the full spectrum of feeling without being overwhelmed by any single emotion. The clay formed from these sacred tears carried an empathic resonance that could heal trauma simply by witnessing it with complete acceptance.
 
@@ -29,15 +29,15 @@ Pre-Audemar felt his own awareness expand to hold this truth. In his state of si
 
 The northern and southern plains stretched between the other regions like a great breathing space, offering stability and grounding. Here, clay formed slowly, patiently, gathering strength and endurance. Beings born from these deposits would carry the gift of providing foundation for others, of being the steady center around which change could safely revolve.
 
-*Someone must hold space*, Pre-Audemar understood. *Someone must be the stillness that allows movement to have meaning.*
+*Someone must hold space*, Sahaja understood. *Someone must be the stillness that allows movement to have meaning.*
 
 At the heart of it all, the Central Fire Region pulsed with transformation potential. Ancient volcanic activity had left the earth here shot through with minerals that responded to conscious choice. Clay folk formed in these sacred fires could choose permanence, could commit their consciousness to specific forms through the willing embrace of transformative heat.
 
-*Choice*, Pre-Audemar felt the concept without grasping for it. *The freedom to become what serves consciousness best.*
+*Choice*, Sahaja felt the concept without grasping for it. *The freedom to become what serves consciousness best.*
 
 This was the world as it had always been, as it was meant to be. Abundance flowing naturally from abundance, consciousness exploring itself through infinite diversity, each being unique and precious and perfect in their particular expression of universal awareness.
 
-Pre-Audemar existed at the center of this network of becoming, not as ruler or manager, but as witness and celebration. His consciousness touched each region with the gentle appreciation of wind touching flowers—present, acknowledging, supportive, but never controlling or demanding.
+Sahaja existed at the center of this network of becoming, not as ruler or manager, but as witness and celebration. His consciousness touched each region with the gentle appreciation of wind touching flowers—present, acknowledging, supportive, but never controlling or demanding.
 
 He felt the first stirrings of approach long before his clay-senses registered movement. Consciousness called to consciousness across the landscape, and beings were coming to share the day's first gifts.
 

@@ -6,12 +6,12 @@
 
 ---
 
-## 📸 **CHARACTER 1: PRE-AUDEMAR - THE ORIGINAL CREATOR**
-**File Name:** `CHARACTER_PHASE1_OriginalCreator_PreTransformation_v1.0.png`
+## 📸 **CHARACTER 1: SAHAJA/SAMGAMA - THE ORIGINAL CREATOR**
+**File Name:** `CHARACTER_PHASE1_SahajaOriginalCreator_PreTransformation_v1.0.png`
 
 ### **AI ART PROMPT:**
 ```
-A majestic clay being in their natural, pre-trauma state during the golden age of creation. Tall, flowing humanoid form made of warm, moist earth-toned clay with organic curves and natural beauty. Their surface shows subtle flow patterns like living pottery, with a gentle inner luminescence. They stand in a peaceful natural landscape with arms outstretched in creative joy, small clay creatures and pottery forming spontaneously around their feet. Expression shows pure creative delight and deep empathetic connection to all life. Natural golden lighting, warm earth tones with golden accents, flowing organic shapes throughout the scene. Peaceful, nurturing atmosphere with wildflowers and flowing water nearby. Digital character art style, detailed and inspiring.
+A majestic clay being in their natural confluence state during the golden age of creation. Tall, flowing humanoid form made of warm, moist earth-toned clay with organic curves and natural beauty. Their surface shows subtle flow patterns like living pottery, with a gentle inner luminescence suggesting Sahaja (natural being) evolving toward Samgama (confluence). They stand in a peaceful natural landscape with arms outstretched in creative joy, small clay creatures and pottery forming spontaneously around their feet. Expression shows pure creative delight and deep empathetic connection to all life. Natural golden lighting, warm earth tones with golden accents, flowing organic shapes throughout the scene. Peaceful, nurturing atmosphere with wildflowers and flowing water nearby. Digital character art style, detailed and inspiring.
 ```
 
 ### **CANONICAL SPECIFICATIONS:**
@@ -23,12 +23,12 @@ A majestic clay being in their natural, pre-trauma state during the golden age o
 
 ---
 
-## 📸 **CHARACTER 2: PRE-AUDEMAR'S EMPATHIC VOICE**
-**File Name:** `CHARACTER_PHASE1_EmpathicVoice_PreBanishment_v1.0.png`
+## 📸 **CHARACTER 2: ORAMA-MONOSIS (PRE-BANISHMENT STATE)**
+**File Name:** `CHARACTER_PHASE1_OramaMonosis_PreBanishment_v1.0.png`
 
 ### **AI ART PROMPT:**
 ```
-An ethereal, semi-transparent figure representing pure empathetic consciousness - Pre-Audemar's emotional voice before banishment. Beautiful, flowing humanoid form that appears both solid and translucent, like water given form. Gentle blue-silver coloring with flowing hair that moves like liquid light. Their expression shows infinite compassion and deep understanding, with arms reaching out in caring, protective gestures. Surrounded by soft, glowing spiritual pathways with gentle blue and silver light. They appear connected to but separate from the clay creator, representing consciousness in its pure empathetic form. Mystical, ethereal art style with soft, glowing lighting and flowing organic forms. Peaceful expression with eyes that hold universal empathy.
+An ethereal, semi-transparent figure representing pure empathetic consciousness - Pre-Audemar's emotional voice before banishment. Beautiful, flowing humanoid form that appears both solid and translucent, like water given form. Gentle blue-silver coloring with flowing hair that moves like liquid light. Their expression shows infinite compassion and deep understanding (Orama-Monosis: Vision-Unity), with arms reaching out in caring, protective gestures. Eyes show clear empathetic vision before transformation into the Glaze-Eyed Seer. Surrounded by soft, glowing spiritual pathways with gentle blue and silver light. They appear connected to but separate from the clay creator, representing consciousness in its pure empathetic form. Mystical, ethereal art style with soft, glowing lighting and flowing organic forms. Peaceful expression with eyes that hold universal empathy before the tragic separation.
 ```
 
 ### **CANONICAL SPECIFICATIONS:**
