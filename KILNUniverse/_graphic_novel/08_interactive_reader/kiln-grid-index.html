@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KILN Universe - The Translator's Burden</title>
+    
+    <!-- KILN Universe Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link rel="stylesheet" href="kiln-grid-layout.css">
+    
+    <!-- KILN Universe Variables -->
+    <style>
+        :root {
+            --consciousness-blue: #4A90E2;
+            --authority-red: #E74C3C;
+            --transformation-gold: #F39C12;
+            --clay-brown: #8B4513;
+            --ceramic-cream: #F5F5DC;
+            --kiln-dark: #2C1810;
+            --moisture-cyan: #17A2B8;
+            --title-font: 'Cinzel', serif;
+            --body-font: 'Crimson Text', serif;
+            --transition-speed: 0.8s;
+            --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- KILN Universe Grid Container -->
+    <div class="kiln-universe-container" id="kilnApp">
+        
+        <!-- Orthodox KILN Law Header -->
+        <header class="kiln-header">
+            <div class="header-content">
+                <!-- KILN Universe Title -->
+                <h1 class="kiln-title">KILN UNIVERSE</h1>
+                
+                <!-- Book Tabs with Page Corner Style -->
+                <div class="book-tabs-section">
+                    <div class="book-tab active" data-book="translators-burden">
+                        The Translator's Burden
+                    </div>
+                    <div class="book-tab" data-book="first-void">
+                        The First Void
+                    </div>
+                    <div class="book-tab teaser" data-book="coming-soon">
+                        Sacred Codex
+                    </div>
+                </div>
+                
+                <!-- Story Selection Dropdown (Hidden when tabs are used) -->
+                <div class="story-selector" style="display: none;">
+                    <button class="story-dropdown" id="storySelector">
+                        <span id="currentStoryTitle">The Translator's Burden</span>
+                        <span style="margin-left: 1rem;">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-story="translators-burden">
+                            <strong>The Translator's Burden</strong>
+                            <small style="display: block; opacity: 0.8;">Orthodox KILN Prequel</small>
+                        </div>
+                        <div class="dropdown-item" data-story="first-void">
+                            <strong>The First Void</strong>
+                            <small style="display: block; opacity: 0.8;">Consciousness Origin</small>
+                        </div>
+                        <div class="dropdown-item" data-story="kiln-codex">
+                            <strong>KILN Codex</strong>
+                            <small style="display: block; opacity: 0.8;">Complete Graphic Novel</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- User Controls -->
+                <div class="user-controls">
+                    <div class="subscription-badge" id="userTier">Premium+</div>
+                    <div class="user-avatar" id="userAvatar" title="Account Settings">
+                        <span id="userInitials">KU</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Sacred Glyph Navigation - Right Panel -->
+        <nav class="kiln-navigation" id="kilnNavigation">
+            <!-- Navigation Expand/Collapse Toggle -->
+            <button class="navigation-toggle" id="navigationToggle">
+                <span>◉</span>
+            </button>
+            
+            <!-- Chapter Display - Top -->
+            <div class="chapter-display">
+                <div class="chapter-label">Chapter</div>
+                <div class="chapter-counter">
+                    <span id="currentChapter">1</span>/<span id="totalChapters">12</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons-section">
+                <!-- Previous Chapter -->
+                <div class="nav-button-container">
+                    <button class="glyph-nav-button" id="prevButton" title="Previous Chapter (Left Arrow)">
+                        <span>◦</span>
+                    </button>
+                    <div class="button-label">Previous</div>
+                </div>
+                
+                <!-- Next Chapter -->
+                <div class="nav-button-container">
+                    <button class="glyph-nav-button" id="nextButton" title="Next Chapter (Right Arrow)">
+                        <span>◉</span>
+                    </button>
+                    <div class="button-label">Next</div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="nav-bottom-section">
+                <!-- Visual Checklist Toggle / Future Therapeutic Button -->
+                <div class="nav-button-container">
+                    <button class="glyph-nav-button" id="checklistToggle" title="Visual Production Checklist (C)">
+                        <span>🎯</span>
+                    </button>
+                    <div class="button-label">Checklist</div>
+                </div>
+                
+                <!-- Settings/Menu -->
+                <div class="nav-button-container">
+                    <button class="glyph-nav-button" id="settingsButton" title="Settings (S)">
+                        <span>⚙️</span>
+                    </button>
+                    <div class="button-label">Settings</div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Main Content Area with Chapter Background -->
+        <main class="kiln-content" id="mainContent">
+            <!-- Dynamic Chapter Background -->
+            <div class="chapter-background" id="chapterBackground">
+                <!-- Background image will be loaded dynamically -->
+            </div>
+            
+        <!-- Chapter Header Overlay - Centered Single Line -->
+        <div class="chapter-header-overlay">
+            <h2 class="chapter-title" id="chapterTitle">
+                Chapter 1: The Weight of Words
+            </h2>
+            <span class="chapter-subtitle" id="chapterSubtitle">
+                - The Orthodox KILN Consciousness Preservation Protocol
+            </span>
+        </div>
+            
+            <!-- Collapsible Manuscript Text Overlay -->
+            <div class="manuscript-overlay" id="manuscriptOverlay">
+                <!-- Expand/Collapse Toggle -->
+                <button class="manuscript-toggle" id="manuscriptToggle">
+                    <span>△</span>
+                </button>
+                
+                <!-- Chapter Text Content -->
+                <div class="manuscript-text" id="manuscriptText">
+                    <div class="chapter-text">
+                        <p>In the orthodox ceramic halls of the KILN, where consciousness flows like carefully tempered clay through prescribed channels, Methodius Terev stood before the great Translation Codex. The weight of individual burden pressed against his shoulders like the clay forms he had shaped in his youth, before the Authority recognized his gift for consciousness preservation.</p>
+                        
+                        <p>The glyph-work before him shimmered with the captured essence of a thousand individual consciousnesses, each one a thread in the vast tapestry of the KILN's orthodox law. Yet as he prepared to begin the day's translation work, something stirred within him—a recognition that consciousness preservation was not merely a duty, but a sacred celebration of what it meant to be truly alive...</p>
+                    </div>
+                </div>
+                
+                <!-- Visual Production Checklist (Initially Hidden) -->
+                <div class="visual-checklist-section" id="visualChecklistSection" style="display: none;">
+                    <h3 style="color: var(--transformation-gold); font-family: var(--title-font); margin-bottom: 1rem;">
+                        🎯 Visual Production Checklist
+                    </h3>
+                    <div id="visualProductionChecklist">
+                        <!-- Checklist content will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer with KILN Law -->
+        <footer class="kiln-footer">
+            <div class="footer-content">
+                <!-- Simple Control Buttons - Left -->
+                <div class="footer-controls">
+                    <button class="simple-footer-button" id="domainButton">🌐 Domain</button>
+                    <button class="simple-footer-button monetization-on" id="monetizationToggle">💰 ON</button>
+                </div>
+                
+                <!-- KILN Law - Centered with Glyphs -->
+                <div class="kiln-law-section">
+                    <span class="law-glyph">◉</span>
+                    <div class="kiln-law-text">Orthodox KILN Law: "Consciousness preserved becomes consciousness celebrated"</div>
+                    <span class="law-glyph end">◦</span>
+                </div>
+                
+                <!-- Empty right space for balance -->
+                <div></div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Authentication Overlay (Hidden Initially) -->
+    <div id="authOverlay" class="auth-overlay" style="display: none;">
+        <!-- Authentication content will be loaded by platform system -->
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="consciousness-loader">
+            <div class="loader-glyph">◉</div>
+            <div class="loader-text">Initializing KILN Universe...</div>
+        </div>
+    </div>
+    
+    <!-- Core JavaScript -->
+    <script src="platform-system.js"></script>
+    <script src="enhanced-manuscript-loader.js"></script>
+    <script src="enhanced-reader.js"></script>
+    <script src="kiln-grid-controller.js"></script>
+    
+    <!-- Initialize KILN Universe -->
+    <script>
+        // Initialize the KILN Universe Grid System
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading screen after initialization
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 2000);
+            
+            // Initialize grid controller
+            window.kilnGridController = new KilnGridController();
+        });
+    </script>
+</body>
+</html>

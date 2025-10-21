@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KILN UNIVERSE - Interactive Graphic Novel Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-title">KILN CODEX</h1>
+            <h2 class="volume-title">Volume 1: The First Crack</h2>
+            <div class="controls">
+                <button id="editModeBtn" class="control-btn">
+                    <span class="edit-icon">✏️</span> Edit Mode
+                </button>
+                <button id="fullscreenBtn" class="control-btn">
+                    <span class="fullscreen-icon">⛶</span> Fullscreen
+                </button>
+                <div class="progress-indicator">
+                    <span id="currentScene">1</span> / <span id="totalScenes">12</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="reader-main">
+            <!-- Image Display Area -->
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img id="currentImage" src="" alt="Scene Image" class="scene-image">
+                    <div class="image-overlay" id="imageOverlay">
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">🎨</div>
+                            <p>Scene Image Loading...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Navigation -->
+                <div class="image-nav">
+                    <button id="prevImageBtn" class="nav-btn image-nav-btn">
+                        <span>‹</span>
+                    </button>
+                    <button id="nextImageBtn" class="nav-btn image-nav-btn">
+                        <span>›</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Text Content Area -->
+            <div class="text-container">
+                <div class="scene-header">
+                    <h3 id="sceneTitle" class="scene-title">Chapter 1: "Wet Clay"</h3>
+                    <div class="scene-meta">
+                        <span id="sceneType" class="scene-type">Opening Scene</span>
+                        <span id="panelInfo" class="panel-info">Panel 1 of 4</span>
+                    </div>
+                </div>
+
+                <div class="text-content">
+                    <!-- Story Text -->
+                    <div class="story-section">
+                        <h4 class="section-title">Story</h4>
+                        <div id="storyText" class="story-text editable-content" contenteditable="false">
+                            <p class="caption">"The Unfired woke drowning in their own skin."</p>
+                            <p class="description">The clay cocoon should have hardened cycles ago. Yet here they were—slick, trembling, unfinished.</p>
+                        </div>
+                    </div>
+
+                    <!-- Scene Description -->
+                    <div class="description-section">
+                        <h4 class="section-title">Scene Description</h4>
+                        <div id="sceneDescription" class="scene-description editable-content" contenteditable="false">
+                            <p>Comic book panel showing clay cocoon in underground chamber, wet membrane splitting like overripe fruit, consciousness-moisture seeping through cracks, atmospheric lighting, clay and ceramic textures, graphic novel art style with detailed linework.</p>
+                        </div>
+                    </div>
+
+                    <!-- Notes Section -->
+                    <div class="notes-section">
+                        <h4 class="section-title">Your Notes</h4>
+                        <textarea id="notesText" class="notes-textarea" placeholder="Add your notes, edits, and corrections here..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Text Navigation -->
+                <div class="text-nav">
+                    <button id="prevSceneBtn" class="nav-btn scene-nav-btn">
+                        <span>‹ Previous Scene</span>
+                    </button>
+                    <button id="nextSceneBtn" class="nav-btn scene-nav-btn">
+                        <span>Next Scene ›</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chapter Navigation Sidebar -->
+        <aside class="chapter-nav" id="chapterNav">
+            <button class="nav-toggle" id="navToggle">
+                <span>≡</span>
+            </button>
+            <div class="nav-content">
+                <h3>Chapters</h3>
+                <div class="chapter-list" id="chapterList">
+                    <!-- Chapters will be populated by JavaScript -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Edit Mode Overlay -->
+        <div class="edit-overlay" id="editOverlay">
+            <div class="edit-panel">
+                <h3>Edit Mode Active</h3>
+                <p>Click on any text to edit it. Changes are saved automatically.</p>
+                <div class="edit-controls">
+                    <button id="saveChanges" class="edit-btn save-btn">Save Changes</button>
+                    <button id="discardChanges" class="edit-btn discard-btn">Discard Changes</button>
+                    <button id="exportNotes" class="edit-btn export-btn">Export Notes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keyboard Shortcuts Help -->
+        <div class="shortcuts-help" id="shortcutsHelp">
+            <div class="shortcuts-content">
+                <h3>Keyboard Shortcuts</h3>
+                <div class="shortcuts-list">
+                    <div class="shortcut">
+                        <kbd>←</kbd> <kbd>→</kbd> <span>Navigate scenes</span>
+                    </div>
+                    <div class="shortcut">
+                        <kbd>↑</kbd> <kbd>↓</kbd> <span>Navigate images</span>
+                    </div>
+                    <div class="shortcut">
+                        <kbd>E</kbd> <span>Toggle edit mode</span>
+                    </div>
+                    <div class="shortcut">
+                        <kbd>F</kbd> <span>Toggle fullscreen</span>
+                    </div>
+                    <div class="shortcut">
+                        <kbd>H</kbd> <span>Toggle this help</span>
+                    </div>
+                    <div class="shortcut">
+                        <kbd>Space</kbd> <span>Next scene</span>
+                    </div>
+                </div>
+                <button id="closeHelp" class="close-help">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="manuscript-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

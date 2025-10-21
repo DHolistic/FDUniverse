@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KILN UNIVERSE - Professional Interactive Story Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <meta name="description" content="Experience KILN Universe stories with professional interactive reading, editing tools, and immersive visuals">
+    <meta name="keywords" content="interactive fiction, graphic novel, KILN Universe, consciousness, clay beings, sacred glyphs">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="KILN Universe - Interactive Story Platform">
+    <meta property="og:description" content="Experience consciousness awakening in a ceramic society through interactive storytelling">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kilnuniverse.com">
+    
+    <!-- Progressive Web App manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4A90E2">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,${encodeURIComponent('<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#4A90E2"/><path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="#F39C12"/></svg>')}">
+</head>
+<body>
+    <div id="app">
+        <!-- Enhanced Header with Platform Features -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="app-logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                        <circle cx="50" cy="50" r="40" fill="#4A90E2"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="#F39C12"/>
+                    </svg>
+                </div>
+                <div class="header-titles">
+                    <h1 class="app-title">KILN UNIVERSE</h1>
+                    <h2 class="volume-title">Interactive Story Platform</h2>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <!-- Story selector will be inserted here -->
+            </div>
+            
+            <div class="controls">
+                <!-- Review mode button (premium users only) will be inserted here -->
+                <button id="editModeBtn" class="control-btn">
+                    <span class="edit-icon">✏️</span> Edit Mode
+                </button>
+                <button id="fullscreenBtn" class="control-btn">
+                    <span class="fullscreen-icon">⛶</span> Fullscreen
+                </button>
+                <div class="user-menu" id="userMenu">
+                    <button class="control-btn user-btn" id="userMenuBtn">
+                        <span class="user-icon">👤</span> Account
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-info">
+                            <div class="user-avatar">👤</div>
+                            <div class="user-details">
+                                <div class="user-name" id="userName">Guest User</div>
+                                <div class="user-tier" id="userTier">Free Access</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="menu-item" onclick="platform.showProfile()">
+                                ⚙️ Profile Settings
+                            </a>
+                            <a href="#" class="menu-item" onclick="platform.showSubscription()">
+                                💎 Subscription
+                            </a>
+                            <a href="#" class="menu-item" onclick="platform.showAnalytics()">
+                                📊 Reading Analytics
+                            </a>
+                            <div class="menu-divider"></div>
+                            <a href="#" class="menu-item" onclick="platform.signOut()">
+                                🚪 Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-indicator">
+                    <span id="currentScene">1</span> / <span id="totalScenes">12</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="reader-main">
+            <!-- Image Display Area -->
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img id="currentImage" src="" alt="Scene Image" class="scene-image">
+                    <div class="image-overlay" id="imageOverlay">
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">🎨</div>
+                            <p>Scene Image Loading...</p>
+                            <div class="upgrade-hint" style="display: none;">
+                                <p>🌟 Upgrade to see AI-generated scene illustrations</p>
+                                <button class="mini-upgrade-btn" onclick="platform.showUpgradeOptions()">
+                                    Upgrade Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Animation Preview (Creator tier) -->
+                    <div class="animation-controls" id="animationControls" style="display: none;">
+                        <button class="anim-btn" onclick="reader.playAnimation()">▶️ Play</button>
+                        <button class="anim-btn" onclick="reader.pauseAnimation()">⏸️ Pause</button>
+                        <div class="animation-progress">
+                            <div class="anim-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Image Navigation -->
+                <div class="image-nav">
+                    <button id="prevImageBtn" class="nav-btn image-nav-btn" title="Previous Image (↑)">
+                        <span>‹</span>
+                    </button>
+                    <div class="image-counter">
+                        <span id="currentImageIndex">1</span> / <span id="totalImages">3</span>
+                    </div>
+                    <button id="nextImageBtn" class="nav-btn image-nav-btn" title="Next Image (↓)">
+                        <span>›</span>
+                    </button>
+                </div>
+
+                <!-- Image Generation Tools (Creator tier) -->
+                <div class="image-tools" id="imageTools" style="display: none;">
+                    <button class="tool-btn" onclick="reader.generateImage()" title="Generate New Image">
+                        🎨 Generate
+                    </button>
+                    <button class="tool-btn" onclick="reader.editPrompt()" title="Edit DALL-E Prompt">
+                        ✏️ Edit Prompt
+                    </button>
+                    <button class="tool-btn" onclick="reader.saveImage()" title="Save to Gallery">
+                        💾 Save
+                    </button>
+                </div>
+            </div>
+
+            <!-- Enhanced Text Content Area -->
+            <div class="text-container">
+                <!-- Upgrade prompt for free users will be inserted here -->
+                
+                <div class="scene-header">
+                    <h3 id="sceneTitle" class="scene-title">Loading...</h3>
+                    <div class="scene-meta">
+                        <span id="sceneType" class="scene-type">Scene Type</span>
+                        <span id="panelInfo" class="panel-info">Scene Info</span>
+                        <div class="scene-quality" id="sceneQuality" style="display: none;">
+                            <span class="quality-label">Quality:</span>
+                            <span class="quality-score">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-content">
+                    <!-- Story Text -->
+                    <div class="story-section">
+                        <h4 class="section-title">📖 Story</h4>
+                        <div id="storyText" class="story-text editable-content" contenteditable="false">
+                            <p class="loading-text">Loading story content...</p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Production Checklist -->
+                    <div class="description-section">
+                        <h4 class="section-title">� Visual Production</h4>
+                        <div id="sceneDescription" class="scene-description editable-content" contenteditable="false">
+                            <p class="loading-text">Loading visual checklist...</p>
+                        </div>
+                    </div>
+
+                    <!-- Characters section will be inserted dynamically -->
+                    <!-- Glyphs section will be inserted dynamically -->
+
+                    <!-- Notes Section -->
+                    <div class="notes-section">
+                        <h4 class="section-title">📝 Your Notes</h4>
+                        <textarea id="notesText" class="notes-textarea" 
+                                placeholder="Add your notes, edits, and corrections here..."></textarea>
+                        <div class="notes-tools">
+                            <button class="notes-btn" onclick="reader.exportNotes()" title="Export Notes">
+                                📤 Export
+                            </button>
+                            <button class="notes-btn" onclick="reader.shareNotes()" title="Share Notes">
+                                🔗 Share
+                            </button>
+                            <div class="word-count" id="wordCount">0 words</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Text Navigation -->
+                <div class="text-nav">
+                    <button id="prevSceneBtn" class="nav-btn scene-nav-btn" title="Previous Scene (←)">
+                        <span>‹ Previous</span>
+                    </button>
+                    <div class="nav-center">
+                        <div class="reading-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="readingProgress"></div>
+                            </div>
+                            <span class="progress-text">Chapter Progress</span>
+                        </div>
+                    </div>
+                    <button id="nextSceneBtn" class="nav-btn scene-nav-btn" title="Next Scene (→)">
+                        <span>Next ›</span>
+                    </button>
+                </div>
+
+                <!-- Review Panel (Premium feature) -->
+                <div id="reviewContainer" class="review-container" style="display: none;">
+                    <!-- Review interface will be inserted here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Enhanced Chapter Navigation Sidebar -->
+        <aside class="chapter-nav" id="chapterNav">
+            <button class="nav-toggle" id="navToggle" title="Toggle Navigation">
+                <span>≡</span>
+            </button>
+            <div class="nav-content">
+                <div class="nav-header">
+                    <h3>📚 Navigation</h3>
+                    <div class="story-progress">
+                        <div class="progress-ring">
+                            <div class="progress-circle"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                </div>
+                
+                <!-- Story tabs for multi-story navigation -->
+                <div class="story-tabs" id="storyTabs">
+                    <!-- Story tabs will be populated by JavaScript -->
+                </div>
+                
+                <div class="chapter-list" id="chapterList">
+                    <!-- Chapters will be populated by JavaScript -->
+                </div>
+
+                <!-- Quick actions -->
+                <div class="nav-actions">
+                    <button class="nav-action-btn" onclick="reader.bookmarkScene()" title="Bookmark Current Scene">
+                        🔖 Bookmark
+                    </button>
+                    <button class="nav-action-btn" onclick="reader.shareProgress()" title="Share Progress">
+                        📤 Share
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Authentication Overlay -->
+        <div class="auth-overlay" id="authOverlay" style="display: none;">
+            <!-- Authentication interface will be inserted by JavaScript -->
+        </div>
+
+        <!-- Edit Mode Overlay -->
+        <div class="edit-overlay" id="editOverlay">
+            <div class="edit-panel">
+                <h3>✏️ Edit Mode Active</h3>
+                <p>Click on any text to edit it. Changes are saved automatically.</p>
+                <div class="edit-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📝</span>
+                        <span>Edit story text and descriptions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎨</span>
+                        <span>Modify visual prompts</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💾</span>
+                        <span>Auto-save and export changes</span>
+                    </div>
+                </div>
+                <div class="edit-controls">
+                    <button id="saveChanges" class="edit-btn save-btn">💾 Save Changes</button>
+                    <button id="discardChanges" class="edit-btn discard-btn">❌ Discard Changes</button>
+                    <button id="exportNotes" class="edit-btn export-btn">📤 Export All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Keyboard Shortcuts Help -->
+        <div class="shortcuts-help" id="shortcutsHelp">
+            <div class="shortcuts-content">
+                <h3>⌨️ Keyboard Shortcuts</h3>
+                <div class="shortcuts-grid">
+                    <div class="shortcuts-column">
+                        <h4>Navigation</h4>
+                        <div class="shortcut">
+                            <kbd>←</kbd> <kbd>→</kbd> <span>Navigate scenes</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>↑</kbd> <kbd>↓</kbd> <span>Navigate images</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Space</kbd> <span>Next scene</span>
+                        </div>
+                    </div>
+                    <div class="shortcuts-column">
+                        <h4>Tools</h4>
+                        <div class="shortcut">
+                            <kbd>E</kbd> <span>Toggle edit mode</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>R</kbd> <span>Toggle review mode</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Ctrl</kbd>+<kbd>S</kbd> <span>Quick save</span>
+                        </div>
+                    </div>
+                    <div class="shortcuts-column">
+                        <h4>Display</h4>
+                        <div class="shortcut">
+                            <kbd>F</kbd> <span>Toggle fullscreen</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>H</kbd> <span>Show/hide help</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Esc</kbd> <span>Exit current mode</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="closeHelp" class="close-help">Close Help</button>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h3>Loading KILN Universe...</h3>
+                <p id="loadingText">Initializing consciousness streams...</p>
+            </div>
+        </div>
+
+        <!-- Notification Container -->
+        <div class="notification-container" id="notificationContainer">
+            <!-- Notifications will be inserted here -->
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="enhanced-manuscript-loader.js"></script>
+    <script src="platform-system.js"></script>
+    <script src="enhanced-reader.js"></script>
+    
+    <!-- Analytics (replace with your analytics service) -->
+    <script>
+        // Initialize analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('config', 'GA_MEASUREMENT_ID');
+        }
+    </script>
+    
+    <!-- Service Worker for offline support -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => {
+                console.log('Service worker registration failed');
+            });
+        }
+    </script>
+</body>
+</html>
