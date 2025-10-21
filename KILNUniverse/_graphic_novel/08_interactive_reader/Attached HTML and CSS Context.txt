@@ -1,0 +1,287 @@
+Attached HTML and CSS Context
+
+<div class="text-tab active" id="textTab" data-content="text">
+                        Text
+                    </div>
+
+
+/* Matched Rule from user-agent */
+div {
+  display: block;
+}
+
+/* Matched Rule from user-agent */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Matched Rule from regular */
+.text-tab {
+  background: rgba(44, 24, 16, 0.9);
+  border: 2px solid var(--consciousness-blue);
+  color: var(--ceramic-cream);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px 8px 0 0;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border-bottom: none;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgba(44, 24, 16, 0.9);
+  color: var(--ceramic-cream);
+  padding-top: 0.4rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition-behavior: normal;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+  backdrop-filter: blur(5px);
+  border-bottom-width: initial;
+  border-bottom-style: none;
+  border-bottom-color: initial;
+}
+
+/* Matched Rule from regular */
+.text-tab.active {
+  background: rgba(74, 144, 226, 0.8);
+  border-color: var(--transformation-gold);
+  color: white;
+  transform: translateY(-2px);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgba(74, 144, 226, 0.8);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+.text-box-tabs {
+  position: absolute;
+  top: -15px;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 15;
+  position: absolute;
+  top: -15px;
+  right: 1rem;
+  display: flex;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  z-index: 15;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+.chapter-header-overlay {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 10;
+  background: linear-gradient(135deg, 
+        rgba(44, 24, 16, 0.9) 0%, 
+        rgba(74, 144, 226, 0.8) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  border: 2px solid var(--transformation-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 10;
+  background-image: linear-gradient(135deg, rgba(44, 24, 16, 0.9) 0%, rgba(74, 144, 226, 0.8) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  backdrop-filter: blur(15px);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+  position: relative;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+article, aside, footer, header, hgroup, main, nav, search, section {
+  display: block;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+.kiln-content {
+  grid-area: content;
+  position: relative;
+  overflow: hidden;
+  background: rgba(245, 245, 220, 0.05);
+  backdrop-filter: blur(2px);
+  grid-row-start: content;
+  grid-column-start: content;
+  grid-row-end: content;
+  grid-column-end: content;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgba(245, 245, 220, 0.05);
+  backdrop-filter: blur(2px);
+}
+
+/* Inherited from ancestor level 4 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 4 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 4 (regular) */
+.kiln-universe-container {
+  display: grid;
+  grid-template-areas: "header header"
+        "content content"
+        "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 100%);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "header header" "content content" "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Inherited from ancestor level 4 (regular) */
+.kiln-universe-container {
+  grid-template-areas: "header header"
+            "content navigation"
+            "footer footer";
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header" "content navigation" "footer footer";
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Inherited from ancestor level 5 (user-agent) */
+body {
+  display: block;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+/* Inherited from ancestor level 6 (user-agent) */
+html {
+  display: block;
+}
+
+/* Inherited from ancestor level 6 (user-agent) */
+:root {
+  view-transition-name: root;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+:root {
+  --consciousness-blue: #4A90E2;
+  --authority-red: #E74C3C;
+  --transformation-gold: #F39C12;
+  --clay-brown: #8B4513;
+  --ceramic-cream: #F5F5DC;
+  --kiln-dark: #2C1810;
+  --moisture-cyan: #17A2B8;
+  --title-font: 'Cinzel', serif;
+  --body-font: 'Crimson Text', serif;
+  --transition-speed: 0.8s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --consciousness-blue: #4A90E2;
+  --authority-red: #E74C3C;
+  --transformation-gold: #F39C12;
+  --clay-brown: #8B4513;
+  --ceramic-cream: #F5F5DC;
+  --kiln-dark: #2C1810;
+  --moisture-cyan: #17A2B8;
+  --title-font: 'Cinzel', serif;
+  --body-font: 'Crimson Text', serif;
+  --transition-speed: 0.8s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
