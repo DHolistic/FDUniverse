@@ -1,14 +1,14 @@
 /* KILN UNIVERSE - Advanced Grid Layout with Orthodox Law Theming */
 
-/* Grid Foundation with KILN Law Structure */
+/* Grid Foundation with KILN Law Structure - Navigation now fixed positioned */
 .kiln-universe-container {
     display: grid;
     grid-template-areas: 
-        "header header header"
-        "content content navigation"
-        "footer footer footer";
+        "header header"
+        "content content"
+        "footer footer";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr auto 80px;
+    grid-template-columns: 1fr;
     min-height: 100vh;
     background: linear-gradient(135deg, 
         var(--kiln-dark) 0%, 
@@ -18,19 +18,130 @@
     overflow: hidden;
 }
 
+/* Header Chapter Text System - Slim Horizontal with Dropdown Tab */
+/* LOCKED Header Chapter System - Final Positioning */
+.header-chapter-system {
+    position: absolute;
+    top: 70px; /* Positioned at bottom 50px of 120px header */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 85%;
+    max-width: 900px;
+    height: 50px; /* Fixed height within header */
+    /* LOCKED: Perfect chapter system placement - Do not modify */
+}
+
+/* Chapter Text Box - Header Style (Same as KILN Law) */
+.header-chapter-text {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+    transition: all 0.5s var(--transition-ease);
+}
+
+.header-chapter-text.expanded {
+    opacity: 0.95;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Numerical Chapter Tab - Dropdown Style */
+.header-chapter-tab {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background: linear-gradient(135deg, 
+        var(--transformation-gold) 0%, 
+        var(--consciousness-blue) 100%);
+    color: white;
+    width: 50px;
+    height: 35px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--transformation-gold);
+    border-bottom: none;
+    z-index: 25;
+    backdrop-filter: blur(5px);
+}
+
+.header-chapter-tab:hover {
+    transform: translateX(-50%) translateY(-105%);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.header-chapter-tab.active {
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    transform: translateX(-50%) translateY(-95%);
+}
+
+/* Chapter Title Content */
+.chapter-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.chapter-number-display {
+    color: var(--transformation-gold);
+    font-weight: bold;
+}
+
+.chapter-title-text {
+    color: var(--ceramic-cream);
+}
+
+.chapter-subtitle-text {
+    color: var(--consciousness-blue);
+    font-style: italic;
+    opacity: 0.9;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
 /* Orthodox KILN Law Header with Watermarked Cover Art */
+/* LOCKED HEADER BANNER - Final Design */
 .kiln-header {
     grid-area: header;
     position: relative;
     height: 120px;
     background: linear-gradient(135deg, 
-        rgba(74, 144, 226, 0.9) 0%, 
-        rgba(231, 76, 60, 0.8) 50%, 
-        rgba(243, 156, 18, 0.9) 100%);
-    backdrop-filter: blur(10px);
-    border-bottom: 3px solid var(--transformation-gold);
+        rgba(74, 144, 226, 0.95) 0%, 
+        rgba(231, 76, 60, 0.85) 50%, 
+        rgba(243, 156, 18, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 4px solid var(--transformation-gold);
     overflow: hidden;
     z-index: 1000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    /* LOCKED: Do not modify - Final banner design */
 }
 
 /* Watermarked Cover Art Background */
@@ -66,15 +177,16 @@
     z-index: 1;
 }
 
-/* Header Content Grid */
+/* LOCKED Header Content Grid - Final Layout */
 .header-content {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    height: 100%;
-    padding: 0 2rem;
+    height: 70px; /* Top portion of 120px header */
+    padding: 0 2.5rem;
     position: relative;
     z-index: 10;
+    /* LOCKED: Precise spacing and alignment - Do not modify */
 }
 
 /* Book Tabs - Page Corner Style */
@@ -94,11 +206,46 @@
     font-family: var(--body-font);
     font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.3s var(--transition-ease);
+    transition: all 0.4s var(--transition-ease);
     backdrop-filter: blur(5px);
     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
     border-radius: 8px 8px 0 0;
     margin-right: 0.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.book-tab.expanded,
+.book-tab:hover,
+.book-tab.active {
+    width: 180px;
+}
+
+.book-tab .tab-text {
+    display: inline-block;
+    position: relative;
+}
+
+.book-tab .tab-text::after {
+    content: attr(data-full-title);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s var(--transition-ease);
+    white-space: nowrap;
+}
+
+.book-tab.expanded .tab-text,
+.book-tab:hover .tab-text,
+.book-tab.active .tab-text {
+    opacity: 0;
+}
+
+.book-tab.expanded .tab-text::after,
+.book-tab:hover .tab-text::after,
+.book-tab.active .tab-text::after {
+    opacity: 1;
 }
 
 .book-tab::before {
@@ -136,20 +283,22 @@
     transform: translateY(-1px);
 }
 
-/* KILN Universe Logo/Title */
+/* LOCKED KILN Universe Logo/Title - Final Typography */
 .kiln-title {
     font-family: var(--title-font);
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 700;
     color: var(--ceramic-cream);
     text-shadow: 
-        0 0 10px var(--consciousness-blue),
-        0 0 20px var(--consciousness-blue),
-        2px 2px 4px rgba(0, 0, 0, 0.8);
+        0 0 12px var(--consciousness-blue),
+        0 0 24px var(--consciousness-blue),
+        3px 3px 6px rgba(0, 0, 0, 0.9);
     margin: 0;
     display: flex;
     align-items: center;
     gap: 1rem;
+    letter-spacing: 1px;
+    /* LOCKED: Perfect title styling - Do not modify */
 }
 
 .kiln-title::before {
@@ -265,11 +414,12 @@
     gap: 1rem;
 }
 
+/* LOCKED User Avatar - Final Design */
 .user-avatar {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 2px solid var(--transformation-gold);
+    border: 3px solid var(--transformation-gold);
     background: linear-gradient(135deg, 
         var(--consciousness-blue) 0%, 
         var(--authority-red) 100%);
@@ -279,85 +429,106 @@
     color: white;
     font-family: var(--title-font);
     font-weight: bold;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* LOCKED: Perfect avatar proportions - Do not modify */
 }
 
 .user-avatar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px var(--transformation-gold);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px var(--transformation-gold);
+    border-width: 4px;
 }
 
-.subscription-badge {
-    background: linear-gradient(45deg, var(--transformation-gold), var(--consciousness-blue));
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Sacred Glyph Navigation - Right Panel with Manuscript Template */
+/* Sacred Glyph Navigation - Bottom Right Upward Expansion */
 .kiln-navigation {
-    grid-area: navigation;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
     background: linear-gradient(180deg, 
-        transparent 0%, 
-        rgba(44, 24, 16, 0.95) 20%, 
+        rgba(44, 24, 16, 0.95) 0%, 
         rgba(44, 24, 16, 0.98) 100%);
     backdrop-filter: blur(10px);
-    border-left: 3px solid var(--consciousness-blue);
-    border-radius: 20px 0 0 20px;
+    border: 3px solid var(--consciousness-blue);
+    border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0.5rem;
-    position: relative;
-    width: 60px;
-    min-height: calc(100vh - 200px);
-    transform: translateX(70%);
-    transition: transform 0.5s var(--transition-ease), width 0.5s var(--transition-ease);
+    justify-content: flex-start;
+    padding: 1rem 0.75rem;
+    width: 70px;
+    height: 70px;
+    transform: translateY(0);
+    transition: all 0.5s var(--transition-ease);
     z-index: 100;
-    max-height: 80vh;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .kiln-navigation.expanded {
-    transform: translateX(0);
-    width: 180px;
+    height: 320px;
+    width: 80px;
+    transform: translateY(-250px);
 }
 
-/* Navigation Expand/Collapse Button */
+/* Navigation Expand/Collapse Toggle - Now at bottom */
 .navigation-toggle {
-    position: absolute;
-    top: 1rem;
-    left: -2rem;
     background: linear-gradient(135deg, 
         var(--transformation-gold) 0%, 
         var(--consciousness-blue) 100%);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    position: relative;
 }
 
 .navigation-toggle:hover {
-    transform: scale(1.1) rotate(180deg);
+    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
 }
 
-/* Chapter Display - Top of Panel */
-.chapter-display {
+/* Toggle button glyph states */
+.navigation-toggle .toggle-glyph {
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Collapsed state - minus/contract symbol */
+.navigation-toggle .toggle-glyph::before {
+    content: '◦';
+    color: white;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Expanded state - plus/expand symbol */
+.kiln-navigation.expanded .navigation-toggle .toggle-glyph::before {
+    content: '◉';
+    color: var(--transformation-gold);
+    text-shadow: 0 0 6px var(--transformation-gold);
+}
+
+/* Chapter Display - Hidden when collapsed, top when expanded */
+.chapter-display {
+    display: none;
     flex-direction: column;
     align-items: center;
+    margin-top: auto;
     margin-bottom: 1rem;
     padding: 0.75rem 0.5rem;
     background: rgba(74, 144, 226, 0.2);
@@ -365,17 +536,56 @@
     border: 1px solid var(--consciousness-blue);
     transition: all 0.3s ease;
     width: 90%;
+    opacity: 0;
+}
+
+/* Enhanced Chapter Display for Action Scene Panels */
+.chapter-label {
+    font-family: var(--title-font);
+    font-size: 0.7rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.chapter-counter {
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    color: var(--ceramic-cream);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.chapter-title-small {
+    font-size: 0.6rem;
+    color: var(--consciousness-blue);
+    opacity: 0.8;
+    font-style: italic;
 }
 
 .kiln-navigation.expanded .chapter-display {
-    padding: 1rem;
-    width: 95%;
+    display: flex;
+    opacity: 1;
+    animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .chapter-label {
     color: var(--ceramic-cream);
     font-family: var(--title-font);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     opacity: 0.8;
     margin-bottom: 0.25rem;
     text-transform: uppercase;
@@ -383,30 +593,27 @@
     text-align: center;
 }
 
-.kiln-navigation.expanded .chapter-label {
-    font-size: 0.8rem;
-}
-
 .chapter-counter {
     color: var(--transformation-gold);
     font-family: var(--title-font);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     line-height: 1;
     text-align: center;
 }
 
-.kiln-navigation.expanded .chapter-counter {
-    font-size: 1rem;
-}
-
-/* Navigation Buttons - Manuscript Style Layout */
+/* Navigation Buttons - Vertical Stack when expanded */
 .nav-buttons-section {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.75rem;
     align-items: center;
     width: 100%;
+    margin-bottom: 1rem;
+}
+
+.kiln-navigation.expanded .nav-buttons-section {
+    display: flex;
 }
 
 .nav-button-container {
@@ -415,18 +622,25 @@
     align-items: center;
     transition: all 0.3s ease;
     width: 100%;
+    opacity: 0;
 }
 
 .kiln-navigation.expanded .nav-button-container {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 1rem;
-    gap: 0.75rem;
+    opacity: 1;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.kiln-navigation.expanded .nav-button-container:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.kiln-navigation.expanded .nav-button-container:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
 .glyph-nav-button {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(135deg, 
         var(--consciousness-blue) 0%, 
         var(--transformation-gold) 100%);
@@ -434,7 +648,7 @@
     border-radius: 50%;
     color: white;
     font-family: var(--title-font);
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.4s var(--transition-ease);
     box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
@@ -444,12 +658,6 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-}
-
-.kiln-navigation.expanded .glyph-nav-button {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
 }
 
 .glyph-nav-button::before {
@@ -475,37 +683,205 @@
     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.6);
 }
 
+/* Navigation Glyph Switching System */
+.nav-glyph {
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+}
+
+/* Collapsed state - show placeholder glyphs */
+.kiln-navigation:not(.expanded) .nav-glyph::before {
+    content: attr(data-collapsed);
+    font-family: var(--title-font);
+    font-weight: bold;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Expanded state - show actual navigation glyphs */
+.kiln-navigation.expanded .nav-glyph::before {
+    content: attr(data-expanded);
+    font-family: var(--title-font);
+    text-shadow: 0 0 6px var(--transformation-gold);
+    animation: glyphReveal 0.5s ease;
+}
+
+@keyframes glyphReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(180deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Hide original span content when using data attributes */
+.nav-glyph {
+    font-size: 0;
+}
+
+.nav-glyph::before {
+    font-size: 1.1rem;
+}
+
 /* Button Labels - Hidden when collapsed */
 .button-label {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     color: var(--ceramic-cream);
-    opacity: 0;
+    opacity: 0.9;
     text-align: center;
     margin-top: 0.25rem;
     font-family: var(--body-font);
     line-height: 1;
-    transition: opacity 0.3s ease;
-    position: absolute;
     white-space: nowrap;
-}
-
-.kiln-navigation.expanded .button-label {
-    opacity: 0.9;
-    font-size: 0.7rem;
-    position: static;
-    margin-top: 0;
-    margin-left: 0.5rem;
-    text-align: left;
 }
 
 /* Bottom Section */
 .nav-bottom-section {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.75rem;
     align-items: center;
-    margin-top: auto;
     width: 100%;
+    margin-bottom: 1rem;
+}
+
+.kiln-navigation.expanded .nav-bottom-section {
+    display: flex;
+}
+
+/* Expandable Navigation Panel System */
+.nav-button-container.expandable-nav {
+    position: relative;
+    transition: all 0.4s var(--transition-ease);
+}
+
+.nav-button-container.expandable-nav[data-expanded="true"] {
+    background: rgba(74, 144, 226, 0.15);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border: 1px solid var(--consciousness-blue);
+}
+
+/* Navigation Panel Content */
+.nav-panel-content {
+    position: absolute;
+    right: 120%;
+    top: 0;
+    width: 220px;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    z-index: 1001;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s var(--transition-ease);
+    pointer-events: none;
+}
+
+.nav-panel-content.expanded {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.panel-header {
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.75rem 1rem 0.5rem;
+    border-bottom: 1px solid var(--consciousness-blue);
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+.panel-options {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.panel-option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.panel-option:hover {
+    background: rgba(74, 144, 226, 0.3);
+    border-color: var(--transformation-gold);
+    transform: translateX(3px);
+}
+
+.panel-option.active {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+}
+
+/* Enhanced Navigation Buttons for Edit Mode */
+.nav-button-container.expandable-nav .glyph-nav-button:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--transformation-gold);
+    transform: scale(1.05);
+}
+
+.nav-button-container.expandable-nav[data-expanded="true"] .glyph-nav-button {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.4);
+}
+
+/* Panel Toggle Animation */
+@keyframes panelSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.nav-panel-content.expanding {
+    animation: panelSlideIn 0.4s var(--transition-ease);
+}
+
+.kiln-navigation.expanded .nav-bottom-section .nav-button-container:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.kiln-navigation.expanded .nav-bottom-section .nav-button-container:nth-child(2) {
+    animation-delay: 0.4s;
 }
 
 /* Therapeutic Mode Button Enhancement */
@@ -560,50 +936,6 @@
     filter: brightness(0.7) contrast(1.2);
     transition: all 1s var(--transition-ease);
     z-index: 1;
-}
-
-/* Chapter One Text Box - Centered Single Line Footer Style */
-.chapter-header-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    background: linear-gradient(135deg, 
-        rgba(44, 24, 16, 0.9) 0%, 
-        rgba(74, 144, 226, 0.8) 100%);
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    border: 2px solid var(--transformation-gold);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    white-space: nowrap;
-}
-
-.chapter-title {
-    font-family: var(--title-font);
-    font-size: 1rem;
-    color: var(--ceramic-cream);
-    margin: 0;
-    text-shadow: 
-        0 0 8px var(--consciousness-blue),
-        1px 1px 2px rgba(0, 0, 0, 0.8);
-    line-height: 1;
-    display: inline;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.chapter-subtitle {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    color: var(--transformation-gold);
-    margin: 0;
-    opacity: 0.95;
-    font-style: italic;
-    display: inline;
-    margin-left: 1rem;
 }
 
 /* Loading Screen */
@@ -662,13 +994,14 @@
     gap: 2rem;
 }
 
-/* KILN Law Text - Centered with Glyphs */
+/* KILN Law Text - Integrated with Expanded Text */
 .kiln-law-section {
     grid-column: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    position: relative;
 }
 
 .law-glyph {
@@ -688,11 +1021,74 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .law-glyph.end {
     color: var(--transformation-gold);
     text-shadow: 0 0 8px var(--transformation-gold);
+    position: relative;
+}
+
+/* Water Flowing Glyph Animation at End of Law Text */
+.law-glyph.end::after {
+    content: '〰〰〰';
+    position: absolute;
+    top: -0.5rem;
+    left: 100%;
+    margin-left: 1rem;
+    color: var(--consciousness-blue);
+    font-size: 1.2rem;
+    opacity: 0.6;
+    animation: waterFlowEnd 4s ease-in-out infinite;
+}
+
+@keyframes waterFlowEnd {
+    0%, 100% { 
+        transform: translateX(0) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateX(10px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateX(5px) scale(1.2);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translateX(15px) scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+/* Integrated Expanded Text Content */
+.integrated-text-content {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--consciousness-blue);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s var(--transition-ease);
+    z-index: 5;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.integrated-text-content.expanded {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Simple Control Buttons */
@@ -858,6 +1254,57 @@
     .book-tab {
         padding: 0.4rem 0.8rem 0.4rem 1rem;
         font-size: 0.8rem;
+        width: 50px;
+    }
+    
+    .book-tab.expanded,
+    .book-tab:hover,
+    .book-tab.active {
+        width: 140px;
+    }
+    
+    /* Responsive Simplified Checklist */
+    .checklist-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .checklist-item-simple {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .checkbox-toggle {
+        font-size: 1rem;
+    }
+    
+    .chapter-lock-status {
+        padding: 1rem;
+    }
+    
+    .lock-message {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Responsive Expandable Navigation */
+    .nav-panel-content {
+        right: 110%;
+        width: 180px;
+    }
+    
+    .panel-option {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .chapter-display {
+        padding: 0.5rem;
+    }
+    
+    .chapter-counter {
+        font-size: 0.8rem;
     }
 }
 
@@ -878,6 +1325,119 @@
 .checklist-item.critical {
     border-left-color: var(--authority-red);
     background: rgba(231, 76, 60, 0.05);
+}
+
+.checklist-item.important {
+    border-left-color: var(--consciousness-blue);
+    background: rgba(74, 144, 226, 0.05);
+}
+
+.checklist-item.complete {
+    border-left-color: var(--transformation-gold);
+    background: rgba(243, 156, 18, 0.1);
+}
+
+/* Simplified Grid Checklist Styles */
+.simple-checklist-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.checklist-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.checklist-item-simple {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(44, 24, 16, 0.6);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    color: var(--ceramic-cream);
+    font-family: var(--body-font);
+    cursor: pointer;
+    transition: all 0.4s var(--transition-ease);
+    backdrop-filter: blur(5px);
+}
+
+.checklist-item-simple:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--transformation-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.checklist-item-simple.completed {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+.checkbox-toggle {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--consciousness-blue);
+    min-width: 1.5rem;
+    transition: all 0.3s var(--transition-ease);
+}
+
+.checklist-item-simple.completed .checkbox-toggle {
+    color: var(--transformation-gold);
+}
+
+.item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.checklist-item-simple.completed .item-title {
+    text-shadow: 0 0 10px var(--transformation-gold);
+}
+
+/* Chapter Lock Status */
+.chapter-lock-status {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.2) 0%, 
+        rgba(74, 144, 226, 0.2) 100%);
+    border: 3px solid var(--transformation-gold);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: canonicalGlow 3s ease-in-out infinite alternate;
+}
+
+.lock-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--transformation-gold);
+    font-family: var(--title-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.lock-glyph {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 10px var(--transformation-gold));
+}
+
+@keyframes canonicalGlow {
+    0% { 
+        box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+    }
+    100% { 
+        box-shadow: 0 0 30px rgba(243, 156, 18, 0.6);
+    }
 }
 
 .checklist-item.important {

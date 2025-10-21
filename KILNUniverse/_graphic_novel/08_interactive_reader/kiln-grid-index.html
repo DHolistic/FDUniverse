@@ -33,22 +33,23 @@
     <!-- KILN Universe Grid Container -->
     <div class="kiln-universe-container" id="kilnApp">
         
+        <!-- 🔒 LOCKED HEADER BANNER - Final Design - Do Not Modify -->
         <!-- Orthodox KILN Law Header -->
         <header class="kiln-header">
             <div class="header-content">
                 <!-- KILN Universe Title -->
                 <h1 class="kiln-title">KILN UNIVERSE</h1>
                 
-                <!-- Book Tabs with Page Corner Style -->
+                <!-- Book Tabs with Page Corner Style - Expandable -->
                 <div class="book-tabs-section">
                     <div class="book-tab active" data-book="translators-burden">
-                        The Translator's Burden
+                        <span class="tab-text" data-full-title="The Translator's Burden">TTB</span>
                     </div>
                     <div class="book-tab" data-book="first-void">
-                        The First Void
+                        <span class="tab-text" data-full-title="The First Void">TFV</span>
                     </div>
                     <div class="book-tab teaser" data-book="coming-soon">
-                        Sacred Codex
+                        <span class="tab-text" data-full-title="Sacred Codex">SC</span>
                     </div>
                 </div>
                 
@@ -76,64 +77,117 @@
                 
                 <!-- User Controls -->
                 <div class="user-controls">
-                    <div class="subscription-badge" id="userTier">Premium+</div>
                     <div class="user-avatar" id="userAvatar" title="Account Settings">
                         <span id="userInitials">KU</span>
                     </div>
                 </div>
             </div>
+            
+            <!-- Header Chapter System - Slim Horizontal with Dropdown Tab -->
+            <div class="header-chapter-system">
+                <!-- Numerical Chapter Tab - Dropdown -->
+                <div class="header-chapter-tab" id="headerChapterTab">
+                    1
+                </div>
+                
+                <!-- Chapter Text Box - Header Style -->
+                <div class="header-chapter-text" id="headerChapterText">
+                    <div class="chapter-title-content">
+                        <span class="chapter-number-display">Chapter 1:</span>
+                        <span class="chapter-title-text">The Weight of Words</span>
+                        <span class="chapter-subtitle-text">The Orthodox KILN Consciousness Preservation Protocol</span>
+                    </div>
+                </div>
+            </div>
         </header>
         
-        <!-- Sacred Glyph Navigation - Right Panel -->
+        <!-- Sacred Glyph Navigation - Bottom Right Upward Expansion -->
         <nav class="kiln-navigation" id="kilnNavigation">
             <!-- Navigation Expand/Collapse Toggle -->
             <button class="navigation-toggle" id="navigationToggle">
-                <span>◉</span>
+                <span class="toggle-glyph"></span>
             </button>
             
             <!-- Chapter Display - Top -->
             <div class="chapter-display">
-                <div class="chapter-label">Chapter</div>
+                <div class="chapter-label">Action Scene</div>
                 <div class="chapter-counter">
-                    <span id="currentChapter">1</span>/<span id="totalChapters">12</span>
+                    Panel <span id="currentPanel">4</span> of <span id="totalPanels">4</span>
                 </div>
+                <div class="chapter-title-small">Chapter <span id="currentChapter">1</span></div>
             </div>
             
             <!-- Navigation Buttons -->
             <div class="nav-buttons-section">
-                <!-- Previous Chapter -->
-                <div class="nav-button-container">
-                    <button class="glyph-nav-button" id="prevButton" title="Previous Chapter (Left Arrow)">
-                        <span>◦</span>
+                <!-- Previous Panel/Chapter -->
+                <div class="nav-button-container expandable-nav" data-expanded="false">
+                    <button class="glyph-nav-button" id="prevButton" title="Previous Panel/Chapter (Left Arrow)">
+                        <span class="nav-glyph" data-collapsed="—" data-expanded="◦">—</span>
                     </button>
                     <div class="button-label">Previous</div>
+                    <!-- Expandable Panel Content -->
+                    <div class="nav-panel-content" style="display: none;">
+                        <div class="panel-header">Previous Navigation</div>
+                        <div class="panel-options">
+                            <button class="panel-option" data-action="prev-panel">◦ Previous Panel</button>
+                            <button class="panel-option" data-action="prev-chapter">◦ Previous Chapter</button>
+                            <button class="panel-option" data-action="first-panel">◦ First Panel</button>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Next Chapter -->
-                <div class="nav-button-container">
-                    <button class="glyph-nav-button" id="nextButton" title="Next Chapter (Right Arrow)">
-                        <span>◉</span>
+                <!-- Next Panel/Chapter -->
+                <div class="nav-button-container expandable-nav" data-expanded="false">
+                    <button class="glyph-nav-button" id="nextButton" title="Next Panel/Chapter (Right Arrow)">
+                        <span class="nav-glyph" data-collapsed="+" data-expanded="◉">+</span>
                     </button>
                     <div class="button-label">Next</div>
+                    <!-- Expandable Panel Content -->
+                    <div class="nav-panel-content" style="display: none;">
+                        <div class="panel-header">Next Navigation</div>
+                        <div class="panel-options">
+                            <button class="panel-option" data-action="next-panel">◉ Next Panel</button>
+                            <button class="panel-option" data-action="next-chapter">◉ Next Chapter</button>
+                            <button class="panel-option" data-action="last-panel">◉ Last Panel</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Bottom Section -->
             <div class="nav-bottom-section">
-                <!-- Visual Checklist Toggle / Future Therapeutic Button -->
-                <div class="nav-button-container">
-                    <button class="glyph-nav-button" id="checklistToggle" title="Visual Production Checklist (C)">
-                        <span>🎯</span>
+                <!-- Visual Checklist Toggle / Edit Mode -->
+                <div class="nav-button-container expandable-nav" data-expanded="false">
+                    <button class="glyph-nav-button" id="checklistToggle" title="Edit Mode Checklist (C)">
+                        <span class="nav-glyph" data-collapsed="—" data-expanded="🎯">—</span>
                     </button>
-                    <div class="button-label">Checklist</div>
+                    <div class="button-label">Edit Mode</div>
+                    <!-- Expandable Panel Content -->
+                    <div class="nav-panel-content" style="display: none;">
+                        <div class="panel-header">Edit Mode Tools</div>
+                        <div class="panel-options">
+                            <button class="panel-option" data-action="edit-text">🎯 Text Editor</button>
+                            <button class="panel-option" data-action="edit-scene">🎯 Scene Editor</button>
+                            <button class="panel-option" data-action="checklist">🎯 Validation</button>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Settings/Menu -->
-                <div class="nav-button-container">
-                    <button class="glyph-nav-button" id="settingsButton" title="Settings (S)">
-                        <span>⚙️</span>
+                <!-- Chapter Order Settings -->
+                <div class="nav-button-container expandable-nav" data-expanded="false">
+                    <button class="glyph-nav-button" id="orderButton" title="Chapter Order (O)">
+                        <span class="nav-glyph" data-collapsed="+" data-expanded="⚙️">+</span>
                     </button>
-                    <div class="button-label">Settings</div>
+                    <div class="button-label">Order</div>
+                    <!-- Expandable Panel Content -->
+                    <div class="nav-panel-content" style="display: none;">
+                        <div class="panel-header">Chapter Order</div>
+                        <div class="panel-options">
+                            <button class="panel-option active" data-action="ascending">⚙️ Ascending (1→12)</button>
+                            <button class="panel-option" data-action="descending">⚙️ Descending (12→1)</button>
+                            <button class="panel-option" data-action="custom">⚙️ Custom Order</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -145,23 +199,14 @@
                 <!-- Background image will be loaded dynamically -->
             </div>
             
-        <!-- Chapter Header Overlay - Centered Single Line -->
-        <div class="chapter-header-overlay">
-            <h2 class="chapter-title" id="chapterTitle">
-                Chapter 1: The Weight of Words
-            </h2>
-            <span class="chapter-subtitle" id="chapterSubtitle">
-                - The Orthodox KILN Consciousness Preservation Protocol
-            </span>
-        </div>
+            <!-- Text box removed - content now in integrated footer system -->
             
-            <!-- Collapsible Manuscript Text Overlay -->
-            <div class="manuscript-overlay" id="manuscriptOverlay">
-                <!-- Expand/Collapse Toggle -->
-                <button class="manuscript-toggle" id="manuscriptToggle">
-                    <span>△</span>
-                </button>
-                
+        </main>
+        
+        <!-- Footer with KILN Law and Integrated Text -->
+        <footer class="kiln-footer">
+            <!-- Integrated Text Content - Expands upward -->
+            <div class="integrated-text-content" id="integratedTextContent">
                 <!-- Chapter Text Content -->
                 <div class="manuscript-text" id="manuscriptText">
                     <div class="chapter-text">
@@ -177,14 +222,51 @@
                         🎯 Visual Production Checklist
                     </h3>
                     <div id="visualProductionChecklist">
-                        <!-- Checklist content will be loaded dynamically -->
+                        <!-- Simplified 2x3 Grid Checklist -->
+                        <div class="simple-checklist-grid">
+                            <div class="checklist-row">
+                                <div class="checklist-item-simple" data-item="atmosphere">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">Atmosphere</span>
+                                </div>
+                                <div class="checklist-item-simple" data-item="characters">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">Characters</span>
+                                </div>
+                            </div>
+                            <div class="checklist-row">
+                                <div class="checklist-item-simple" data-item="glyphs">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">Sacred Glyphs</span>
+                                </div>
+                                <div class="checklist-item-simple" data-item="style">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">KILN Style</span>
+                                </div>
+                            </div>
+                            <div class="checklist-row">
+                                <div class="checklist-item-simple" data-item="consistency">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">Consistency</span>
+                                </div>
+                                <div class="checklist-item-simple" data-item="canonical">
+                                    <span class="checkbox-toggle" data-checked="false">[ ]</span>
+                                    <span class="item-title">Canonical</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chapter Lock Status -->
+                        <div class="chapter-lock-status" id="chapterLockStatus" style="display: none;">
+                            <div class="lock-message">
+                                <span class="lock-glyph">🔒</span>
+                                <span class="lock-text">Chapter Locked - All items validated for KILN Universe canonical consistency</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        
-        <!-- Footer with KILN Law -->
-        <footer class="kiln-footer">
+            
             <div class="footer-content">
                 <!-- Simple Control Buttons - Left -->
                 <div class="footer-controls">
@@ -192,10 +274,10 @@
                     <button class="simple-footer-button monetization-on" id="monetizationToggle">💰 ON</button>
                 </div>
                 
-                <!-- KILN Law - Centered with Glyphs -->
+                <!-- KILN Law - Centered with Glyphs and Water Flow -->
                 <div class="kiln-law-section">
                     <span class="law-glyph">◉</span>
-                    <div class="kiln-law-text">Orthodox KILN Law: "Consciousness preserved becomes consciousness celebrated"</div>
+                    <div class="kiln-law-text" id="kilnLawText">Orthodox KILN Law: "Consciousness preserved becomes consciousness celebrated"</div>
                     <span class="law-glyph end">◦</span>
                 </div>
                 

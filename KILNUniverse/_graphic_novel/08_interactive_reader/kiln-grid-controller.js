@@ -4,10 +4,17 @@ class KilnGridController {
         this.currentStory = 'translators-burden';
         this.currentChapter = 1;
         this.totalChapters = 12;
+        this.currentPanel = 4;
+        this.totalPanels = 4;
         this.manuscriptExpanded = false;
         this.checklistVisible = false;
         this.monetizationEnabled = true;
         this.navigationExpanded = false;
+        this.activeTab = 'text';
+        this.integratedTextExpanded = false;
+        this.headerChapterExpanded = false;
+        this.chapterOrder = 'ascending'; // ascending, descending, custom
+        this.expandedPanels = new Set(); // Track which navigation panels are expanded
         
         // Story-specific configurations
         this.storyConfigs = {
@@ -88,6 +95,38 @@ class KilnGridController {
             this.toggleNavigation();
         });
 
+        // KILN law text (click to expand)
+        document.getElementById('kilnLawText').addEventListener('click', () => {
+            this.toggleIntegratedText();
+        });
+
+        // Header chapter tab
+        document.getElementById('headerChapterTab').addEventListener('click', () => {
+            this.toggleHeaderChapter();
+        });
+
+        // Expandable navigation panels
+        this.setupExpandableNavigation();
+
+        // Panel option clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('panel-option')) {
+                this.handlePanelOptionClick(e.target);
+            }
+        });
+
+        // Close panels when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-button-container.expandable-nav')) {
+                this.closeAllNavPanels();
+            }
+        });
+
+        // Header chapter text (click to collapse)
+        document.getElementById('headerChapterText').addEventListener('click', () => {
+            this.toggleHeaderChapter();
+        });
+
         // Visual checklist toggle
         document.getElementById('checklistToggle').addEventListener('click', () => {
             this.toggleVisualChecklist();
@@ -121,12 +160,77 @@ class KilnGridController {
         
         if (this.navigationExpanded) {
             navigation.classList.add('expanded');
-            toggle.innerHTML = '<span>◦</span>';
             toggle.setAttribute('title', 'Collapse Navigation');
         } else {
             navigation.classList.remove('expanded');
-            toggle.innerHTML = '<span>◉</span>';
             toggle.setAttribute('title', 'Expand Navigation');
+        }
+    }
+
+    switchTab(tabType) {
+        // Tab system removed with text box
+        this.activeTab = tabType;
+        
+        if (tabType === 'text') {
+            this.showTextContent();
+        } else if (tabType === 'law') {
+            this.showLawContent();
+        }
+    }
+
+    showTextContent() {
+        const integratedContent = document.getElementById('integratedTextContent');
+        const textSection = integratedContent.querySelector('.manuscript-text');
+        const checklistSection = integratedContent.querySelector('.visual-checklist-section');
+        
+        if (textSection) textSection.style.display = 'block';
+        if (checklistSection) checklistSection.style.display = 'none';
+        
+        this.showNotification('Switched to manuscript text view', 'info');
+    }
+
+    showLawContent() {
+        const integratedContent = document.getElementById('integratedTextContent');
+        const textSection = integratedContent.querySelector('.manuscript-text');
+        const checklistSection = integratedContent.querySelector('.visual-checklist-section');
+        
+        if (textSection) textSection.style.display = 'none';
+        if (checklistSection) checklistSection.style.display = 'block';
+        
+        // Auto-expand the integrated text to show law content
+        if (!this.integratedTextExpanded) {
+            this.toggleIntegratedText();
+        }
+        
+        // Load checklist if not already loaded
+        this.loadVisualChecklist();
+        this.showNotification('Switched to KILN law checklist view', 'info');
+    }
+
+    toggleIntegratedText() {
+        const integratedContent = document.getElementById('integratedTextContent');
+        
+        this.integratedTextExpanded = !this.integratedTextExpanded;
+        
+        if (this.integratedTextExpanded) {
+            integratedContent.classList.add('expanded');
+        } else {
+            integratedContent.classList.remove('expanded');
+        }
+    }
+
+    toggleHeaderChapter() {
+        const headerChapterText = document.getElementById('headerChapterText');
+        const headerChapterTab = document.getElementById('headerChapterTab');
+        
+        this.headerChapterExpanded = !this.headerChapterExpanded;
+        
+        if (this.headerChapterExpanded) {
+            headerChapterText.classList.add('expanded');
+            headerChapterTab.classList.add('active');
+        } else {
+            headerChapterText.classList.remove('expanded');
+            headerChapterTab.classList.remove('active');
         }
     }
 
@@ -326,24 +430,16 @@ class KilnGridController {
     }
 
     toggleVisualChecklist() {
-        const section = document.getElementById('visualChecklistSection');
-        const button = document.getElementById('checklistToggle');
+        // Show law content (checklist) and expand integrated text
+        this.showLawContent();
         
-        this.checklistVisible = !this.checklistVisible;
+        if (!this.integratedTextExpanded) {
+            this.toggleIntegratedText();
+        }
         
-        if (this.checklistVisible) {
-            section.style.display = 'block';
-            this.loadVisualChecklist();
-            // Auto-expand manuscript if not already expanded
-            if (!this.manuscriptExpanded) {
-                this.toggleManuscript();
-            }
-            // Auto-expand navigation if not already expanded
-            if (!this.navigationExpanded) {
-                this.toggleNavigation();
-            }
-        } else {
-            section.style.display = 'none';
+        // Auto-expand navigation if not already expanded
+        if (!this.navigationExpanded) {
+            this.toggleNavigation();
         }
         
         // Future enhancement: When checklist is complete, transform to therapeutic button
@@ -436,24 +532,45 @@ class KilnGridController {
     }
 
     loadChapterContent() {
-        const chapterTitle = document.getElementById('chapterTitle');
-        const chapterSubtitle = document.getElementById('chapterSubtitle');
-        const manuscriptText = document.getElementById('manuscriptText');
+        // Update header chapter system
+        const headerChapterTab = document.getElementById('headerChapterTab');
+        const headerChapterText = document.getElementById('headerChapterText');
+        
+        // Update integrated text content
+        const manuscriptText = document.querySelector('#integratedTextContent .manuscript-text .chapter-text');
         
         const config = this.storyConfigs[this.currentStory];
         
         // Generate chapter-specific content
         const chapterData = this.generateChapterData();
         
-        chapterTitle.textContent = `Chapter ${this.currentChapter}: ${chapterData.title}`;
-        chapterSubtitle.textContent = chapterData.subtitle;
+        // Update header chapter system
+        if (headerChapterTab) {
+            headerChapterTab.textContent = this.currentChapter;
+        }
         
-        // Load manuscript text with water flow effect
-        manuscriptText.innerHTML = `
-            <div class="chapter-text">
+        if (headerChapterText) {
+            headerChapterText.innerHTML = `
+                <div class="chapter-title-content">
+                    <span class="chapter-number-display">Chapter ${this.currentChapter}:</span>
+                    <span class="chapter-title-text">${chapterData.title}</span>
+                    <span class="chapter-subtitle-text">${chapterData.subtitle}</span>
+                </div>
+            `;
+        }
+        
+        // Load manuscript text with chapter information
+        if (manuscriptText) {
+            manuscriptText.innerHTML = `
+                <h3 style="color: var(--transformation-gold); margin-bottom: 1rem; font-family: var(--title-font);">
+                    Chapter ${this.currentChapter}: ${chapterData.title}
+                </h3>
+                <p style="color: var(--consciousness-blue); font-style: italic; margin-bottom: 1.5rem;">
+                    ${chapterData.subtitle}
+                </p>
                 ${chapterData.content.map(paragraph => `<p>${paragraph}</p>`).join('')}
-            </div>
-        `;
+            `;
+        }
     }
 
     generateChapterData() {
@@ -489,151 +606,220 @@ class KilnGridController {
     }
 
     initializeVisualChecklist() {
-        // Initialize the visual production checklist system with canonical KILN integration
+        // Initialize the simplified visual production checklist system
         const checklistContainer = document.getElementById('visualProductionChecklist');
         
-        checklistContainer.innerHTML = `
-            <div class="visual-checklist-container">
-                <div class="checklist-header">
-                    <h5 style="color: var(--transformation-gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: var(--consciousness-blue);">◉</span>
-                        Visual Production Checklist
-                        <span style="color: var(--transformation-gold);">◦</span>
-                    </h5>
+        // Add event listeners for simplified checklist items
+        checklistContainer.querySelectorAll('.checklist-item-simple').forEach(item => {
+            item.addEventListener('click', (e) => {
+                this.toggleChecklistItem(e.currentTarget);
+            });
+        });
+        
+        // Load saved state
+        this.loadSimpleChecklistState();
+    }
+
+    toggleChecklistItem(item) {
+        const itemKey = item.dataset.item;
+        const toggle = item.querySelector('.checkbox-toggle');
+        const isCompleted = item.classList.contains('completed');
+        
+        if (isCompleted) {
+            // Unchecking
+            item.classList.remove('completed');
+            toggle.textContent = '[ ]';
+            toggle.dataset.checked = 'false';
+        } else {
+            // Checking
+            item.classList.add('completed');
+            toggle.textContent = '[X]';
+            toggle.dataset.checked = 'true';
+        }
+        
+        // Save state
+        this.saveSimpleChecklistState();
+        
+        // Check for completion
+        this.checkSimpleCompletionStatus();
+        
+        // Show feedback
+        const action = isCompleted ? 'unchecked' : 'checked';
+        this.showNotification(`${itemKey.charAt(0).toUpperCase() + itemKey.slice(1)} ${action}`, 'success');
+    }
+
+    saveSimpleChecklistState() {
+        const storageKey = `simple_checklist_${this.currentStory}_${this.currentChapter}`;
+        const state = {};
+        
+        document.querySelectorAll('.checklist-item-simple').forEach(item => {
+            const itemKey = item.dataset.item;
+            state[itemKey] = item.classList.contains('completed');
+        });
+        
+        localStorage.setItem(storageKey, JSON.stringify(state));
+    }
+
+    loadSimpleChecklistState() {
+        const storageKey = `simple_checklist_${this.currentStory}_${this.currentChapter}`;
+        const savedState = JSON.parse(localStorage.getItem(storageKey) || '{}');
+        
+        document.querySelectorAll('.checklist-item-simple').forEach(item => {
+            const itemKey = item.dataset.item;
+            const toggle = item.querySelector('.checkbox-toggle');
+            
+            if (savedState[itemKey]) {
+                item.classList.add('completed');
+                toggle.textContent = '[X]';
+                toggle.dataset.checked = 'true';
+            } else {
+                item.classList.remove('completed');
+                toggle.textContent = '[ ]';
+                toggle.dataset.checked = 'false';
+            }
+        });
+        
+        // Check completion status after loading
+        this.checkSimpleCompletionStatus();
+    }
+
+    checkSimpleCompletionStatus() {
+        const items = document.querySelectorAll('.checklist-item-simple');
+        const completedItems = document.querySelectorAll('.checklist-item-simple.completed');
+        const lockStatus = document.getElementById('chapterLockStatus');
+        
+        if (completedItems.length === items.length && items.length > 0) {
+            // All items completed - perform canonical validation
+            this.performCanonicalValidation();
+        } else {
+            // Hide lock status if not all completed
+            if (lockStatus) {
+                lockStatus.style.display = 'none';
+            }
+        }
+    }
+
+    performCanonicalValidation() {
+        // Simulate canonical validation process
+        const lockStatus = document.getElementById('chapterLockStatus');
+        
+        // Show validation message first
+        this.showNotification('Performing KILN Universe canonical validation...', 'info');
+        
+        setTimeout(() => {
+            // Mark chapter as canonically validated and locked
+            const chapterKey = `chapter_locked_${this.currentStory}_${this.currentChapter}`;
+            localStorage.setItem(chapterKey, JSON.stringify({
+                locked: true,
+                timestamp: new Date().toISOString(),
+                validated: true
+            }));
+            
+            // Show lock status
+            if (lockStatus) {
+                lockStatus.style.display = 'block';
+            }
+            
+            // Show completion celebration
+            this.showCanonicalCompletionCelebration();
+            
+            // Disable further editing
+            this.lockChapterForEditing();
+            
+        }, 2000); // 2 second validation delay
+    }
+
+    showCanonicalCompletionCelebration() {
+        const celebration = document.createElement('div');
+        celebration.innerHTML = `
+            <div style="
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, 
+                    var(--consciousness-blue) 0%, 
+                    var(--transformation-gold) 50%,
+                    var(--authority-red) 100%);
+                color: white;
+                padding: 3rem 4rem;
+                border-radius: 25px;
+                font-family: var(--title-font);
+                font-size: 1.8rem;
+                text-align: center;
+                z-index: 10000;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+                animation: canonicalCelebration 4s ease-out;
+                border: 3px solid var(--transformation-gold);
+            ">
+                <div style="margin-bottom: 1rem;">
+                    ◉ ✨ ◦
                 </div>
-                <div class="checklist-items">
-                    <div class="checklist-item critical">
-                        <label class="mini-checkbox">
-                            <input type="checkbox" data-item="tone">
-                            <span class="mini-checkmark"></span>
-                            <span class="check-label">
-                                <strong>🎵 Tone & Atmosphere</strong>
-                                <br><small>Orthodox KILN mood, consciousness energy, sacred atmosphere</small>
-                                <div class="canonical-link" data-canon="tone">
-                                    <span style="color: var(--consciousness-blue); font-size: 0.7rem;">◦ Linked to: Orthodox Period Atmosphere</span>
-                                </div>
-                            </span>
-                        </label>
-                        <div class="glyph-space" data-item="tone">
-                            <span class="sacred-glyph">◦</span>
-                        </div>
-                        <span class="check-status">⚠️</span>
-                    </div>
-                    
-                    <div class="checklist-item important">
-                        <label class="mini-checkbox">
-                            <input type="checkbox" data-item="glyphs">
-                            <span class="mini-checkmark"></span>
-                            <span class="check-label">
-                                <strong>⚡ Sacred Glyphs</strong>
-                                <br><small>KILN codex symbols, consciousness patterns, orthodox markings</small>
-                                <div class="canonical-link" data-canon="glyphs">
-                                    <span style="color: var(--transformation-gold); font-size: 0.7rem;">◉ Linked to: KILN Codex Glyph System</span>
-                                </div>
-                            </span>
-                        </label>
-                        <div class="glyph-space" data-item="glyphs">
-                            <span class="sacred-glyph">◉</span>
-                        </div>
-                        <span class="check-status">📝</span>
-                    </div>
-                    
-                    <div class="checklist-item critical">
-                        <label class="mini-checkbox">
-                            <input type="checkbox" data-item="characters">
-                            <span class="mini-checkmark"></span>
-                            <span class="check-label">
-                                <strong>👤 Character Images</strong>
-                                <br><small>Accurate representation, canonical appearance, sacred vestments</small>
-                                <div class="canonical-link" data-canon="characters">
-                                    <span style="color: var(--authority-red); font-size: 0.7rem;">◦ Linked to: Character Archetypes Canonical</span>
-                                </div>
-                            </span>
-                        </label>
-                        <div class="glyph-space" data-item="characters">
-                            <span class="sacred-glyph">◦</span>
-                        </div>
-                        <span class="check-status">⚠️</span>
-                    </div>
-                    
-                    <div class="checklist-item important">
-                        <label class="mini-checkbox">
-                            <input type="checkbox" data-item="missing">
-                            <span class="mini-checkmark"></span>
-                            <span class="check-label">
-                                <strong>🔍 Missing Elements</strong>
-                                <br><small>Completeness check, visual consistency, story continuity</small>
-                                <div class="canonical-link" data-canon="missing">
-                                    <span style="color: var(--consciousness-blue); font-size: 0.7rem;">◉ AI Prompt Analysis: KILN Law Codex Timeline</span>
-                                </div>
-                            </span>
-                        </label>
-                        <div class="glyph-space" data-item="missing">
-                            <span class="sacred-glyph">◉</span>
-                        </div>
-                        <span class="check-status">📝</span>
-                    </div>
-                    
-                    <div class="checklist-item critical">
-                        <label class="mini-checkbox">
-                            <input type="checkbox" data-item="universe">
-                            <span class="mini-checkmark"></span>
-                            <span class="check-label">
-                                <strong>🌌 KILN Universe Style</strong>
-                                <br><small>Color palette, world authenticity, canonical consistency</small>
-                                <div class="canonical-link" data-canon="universe">
-                                    <span style="color: var(--transformation-gold); font-size: 0.7rem;">◦ Linked to: Universe Foundation Complete</span>
-                                </div>
-                            </span>
-                        </label>
-                        <div class="glyph-space" data-item="universe">
-                            <span class="sacred-glyph">◦</span>
-                        </div>
-                        <span class="check-status">⚠️</span>
-                    </div>
+                <div>Chapter ${this.currentChapter} Canonically Validated!</div>
+                <div style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.9;">
+                    🔒 Locked for KILN Universe Consistency
                 </div>
-                
-                <!-- Canonical Reference Panel -->
-                <div class="canonical-reference-panel" style="margin-top: 1.5rem; padding: 1rem; background: rgba(74, 144, 226, 0.1); border-radius: 8px; border: 1px solid var(--consciousness-blue);">
-                    <h6 style="color: var(--transformation-gold); margin-bottom: 0.5rem; font-family: var(--title-font);">📚 Canonical References Active:</h6>
-                    <div class="active-references">
-                        <small style="color: var(--ceramic-cream); opacity: 0.8;">
-                            ◉ _canonical_imagery/02_character_archetypes/<br>
-                            ◦ _canonical_foundation/CANONICAL_CODEX_GLYPH_SYSTEM_COMPLETE.md<br>
-                            ◉ _canonical_imagery/06_timeline_eras/orthodox_period/
-                        </small>
-                    </div>
+                <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
+                    "Consciousness preserved becomes consciousness celebrated"
                 </div>
             </div>
         `;
         
-        // Add event listeners for checklist items
-        checklistContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', (e) => {
-                this.handleChecklistUpdate(e.target);
-            });
+        document.body.appendChild(celebration);
+        
+        // Add celebration animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes canonicalCelebration {
+                0% { 
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(0.5) rotateY(-180deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1.1) rotateY(0deg);
+                }
+                100% { 
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Remove after animation
+        setTimeout(() => {
+            celebration.remove();
+            style.remove();
+        }, 4000);
+    }
+
+    lockChapterForEditing() {
+        // Disable checklist interaction
+        document.querySelectorAll('.checklist-item-simple').forEach(item => {
+            item.style.pointerEvents = 'none';
+            item.style.opacity = '0.7';
         });
         
-        // Add canonical link clicks
-        checklistContainer.querySelectorAll('.canonical-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                this.openCanonicalReference(e.target.dataset.canon);
-            });
-        });
+        // Show locked state in UI
+        this.showNotification('Chapter locked - All content validated for canonical consistency', 'success');
     }
 
     loadVisualChecklist() {
-        // Load saved checklist state for current chapter
-        const storageKey = `checklist_${this.currentStory}_${this.currentChapter}`;
-        const savedState = JSON.parse(localStorage.getItem(storageKey) || '{}');
+        // Load saved checklist state for current chapter using simplified system
+        this.loadSimpleChecklistState();
         
-        document.querySelectorAll('#visualProductionChecklist input[type="checkbox"]').forEach(checkbox => {
-            const item = checkbox.dataset.item;
-            if (savedState[item]) {
-                checkbox.checked = true;
-                this.updateChecklistVisuals(checkbox, true);
+        // Check if chapter is already locked
+        const chapterKey = `chapter_locked_${this.currentStory}_${this.currentChapter}`;
+        const lockState = JSON.parse(localStorage.getItem(chapterKey) || '{}');
+        
+        if (lockState.locked) {
+            const lockStatus = document.getElementById('chapterLockStatus');
+            if (lockStatus) {
+                lockStatus.style.display = 'block';
             }
-        });
+            this.lockChapterForEditing();
+        }
     }
 
     handleChecklistUpdate(checkbox) {
@@ -769,7 +955,7 @@ class KilnGridController {
                 break;
             case ' ':
                 e.preventDefault();
-                this.toggleManuscript();
+                this.toggleIntegratedText();
                 break;
             case 'c':
             case 'C':
@@ -794,8 +980,22 @@ class KilnGridController {
                 if (therapeuticButton) {
                     this.activateTherapeuticMode();
                 } else {
-                    this.toggleVisualChecklist();
+                    this.toggleIntegratedText();
                 }
+                break;
+            case 'l':
+            case 'L':
+                e.preventDefault();
+                this.toggleIntegratedText();
+                break;
+            case '1':
+                e.preventDefault();
+                this.toggleHeaderChapter();
+                break;
+            case 'h':
+            case 'H':
+                e.preventDefault();
+                this.toggleHeaderChapter();
                 break;
         }
     }
@@ -929,6 +1129,172 @@ class KilnGridController {
         
         // Load initial content
         this.loadChapterContent();
+    }
+
+    // Expandable Navigation Panel System
+    setupExpandableNavigation() {
+        // Add click listeners to all expandable navigation buttons
+        document.querySelectorAll('.nav-button-container.expandable-nav .glyph-nav-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const container = e.target.closest('.nav-button-container.expandable-nav');
+                this.toggleNavPanel(container);
+            });
+        });
+    }
+
+    toggleNavPanel(container) {
+        const isExpanded = container.dataset.expanded === 'true';
+        const panelContent = container.querySelector('.nav-panel-content');
+        
+        if (isExpanded) {
+            this.closeNavPanel(container);
+        } else {
+            // Close other panels first
+            this.closeAllNavPanels();
+            this.openNavPanel(container);
+        }
+    }
+
+    openNavPanel(container) {
+        const panelContent = container.querySelector('.nav-panel-content');
+        
+        container.dataset.expanded = 'true';
+        panelContent.style.display = 'block';
+        panelContent.classList.add('expanding');
+        
+        setTimeout(() => {
+            panelContent.classList.add('expanded');
+            panelContent.classList.remove('expanding');
+        }, 10);
+        
+        this.expandedPanels.add(container);
+    }
+
+    closeNavPanel(container) {
+        const panelContent = container.querySelector('.nav-panel-content');
+        
+        container.dataset.expanded = 'false';
+        panelContent.classList.remove('expanded');
+        
+        setTimeout(() => {
+            panelContent.style.display = 'none';
+        }, 400);
+        
+        this.expandedPanels.delete(container);
+    }
+
+    closeAllNavPanels() {
+        this.expandedPanels.forEach(container => {
+            this.closeNavPanel(container);
+        });
+        this.expandedPanels.clear();
+    }
+
+    handlePanelOptionClick(option) {
+        const action = option.dataset.action;
+        
+        switch(action) {
+            case 'prev-panel':
+                this.navigatePanel(-1);
+                break;
+            case 'next-panel':
+                this.navigatePanel(1);
+                break;
+            case 'prev-chapter':
+                this.navigateChapter(-1);
+                break;
+            case 'next-chapter':
+                this.navigateChapter(1);
+                break;
+            case 'first-panel':
+                this.goToPanel(1);
+                break;
+            case 'last-panel':
+                this.goToPanel(this.totalPanels);
+                break;
+            case 'edit-text':
+                this.enterEditMode('text');
+                break;
+            case 'edit-scene':
+                this.enterEditMode('scene');
+                break;
+            case 'checklist':
+                this.toggleVisualChecklist();
+                break;
+            case 'ascending':
+                this.setChapterOrder('ascending');
+                break;
+            case 'descending':
+                this.setChapterOrder('descending');
+                break;
+            case 'custom':
+                this.setChapterOrder('custom');
+                break;
+        }
+        
+        // Close panels after action
+        this.closeAllNavPanels();
+    }
+
+    navigatePanel(direction) {
+        const newPanel = this.currentPanel + direction;
+        if (newPanel >= 1 && newPanel <= this.totalPanels) {
+            this.currentPanel = newPanel;
+            this.updatePanelDisplay();
+            this.showNotification(`Panel ${this.currentPanel} of ${this.totalPanels}`, 'info');
+        } else if (direction > 0 && newPanel > this.totalPanels) {
+            // Move to next chapter, panel 1
+            this.navigateChapter(1);
+            this.currentPanel = 1;
+            this.updatePanelDisplay();
+        } else if (direction < 0 && newPanel < 1) {
+            // Move to previous chapter, last panel
+            this.navigateChapter(-1);
+            this.currentPanel = this.totalPanels;
+            this.updatePanelDisplay();
+        }
+    }
+
+    goToPanel(panelNumber) {
+        if (panelNumber >= 1 && panelNumber <= this.totalPanels) {
+            this.currentPanel = panelNumber;
+            this.updatePanelDisplay();
+            this.showNotification(`Jumped to Panel ${this.currentPanel}`, 'success');
+        }
+    }
+
+    updatePanelDisplay() {
+        document.getElementById('currentPanel').textContent = this.currentPanel;
+        document.getElementById('totalPanels').textContent = this.totalPanels;
+        document.getElementById('currentChapter').textContent = this.currentChapter;
+    }
+
+    enterEditMode(type) {
+        this.showNotification(`Entering ${type} edit mode...`, 'info');
+        // Add edit mode functionality here
+        console.log(`Edit mode: ${type}`);
+    }
+
+    setChapterOrder(order) {
+        this.chapterOrder = order;
+        
+        // Update active state in UI
+        document.querySelectorAll('.panel-option[data-action*="ending"], .panel-option[data-action="custom"]').forEach(option => {
+            option.classList.remove('active');
+        });
+        
+        document.querySelector(`.panel-option[data-action="${order}"]`).classList.add('active');
+        
+        this.showNotification(`Chapter order: ${order}`, 'success');
+        
+        // Apply the ordering logic
+        this.applyChapterOrder();
+    }
+
+    applyChapterOrder() {
+        // Implementation for chapter ordering
+        console.log(`Applying ${this.chapterOrder} chapter order`);
     }
 }
 
