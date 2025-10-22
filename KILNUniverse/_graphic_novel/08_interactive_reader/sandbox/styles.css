@@ -1,0 +1,15 @@
+:root{
+  --kiln-dark: #2c1810;
+  --consciousness-blue: #4A90E2;
+  --authority-red: #E74C3C;
+  --transformation-gold: #F39C12;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,var(--kiln-dark),#3b2215);color:#fff;font-family:system-ui,Segoe UI,Arial}
+header{padding:1rem;background:rgba(0,0,0,0.25);border-bottom:1px solid rgba(255,255,255,0.06)}
+.sample-stage{height:70vh;display:flex;align-items:flex-end;justify-content:center;padding:2rem}
+.edits-panel{position:relative;bottom:0;right:0;width:56px;height:56px;border-radius:50%;background:linear-gradient(180deg,rgba(44,24,16,.95),rgba(44,24,16,.98));display:flex;align-items:center;justify-content:center;border:2px solid var(--authority-red);}
+.edits-toggle{background:transparent;border:none;color:var(--authority-red);font-size:1.25rem;cursor:pointer}
+.edits-panel.expanded{width:360px;height:320px;border-radius:12px;padding:1rem}
+.edits-content{display:none}
+.edits-panel.expanded .edits-content{display:block}

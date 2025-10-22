@@ -1,5 +1,94 @@
 /* KILN UNIVERSE - Advanced Grid Layout with Orthodox Law Theming */
 
+/* 🔒 STANDARDIZED BANNER STYLES - Slim Edit Page Layout */
+.kiln-header-title {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 50%, 
+        var(--kiln-dark) 100%);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--transformation-gold);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Left Title Section - Inline Layout */
+.left-title-section {
+    flex: 1;
+}
+
+.main-title-inline {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ceramic-cream);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-title-inline a {
+    color: inherit;
+    text-decoration: none;
+    text-shadow: 
+        0 0 15px rgba(74, 144, 226, 0.5),
+        0 0 30px rgba(74, 144, 226, 0.3);
+}
+
+.main-title-inline a:hover {
+    text-shadow: 
+        0 0 25px rgba(74, 144, 226, 0.8),
+        0 0 50px rgba(74, 144, 226, 0.5);
+}
+
+.main-title-inline .consciousness-glyph {
+    font-size: 1rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
+}
+
+/* Right Badge Section - Far Right */
+.right-badge-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.kiln-universe-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+    box-shadow: 0 3px 15px rgba(74, 144, 226, 0.3);
+    text-align: center;
+    min-width: 120px;
+}
+
 /* Grid Foundation with KILN Law Structure - Navigation now fixed positioned */
 .kiln-universe-container {
     display: grid;
@@ -107,6 +196,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex: 1;
 }
 
 .chapter-number-display {
@@ -120,6 +210,75 @@
 
 .chapter-subtitle-text {
     color: var(--consciousness-blue);
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Chapter Navigation Controls */
+.chapter-navigation-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 2rem;
+}
+
+.chapter-nav-btn {
+    background: var(--consciousness-blue);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chapter-nav-btn:hover {
+    background: var(--transformation-gold);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.chapter-nav-label {
+    font-family: var(--title-font);
+    font-size: 0.8rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Update header chapter text to use flexbox layout */
+.header-chapter-text {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+    transition: all 0.5s var(--transition-ease);
+}
+
+.chapter-subtitle-text {
+    color: var(--consciousness-blue);
     font-style: italic;
     opacity: 0.9;
     margin-left: 1rem;
@@ -127,7 +286,8 @@
 }
 
 /* Orthodox KILN Law Header with Watermarked Cover Art */
-/* LOCKED HEADER BANNER - Final Design */
+/* LEGACY HEADER BANNER - Replaced with Standardized Design */
+/*
 .kiln-header {
     grid-area: header;
     position: relative;
@@ -141,10 +301,11 @@
     overflow: hidden;
     z-index: 1000;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-    /* LOCKED: Do not modify - Final banner design */
 }
+*/
 
 /* Watermarked Cover Art Background */
+/*
 .kiln-header::before {
     content: '';
     position: absolute;
@@ -161,7 +322,6 @@
     z-index: -1;
 }
 
-/* Sacred Glyph Watermarks */
 .kiln-header::after {
     content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
     position: absolute;
@@ -176,18 +336,20 @@
     pointer-events: none;
     z-index: 1;
 }
+*/
 
 /* LOCKED Header Content Grid - Final Layout */
+/*
 .header-content {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    height: 70px; /* Top portion of 120px header */
+    height: 70px;
     padding: 0 2.5rem;
     position: relative;
     z-index: 10;
-    /* LOCKED: Precise spacing and alignment - Do not modify */
 }
+*/
 
 /* Book Tabs - Page Corner Style */
 .book-tabs-section {
@@ -318,6 +480,36 @@
         opacity: 1;
         transform: scale(1.1);
     }
+}
+
+/* Consciousness Codex Link Styling */
+.consciousness-codex-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s var(--transition-ease);
+    position: relative;
+}
+
+.consciousness-codex-link:hover {
+    color: var(--consciousness-blue);
+    text-shadow: 
+        0 0 12px var(--consciousness-blue),
+        0 0 24px var(--consciousness-blue),
+        0 0 36px rgba(74, 144, 226, 0.8),
+        3px 3px 6px rgba(0, 0, 0, 0.9);
+    transform: scale(1.02);
+}
+
+.consciousness-subtitle {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px var(--transformation-gold);
 }
 
 /* Story Selection Dropdown */
@@ -914,28 +1106,307 @@
     }
 }
 
-/* Main Content Area */
+/* Main Content Area - Enhanced for Chapter Backgrounds */
 .kiln-content {
     grid-area: content;
     position: relative;
     overflow: hidden;
-    background: rgba(245, 245, 220, 0.05);
-    backdrop-filter: blur(2px);
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 100%);
+    min-height: calc(100vh - 170px); /* Account for header + footer */
 }
 
-/* Chapter Background System */
+/* Dynamic Chapter Background System */
+.chapter-background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .chapter-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s var(--transition-ease);
+}
+
+.chapter-background.primary {
+    z-index: 1;
+}
+
+.chapter-background.secondary {
+    z-index: 2;
+}
+
+/* Layered Background System */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.7) contrast(1.2);
-    transition: all 1s var(--transition-ease);
+    transition: all 1.2s var(--transition-ease);
+}
+
+.bg-layer.base-layer {
     z-index: 1;
+    opacity: 0.8;
+    filter: sepia(20%) hue-rotate(200deg) saturate(120%);
+}
+
+.bg-layer.atmosphere-layer {
+    z-index: 2;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    background: radial-gradient(ellipse at center, 
+        transparent 0%, 
+        rgba(74, 144, 226, 0.1) 50%, 
+        rgba(44, 24, 16, 0.3) 100%);
+}
+
+.bg-layer.character-layer {
+    z-index: 3;
+    opacity: 0.9;
+    filter: contrast(110%) brightness(105%);
+}
+
+.bg-layer.glyph-layer {
+    z-index: 4;
+    opacity: 0.3;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(243, 156, 18, 0.1) 42px,
+        rgba(243, 156, 18, 0.1) 44px
+    );
+    mix-blend-mode: overlay;
+}
+
+/* Manuscript Text Overlay */
+.manuscript-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s var(--transition-ease);
+}
+
+.manuscript-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.manuscript-frame {
+    background: linear-gradient(135deg, 
+        rgba(245, 245, 220, 0.95) 0%, 
+        rgba(240, 240, 240, 0.9) 100%);
+    border: 3px solid var(--transformation-gold);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(243, 156, 18, 0.2);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.manuscript-frame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+        var(--consciousness-blue), 
+        var(--authority-red), 
+        var(--transformation-gold));
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.manuscript-content {
+    color: var(--kiln-dark);
+    font-family: var(--body-font);
+}
+
+.chapter-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--consciousness-blue);
+}
+
+.chapter-number {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--authority-red);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-title {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--consciousness-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-subtitle {
+    display: block;
+    font-size: 1rem;
+    color: var(--clay-brown);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.manuscript-body {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.opening-paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--kiln-dark);
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+/* Chapter Theme Indicators */
+.chapter-theme-indicators {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 15;
+}
+
+.theme-glyph {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    transition: all 0.4s var(--transition-ease);
+    cursor: pointer;
+}
+
+.theme-glyph.consciousness {
+    background: rgba(74, 144, 226, 0.2);
+    color: var(--consciousness-blue);
+    border-color: var(--consciousness-blue);
+}
+
+.theme-glyph.authority {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--authority-red);
+    border-color: var(--authority-red);
+}
+
+.theme-glyph.transformation {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--transformation-gold);
+    border-color: var(--transformation-gold);
+}
+
+.theme-glyph:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px currentColor;
+}
+
+.theme-glyph.active {
+    animation: themeGlyphPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes themeGlyphPulse {
+    0% { 
+        box-shadow: 0 0 10px currentColor;
+        transform: scale(1);
+    }
+    100% { 
+        box-shadow: 0 0 25px currentColor;
+        transform: scale(1.05);
+    }
+}
+
+/* Background Controls */
+.background-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 15;
+}
+
+.bg-control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(44, 24, 16, 0.8);
+    border: 2px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-control-btn:hover {
+    background: rgba(74, 144, 226, 0.3);
+    border-color: var(--transformation-gold);
+    transform: scale(1.1);
+}
+
+.bg-control-btn.active {
+    background: rgba(243, 156, 18, 0.3);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+/* Chapter-Specific Background Themes */
+.chapter-background[data-story="translators-burden"] .base-layer {
+    filter: sepia(30%) hue-rotate(350deg) saturate(130%);
+}
+
+.chapter-background[data-story="first-void"] .base-layer {
+    filter: sepia(20%) hue-rotate(200deg) saturate(140%);
+}
+
+.chapter-background[data-story="kiln-codex"] .base-layer {
+    filter: sepia(25%) hue-rotate(25deg) saturate(125%);
 }
 
 /* Loading Screen */
