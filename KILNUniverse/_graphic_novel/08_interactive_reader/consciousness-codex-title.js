@@ -17,7 +17,7 @@ class ConsciousnessCodexTitle {
                 title: "The Translator's Burden",
                 subtitle: 'Orthodox KILN Prequel',
                 targetPage: 'kiln-grid-index.html',
-                backgroundImage: '../_canonical_imagery/02_character_archetypes/methodius_terev_canonical.jpg',
+                backgroundImage: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
                 description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
                 theme: 'authority',
                 chapters: 12
@@ -26,7 +26,7 @@ class ConsciousnessCodexTitle {
                 title: 'The First Void',
                 subtitle: 'Consciousness Origin',
                 targetPage: 'kiln-grid-index.html',
-                backgroundImage: '../_canonical_imagery/01_landscape_foundation/void_emergence.jpg',
+                backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
                 description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
                 theme: 'consciousness',
                 chapters: 16
@@ -35,7 +35,7 @@ class ConsciousnessCodexTitle {
                 title: 'KILN Codex',
                 subtitle: 'Complete Graphic Novel',
                 targetPage: 'kiln-grid-index.html',
-                backgroundImage: '../_canonical_imagery/01_landscape_foundation/consciousness_codex_cover.jpg',
+                backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
                 description: 'The complete transformation saga from paradise through control to sovereignty.',
                 theme: 'integration',
                 chapters: 12

@@ -23,24 +23,24 @@ class KilnGridController {
                 subtitle: 'Orthodox KILN Prequel',
                 totalChapters: 12,
                 colorTheme: 'orthodox', // Authority red dominant
-                backgroundPath: '../_canonical_imagery/06_timeline_eras/orthodox_period/',
-                coverArt: '../_canonical_imagery/02_character_archetypes/methodius_terev_canonical.jpg'
+                backgroundPath: '../../_canonical_imagery/06_timeline_eras/orthodox_period/',
+                coverArt: '../../_canonical_imagery/02_character_archetypes/CHARACTER_PHASE3_ScribeFired_Authority_v1.0.png'
             },
             'first-void': {
                 title: 'The First Void',
                 subtitle: 'Consciousness Origin',
                 totalChapters: 16,
                 colorTheme: 'consciousness', // Consciousness blue dominant
-                backgroundPath: '../_canonical_imagery/06_timeline_eras/consciousness_emergence/',
-                coverArt: '../_canonical_imagery/01_landscape_foundation/void_emergence.jpg'
+                backgroundPath: '../../_canonical_imagery/06_timeline_eras/consciousness_emergence/',
+                coverArt: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png'
             },
             'kiln-codex': {
                 title: 'KILN Codex',
                 subtitle: 'Complete Graphic Novel',
                 totalChapters: 12,
                 colorTheme: 'balanced', // All colors balanced
-                backgroundPath: '../_canonical_imagery/03_kiln_systems/',
-                coverArt: '../_canonical_imagery/01_landscape_foundation/consciousness_codex_cover.jpg'
+                backgroundPath: '../../_canonical_imagery/03_kiln_systems/',
+                coverArt: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png'
             }
         };
         
@@ -381,9 +381,9 @@ class KilnGridController {
 
     openCanonicalReference(canonType) {
         const canonicalPaths = {
-            'tone': '../_canonical_imagery/06_timeline_eras/orthodox_period/',
+            'tone': '../../_canonical_imagery/06_timeline_eras/orthodox_period/',
             'glyphs': '../_canonical_foundation/CANONICAL_CODEX_GLYPH_SYSTEM_COMPLETE.md',
-            'characters': '../_canonical_imagery/02_character_archetypes/',
+            'characters': '../../_canonical_imagery/02_character_archetypes/',
             'missing': '../_canonical_foundation/CANONICAL_KILN_LAW.md',
             'universe': '../_canonical_foundation/CANONICAL_KILN_UNIVERSE_FOUNDATION.md'
         };
