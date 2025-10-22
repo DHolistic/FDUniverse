@@ -270,14 +270,8 @@ class ConsciousnessCodexTitle {
         sessionStorage.setItem('selectedStory', this.selectedStory);
         sessionStorage.setItem('fromTitleScreen', 'true');
         
-        // Add transition effect
-        document.body.style.transition = 'opacity 1s var(--sacred-ease)';
-        document.body.style.opacity = '0';
-        
-        // Navigate to story
-        setTimeout(() => {
-            window.location.href = config.targetPage;
-        }, 1000);
+        // Direct navigation to edit page
+        window.location.href = 'kiln-grid-index.html';
     }
 
     handleKeyboardNavigation(e) {
