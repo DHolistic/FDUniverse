@@ -53,6 +53,9 @@ class KilnGridController {
         this.updateChapterBackground();
         this.initializeVisualChecklist();
         this.setupResponsiveHandling();
+        
+        // Check if coming from title screen
+        this.handleTitleScreenNavigation();
     }
 
     setupEventListeners() {
@@ -1562,6 +1565,95 @@ class KilnGridController {
         if (this.currentBackgroundState) {
             this.loadChapterBackground();
         }
+    }
+
+    // Handle navigation from Consciousness Codex Title Screen
+    handleTitleScreenNavigation() {
+        const selectedStory = sessionStorage.getItem('selectedStory');
+        const fromTitleScreen = sessionStorage.getItem('fromTitleScreen');
+        
+        if (fromTitleScreen === 'true' && selectedStory) {
+            // Switch to the selected story
+            this.switchStory(selectedStory);
+            
+            // Show welcome message
+            this.showTitleScreenWelcome(selectedStory);
+            
+            // Clear session storage
+            sessionStorage.removeItem('selectedStory');
+            sessionStorage.removeItem('fromTitleScreen');
+        }
+    }
+
+    showTitleScreenWelcome(storyId) {
+        const storyConfig = this.storyConfigs[storyId];
+        if (!storyConfig) return;
+
+        const welcomeHTML = `
+            <div style="
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, 
+                    var(--consciousness-blue) 0%, 
+                    var(--transformation-gold) 50%,
+                    var(--authority-red) 100%);
+                color: white;
+                padding: 3rem 4rem;
+                border-radius: 25px;
+                font-family: var(--title-font);
+                font-size: 1.5rem;
+                text-align: center;
+                z-index: 10000;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+                animation: welcomeReveal 3s ease-out;
+                border: 3px solid var(--transformation-gold);
+            ">
+                <div style="margin-bottom: 1rem;">
+                    ◉ ∿ ◈
+                </div>
+                <div>Welcome to ${storyConfig.title}!</div>
+                <div style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.9;">
+                    ${storyConfig.subtitle}
+                </div>
+                <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
+                    "Your consciousness journey begins now..."
+                </div>
+            </div>
+        `;
+
+        const welcomeDiv = document.createElement('div');
+        welcomeDiv.innerHTML = welcomeHTML;
+        document.body.appendChild(welcomeDiv);
+
+        // Add welcome animation CSS
+        const welcomeCSS = `
+            @keyframes welcomeReveal {
+                0% { 
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(0.5) rotateY(-180deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1.1) rotateY(0deg);
+                }
+                100% { 
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+                }
+            }
+        `;
+
+        const style = document.createElement('style');
+        style.textContent = welcomeCSS;
+        document.head.appendChild(style);
+
+        // Remove after animation
+        setTimeout(() => {
+            welcomeDiv.remove();
+            style.remove();
+        }, 4000);
     }
 }
 
