@@ -61,7 +61,7 @@
         <!-- Center Bottom Page Navigation - Horizontal Layout -->
         <nav class="center-page-navigation" id="centerPageNavigation">
             <div class="page-nav-container">
-                <!-- Previous Panel/Chapter - Blue with ◦ -->
+                <!-- Previous Panel/Chapter - Red with ◉ (DECREASE) -->
                 <div class="page-nav-button-container expandable-nav" data-expanded="false">
                     <button class="page-nav-button" id="prevButton" title="Previous Panel/Chapter (Left Arrow)">
                         <span class="nav-glyph"></span>
@@ -71,24 +71,23 @@
                     <div class="nav-panel-content" style="display: none;">
                         <div class="panel-header">Previous Navigation</div>
                         <div class="panel-options">
-                            <button class="panel-option" data-action="prev-panel">◦ Previous Panel</button>
-                            <button class="panel-option" data-action="prev-chapter">◦ Previous Chapter</button>
-                            <button class="panel-option" data-action="first-panel">◦ First Panel</button>
+                            <button class="panel-option" data-action="prev-panel">◉ Previous Panel</button>
+                            <button class="panel-option" data-action="prev-chapter">◉ Previous Chapter</button>
+                            <button class="panel-option" data-action="first-panel">◉ First Panel</button>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Page Counter Display - Red ◉ at top -->
+                <!-- Page Counter Display - Gold ◉ at top (PRESENT CHAPTER) -->
                 <div class="page-counter-display">
                     <div class="page-info">
                         <span class="current-page" id="currentPage">1</span>
                         <span class="page-separator">/</span>
                         <span class="total-pages" id="totalPages">4</span>
                     </div>
-                    <div class="chapter-info" id="chapterInfo">Chapter 1</div>
                 </div>
                 
-                <!-- Next Panel/Chapter - Gold with ◉ -->
+                <!-- Next Panel/Chapter - Blue with ◦ (INCREASE) -->
                 <div class="page-nav-button-container expandable-nav" data-expanded="false">
                     <button class="page-nav-button" id="nextButton" title="Next Panel/Chapter (Right Arrow)">
                         <span class="nav-glyph"></span>
@@ -98,9 +97,9 @@
                     <div class="nav-panel-content" style="display: none;">
                         <div class="panel-header">Next Navigation</div>
                         <div class="panel-options">
-                            <button class="panel-option" data-action="next-panel">◉ Next Panel</button>
-                            <button class="panel-option" data-action="next-chapter">◉ Next Chapter</button>
-                            <button class="panel-option" data-action="last-panel">◉ Last Panel</button>
+                            <button class="panel-option" data-action="next-panel">◦ Next Panel</button>
+                            <button class="panel-option" data-action="next-chapter">◦ Next Chapter</button>
+                            <button class="panel-option" data-action="last-panel">◦ Last Panel</button>
                         </div>
                     </div>
                 </div>
