@@ -1,5 +1,94 @@
 /* KILN UNIVERSE - Advanced Grid Layout with Orthodox Law Theming */
 
+/* 🔒 STANDARDIZED BANNER STYLES - Slim Edit Page Layout */
+.kiln-header-title {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 50%, 
+        var(--kiln-dark) 100%);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--transformation-gold);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Left Title Section - Inline Layout */
+.left-title-section {
+    flex: 1;
+}
+
+.main-title-inline {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ceramic-cream);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-title-inline a {
+    color: inherit;
+    text-decoration: none;
+    text-shadow: 
+        0 0 15px rgba(74, 144, 226, 0.5),
+        0 0 30px rgba(74, 144, 226, 0.3);
+}
+
+.main-title-inline a:hover {
+    text-shadow: 
+        0 0 25px rgba(74, 144, 226, 0.8),
+        0 0 50px rgba(74, 144, 226, 0.5);
+}
+
+.main-title-inline .consciousness-glyph {
+    font-size: 1rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
+}
+
+/* Right Badge Section - Far Right */
+.right-badge-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.kiln-universe-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+    box-shadow: 0 3px 15px rgba(74, 144, 226, 0.3);
+    text-align: center;
+    min-width: 120px;
+}
+
 /* Grid Foundation with KILN Law Structure - Navigation now fixed positioned */
 .kiln-universe-container {
     display: grid;
@@ -197,7 +286,8 @@
 }
 
 /* Orthodox KILN Law Header with Watermarked Cover Art */
-/* LOCKED HEADER BANNER - Final Design */
+/* LEGACY HEADER BANNER - Replaced with Standardized Design */
+/*
 .kiln-header {
     grid-area: header;
     position: relative;
@@ -211,10 +301,11 @@
     overflow: hidden;
     z-index: 1000;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-    /* LOCKED: Do not modify - Final banner design */
 }
+*/
 
 /* Watermarked Cover Art Background */
+/*
 .kiln-header::before {
     content: '';
     position: absolute;
@@ -231,7 +322,6 @@
     z-index: -1;
 }
 
-/* Sacred Glyph Watermarks */
 .kiln-header::after {
     content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
     position: absolute;
@@ -246,18 +336,20 @@
     pointer-events: none;
     z-index: 1;
 }
+*/
 
 /* LOCKED Header Content Grid - Final Layout */
+/*
 .header-content {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    height: 70px; /* Top portion of 120px header */
+    height: 70px;
     padding: 0 2.5rem;
     position: relative;
     z-index: 10;
-    /* LOCKED: Precise spacing and alignment - Do not modify */
 }
+*/
 
 /* Book Tabs - Page Corner Style */
 .book-tabs-section {

@@ -55,6 +55,9 @@ class KilnGridController {
         this.setupResponsiveHandling();
         this.updatePanelDisplay();
         
+        // Force load Translator's Burden for testing
+        this.switchStory('translators-burden');
+        
         // Check if coming from title screen
         this.handleTitleScreenNavigation();
     }
@@ -334,9 +337,13 @@ class KilnGridController {
 
         this.currentStory = storyId;
         this.currentChapter = 1;
+        this.currentPanel = 1;
         
         const config = this.storyConfigs[storyId];
         this.totalChapters = config.totalChapters;
+        
+        // Set total panels based on story type
+        this.updateTotalPanels();
         
         // Update UI
         document.getElementById('currentStoryTitle').textContent = config.title;
@@ -368,7 +375,11 @@ class KilnGridController {
         }
 
         this.currentChapter = newChapter;
+        this.currentPanel = 1; // Reset to first panel of new chapter
         document.getElementById('currentChapter').textContent = this.currentChapter;
+        
+        // Update total panels for new chapter
+        this.updateTotalPanels();
         
         // Add transition effect
         this.addChapterTransition();
@@ -379,6 +390,17 @@ class KilnGridController {
             this.loadChapterContent();
             this.updatePanelDisplay();
         }, 400);
+    }
+
+    updateTotalPanels() {
+        // Set total panels based on story and chapter
+        if (this.currentStory === 'translators-burden' && this.currentChapter <= 3) {
+            // First 3 chapters have 4 pages each
+            this.totalPanels = 4;
+        } else {
+            // Default panel count
+            this.totalPanels = 4;
+        }
     }
 
     addChapterTransition() {
@@ -396,12 +418,16 @@ class KilnGridController {
         const config = this.storyConfigs[this.currentStory];
         const backgroundElement = document.getElementById('chapterBackground');
         
-        // Construct background image path
-        const imagePath = `${config.backgroundPath}chapter_${this.currentChapter.toString().padStart(2, '0')}.jpg`;
+        // Construct background image paths (try multiple formats)
+        const jpgPath = `${config.backgroundPath}chapter_${this.currentChapter.toString().padStart(2, '0')}.jpg`;
+        const pngPath = `${config.backgroundPath}chapter_${this.currentChapter.toString().padStart(2, '0')}.png`;
+        const svgPath = `${config.backgroundPath}chapter_${this.currentChapter.toString().padStart(2, '0')}.svg`;
         
         backgroundElement.style.backgroundImage = `
             linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-            url('${imagePath}'),
+            url('${jpgPath}'),
+            url('${pngPath}'),
+            url('${svgPath}'),
             url('${config.coverArt}')
         `;
         backgroundElement.style.backgroundSize = 'cover';
@@ -594,7 +620,7 @@ class KilnGridController {
     }
 
     generateChapterData() {
-        // Sample chapter data - in production this would load from your manuscripts
+        // Detailed chapter data for The Translator's Burden
         const chapterTitles = {
             'translators-burden': [
                 'The Weight of Words', 'Sacred Consciousness Protocol', 'The Orthodox Translation',
@@ -611,8 +637,113 @@ class KilnGridController {
             ]
         };
         
+        // Detailed content for Translator's Burden chapters with multiple pages
+        const translatorsBurdenContent = {
+            1: {
+                title: 'The Weight of Words',
+                pages: [
+                    {
+                        content: [
+                            'Methodius Terev sits hunched over ancient manuscripts in the Orthodox Translation Chamber, his weathered hands trembling as he encounters words that challenge everything he believes about consciousness and authority.',
+                            'The sacred texts before him speak of consciousness sovereignty—a concept so radical it threatens the very foundation of KILN orthodoxy. Each glyph seems to pulse with dangerous energy.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'As Chief Translator of the Orthodox KILN, Methodius has spent decades preserving the sanctity of authorized consciousness protocols. But these new texts whisper of transformation beyond his comprehension.',
+                            'The weight of his responsibility presses down like clay in the kiln—to translate accurately while protecting the orthodox way. Yet consciousness, he realizes, may not be so easily contained.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'The forbidden manuscripts seem to writhe under his gaze, their consciousness glyphs shifting between orthodox forms and something altogether more revolutionary.',
+                            'Methodius feels the weight of history pressing upon his shoulders. These texts could either preserve the KILN\'s sacred order or shatter it entirely.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'As night deepens in the Translation Chamber, Methodius makes his choice. He will translate these dangerous words, but he will find a way to preserve both truth and tradition.',
+                            'The first chapter of his burden begins with a single, trembling stroke of his translation stylus.'
+                        ]
+                    }
+                ]
+            },
+            2: {
+                title: 'Sacred Consciousness Protocol',
+                pages: [
+                    {
+                        content: [
+                            'The Orthodox Protocol Chamber hums with the energy of preserved consciousness, its walls lined with approved glyphs that have maintained order for generations.',
+                            'Methodius reviews the established guidelines: consciousness must be channeled through proper authority, individual awareness must serve the collective orthodoxy.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'But the forbidden texts speak of consciousness as a democratic process—awareness participating in its own becoming. The implications make his clay hands shake.',
+                            'He attempts to reconcile the orthodox protocols with these revolutionary concepts, searching for a translation that preserves both truth and tradition.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'The sacred consciousness glyphs on the chamber walls seem to shift and dance, as if responding to his internal struggle between duty and revelation.',
+                            'Each approved symbol pulses with contained energy, while the forbidden texts whisper of consciousness unleashed.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'Methodius realizes that consciousness cannot be fully contained by protocol—it grows, evolves, demands its own democratic voice.',
+                            'His translation work becomes an act of careful rebellion, preserving revolutionary truth within orthodox language.'
+                        ]
+                    }
+                ]
+            },
+            3: {
+                title: 'The Orthodox Translation',
+                pages: [
+                    {
+                        content: [
+                            'In the depths of the Translation Archives, Methodius begins the dangerous work of rendering consciousness sovereignty into orthodox language.',
+                            'Each word becomes a battlefield between truth and tradition. How does one translate "consciousness democracy" into terms the Orthodox KILN will accept?'
+                        ]
+                    },
+                    {
+                        content: [
+                            'He develops a careful linguistic strategy—embedding revolutionary concepts within familiar orthodox structures, like consciousness seeds planted in traditional clay.',
+                            'The work is exhausting. Every phrase must pass through multiple filters: accuracy to the source, alignment with orthodoxy, and hidden preservation of the dangerous truth.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'Dawn breaks through the archive windows as Methodius completes the first section of his orthodox translation.',
+                            'The revolutionary concepts are now disguised as traditional consciousness preservation protocols—hidden in plain sight.'
+                        ]
+                    },
+                    {
+                        content: [
+                            'As dawn breaks through the chamber windows, Methodius realizes he is no longer just translating texts—he is translating consciousness itself.',
+                            'He bears the weight of transformation disguised as preservation, ensuring the dangerous truth will survive within orthodox tradition.'
+                        ]
+                    }
+                ]
+            }
+        };
+        
         const titles = chapterTitles[this.currentStory] || ['Unknown Chapter'];
         const title = titles[this.currentChapter - 1] || 'Unknown Chapter';
+        
+        // Return specific content for Translator's Burden or default content
+        if (this.currentStory === 'translators-burden' && translatorsBurdenContent[this.currentChapter]) {
+            const chapterData = translatorsBurdenContent[this.currentChapter];
+            const currentPage = this.currentPanel - 1; // Convert to 0-based index
+            const pageData = chapterData.pages[currentPage] || chapterData.pages[0];
+            
+            return {
+                title: chapterData.title,
+                subtitle: `${this.storyConfigs[this.currentStory].subtitle} - Chapter ${this.currentChapter}, Page ${this.currentPanel}`,
+                content: pageData.content,
+                totalPages: chapterData.pages.length
+            };
+        }
         
         return {
             title: title,
