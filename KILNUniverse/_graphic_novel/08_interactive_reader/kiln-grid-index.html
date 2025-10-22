@@ -58,27 +58,13 @@
             </div>
         </header>
         
-        <!-- Sacred Glyph Navigation - Bottom Right Upward Expansion -->
-        <nav class="kiln-navigation" id="kilnNavigation">
-            <!-- Navigation Expand/Collapse Toggle -->
-            <button class="navigation-toggle" id="navigationToggle">
-                <span class="toggle-glyph"></span>
-            </button>
-            
-            <!-- Chapter Display - Top -->
-            <div class="chapter-display">
-                <div class="chapter-label">Title Page</div>
-                <div class="chapter-counter">
-                    Next: <span id="nextChapter">Chapter 2</span>
-                </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="nav-buttons-section">
-                <!-- Previous Panel/Chapter -->
-                <div class="nav-button-container expandable-nav" data-expanded="false">
-                    <button class="glyph-nav-button" id="prevButton" title="Previous Panel/Chapter (Left Arrow)">
-                        <span class="nav-glyph" data-collapsed="—" data-expanded="◦">—</span>
+        <!-- Center Bottom Page Navigation - Horizontal Layout -->
+        <nav class="center-page-navigation" id="centerPageNavigation">
+            <div class="page-nav-container">
+                <!-- Previous Panel/Chapter - Blue with ◦ -->
+                <div class="page-nav-button-container expandable-nav" data-expanded="false">
+                    <button class="page-nav-button" id="prevButton" title="Previous Panel/Chapter (Left Arrow)">
+                        <span class="nav-glyph"></span>
                     </button>
                     <div class="button-label">Previous</div>
                     <!-- Expandable Panel Content -->
@@ -92,10 +78,20 @@
                     </div>
                 </div>
                 
-                <!-- Next Panel/Chapter -->
-                <div class="nav-button-container expandable-nav" data-expanded="false">
-                    <button class="glyph-nav-button" id="nextButton" title="Next Panel/Chapter (Right Arrow)">
-                        <span class="nav-glyph" data-collapsed="+" data-expanded="◉">+</span>
+                <!-- Page Counter Display - Red ◉ at top -->
+                <div class="page-counter-display">
+                    <div class="page-info">
+                        <span class="current-page" id="currentPage">1</span>
+                        <span class="page-separator">/</span>
+                        <span class="total-pages" id="totalPages">4</span>
+                    </div>
+                    <div class="chapter-info" id="chapterInfo">Chapter 1</div>
+                </div>
+                
+                <!-- Next Panel/Chapter - Gold with ◉ -->
+                <div class="page-nav-button-container expandable-nav" data-expanded="false">
+                    <button class="page-nav-button" id="nextButton" title="Next Panel/Chapter (Right Arrow)">
+                        <span class="nav-glyph"></span>
                     </button>
                     <div class="button-label">Next</div>
                     <!-- Expandable Panel Content -->
@@ -105,6 +101,52 @@
                             <button class="panel-option" data-action="next-panel">◉ Next Panel</button>
                             <button class="panel-option" data-action="next-chapter">◉ Next Chapter</button>
                             <button class="panel-option" data-action="last-panel">◉ Last Panel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Edits Panel - Bottom Right Expansion -->
+        <nav class="edits-panel" id="editsPanel">
+            <!-- Toggle Button -->
+            <button class="edits-toggle" id="editsToggle">
+                <span class="toggle-glyph"></span>
+            </button>
+            
+            <!-- Edits Content -->
+            <div class="edits-content">
+                <div class="edits-header">
+                    <div class="edits-title">Edit Mode</div>
+                    <div class="edits-subtitle">Chapter Controls</div>
+                </div>
+                
+                <div class="edits-sections">
+                    <!-- Chapter Management -->
+                    <div class="edit-section">
+                        <div class="section-title">Chapter</div>
+                        <div class="section-options">
+                            <button class="edit-option" data-action="edit-chapter">✎ Edit Chapter</button>
+                            <button class="edit-option" data-action="add-chapter">+ Add Chapter</button>
+                            <button class="edit-option" data-action="delete-chapter">✗ Delete Chapter</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Background Management -->
+                    <div class="edit-section">
+                        <div class="section-title">Background</div>
+                        <div class="section-options">
+                            <button class="edit-option" data-action="change-background">🖼 Change Background</button>
+                            <button class="edit-option" data-action="layer-settings">⚙ Layer Settings</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Story Management -->
+                    <div class="edit-section">
+                        <div class="section-title">Story</div>
+                        <div class="section-options">
+                            <button class="edit-option" data-action="story-settings">📚 Story Settings</button>
+                            <button class="edit-option" data-action="export-story">📤 Export</button>
                         </div>
                     </div>
                 </div>

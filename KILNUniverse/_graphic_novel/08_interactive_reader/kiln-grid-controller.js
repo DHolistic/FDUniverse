@@ -9,7 +9,7 @@ class KilnGridController {
         this.manuscriptExpanded = false;
         this.checklistVisible = false;
         this.monetizationEnabled = true;
-        this.navigationExpanded = false;
+        this.editsExpanded = false;
         this.activeTab = 'text';
         this.integratedTextExpanded = false;
         this.headerChapterExpanded = false;
@@ -54,6 +54,7 @@ class KilnGridController {
         this.initializeVisualChecklist();
         this.setupResponsiveHandling();
         this.updatePanelDisplay();
+        this.updatePageCounter();
         
         // Force load Translator's Burden for testing
         this.switchStory('translators-burden');
@@ -97,9 +98,9 @@ class KilnGridController {
             this.toggleManuscript();
         });
 
-        // Navigation toggle
-        document.getElementById('navigationToggle').addEventListener('click', () => {
-            this.toggleNavigation();
+        // Edits panel toggle
+        document.getElementById('editsToggle').addEventListener('click', () => {
+            this.toggleEditsPanel();
         });
 
         // KILN law text (click to expand)
@@ -122,6 +123,11 @@ class KilnGridController {
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('panel-option')) {
                 this.handlePanelOptionClick(e.target);
+            }
+            
+            // Edit option clicks
+            if (e.target.classList.contains('edit-option')) {
+                this.handleEditOptionClick(e.target);
             }
         });
 
@@ -171,18 +177,101 @@ class KilnGridController {
         });
     }
 
-    toggleNavigation() {
-        const navigation = document.getElementById('kilnNavigation');
-        const toggle = document.getElementById('navigationToggle');
+    toggleEditsPanel() {
+        const editsPanel = document.getElementById('editsPanel');
+        const toggle = document.getElementById('editsToggle');
         
-        this.navigationExpanded = !this.navigationExpanded;
+        this.editsExpanded = !this.editsExpanded;
         
-        if (this.navigationExpanded) {
-            navigation.classList.add('expanded');
-            toggle.setAttribute('title', 'Collapse Navigation');
+        if (this.editsExpanded) {
+            editsPanel.classList.add('expanded');
+            toggle.setAttribute('title', 'Close Edit Panel');
         } else {
-            navigation.classList.remove('expanded');
-            toggle.setAttribute('title', 'Expand Navigation');
+            editsPanel.classList.remove('expanded');
+            toggle.setAttribute('title', 'Open Edit Panel');
+        }
+    }
+
+    handleEditOptionClick(option) {
+        const action = option.getAttribute('data-action');
+        
+        switch(action) {
+            case 'edit-chapter':
+                this.editChapter();
+                break;
+            case 'add-chapter':
+                this.addChapter();
+                break;
+            case 'delete-chapter':
+                this.deleteChapter();
+                break;
+            case 'change-background':
+                this.changeBackground();
+                break;
+            case 'layer-settings':
+                this.openLayerSettings();
+                break;
+            case 'story-settings':
+                this.openStorySettings();
+                break;
+            case 'export-story':
+                this.exportStory();
+                break;
+        }
+    }
+
+    // Edit Panel Functionality Methods
+    editChapter() {
+        this.showNotification('Chapter editing mode activated', 'info');
+        // Implementation would open chapter editing interface
+    }
+
+    addChapter() {
+        this.showNotification('Adding new chapter...', 'info');
+        // Implementation would create new chapter
+    }
+
+    deleteChapter() {
+        this.showNotification('Chapter deletion requested', 'warning');
+        // Implementation would handle chapter deletion
+    }
+
+    changeBackground() {
+        this.showNotification('Background selection mode activated', 'info');
+        // Implementation would open background selection
+    }
+
+    openLayerSettings() {
+        this.showNotification('Layer settings panel opened', 'info');
+        // Implementation would open layer configuration
+    }
+
+    openStorySettings() {
+        this.showNotification('Story settings panel opened', 'info');
+        // Implementation would open story configuration
+    }
+
+    exportStory() {
+        this.showNotification('Exporting story data...', 'info');
+        // Implementation would handle story export
+    }
+
+    // Update page counter display in center navigation
+    updatePageCounter() {
+        const currentPageElement = document.getElementById('currentPage');
+        const totalPagesElement = document.getElementById('totalPages');
+        const chapterInfoElement = document.getElementById('chapterInfo');
+        
+        if (currentPageElement) {
+            currentPageElement.textContent = this.currentPanel;
+        }
+        
+        if (totalPagesElement) {
+            totalPagesElement.textContent = this.totalPanels;
+        }
+        
+        if (chapterInfoElement) {
+            chapterInfoElement.textContent = `Chapter ${this.currentChapter}`;
         }
     }
 
@@ -1284,11 +1373,11 @@ class KilnGridController {
 
     // Expandable Navigation Panel System
     setupExpandableNavigation() {
-        // Add click listeners to all expandable navigation buttons
-        document.querySelectorAll('.nav-button-container.expandable-nav .glyph-nav-button').forEach(button => {
+        // Add click listeners to all expandable navigation buttons (both old and new style)
+        document.querySelectorAll('.nav-button-container.expandable-nav .glyph-nav-button, .page-nav-button-container.expandable-nav .page-nav-button').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const container = e.target.closest('.nav-button-container.expandable-nav');
+                const container = e.target.closest('.nav-button-container.expandable-nav, .page-nav-button-container.expandable-nav');
                 this.toggleNavPanel(container);
             });
         });
@@ -1393,17 +1482,20 @@ class KilnGridController {
         if (newPanel >= 1 && newPanel <= this.totalPanels) {
             this.currentPanel = newPanel;
             this.updatePanelDisplay();
+            this.updatePageCounter();
             this.showNotification(`Panel ${this.currentPanel} of ${this.totalPanels}`, 'info');
         } else if (direction > 0 && newPanel > this.totalPanels) {
             // Move to next chapter, panel 1
             this.navigateChapter(1);
             this.currentPanel = 1;
             this.updatePanelDisplay();
+            this.updatePageCounter();
         } else if (direction < 0 && newPanel < 1) {
             // Move to previous chapter, last panel
             this.navigateChapter(-1);
             this.currentPanel = this.totalPanels;
             this.updatePanelDisplay();
+            this.updatePageCounter();
         }
     }
 

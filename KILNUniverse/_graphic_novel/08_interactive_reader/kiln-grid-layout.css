@@ -634,8 +634,140 @@
     border-width: 4px;
 }
 
-/* Sacred Glyph Navigation - Bottom Right Upward Expansion */
-.kiln-navigation {
+/* Center Bottom Page Navigation - Horizontal Layout with Sacred Glyphs */
+.center-page-navigation {
+    position: fixed;
+    bottom: 0.5rem; /* Align with footer, reduced from 2rem */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 15px; /* Reduced from 20px */
+    padding: 0.75rem 1.125rem; /* Reduced by 25% */
+    z-index: 100;
+    /* Size reduced by 25% */
+    scale: 0.75;
+}
+
+.page-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Reduced from 2rem */
+}
+
+.page-nav-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.page-nav-button {
+    width: 37.5px; /* Reduced by 25% from 50px */
+    height: 37.5px; /* Reduced by 25% from 50px */
+    border: 2px solid;
+    border-radius: 50%;
+    background: transparent;
+    font-family: var(--title-font);
+    font-size: 1.4rem; /* Increased to maintain readability */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Previous Button - Blue themed with ◦ glyph */
+.page-nav-button-container:first-child .page-nav-button {
+    border-color: var(--consciousness-blue);
+    color: var(--consciousness-blue);
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(74, 144, 226, 0.3) 100%);
+}
+
+.page-nav-button-container:first-child .page-nav-button:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.3) 0%, 
+        rgba(74, 144, 226, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.page-nav-button-container:first-child .nav-glyph::before {
+    content: "◦";
+}
+
+/* Next Button - Gold themed with ◉ glyph */
+.page-nav-button-container:last-child .page-nav-button {
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.1) 0%, 
+        rgba(243, 156, 18, 0.3) 100%);
+}
+
+.page-nav-button-container:last-child .page-nav-button:hover {
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.3) 0%, 
+        rgba(243, 156, 18, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
+}
+
+.page-nav-button-container:last-child .nav-glyph::before {
+    content: "◉";
+}
+
+.page-counter-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem; /* Reduced by 25% */
+    min-width: 90px; /* Reduced by 25% */
+    position: relative;
+}
+
+/* Center glyph - Red themed with ◉ */
+.page-counter-display::before {
+    content: "◉";
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--authority-red);
+    text-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.page-info {
+    font-family: var(--title-font);
+    font-size: 1.125rem; /* Reduced by 25% */
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-top: 1rem; /* Space for top glyph */
+}
+
+.page-separator {
+    margin: 0 0.375rem; /* Reduced by 25% */
+    color: var(--transformation-gold);
+}
+
+.chapter-info {
+    font-family: var(--body-font);
+    font-size: 0.675rem; /* Reduced by 25% */
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Edits Panel - Bottom Right Expansion */
+.edits-panel {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -643,10 +775,10 @@
         rgba(44, 24, 16, 0.95) 0%, 
         rgba(44, 24, 16, 0.98) 100%);
     backdrop-filter: blur(10px);
-    border: 3px solid var(--consciousness-blue);
+    border: 3px solid var(--authority-red);
     border-radius: 20px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 1rem 0.75rem;
@@ -658,13 +790,208 @@
     overflow: hidden;
 }
 
-.kiln-navigation.expanded {
-    height: 320px;
-    width: 80px;
-    transform: translateY(-250px);
+.edits-panel.expanded {
+    height: 400px;
+    width: 300px;
+    transform: translateY(-330px);
+    padding: 1.5rem;
 }
 
-/* Navigation Expand/Collapse Toggle - Now at bottom */
+.edits-toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: var(--authority-red);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+}
+
+.edits-toggle:hover {
+    color: var(--transformation-gold);
+    transform: scale(1.2);
+}
+
+.edits-toggle .toggle-glyph::before {
+    content: "⚙";
+    transition: transform 0.5s var(--transition-ease);
+}
+
+.edits-panel.expanded .edits-toggle .toggle-glyph::before {
+    content: "✕";
+    transform: rotate(180deg);
+}
+
+.edits-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.edits-panel.expanded .edits-content {
+    display: flex;
+}
+
+.edits-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.edits-title {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--authority-red);
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.edits-subtitle {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.edits-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.edit-section {
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 10px;
+    padding: 1rem;
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.section-title {
+    font-family: var(--title-font);
+    font-size: 1rem;
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.section-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-option {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.2) 0%, 
+        rgba(74, 144, 226, 0.4) 100%);
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 8px;
+    color: var(--text-light);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+}
+
+.edit-option:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.4) 0%, 
+        rgba(74, 144, 226, 0.6) 100%);
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Expandable Navigation Panel Styles for Center Navigation */
+.page-nav-button-container .nav-panel-content {
+    position: absolute;
+    bottom: calc(100% + 0.375rem); /* Reduced spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 9px; /* Reduced by 25% */
+    padding: 0.75rem; /* Reduced by 25% */
+    min-width: 150px; /* Reduced by 25% */
+    max-width: 187.5px; /* Reduced by 25% */
+    z-index: 200;
+    opacity: 0;
+    transform: translateX(-50%) translateY(7.5px); /* Reduced movement */
+    transition: all 0.3s var(--transition-ease);
+    pointer-events: none;
+    /* Ensure it appears above footer level */
+    bottom: calc(100% + 1rem);
+}
+
+.page-nav-button-container[data-expanded="true"] .nav-panel-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: all;
+}
+
+.page-nav-button-container .panel-header {
+    font-family: var(--title-font);
+    font-size: 0.675rem; /* Reduced by 25% */
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-bottom: 0.5625rem; /* Reduced by 25% */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.375px; /* Reduced by 25% */
+}
+
+.page-nav-button-container .panel-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem; /* Reduced by 25% */
+}
+
+.page-nav-button-container .panel-option {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.2) 0%, 
+        rgba(74, 144, 226, 0.4) 100%);
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 6px; /* Reduced by 25% */
+    color: var(--text-light);
+    padding: 0.375rem 0.5625rem; /* Reduced by 25% */
+    font-family: var(--body-font);
+    font-size: 0.6375rem; /* Reduced by 25% */
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+}
+
+.page-nav-button-container .panel-option:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.4) 0%, 
+        rgba(74, 144, 226, 0.6) 100%);
+    transform: translateY(-1.5px); /* Reduced by 25% */
+    box-shadow: 0 3px 9px rgba(74, 144, 226, 0.3); /* Reduced by 25% */
+}
+
+.page-nav-button-container .button-label {
+    font-family: var(--body-font);
+    font-size: 0.6rem; /* Reduced by 25% */
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 0.25rem; /* Reduced spacing */
+    opacity: 0.8;
+}
+
+/* OLD NAVIGATION STYLES - COMMENTED OUT
 .navigation-toggle {
     background: linear-gradient(135deg, 
         var(--transformation-gold) 0%, 
@@ -692,7 +1019,6 @@
     box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
 }
 
-/* Toggle button glyph states */
 .navigation-toggle .toggle-glyph {
     font-size: 1.3rem;
     transition: all 0.3s ease;
@@ -701,19 +1027,18 @@
     justify-content: center;
 }
 
-/* Collapsed state - minus/contract symbol */
 .navigation-toggle .toggle-glyph::before {
     content: '◦';
     color: white;
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
-/* Expanded state - plus/expand symbol */
 .kiln-navigation.expanded .navigation-toggle .toggle-glyph::before {
     content: '◉';
     color: var(--transformation-gold);
     text-shadow: 0 0 6px var(--transformation-gold);
 }
+*/
 
 /* Chapter Display - Hidden when collapsed, top when expanded */
 .chapter-display {
