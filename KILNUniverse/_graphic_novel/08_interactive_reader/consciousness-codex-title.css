@@ -170,16 +170,31 @@ body {
     content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: var(--title-font);
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.06);
-    letter-spacing: 2rem;
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 1;
-}
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--title-font);
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: 2rem;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+    }
+    /* Removed watermark glyphs per lock-in request. Keep rule commented for easy restore if needed. */
+    /* .kiln-header-title::after {
+        content: '\u25c9 \u25e6 \u25c9 \u25e6 \u25c9 \u25e6 \u25c9 \u25e6 \u25c9';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--title-font);
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: 2rem;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+    } */
 
 .header-title-content {
     display: flex;
@@ -487,10 +502,9 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Hide the small subtitle/text box as requested */
 .selection-subtitle {
-    font-size: 1.3rem;
-    color: var(--ceramic-cream);
-    opacity: 0.8;
+    display: none !important;
 }
 
 .story-cards {
@@ -568,15 +582,19 @@ body {
     font-family: var(--title-font);
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    display: block;
 }
 
-.orthodoxy-icon {
-    color: var(--authority-red);
-}
-
-.consciousness-icon {
+/* Disable shimmering glyph animation for locked foundation */
+.consciousness-glyph {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
     color: var(--consciousness-blue);
+    animation: none !important;
+}
+
+.consciousness-glyph:nth-child(odd),
+.consciousness-glyph:nth-child(even) {
+    animation-delay: 0s !important;
 }
 
 .integration-icon {

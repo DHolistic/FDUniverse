@@ -1,0 +1,29 @@
+/* LOCKED FOUNDATION OVERRIDES: Disable glyph animations and transitions site-wide */
+[class*="glyph"],
+[class*="Glyph"],
+.consciousness-glyph,
+.nav-glyph,
+.theme-glyph,
+.glyph-nav-button,
+.floating-glyph,
+.nav-glyph::before,
+.nav-glyph::after,
+.floating-glyph::before,
+.floating-glyph::after {
+    animation: none !important;
+    animation-play-state: paused !important;
+    transition: none !important;
+    transform: none !important;
+    will-change: auto !important;
+}
+
+/* Also remove keyframe-driven effects on pseudo elements */
+*::before,
+*::after {
+    animation: none !important;
+}
+
+/* Small safeguard to prevent any lingering JS from re-applying inline animations */
+[inline-style-disabled] {
+    animation: none !important;
+}
