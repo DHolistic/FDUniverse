@@ -107,6 +107,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex: 1;
 }
 
 .chapter-number-display {
@@ -116,6 +117,75 @@
 
 .chapter-title-text {
     color: var(--ceramic-cream);
+}
+
+.chapter-subtitle-text {
+    color: var(--consciousness-blue);
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Chapter Navigation Controls */
+.chapter-navigation-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 2rem;
+}
+
+.chapter-nav-btn {
+    background: var(--consciousness-blue);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chapter-nav-btn:hover {
+    background: var(--transformation-gold);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.chapter-nav-label {
+    font-family: var(--title-font);
+    font-size: 0.8rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Update header chapter text to use flexbox layout */
+.header-chapter-text {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+    transition: all 0.5s var(--transition-ease);
 }
 
 .chapter-subtitle-text {

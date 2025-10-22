@@ -285,10 +285,10 @@ class ConsciousnessCodexTitle {
 
         switch(e.key) {
             case '1':
-                this.selectStory('translators-burden');
+                this.selectStory('first-void');
                 break;
             case '2':
-                this.selectStory('first-void');
+                this.selectStory('translators-burden');
                 break;
             case '3':
                 this.selectStory('kiln-codex');

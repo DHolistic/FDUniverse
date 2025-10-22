@@ -53,6 +53,7 @@ class KilnGridController {
         this.updateChapterBackground();
         this.initializeVisualChecklist();
         this.setupResponsiveHandling();
+        this.updatePanelDisplay();
         
         // Check if coming from title screen
         this.handleTitleScreenNavigation();
@@ -131,6 +132,15 @@ class KilnGridController {
         // Header chapter text (click to collapse)
         document.getElementById('headerChapterText').addEventListener('click', () => {
             this.toggleHeaderChapter();
+        });
+
+        // Chapter navigation controls
+        document.getElementById('ascendChapter').addEventListener('click', () => {
+            this.navigateChapter(1);
+        });
+
+        document.getElementById('descendChapter').addEventListener('click', () => {
+            this.navigateChapter(-1);
         });
 
         // Visual checklist toggle
@@ -344,6 +354,9 @@ class KilnGridController {
         
         // Show notification
         this.showNotification(`Switched to ${config.title}`, 'success');
+        
+        // Update panel display
+        this.updatePanelDisplay();
     }
 
     navigateChapter(direction) {
@@ -364,6 +377,7 @@ class KilnGridController {
         setTimeout(() => {
             this.updateChapterBackground();
             this.loadChapterContent();
+            this.updatePanelDisplay();
         }, 400);
     }
 
@@ -1271,8 +1285,15 @@ class KilnGridController {
     }
 
     updatePanelDisplay() {
-        document.getElementById('currentPanel').textContent = this.currentPanel;
-        document.getElementById('totalPanels').textContent = this.totalPanels;
+        // Update current position to show "Title Page"
+        document.getElementById('currentPanel').textContent = 'Title Page';
+        
+        // Update next chapter info
+        const nextChapter = this.currentChapter + 1;
+        const nextChapterText = nextChapter <= this.totalChapters ? `Next: Chapter ${nextChapter}` : 'Final Chapter';
+        document.getElementById('totalPanels').textContent = nextChapterText;
+        
+        // Update current chapter display
         document.getElementById('currentChapter').textContent = this.currentChapter;
     }
 

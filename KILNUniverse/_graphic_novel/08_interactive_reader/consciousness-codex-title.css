@@ -130,6 +130,70 @@ body {
     opacity: 1;
 }
 
+/* 🔒 LOCKED HEADER BANNER - Applied from Main Interface */
+.kiln-header-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(135deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(139, 69, 19, 0.9) 50%, 
+        rgba(44, 24, 16, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 4px solid var(--transformation-gold);
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Watermarked Cover Art Background */
+.kiln-header-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../_canonical_imagery/01_landscape_foundation/consciousness_codex_cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    filter: sepia(30%) hue-rotate(200deg) saturate(150%);
+    z-index: -1;
+}
+
+/* Sacred Glyph Watermarks */
+.kiln-header-title::after {
+    content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.06);
+    letter-spacing: 2rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 /* Background Layers */
 .background-container {
     position: absolute;
@@ -281,7 +345,8 @@ body {
 .title-content {
     position: relative;
     z-index: 10;
-    height: 100vh;
+    height: calc(100vh - 160px);
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,27 +366,36 @@ body {
     }
 }
 
-/* Main Title Container */
-.main-title-container {
-    text-align: center;
-    margin-bottom: 4rem;
+/* Left Title Section */
+.left-title-section {
+    text-align: left;
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Right Badge Section */
+.right-badge-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
 }
 
 .title-glyph-row {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0.5rem 0;
 }
 
 .title-glyph-row.bottom {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     margin-bottom: 0;
 }
 
 .consciousness-glyph {
     font-family: var(--title-font);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--consciousness-blue);
     animation: glyphShimmer 4s ease-in-out infinite;
 }
@@ -347,14 +421,14 @@ body {
 
 .main-title {
     font-family: var(--title-font);
-    font-size: 4.5rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: var(--ceramic-cream);
     text-shadow: 
         0 0 20px rgba(74, 144, 226, 0.5),
         0 0 40px rgba(74, 144, 226, 0.3);
-    letter-spacing: 0.2em;
-    margin: 1rem 0;
+    letter-spacing: 0.15em;
+    margin: 0.5rem 0;
     animation: titleGlow 6s ease-in-out infinite;
 }
 
@@ -373,7 +447,7 @@ body {
 }
 
 .subtitle-container {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .kiln-universe-badge {
@@ -382,37 +456,23 @@ body {
         var(--consciousness-blue) 0%, 
         var(--transformation-gold) 100%);
     color: white;
-    padding: 0.75rem 2rem;
+    padding: 0.8rem 2rem;
     border-radius: 25px;
     font-family: var(--title-font);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.3);
-}
-
-.main-subtitle {
-    font-size: 1.8rem;
-    color: var(--consciousness-blue);
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-
-.philosophical-tagline {
-    font-size: 1.2rem;
-    color: var(--ceramic-cream);
-    opacity: 0.9;
-    font-style: italic;
-    max-width: 600px;
-    line-height: 1.6;
+    margin: 0;
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+    text-align: center;
+    min-width: 150px;
 }
 
 /* Story Selection */
 .story-selection {
     max-width: 1200px;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .selection-header {
@@ -622,35 +682,6 @@ body {
 }
 
 /* Sacred Footer */
-.sacred-footer {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.kiln-law-excerpt {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--consciousness-blue);
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-    line-height: 1.6;
-}
-
-.universe-signature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1rem;
-    color: var(--ceramic-cream);
-    opacity: 0.8;
-}
-
-.signature-glyph {
-    font-size: 1.5rem;
-    color: var(--transformation-gold);
-}
-
 /* Floating Elements */
 .floating-elements {
     position: absolute;

@@ -102,6 +102,12 @@
                         <span class="chapter-title-text">The Weight of Words</span>
                         <span class="chapter-subtitle-text">The Orthodox KILN Consciousness Preservation Protocol</span>
                     </div>
+                    <!-- Chapter Ascend/Descend Controls -->
+                    <div class="chapter-navigation-controls">
+                        <button class="chapter-nav-btn" id="descendChapter" title="Previous Chapter">▼</button>
+                        <span class="chapter-nav-label">Chapter Order</span>
+                        <button class="chapter-nav-btn" id="ascendChapter" title="Next Chapter">▲</button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -115,11 +121,10 @@
             
             <!-- Chapter Display - Top -->
             <div class="chapter-display">
-                <div class="chapter-label">Action Scene</div>
+                <div class="chapter-label">Title Page</div>
                 <div class="chapter-counter">
-                    Panel <span id="currentPanel">4</span> of <span id="totalPanels">4</span>
+                    Next: <span id="nextChapter">Chapter 2</span>
                 </div>
-                <div class="chapter-title-small">Chapter <span id="currentChapter">1</span></div>
             </div>
             
             <!-- Navigation Buttons -->
@@ -154,43 +159,6 @@
                             <button class="panel-option" data-action="next-panel">◉ Next Panel</button>
                             <button class="panel-option" data-action="next-chapter">◉ Next Chapter</button>
                             <button class="panel-option" data-action="last-panel">◉ Last Panel</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Bottom Section -->
-            <div class="nav-bottom-section">
-                <!-- Visual Checklist Toggle / Edit Mode -->
-                <div class="nav-button-container expandable-nav" data-expanded="false">
-                    <button class="glyph-nav-button" id="checklistToggle" title="Edit Mode Checklist (C)">
-                        <span class="nav-glyph" data-collapsed="—" data-expanded="🎯">—</span>
-                    </button>
-                    <div class="button-label">Edit Mode</div>
-                    <!-- Expandable Panel Content -->
-                    <div class="nav-panel-content" style="display: none;">
-                        <div class="panel-header">Edit Mode Tools</div>
-                        <div class="panel-options">
-                            <button class="panel-option" data-action="edit-text">🎯 Text Editor</button>
-                            <button class="panel-option" data-action="edit-scene">🎯 Scene Editor</button>
-                            <button class="panel-option" data-action="checklist">🎯 Validation</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Chapter Order Settings -->
-                <div class="nav-button-container expandable-nav" data-expanded="false">
-                    <button class="glyph-nav-button" id="orderButton" title="Chapter Order (O)">
-                        <span class="nav-glyph" data-collapsed="+" data-expanded="⚙️">+</span>
-                    </button>
-                    <div class="button-label">Order</div>
-                    <!-- Expandable Panel Content -->
-                    <div class="nav-panel-content" style="display: none;">
-                        <div class="panel-header">Chapter Order</div>
-                        <div class="panel-options">
-                            <button class="panel-option active" data-action="ascending">⚙️ Ascending (1→12)</button>
-                            <button class="panel-option" data-action="descending">⚙️ Descending (12→1)</button>
-                            <button class="panel-option" data-action="custom">⚙️ Custom Order</button>
                         </div>
                     </div>
                 </div>
