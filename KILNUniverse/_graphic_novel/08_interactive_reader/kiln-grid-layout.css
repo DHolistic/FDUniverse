@@ -634,10 +634,10 @@
     border-width: 4px;
 }
 
-/* Center Bottom Page Navigation - Horizontal Layout with Sacred Glyphs */
+/* Page Navigation - Moved to Main Field Area, Bottom Center */
 .center-page-navigation {
-    position: fixed;
-    bottom: 0; /* Align with very bottom of page */
+    position: absolute;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(180deg, 
@@ -645,9 +645,9 @@
         rgba(44, 24, 16, 0.98) 100%);
     backdrop-filter: blur(10px);
     border: 2px solid var(--consciousness-blue);
-    border-radius: 15px 15px 0 0; /* Rounded top, flat bottom to align with page */
-    padding: 0.75rem 1.125rem 0.5rem; /* Less bottom padding */
-    z-index: 100;
+    border-radius: 15px;
+    padding: 0.75rem 1.125rem;
+    z-index: 50;
     /* Size reduced by 25% */
     scale: 0.75;
 }
@@ -655,7 +655,7 @@
 .page-nav-container {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Reduced from 2rem */
+    gap: 1.5rem;
 }
 
 .page-nav-button-container {
@@ -666,13 +666,13 @@
 }
 
 .page-nav-button {
-    width: 37.5px; /* Reduced by 25% from 50px */
-    height: 37.5px; /* Reduced by 25% from 50px */
+    width: 37.5px;
+    height: 37.5px;
     border: 2px solid;
     border-radius: 50%;
     background: transparent;
     font-family: var(--title-font);
-    font-size: 1.4rem; /* Increased to maintain readability */
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s var(--transition-ease);
@@ -727,8 +727,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem; /* Reduced spacing */
-    min-width: 90px; /* Reduced by 25% */
+    gap: 0.25rem;
+    min-width: 90px;
     position: relative;
 }
 
@@ -748,22 +748,18 @@
 
 .page-info {
     font-family: var(--title-font);
-    font-size: 1.125rem; /* Reduced by 25% */
+    font-size: 1.125rem;
     color: var(--consciousness-blue);
     font-weight: bold;
     margin-top: 1rem; /* Space for top glyph */
 }
 
 .page-separator {
-    margin: 0 0.375rem; /* Reduced by 25% */
+    margin: 0 0.375rem;
     color: var(--transformation-gold);
 }
 
-.chapter-info {
-    display: none; /* Hide chapter text */
-}
-
-/* Edits Panel - Bottom Right Expansion - Reverted to Previous Settings */
+/* Edits Panel - Bottom Right Expansion - Consistent Sizing */
 .edits-panel {
     position: fixed;
     bottom: 2rem;
@@ -772,15 +768,15 @@
         rgba(44, 24, 16, 0.95) 0%, 
         rgba(44, 24, 16, 0.98) 100%);
     backdrop-filter: blur(10px);
-    border: 3px solid var(--authority-red);
-    border-radius: 20px;
+    border: 2px solid var(--authority-red); /* Consistent with other buttons */
+    border-radius: 50%; /* Make it circular like other buttons */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 1rem 0.75rem;
-    width: 70px;
-    height: 70px;
+    justify-content: center;
+    padding: 0;
+    width: 50px; /* Consistent with theme glyphs */
+    height: 50px; /* Consistent with theme glyphs */
     transform: translateY(0);
     transition: all 0.5s var(--transition-ease);
     z-index: 100;
@@ -790,28 +786,29 @@
 .edits-panel.expanded {
     height: 400px;
     width: 300px;
-    transform: translateY(-330px);
+    border-radius: 20px; /* Rounded when expanded */
+    transform: translateY(-350px);
     padding: 1.5rem;
 }
 
 .edits-toggle {
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Consistent with theme glyph content */
+    height: 40px; /* Consistent with theme glyph content */
     border: none;
     background: transparent;
     color: var(--authority-red);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Consistent with other buttons */
     cursor: pointer;
     transition: all 0.3s var(--transition-ease);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: auto;
+    margin: 0;
 }
 
 .edits-toggle:hover {
     color: var(--transformation-gold);
-    transform: scale(1.2);
+    transform: scale(1.1); /* Consistent hover effect */
 }
 
 .edits-toggle .toggle-glyph::before {
@@ -1615,31 +1612,81 @@
     text-indent: 2rem;
 }
 
-/* Chapter Theme Indicators */
+/* Chapter Theme Indicators - Moved to Bottom Center */
 .chapter-theme-indicators {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Horizontal layout */
     gap: 1rem;
-    z-index: 15;
+    z-index: 50;
 }
 
 .theme-glyph {
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Consistent with other buttons */
+    height: 40px; /* Consistent with other buttons */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--title-font);
-    font-size: 1.5rem;
-    font-weight: bold;
-    backdrop-filter: blur(10px);
-    border: 2px solid transparent;
-    transition: all 0.4s var(--transition-ease);
+    font-size: 1.2rem; /* Consistent sizing */
+    border: 2px solid;
     cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+}
+
+/* Blue theme glyph */
+.theme-glyph:nth-child(1) {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(74, 144, 226, 0.3) 100%);
+    border-color: var(--consciousness-blue);
+    color: var(--consciousness-blue);
+}
+
+.theme-glyph:nth-child(1):hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.3) 0%, 
+        rgba(74, 144, 226, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+/* Red theme glyph */
+.theme-glyph:nth-child(2) {
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.1) 0%, 
+        rgba(231, 76, 60, 0.3) 100%);
+    border-color: var(--authority-red);
+    color: var(--authority-red);
+}
+
+.theme-glyph:nth-child(2):hover {
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.3) 0%, 
+        rgba(231, 76, 60, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+/* Gold theme glyph */
+.theme-glyph:nth-child(3) {
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.1) 0%, 
+        rgba(243, 156, 18, 0.3) 100%);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+.theme-glyph:nth-child(3):hover {
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.3) 0%, 
+        rgba(243, 156, 18, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
 }
 
 .theme-glyph.consciousness {
