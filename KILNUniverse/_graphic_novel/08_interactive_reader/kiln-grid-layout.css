@@ -914,28 +914,307 @@
     }
 }
 
-/* Main Content Area */
+/* Main Content Area - Enhanced for Chapter Backgrounds */
 .kiln-content {
     grid-area: content;
     position: relative;
     overflow: hidden;
-    background: rgba(245, 245, 220, 0.05);
-    backdrop-filter: blur(2px);
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 100%);
+    min-height: calc(100vh - 170px); /* Account for header + footer */
 }
 
-/* Chapter Background System */
+/* Dynamic Chapter Background System */
+.chapter-background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .chapter-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s var(--transition-ease);
+}
+
+.chapter-background.primary {
+    z-index: 1;
+}
+
+.chapter-background.secondary {
+    z-index: 2;
+}
+
+/* Layered Background System */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.7) contrast(1.2);
-    transition: all 1s var(--transition-ease);
+    transition: all 1.2s var(--transition-ease);
+}
+
+.bg-layer.base-layer {
     z-index: 1;
+    opacity: 0.8;
+    filter: sepia(20%) hue-rotate(200deg) saturate(120%);
+}
+
+.bg-layer.atmosphere-layer {
+    z-index: 2;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    background: radial-gradient(ellipse at center, 
+        transparent 0%, 
+        rgba(74, 144, 226, 0.1) 50%, 
+        rgba(44, 24, 16, 0.3) 100%);
+}
+
+.bg-layer.character-layer {
+    z-index: 3;
+    opacity: 0.9;
+    filter: contrast(110%) brightness(105%);
+}
+
+.bg-layer.glyph-layer {
+    z-index: 4;
+    opacity: 0.3;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(243, 156, 18, 0.1) 42px,
+        rgba(243, 156, 18, 0.1) 44px
+    );
+    mix-blend-mode: overlay;
+}
+
+/* Manuscript Text Overlay */
+.manuscript-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s var(--transition-ease);
+}
+
+.manuscript-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.manuscript-frame {
+    background: linear-gradient(135deg, 
+        rgba(245, 245, 220, 0.95) 0%, 
+        rgba(240, 240, 240, 0.9) 100%);
+    border: 3px solid var(--transformation-gold);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(243, 156, 18, 0.2);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.manuscript-frame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+        var(--consciousness-blue), 
+        var(--authority-red), 
+        var(--transformation-gold));
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.manuscript-content {
+    color: var(--kiln-dark);
+    font-family: var(--body-font);
+}
+
+.chapter-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--consciousness-blue);
+}
+
+.chapter-number {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--authority-red);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-title {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--consciousness-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-subtitle {
+    display: block;
+    font-size: 1rem;
+    color: var(--clay-brown);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.manuscript-body {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.opening-paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--kiln-dark);
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+/* Chapter Theme Indicators */
+.chapter-theme-indicators {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 15;
+}
+
+.theme-glyph {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    transition: all 0.4s var(--transition-ease);
+    cursor: pointer;
+}
+
+.theme-glyph.consciousness {
+    background: rgba(74, 144, 226, 0.2);
+    color: var(--consciousness-blue);
+    border-color: var(--consciousness-blue);
+}
+
+.theme-glyph.authority {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--authority-red);
+    border-color: var(--authority-red);
+}
+
+.theme-glyph.transformation {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--transformation-gold);
+    border-color: var(--transformation-gold);
+}
+
+.theme-glyph:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px currentColor;
+}
+
+.theme-glyph.active {
+    animation: themeGlyphPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes themeGlyphPulse {
+    0% { 
+        box-shadow: 0 0 10px currentColor;
+        transform: scale(1);
+    }
+    100% { 
+        box-shadow: 0 0 25px currentColor;
+        transform: scale(1.05);
+    }
+}
+
+/* Background Controls */
+.background-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 15;
+}
+
+.bg-control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(44, 24, 16, 0.8);
+    border: 2px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-control-btn:hover {
+    background: rgba(74, 144, 226, 0.3);
+    border-color: var(--transformation-gold);
+    transform: scale(1.1);
+}
+
+.bg-control-btn.active {
+    background: rgba(243, 156, 18, 0.3);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+/* Chapter-Specific Background Themes */
+.chapter-background[data-story="translators-burden"] .base-layer {
+    filter: sepia(30%) hue-rotate(350deg) saturate(130%);
+}
+
+.chapter-background[data-story="first-void"] .base-layer {
+    filter: sepia(20%) hue-rotate(200deg) saturate(140%);
+}
+
+.chapter-background[data-story="kiln-codex"] .base-layer {
+    filter: sepia(25%) hue-rotate(25deg) saturate(125%);
 }
 
 /* Loading Screen */

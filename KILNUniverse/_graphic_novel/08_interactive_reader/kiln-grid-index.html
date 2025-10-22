@@ -194,13 +194,56 @@
         
         <!-- Main Content Area with Chapter Background -->
         <main class="kiln-content" id="mainContent">
-            <!-- Dynamic Chapter Background -->
-            <div class="chapter-background" id="chapterBackground">
-                <!-- Background image will be loaded dynamically -->
+            <!-- Dynamic Chapter Background System -->
+            <div class="chapter-background-container" id="chapterBackgroundContainer">
+                <!-- Primary Chapter Background -->
+                <div class="chapter-background primary" id="chapterBackground" data-chapter="1" data-story="translators-burden">
+                    <!-- Background image layers -->
+                    <div class="bg-layer base-layer" id="baseLayer"></div>
+                    <div class="bg-layer atmosphere-layer" id="atmosphereLayer"></div>
+                    <div class="bg-layer character-layer" id="characterLayer"></div>
+                    <div class="bg-layer glyph-layer" id="glyphLayer"></div>
+                </div>
+                
+                <!-- Secondary Background for Transitions -->
+                <div class="chapter-background secondary" id="chapterBackgroundSecondary" style="opacity: 0;">
+                    <div class="bg-layer base-layer"></div>
+                    <div class="bg-layer atmosphere-layer"></div>
+                    <div class="bg-layer character-layer"></div>
+                    <div class="bg-layer glyph-layer"></div>
+                </div>
+                
+                <!-- Manuscript Text Overlay -->
+                <div class="manuscript-overlay" id="manuscriptOverlay">
+                    <div class="manuscript-frame">
+                        <div class="manuscript-content">
+                            <div class="chapter-heading" id="chapterHeading">
+                                <span class="chapter-number">Chapter 1</span>
+                                <span class="chapter-title">The Weight of Words</span>
+                                <span class="chapter-subtitle">Orthodox KILN Consciousness Preservation Protocol</span>
+                            </div>
+                            <div class="manuscript-body" id="manuscriptBody">
+                                <p class="opening-paragraph">In the orthodox ceramic halls of the KILN, where consciousness flows like carefully tempered clay through prescribed channels...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chapter Theme Indicators -->
+                <div class="chapter-theme-indicators" id="chapterThemeIndicators">
+                    <div class="theme-glyph consciousness" data-theme="consciousness">◉</div>
+                    <div class="theme-glyph authority" data-theme="authority">◦</div>
+                    <div class="theme-glyph transformation" data-theme="transformation">◉</div>
+                </div>
+                
+                <!-- Background Transition Controls -->
+                <div class="background-controls" id="backgroundControls" style="display: none;">
+                    <button class="bg-control-btn" id="fadeBackgroundBtn" title="Fade Background">🌅</button>
+                    <button class="bg-control-btn" id="enhanceAtmosphereBtn" title="Enhance Atmosphere">🌫️</button>
+                    <button class="bg-control-btn" id="showCharactersBtn" title="Show Characters">👤</button>
+                    <button class="bg-control-btn" id="revealGlyphsBtn" title="Reveal Glyphs">⚡</button>
+                </div>
             </div>
-            
-            <!-- Text box removed - content now in integrated footer system -->
-            
         </main>
         
         <!-- Footer with KILN Law and Integrated Text -->

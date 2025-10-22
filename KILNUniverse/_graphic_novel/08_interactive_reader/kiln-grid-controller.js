@@ -108,6 +108,9 @@ class KilnGridController {
         // Expandable navigation panels
         this.setupExpandableNavigation();
 
+        // Chapter background system
+        this.setupChapterBackground();
+
         // Panel option clicks
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('panel-option')) {
@@ -1295,6 +1298,270 @@ class KilnGridController {
     applyChapterOrder() {
         // Implementation for chapter ordering
         console.log(`Applying ${this.chapterOrder} chapter order`);
+    }
+
+    // Chapter Background System
+    setupChapterBackground() {
+        this.currentBackgroundState = {
+            activeBackground: 'primary',
+            isTransitioning: false,
+            manuscriptVisible: false,
+            activeTheme: 'consciousness'
+        };
+
+        // Initialize background layers
+        this.initializeBackgroundLayers();
+        
+        // Setup theme indicator controls
+        this.setupThemeIndicators();
+        
+        // Setup background controls
+        this.setupBackgroundControls();
+        
+        // Load initial background
+        this.loadChapterBackground();
+    }
+
+    initializeBackgroundLayers() {
+        const container = document.querySelector('.chapter-background-container');
+        if (!container) return;
+
+        // Create primary and secondary background divs
+        const primaryBg = container.querySelector('.chapter-background.primary');
+        const secondaryBg = container.querySelector('.chapter-background.secondary');
+
+        if (primaryBg && secondaryBg) {
+            // Initialize layers within each background
+            ['base-layer', 'atmosphere-layer', 'character-layer', 'glyph-layer'].forEach(layerClass => {
+                if (!primaryBg.querySelector(`.${layerClass}`)) {
+                    const layer = document.createElement('div');
+                    layer.className = `bg-layer ${layerClass}`;
+                    primaryBg.appendChild(layer);
+                }
+                
+                if (!secondaryBg.querySelector(`.${layerClass}`)) {
+                    const layer = document.createElement('div');
+                    layer.className = `bg-layer ${layerClass}`;
+                    secondaryBg.appendChild(layer);
+                }
+            });
+        }
+    }
+
+    setupThemeIndicators() {
+        const indicators = document.querySelectorAll('.theme-glyph');
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', (e) => {
+                const theme = e.target.dataset.theme;
+                this.switchTheme(theme);
+            });
+        });
+    }
+
+    setupBackgroundControls() {
+        const controls = document.querySelectorAll('.bg-control-btn');
+        controls.forEach(control => {
+            control.addEventListener('click', (e) => {
+                const action = e.target.dataset.action;
+                this.handleBackgroundControl(action);
+            });
+        });
+    }
+
+    loadChapterBackground() {
+        const storyConfig = this.storyConfigs[this.currentStory];
+        if (!storyConfig) return;
+
+        const backgroundPath = `${storyConfig.backgroundPath}chapter_${this.currentChapter}/`;
+        
+        // Update background layers
+        this.updateBackgroundLayers(backgroundPath);
+        
+        // Apply story-specific theme
+        this.applyStoryTheme(storyConfig.colorTheme);
+        
+        // Update manuscript content if visible
+        if (this.currentBackgroundState.manuscriptVisible) {
+            this.updateManuscriptContent();
+        }
+    }
+
+    updateBackgroundLayers(basePath) {
+        const activeBackground = document.querySelector(
+            `.chapter-background.${this.currentBackgroundState.activeBackground}`
+        );
+        
+        if (!activeBackground) return;
+
+        // Set background images for each layer
+        const layers = {
+            'base-layer': `${basePath}landscape_base.jpg`,
+            'atmosphere-layer': null, // Uses CSS gradient
+            'character-layer': `${basePath}character_focus.jpg`,
+            'glyph-layer': null // Uses CSS pattern
+        };
+
+        Object.entries(layers).forEach(([layerClass, imagePath]) => {
+            const layer = activeBackground.querySelector(`.${layerClass}`);
+            if (layer && imagePath) {
+                layer.style.backgroundImage = `url('${imagePath}')`;
+            }
+        });
+
+        // Set story data attribute for theme-specific styling
+        activeBackground.dataset.story = this.currentStory;
+    }
+
+    switchTheme(themeName) {
+        this.currentBackgroundState.activeTheme = themeName;
+        
+        // Update theme indicator states
+        document.querySelectorAll('.theme-glyph').forEach(glyph => {
+            glyph.classList.remove('active');
+        });
+        
+        const activeIndicator = document.querySelector(`.theme-glyph.${themeName}`);
+        if (activeIndicator) {
+            activeIndicator.classList.add('active');
+        }
+
+        // Apply theme to background
+        this.applyThemeFilters(themeName);
+        
+        this.showNotification(`Switched to ${themeName} theme`, 'info');
+    }
+
+    applyThemeFilters(theme) {
+        const container = document.querySelector('.chapter-background-container');
+        if (!container) return;
+
+        // Remove existing theme classes
+        container.classList.remove('consciousness-theme', 'authority-theme', 'transformation-theme');
+        
+        // Add new theme class
+        container.classList.add(`${theme}-theme`);
+
+        // Apply theme-specific filters to base layer
+        const baseLayers = document.querySelectorAll('.bg-layer.base-layer');
+        baseLayers.forEach(layer => {
+            switch(theme) {
+                case 'consciousness':
+                    layer.style.filter = 'sepia(20%) hue-rotate(200deg) saturate(120%) brightness(110%)';
+                    break;
+                case 'authority':
+                    layer.style.filter = 'sepia(30%) hue-rotate(350deg) saturate(130%) contrast(115%)';
+                    break;
+                case 'transformation':
+                    layer.style.filter = 'sepia(25%) hue-rotate(25deg) saturate(125%) brightness(105%)';
+                    break;
+                default:
+                    layer.style.filter = 'sepia(20%) hue-rotate(200deg) saturate(120%)';
+            }
+        });
+    }
+
+    applyStoryTheme(colorTheme) {
+        // Set default theme based on story configuration
+        const themeMap = {
+            'consciousness': 'consciousness',
+            'orthodox': 'authority',
+            'balanced': 'transformation'
+        };
+        
+        const theme = themeMap[colorTheme] || 'consciousness';
+        this.switchTheme(theme);
+    }
+
+    handleBackgroundControl(action) {
+        switch(action) {
+            case 'toggle-manuscript':
+                this.toggleManuscriptOverlay();
+                break;
+            case 'switch-background':
+                this.switchBackgroundLayer();
+                break;
+            case 'reload-background':
+                this.loadChapterBackground();
+                break;
+            case 'fullscreen':
+                this.toggleFullscreenBackground();
+                break;
+        }
+    }
+
+    toggleManuscriptOverlay() {
+        const overlay = document.querySelector('.manuscript-overlay');
+        if (!overlay) return;
+
+        this.currentBackgroundState.manuscriptVisible = !this.currentBackgroundState.manuscriptVisible;
+        
+        if (this.currentBackgroundState.manuscriptVisible) {
+            this.updateManuscriptContent();
+            overlay.classList.add('visible');
+            this.showNotification('Manuscript overlay enabled', 'info');
+        } else {
+            overlay.classList.remove('visible');
+            this.showNotification('Manuscript overlay disabled', 'info');
+        }
+    }
+
+    updateManuscriptContent() {
+        const storyConfig = this.storyConfigs[this.currentStory];
+        const chapterData = this.generateChapterData();
+        
+        const numberEl = document.querySelector('.chapter-number');
+        const titleEl = document.querySelector('.chapter-title');
+        const subtitleEl = document.querySelector('.chapter-subtitle');
+        const bodyEl = document.querySelector('.opening-paragraph');
+        
+        if (numberEl) numberEl.textContent = `Chapter ${this.currentChapter}`;
+        if (titleEl) titleEl.textContent = chapterData.title;
+        if (subtitleEl) subtitleEl.textContent = storyConfig.subtitle;
+        if (bodyEl) bodyEl.textContent = chapterData.openingText;
+    }
+
+    switchBackgroundLayer() {
+        if (this.currentBackgroundState.isTransitioning) return;
+        
+        this.currentBackgroundState.isTransitioning = true;
+        
+        // Switch between primary and secondary backgrounds
+        const currentActive = this.currentBackgroundState.activeBackground;
+        const newActive = currentActive === 'primary' ? 'secondary' : 'primary';
+        
+        // Load new background in inactive layer
+        this.currentBackgroundState.activeBackground = newActive;
+        this.loadChapterBackground();
+        
+        // Trigger transition
+        setTimeout(() => {
+            document.querySelector(`.chapter-background.${newActive}`).style.opacity = '1';
+            document.querySelector(`.chapter-background.${currentActive}`).style.opacity = '0';
+            
+            setTimeout(() => {
+                this.currentBackgroundState.isTransitioning = false;
+            }, 1500);
+        }, 100);
+    }
+
+    toggleFullscreenBackground() {
+        const container = document.querySelector('.chapter-background-container');
+        if (!container) return;
+
+        container.classList.toggle('fullscreen-mode');
+        
+        if (container.classList.contains('fullscreen-mode')) {
+            this.showNotification('Fullscreen background mode', 'info');
+        } else {
+            this.showNotification('Normal background mode', 'info');
+        }
+    }
+
+    // Update background when chapter changes
+    updateChapterBackground() {
+        if (this.currentBackgroundState) {
+            this.loadChapterBackground();
+        }
     }
 }
 
