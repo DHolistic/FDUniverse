@@ -150,3 +150,8 @@
 ---
 
 🏺 📜 *"Every consciousness awakening echoes across infinite existence. Every preservation effort creates eternal possibility. Every translation burden becomes universal celebration."* 📜 🏺
+
+AI GENERATED PROMPTS FOR THE CHAPTER IMAGES 
+
+
+[text](chapters/THE_TRANSLATORS_BURDEN_Chapter_1_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_2_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_3_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_4_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_5_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_6_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_7_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_8_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_9_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_10_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_11_Script.md) [text](chapters/THE_TRANSLATORS_BURDEN_Chapter_12_Script.md)

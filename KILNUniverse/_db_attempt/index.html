@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DB Attempt — Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DB Attempt — Sandbox</h1>
+    <p>Paste HTML, CSS and JS into the panes and click "Run" to preview.</p>
+  </header>
+
+  <main>
+    <section class="editor-area">
+      <div class="tabs">
+        <button data-tab="html" class="active">HTML</button>
+        <button data-tab="css">CSS</button>
+        <button data-tab="js">JS</button>
+      </div>
+
+      <div class="editors">
+        <textarea id="html" placeholder="<!-- HTML here -->"><div id="root">Hello from DB Attempt sandbox</div></textarea>
+        <textarea id="css" class="hidden">/* CSS here */
+body { font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial; background: #fff; }
+#root { padding: 16px; border: 1px dashed #ddd; }</textarea>
+        <textarea id="js" class="hidden">// JS here
+console.log('Sandbox loaded');</textarea>
+      </div>
+
+      <div class="controls">
+        <button id="run">Run</button>
+        <button id="clear">Clear</button>
+        <label class="autosave"><input type="checkbox" id="autosave"> Autosave</label>
+      </div>
+    </section>
+
+    <section class="preview-area">
+      <h2>Preview</h2>
+      <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <small>Local sandbox. Files are local to this folder. Use with caution when pasting untrusted code.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

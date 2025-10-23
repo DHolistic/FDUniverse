@@ -29,9 +29,10 @@
 
 body {
     font-family: var(--body-font);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: var(--kiln-dark);
-    height: 100vh;
+    min-height: 100vh;
     color: var(--ceramic-cream);
 }
 
@@ -360,12 +361,12 @@ body {
 .title-content {
     position: relative;
     z-index: 10;
-    height: calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
     margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2rem;
     animation: titleContentReveal 2s var(--sacred-ease) 4s both;
 }
@@ -500,6 +501,54 @@ body {
     font-size: 2.5rem;
     color: var(--transformation-gold);
     margin-bottom: 1rem;
+}
+
+/* Hero cover prioritized visual */
+.hero-cover {
+    width: 80%;
+    max-width: 1000px;
+    margin: 2rem auto 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    overflow: hidden;
+    border: 6px solid rgba(0,0,0,0.35);
+}
+
+.hero-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Story action buttons */
+.story-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.story-actions .action-view,
+.story-actions .action-edit {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.12);
+    color: var(--ceramic-cream);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--title-font);
+    font-weight: 600;
+    transition: all 0.2s var(--sacred-ease);
+}
+
+.story-actions .action-view:hover {
+    background: rgba(74,144,226,0.12);
+    border-color: var(--consciousness-blue);
+}
+
+.story-actions .action-edit:hover {
+    background: rgba(243,156,18,0.12);
+    border-color: var(--transformation-gold);
 }
 
 /* Hide the small subtitle/text box as requested */

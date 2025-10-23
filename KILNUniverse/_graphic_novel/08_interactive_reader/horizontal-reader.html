@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KILN Universe - Horizontal Reader</title>
+
+    <!-- KILN Universe Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="consciousness-codex-title.css">
+    <link rel="stylesheet" href="horizontal-reader.css">
+</head>
+<body>
+    <!-- KILN Header -->
+    <header class="kiln-header-title">
+        <div class="header-title-content">
+            <div class="left-title-section">
+                <h1 class="main-title-inline">
+                    <span class="consciousness-glyph">〰</span>
+                    <span class="consciousness-glyph">◦</span>
+                    <span class="consciousness-glyph">◉</span>
+                    <a href="consciousness-codex-title.html" class="consciousness-codex-link" title="Return to Consciousness Codex Title Screen">
+                        KILN CODEX
+                    </a>
+                    <span class="consciousness-glyph">◉</span>
+                    <span class="consciousness-glyph">◦</span>
+                    <span class="consciousness-glyph">〰</span>
+                </h1>
+            </div>
+            <div class="right-badge-section">
+                <div class="kiln-universe-badge">KILN UNIVERSE</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Info Bar -->
+    <div class="story-info-bar" id="storyInfoBar">
+        <div class="story-title" id="storyTitle">The First Void</div>
+        <div class="chapter-indicator" id="chapterIndicator">Chapter 1 of 16</div>
+    </div>
+
+    <!-- Main Reader Container -->
+    <main class="horizontal-reader-container" id="readerContainer">
+        <!-- Horizontal Scroll Wrapper -->
+    <div class="chapter-scroll-wrapper" id="chapterScrollWrapper" tabindex="0" aria-label="Chapter panels horizontal scroll">
+            <!-- Panels will be dynamically inserted here -->
+        </div>
+
+        <!-- Panel Progress Indicator (Glyph-based) -->
+        <div class="panel-progress" id="panelProgress">
+            <div class="progress-glyphs" id="progressGlyphs">
+                <!-- Dynamically generated based on panel count -->
+            </div>
+            <div class="progress-text" id="progressText">Panel 1 of 4</div>
+        </div>
+
+        <!-- Scroll Hint (shows on first load) -->
+        <div class="scroll-hint" id="scrollHint">
+            <div class="hint-content">
+                <span class="hint-icon">←→</span>
+                <span class="hint-text">Swipe or scroll to navigate panels</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chapter Navigation (Bottom) -->
+    <nav class="chapter-navigation" id="chapterNavigation">
+        <button class="nav-button prev-chapter" id="prevChapterBtn" disabled>
+            <span class="nav-glyph">◀</span>
+            <span class="nav-text">Previous Chapter</span>
+        </button>
+
+        <div class="chapter-info">
+            <div class="chapter-title" id="navChapterTitle">The Weight of Words</div>
+            <div class="chapter-subtitle" id="navChapterSubtitle">Orthodox KILN Consciousness Preservation Protocol</div>
+        </div>
+
+        <button class="nav-button next-chapter" id="nextChapterBtn">
+            <span class="nav-text">Next Chapter</span>
+            <span class="nav-glyph">▶</span>
+        </button>
+    </nav>
+
+    <!-- Back to Story Selection -->
+    <div class="back-link-container">
+        <a href="story-view.html" class="back-link" id="backLink">
+            <span class="back-glyph">◀</span> Back to Story
+        </a>
+    </div>
+
+    <!-- Keyboard Shortcuts Help (Press '?' to show) -->
+    <div class="keyboard-help hidden" id="keyboardHelp">
+        <div class="help-content">
+            <h3>Keyboard Shortcuts</h3>
+            <div class="shortcut-list">
+                <div class="shortcut-item">
+                    <kbd>←</kbd> <kbd>→</kbd>
+                    <span>Navigate panels</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Page Up</kbd> <kbd>Page Down</kbd>
+                    <span>Navigate chapters</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Home</kbd> <kbd>End</kbd>
+                    <span>First / Last panel</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>?</kbd>
+                    <span>Toggle this help</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Esc</kbd>
+                    <span>Back to story</span>
+                </div>
+            </div>
+            <button class="close-help" id="closeHelp">Close</button>
+        </div>
+    </div>
+
+    <script src="markdown-loader.js"></script>
+    <script src="horizontal-reader.js"></script>
+</body>
+</html>

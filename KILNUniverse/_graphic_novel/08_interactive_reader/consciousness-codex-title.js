@@ -81,6 +81,25 @@ class ConsciousnessCodexTitle {
             });
         });
 
+        // Story action buttons (View / Edit)
+        document.querySelectorAll('.story-actions button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Prevent parent card click from firing
+                e.stopPropagation();
+                const action = btn.dataset.action;
+                const card = btn.closest('.story-card');
+                const storyId = card && card.dataset.story;
+
+                if (!storyId) return;
+
+                if (action === 'view') {
+                    this.openStoryView(storyId);
+                } else if (action === 'edit') {
+                    this.openStoryEdit(storyId);
+                }
+            });
+        });
+
         // Window focus events for animations
         document.addEventListener('visibilitychange', () => {
             this.handleVisibilityChange();
@@ -270,8 +289,20 @@ class ConsciousnessCodexTitle {
         sessionStorage.setItem('selectedStory', this.selectedStory);
         sessionStorage.setItem('fromTitleScreen', 'true');
         
-        // Direct navigation to edit page
+        // Direct navigation to main grid index (default)
         window.location.href = 'kiln-grid-index.html';
+    }
+
+    // Open a lightweight story view page that displays artwork and narration
+    openStoryView(storyId) {
+        const target = `story-view.html?id=${encodeURIComponent(storyId)}`;
+        window.location.href = target;
+    }
+
+    // Open a lightweight story edit page (template) for immediate script/manuscript placement
+    openStoryEdit(storyId) {
+        const target = `story-edit.html?id=${encodeURIComponent(storyId)}`;
+        window.location.href = target;
     }
 
     handleKeyboardNavigation(e) {

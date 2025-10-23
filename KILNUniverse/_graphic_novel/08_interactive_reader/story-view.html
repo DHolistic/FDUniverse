@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Story View - Consciousness Codex</title>
+  <link rel="stylesheet" href="consciousness-codex-title.css">
+  <style>
+    .view-container { max-width: 1100px; margin: 120px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
+    .view-hero { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .view-hero img { width: 100%; display:block; }
+    .view-meta { margin-top: 1rem; display:flex; gap:1rem; align-items:center; justify-content:space-between; }
+    .view-description { margin-top:1rem; background: rgba(0,0,0,0.25); padding:1rem; border-radius:8px; }
+    .back-link { margin-top:1rem; display:inline-block; color:var(--consciousness-blue); font-weight:700; }
+  </style>
+</head>
+<body>
+  <header class="kiln-header-title" aria-hidden="true"></header>
+  <div class="view-container" id="viewContainer">
+    <div id="viewTitle" class="view-title"><h1>Story</h1></div>
+    <div class="view-hero"><img id="viewImage" src="" alt="Story artwork"/></div>
+    <div class="view-meta">
+      <div id="viewSubtitle"></div>
+      <div id="viewChapters"></div>
+    </div>
+    <div id="viewDescription" class="view-description"></div>
+
+    <div style="margin-top: 2rem; display: flex; gap: 1rem; align-items: center;">
+      <a href="#" id="readStoryBtn" class="action-button" style="flex: 1; text-align: center; padding: 1rem 2rem; background: var(--consciousness-blue); color: white; border-radius: 8px; text-decoration: none; font-family: var(--title-font); font-weight: 700; transition: all 0.3s ease;">
+        📖 Read Story
+      </a>
+      <a href="#" id="editStoryBtn" class="action-button" style="flex: 1; text-align: center; padding: 1rem 2rem; background: rgba(74, 144, 226, 0.2); color: var(--consciousness-blue); border: 2px solid var(--consciousness-blue); border-radius: 8px; text-decoration: none; font-family: var(--title-font); font-weight: 700; transition: all 0.3s ease;">
+        ✎ Edit Story
+      </a>
+    </div>
+
+    <a href="consciousness-codex-title.html" class="back-link">← Back to title screen</a>
+  </div>
+
+  <script>
+    const storyConfigs = (function(){
+      return {
+        'translators-burden': {
+            title: "The Translator's Burden",
+            subtitle: 'Orthodox KILN Prequel',
+            image: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
+            description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
+            chapters: 12
+        },
+        'first-void': {
+            title: 'The First Void',
+            subtitle: 'Consciousness Origin',
+            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
+            description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
+            chapters: 16
+        },
+        'kiln-codex': {
+            title: 'KILN Codex',
+            subtitle: 'Complete Graphic Novel',
+            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
+            description: 'The complete transformation saga from paradise through control to sovereignty.',
+            chapters: 12
+        }
+      };
+    })();
+
+    function param(name){
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    const id = param('id') || 'first-void';
+    const config = storyConfigs[id] || storyConfigs['first-void'];
+
+    document.getElementById('viewTitle').innerHTML = `<h1>${config.title}</h1>`;
+    document.getElementById('viewSubtitle').textContent = config.subtitle;
+    document.getElementById('viewChapters').textContent = config.chapters + ' Chapters';
+    document.getElementById('viewImage').src = config.image;
+    document.getElementById('viewImage').alt = config.title;
+    document.getElementById('viewDescription').textContent = config.description;
+
+    // Set up action buttons
+    document.getElementById('readStoryBtn').href = `horizontal-reader.html?story=${id}&chapter=1`;
+    document.getElementById('editStoryBtn').href = `story-edit.html?id=${id}`;
+  </script>
+</body>
+</html>

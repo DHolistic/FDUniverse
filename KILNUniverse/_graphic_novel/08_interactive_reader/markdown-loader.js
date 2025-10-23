@@ -1,0 +1,324 @@
+// KILN UNIVERSE - MARKDOWN LOADER
+// Loads and parses chapter markdown files into horizontal panels
+
+class MarkdownLoader {
+    constructor() {
+        this.chapterData = null;
+    }
+
+    /**
+     * Load chapter data from JSON
+     */
+    async loadChapterData() {
+        try {
+            const response = await fetch('chapter-data.json');
+            if (!response.ok) {
+                throw new Error(`Failed to load chapter data: ${response.statusText}`);
+            }
+            this.chapterData = await response.json();
+            return this.chapterData;
+        } catch (error) {
+            console.error('Error loading chapter data:', error);
+            return null;
+        }
+    }
+
+    /**
+     * Get story configuration
+     */
+    getStoryConfig(storyId) {
+        if (!this.chapterData) {
+            console.error('Chapter data not loaded');
+            return null;
+        }
+        return this.chapterData[storyId];
+    }
+
+    /**
+     * Get specific chapter data
+     */
+    getChapter(storyId, chapterNumber) {
+        const story = this.getStoryConfig(storyId);
+        if (!story) return null;
+
+        return story.chapters.find(ch => ch.number === chapterNumber);
+    }
+
+    /**
+     * Fetch markdown file content
+     */
+    async fetchMarkdown(path) {
+        try {
+            const response = await fetch(path);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch markdown: ${response.statusText}`);
+            }
+            return await response.text();
+        } catch (error) {
+            console.error('Error fetching markdown:', error);
+            return null;
+        }
+    }
+
+    /**
+     * Parse prose chapter (The First Void style) into scrollable panels
+     * Splits long text into readable chunks
+     */
+    parseProseChapter(markdown, backgroundImage) {
+        const panels = [];
+
+        // Remove frontmatter and extract title
+        const lines = markdown.split('\n');
+        let title = '';
+        let subtitle = '';
+        let content = [];
+        let inFrontmatter = false;
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            // Extract title from first heading
+            if (line.startsWith('# ') && !title) {
+                title = line.replace('# ', '').replace(/📖|📜/g, '').trim();
+                continue;
+            }
+
+            // Extract subtitle from italic line after title
+            if (line.startsWith('*') && line.endsWith('*') && !subtitle) {
+                subtitle = line.replace(/\*/g, '');
+                continue;
+            }
+
+            // Skip horizontal rules and metadata
+            if (line.startsWith('---') || line.startsWith('**[Word Count:')) {
+                continue;
+            }
+
+            // Skip chapter headers
+            if (line.startsWith('## **CHAPTER')) {
+                continue;
+            }
+
+            // Collect content
+            if (line.length > 0) {
+                content.push(line);
+            }
+        }
+
+        // Create panels from paragraphs (every 5-7 paragraphs becomes a panel)
+        const paragraphs = content.filter(line => line.length > 0);
+        const panelsPerPage = 6;
+
+        for (let i = 0; i < paragraphs.length; i += panelsPerPage) {
+            const chunk = paragraphs.slice(i, i + panelsPerPage);
+            const html = chunk.map(p => {
+                // Convert italic markdown
+                p = p.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                return `<p>${p}</p>`;
+            }).join('\n');
+
+            panels.push({
+                type: 'text-only',
+                title: i === 0 ? title : '',
+                subtitle: i === 0 ? subtitle : '',
+                content: html,
+                backgroundImage: backgroundImage
+            });
+        }
+
+        return panels;
+    }
+
+    /**
+     * Parse script chapter (Translator's Burden style) into scene panels
+     * Each major scene becomes a panel
+     */
+    parseScriptChapter(markdown, chapterData) {
+        const panels = [];
+        const lines = markdown.split('\n');
+
+        let currentPanel = null;
+        let title = '';
+        let subtitle = '';
+
+        console.log('=== PARSING SCRIPT CHAPTER ===');
+        console.log('Total lines:', lines.length);
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            // Extract main title
+            if (line.startsWith('# ') && !title) {
+                title = line.replace('# ', '').replace(/📜|📖/g, '').trim();
+                subtitle = lines[i + 1]?.replace('## ', '').replace(/\*/g, '').trim() || '';
+                continue;
+            }
+
+            // Detect page breaks - match any line with ## followed by emoji and **PAGE
+            // More flexible regex to catch all variations
+            const pageMatch = line.match(/^##\s+.*\*\*PAGE\s+(\d+)/i);
+
+            if (pageMatch) {
+                console.log('📄 Found page marker:', line);
+
+                // Save previous panel
+                if (currentPanel && currentPanel.content.length > 0) {
+                    console.log('  → Saving previous panel with', currentPanel.content.length, 'content items');
+                    panels.push({
+                        type: 'image-text',
+                        title: currentPanel.title || `Page ${pageMatch[1]}`,
+                        subtitle: currentPanel.subtitle,
+                        content: currentPanel.content.join('\n'),
+                        backgroundImage: currentPanel.image || chapterData.backgroundImage
+                    });
+                }
+
+                // Start new panel
+                currentPanel = {
+                    title: line.replace(/^##\s+/, '').replace(/\*\*/g, '').trim(),
+                    subtitle: '',
+                    content: [],
+                    image: null
+                };
+                console.log('  → Started new panel:', currentPanel.title);
+                continue;
+            }
+
+            // Detect panel/scene breaks
+            if (line.startsWith('### **PANEL')) {
+                if (currentPanel) {
+                    currentPanel.title = line.replace('### **PANEL', 'Panel').replace('**', '').trim();
+                }
+                continue;
+            }
+
+            // Extract setting info
+            if (line.startsWith('**SETTING:**')) {
+                if (currentPanel) {
+                    currentPanel.subtitle = line.replace('**SETTING:**', '').trim();
+                }
+                continue;
+            }
+
+            // Extract dialogue and captions
+            if (line.startsWith('**CAPTION:**') ||
+                line.startsWith('**DIALOGUE') ||
+                line.startsWith('**METHODIUS THOUGHT:**')) {
+
+                const content = line.replace(/\*\*/g, '').replace(/CAPTION:|DIALOGUE.*:|.*THOUGHT:/, '').trim();
+                if (content && currentPanel) {
+                    currentPanel.content.push(`<p class="dialogue">${content}</p>`);
+                }
+                continue;
+            }
+
+            // Regular content
+            if (line.length > 0 && currentPanel && !line.startsWith('**') && !line.startsWith('---')) {
+                currentPanel.content.push(`<p>${line}</p>`);
+            }
+        }
+
+        // Save last panel
+        if (currentPanel && currentPanel.content.length > 0) {
+            panels.push({
+                type: 'image-text',
+                title: currentPanel.title || title,
+                subtitle: currentPanel.subtitle || subtitle,
+                content: currentPanel.content.join('\n'),
+                backgroundImage: chapterData.backgroundImage
+            });
+        }
+
+        // If no panels were created, create a single panel from the whole content
+        if (panels.length === 0) {
+            console.warn('⚠️ No panels created! Creating fallback panel');
+            panels.push({
+                type: 'text-only',
+                title: title,
+                subtitle: subtitle,
+                content: `<p>${markdown.substring(0, 2000)}...</p>`,
+                backgroundImage: chapterData.backgroundImage
+            });
+        }
+
+        console.log('=== PARSING COMPLETE ===');
+        console.log('Created', panels.length, 'panels');
+        console.log('Panel titles:', panels.map(p => p.title));
+
+        return panels;
+    }
+
+    /**
+     * Load and parse a chapter into panels
+     */
+    async loadChapter(storyId, chapterNumber) {
+        const chapterData = this.getChapter(storyId, chapterNumber);
+        if (!chapterData) {
+            console.error(`Chapter ${chapterNumber} not found for story ${storyId}`);
+            return null;
+        }
+
+        const markdown = await this.fetchMarkdown(chapterData.markdownPath);
+        if (!markdown) {
+            console.error(`Failed to load markdown from ${chapterData.markdownPath}`);
+            return null;
+        }
+
+        // Determine parsing strategy based on story type
+        let panels;
+        if (storyId === 'first-void') {
+            // Prose novel - split into readable chunks
+            panels = this.parseProseChapter(markdown, chapterData.backgroundImage);
+        } else if (storyId === 'translators-burden') {
+            // Script - parse by scenes/panels
+            panels = this.parseScriptChapter(markdown, chapterData);
+        } else {
+            // Default - simple text panel
+            panels = [{
+                type: 'text-only',
+                title: chapterData.title,
+                subtitle: chapterData.subtitle,
+                content: this.simpleMarkdownToHTML(markdown),
+                backgroundImage: chapterData.backgroundImage
+            }];
+        }
+
+        return {
+            chapter: chapterData,
+            panels: panels
+        };
+    }
+
+    /**
+     * Simple markdown to HTML converter
+     * Handles basic formatting
+     */
+    simpleMarkdownToHTML(markdown) {
+        let html = markdown;
+
+        // Remove frontmatter
+        html = html.replace(/^---[\s\S]*?---/m, '');
+
+        // Headers
+        html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+        html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+        html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+        // Emphasis
+        html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+        // Paragraphs
+        html = html.split('\n\n').map(para => {
+            if (para.trim().startsWith('<')) return para;
+            if (para.trim().length === 0) return '';
+            return `<p>${para.trim()}</p>`;
+        }).join('\n');
+
+        return html;
+    }
+}
+
+// Export for use in other scripts
+window.MarkdownLoader = MarkdownLoader;
