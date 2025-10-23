@@ -273,6 +273,15 @@ class HorizontalReader {
             this.toggleKeyboardHelp(false);
         });
 
+        // Chapter end modal buttons
+        document.getElementById('modalContinueBtn').addEventListener('click', () => {
+            this.handleModalContinue();
+        });
+
+        document.getElementById('modalStayBtn').addEventListener('click', () => {
+            this.handleModalStay();
+        });
+
         // Dismiss scroll hint on first scroll
         wrapper.addEventListener('scroll', () => {
             if (!this.scrollHintDismissed) {
@@ -379,7 +388,22 @@ class HorizontalReader {
         if (swipeXDistance > swipeYDistance && swipeXDistance > swipeThreshold) {
             if (this.touchStartX > this.touchEndX) {
                 // Swipe left (next panel)
-                this.scrollToPanel(this.currentPanel + 1);
+                // Check if we're on the last panel
+                if (this.currentPanel === this.totalPanels - 1) {
+                    // On last panel - show chapter end modal
+                    console.log('🎯 Swiped on last panel, checking for next chapter...');
+                    const totalChapters = this.getTotalChapters();
+                    if (this.currentChapter < totalChapters) {
+                        // Not the last chapter - show next chapter prompt
+                        this.showNextChapterPrompt();
+                    } else {
+                        // Last chapter - show story completed prompt
+                        this.showStoryCompletedPrompt();
+                    }
+                } else {
+                    // Normal navigation
+                    this.scrollToPanel(this.currentPanel + 1);
+                }
             } else {
                 // Swipe right (previous panel)
                 this.scrollToPanel(this.currentPanel - 1);
@@ -392,6 +416,28 @@ class HorizontalReader {
     handleKeyboard(e) {
         console.log('handleKeyboard called with:', e.key, 'Current panel:', this.currentPanel, 'Total:', this.totalPanels);
 
+        // Check if modal is open for modal-specific keyboard handling
+        const modal = document.getElementById('chapterEndModal');
+        const isModalOpen = !modal.classList.contains('hidden');
+
+        if (isModalOpen) {
+            // Modal keyboard handling
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                this.handleModalContinue();
+            } else if (e.key === 'Escape') {
+                e.preventDefault();
+                this.closeChapterEndModal();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                this.handleModalContinue();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                this.handleModalStay();
+            }
+            return; // Don't process other keyboard events when modal is open
+        }
+
         switch(e.key) {
             case 'ArrowLeft':
                 e.preventDefault();
@@ -403,10 +449,25 @@ class HorizontalReader {
 
             case 'ArrowRight':
                 e.preventDefault();
-                const nextPanel = Math.min(this.totalPanels - 1, this.currentPanel + 1);
-                console.log('Scrolling to next panel:', nextPanel);
-                this.scrollToPanel(nextPanel);
-                this.hideScrollHint();
+                // Check if we're on the last panel
+                if (this.currentPanel === this.totalPanels - 1) {
+                    // On last panel - show chapter end modal
+                    console.log('🎯 On last panel, checking for next chapter...');
+                    const totalChapters = this.getTotalChapters();
+                    if (this.currentChapter < totalChapters) {
+                        // Not the last chapter - show next chapter prompt
+                        this.showNextChapterPrompt();
+                    } else {
+                        // Last chapter - show story completed prompt
+                        this.showStoryCompletedPrompt();
+                    }
+                } else {
+                    // Normal navigation
+                    const nextPanel = this.currentPanel + 1;
+                    console.log('Scrolling to next panel:', nextPanel);
+                    this.scrollToPanel(nextPanel);
+                    this.hideScrollHint();
+                }
                 break;
 
             case 'Home':
@@ -510,6 +571,121 @@ class HorizontalReader {
         } else {
             help.classList.add('hidden');
         }
+    }
+
+    // ==========================================
+    // CHAPTER END MODAL FUNCTIONS
+    // ==========================================
+
+    showNextChapterPrompt() {
+        if (!this.storyConfigs || !this.currentChapterData) return;
+
+        const config = this.storyConfigs[this.currentStoryId];
+        const nextChapter = this.currentChapter + 1;
+
+        // Get chapter titles from loaded data
+        const currentChapterTitle = this.currentChapterData.chapter.title || `Chapter ${this.currentChapter}`;
+
+        const modal = document.getElementById('chapterEndModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalChapterName = document.getElementById('modalChapterName');
+        const modalPrompt = document.getElementById('modalPrompt');
+        const modalNextChapter = document.getElementById('modalNextChapter');
+
+        modalTitle.textContent = `End of Chapter ${this.currentChapter}`;
+        modalMessage.innerHTML = `You've reached the end of<br><span class="modal-chapter-name">"${currentChapterTitle}"</span>`;
+        modalPrompt.innerHTML = `Continue to Chapter ${nextChapter}?`;
+        modalNextChapter.textContent = ''; // We don't know next chapter title yet
+
+        modal.classList.remove('hidden');
+        console.log('📌 Chapter end modal shown');
+    }
+
+    showStoryCompletedPrompt() {
+        if (!this.storyConfigs || !this.currentChapterData) return;
+
+        const config = this.storyConfigs[this.currentStoryId];
+        const currentChapterTitle = this.currentChapterData.chapter.title || `Chapter ${this.currentChapter}`;
+
+        const modal = document.getElementById('chapterEndModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalPrompt = document.getElementById('modalPrompt');
+        const modalContinueBtn = document.getElementById('modalContinueBtn');
+        const modalStayBtn = document.getElementById('modalStayBtn');
+
+        modalTitle.textContent = `Story Complete!`;
+        modalMessage.innerHTML = `You've completed<br><span class="modal-chapter-name">"${config.title}"</span>`;
+        modalPrompt.textContent = `Congratulations on finishing the journey!`;
+
+        // Change button labels for story completion
+        modalContinueBtn.textContent = 'Return to Stories';
+        modalStayBtn.textContent = 'Restart Chapter 1';
+
+        modal.classList.remove('hidden');
+        console.log('📌 Story completed modal shown');
+    }
+
+    closeChapterEndModal() {
+        const modal = document.getElementById('chapterEndModal');
+        modal.classList.add('hidden');
+
+        // Reset button labels
+        document.getElementById('modalContinueBtn').textContent = 'Continue →';
+        document.getElementById('modalStayBtn').textContent = 'Stay Here';
+
+        console.log('📌 Chapter end modal closed');
+    }
+
+    handleModalContinue() {
+        if (!this.storyConfigs) return;
+
+        const config = this.storyConfigs[this.currentStoryId];
+
+        if (this.currentChapter >= config.totalChapters) {
+            // Last chapter - return to story selection
+            window.location.href = 'consciousness-codex-title.html';
+        } else {
+            // Navigate to next chapter
+            this.navigateToNextChapter();
+        }
+    }
+
+    handleModalStay() {
+        const config = this.storyConfigs[this.currentStoryId];
+
+        if (this.currentChapter >= config.totalChapters) {
+            // Restart chapter 1
+            const url = new URL(window.location.href);
+            url.searchParams.set('chapter', 1);
+            window.location.href = url.toString();
+        } else {
+            // Just close modal
+            this.closeChapterEndModal();
+        }
+    }
+
+    navigateToNextChapter() {
+        if (!this.storyConfigs) return;
+
+        const config = this.storyConfigs[this.currentStoryId];
+        const nextChapter = this.currentChapter + 1;
+
+        if (nextChapter > config.totalChapters) {
+            return;
+        }
+
+        // Update URL and navigate
+        const url = new URL(window.location.href);
+        url.searchParams.set('chapter', nextChapter);
+        window.location.href = url.toString();
+    }
+
+    getTotalChapters() {
+        if (!this.storyConfigs) return 0;
+        const config = this.storyConfigs[this.currentStoryId];
+        return config ? config.totalChapters : 0;
     }
 }
 
