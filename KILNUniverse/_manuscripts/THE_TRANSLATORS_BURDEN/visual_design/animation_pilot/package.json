@@ -1,0 +1,10 @@
+{
+  "name": "kiln-animation-pilot",
+  "version": "0.1.0",
+  "description": "Pilot POC for KILN Universe animation scenes (tablet contact + epilogue seed)",
+  "scripts": {
+    "start": "npx http-server -c-1 -p 5500"
+  ,"install:hint": "npm i -g http-server or use npx"
+  },
+  "devDependencies": {}
+}

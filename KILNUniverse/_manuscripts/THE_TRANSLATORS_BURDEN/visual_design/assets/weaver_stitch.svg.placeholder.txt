@@ -1,0 +1,8 @@
+Placeholder for SVG asset: weaver_stitch.svg
+
+Intended use: vector diagram illustrating the weaver stitch & fold mnemonic.
+
+Action: Replace this placeholder with an SVG file named `weaver_stitch.svg` at:
+  visual_design/assets/weaver_stitch.svg
+
+Notes: Prefer simple, high-contrast vector with clear lines; include a 512px viewBox so it scales for thumbnails.

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Story Edit - Consciousness Codex</title>
+  <link rel="stylesheet" href="consciousness-codex-title.css">
+  <style>
+    .edit-container { max-width: 1100px; margin: 100px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
+    .editor { background: rgba(0,0,0,0.2); padding:1rem; border-radius:8px; min-height:300px; }
+    .meta-row { display:flex; gap:1rem; align-items:center; }
+    .save-btn { margin-top:1rem; padding:0.5rem 1rem; border-radius:8px; background:var(--consciousness-blue); border:none; color:white; font-weight:700; cursor:pointer; }
+    .back-link { margin-top:1rem; display:inline-block; color:var(--consciousness-blue); font-weight:700; }
+  </style>
+</head>
+<body>
+  <!-- App Header (standardized) -->
+  <header class="app-header">
+    <h1 class="app-title">KILN CODEX</h1>
+    <div class="controls">
+      <button id="kilnUniverseBtn" type="button" class="control-btn">
+        <span class="home-icon">⌂</span> Home Mode
+      </button>
+      <button id="fullscreenBtn" type="button" class="control-btn">
+        <span class="fullscreen-icon">⛶</span> Fullscreen
+      </button>
+      <div class="progress-indicator">
+        <span id="currentScene">DB</span>
+      </div>
+    </div>
+  </header>
+  <div class="edit-container">
+    <div id="editTitle"><h1>Edit Story</h1></div>
+    <div class="meta-row">
+      <div id="editSubtitle"></div>
+      <div id="editChapters"></div>
+    </div>
+
+    <div style="margin-top:1rem;">
+      <label for="imagePath">Cover image path</label>
+      <input id="imagePath" style="width:100%; padding:0.5rem; margin-top:0.5rem; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:transparent; color:var(--ceramic-cream);" />
+    </div>
+
+    <div style="margin-top:1rem;">
+      <label for="scriptArea">Manuscript / narration (markdown)</label>
+      <textarea id="scriptArea" class="editor" placeholder="Place manuscript or narration here..."></textarea>
+    </div>
+
+    <button id="saveBtn" class="save-btn">Save (local)</button>
+    <a href="consciousness-codex-title.html" class="back-link">← Back to title screen</a>
+  </div>
+
+  <script>
+    const storyConfigs = (function(){
+      return {
+        'translators-burden': {
+            title: "The Translator's Burden",
+            subtitle: 'Orthodox KILN Prequel',
+            image: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
+            description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
+            chapters: 12
+        },
+        'first-void': {
+            title: 'The First Void',
+            subtitle: 'Consciousness Origin',
+            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
+            description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
+            chapters: 16
+        },
+        'kiln-codex': {
+            title: 'KILN Codex',
+            subtitle: 'Complete Graphic Novel',
+            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
+            description: 'The complete transformation saga from paradise through control to sovereignty.',
+            chapters: 12
+        }
+      };
+    })();
+
+    function param(name){
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    const id = param('id') || 'first-void';
+    const config = storyConfigs[id] || storyConfigs['first-void'];
+
+    document.getElementById('editTitle').innerHTML = `<h1>${config.title} — Edit</h1>`;
+    document.getElementById('editSubtitle').textContent = config.subtitle;
+    document.getElementById('editChapters').textContent = config.chapters + ' Chapters';
+    document.getElementById('imagePath').value = config.image;
+
+    // Load saved script if available
+    const savedKey = `script_${id}`;
+    document.getElementById('scriptArea').value = localStorage.getItem(savedKey) || '';
+
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      const text = document.getElementById('scriptArea').value;
+      localStorage.setItem(savedKey, text);
+      alert('Saved locally for preview.');
+    });
+  </script>
+    <script src="header-controls.js"></script>
+</body>
+</html>

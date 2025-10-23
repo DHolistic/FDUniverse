@@ -1,0 +1,8 @@
+Placeholder for PNG asset: footnote_salt.png
+
+Intended use: small image/icon for the "Salt Footnote" textual hook.
+
+Action: Replace this placeholder with a PNG asset named `footnote_salt.png` at:
+  visual_design/assets/footnote_salt.png
+
+Notes: 128x128 PNG recommended for small UI usage; transparency allowed.

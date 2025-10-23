@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>THE TRANSLATOR'S BURDEN — Animation Pilot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="viewport">
+      <section id="scene-tablet-contact" class="scene">
+        <div class="background layer" data-speed="0.2"></div>
+        <div class="midground layer" data-speed="0.5"></div>
+        <div class="foreground layer" data-speed="0.9">
+          <div class="tablet" id="tablet"></div>
+        </div>
+        <div class="caption">Scene 1 — Tablet Contact (touch to pulse glyph)</div>
+      </section>
+
+      <section id="scene-seed-planting" class="scene">
+        <div class="background layer" data-speed="0.2"></div>
+        <div class="midground layer" data-speed="0.5"></div>
+        <div class="foreground layer" data-speed="0.9">
+          <div class="ledger" id="ledger"></div>
+        </div>
+        <div class="caption">Scene 2 — Epilogue Seed Planting (hover to reveal seed)</div>
+      </section>
+    </main>
+
+    <script src="pilot.js"></script>
+  </body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KILN — Animation Pilot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="stage">
+      <section class="scene" id="tablet-contact">
+        <div class="layer background"></div>
+        <div class="layer tablet">
+          <div class="glyph" id="glyph-seed" title="glyph seed">
+            <!-- SVG fallback -->
+            <img src="assets/glyph_seed.svg" alt="glyph seed" />
+          </div>
+        </div>
+      </section>
+
+      <section class="scene" id="epilogue-seed">
+        <div class="layer background"></div>
+        <div class="layer characters">
+          <div class="seed-plant">
+            <img src="assets/glyph_pulse.svg" alt="glyph pulse" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Try to load Lottie if available; otherwise use the SVG fallbacks.
+      (function(){
+        var script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js';
+        script.onload = function(){
+          try{
+            var anim = lottie.loadAnimation({
+              container: document.getElementById('glyph-seed'),
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              path: 'assets/glyph_pulse.json'
+            });
+            console.log('Lottie loaded glyph animation');
+          }catch(e){
+            console.warn('Lottie failed to initialize', e);
+          }
+        };
+        script.onerror = function(){ console.info('Lottie not available, using SVG fallbacks.'); };
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <script src="pilot.js"></script>
+  </body>
+</html>

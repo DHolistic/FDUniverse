@@ -1,0 +1,8 @@
+Placeholder for SVG asset: token_imperfect.svg
+
+Intended use: visual/object reference for a small imperfect clay token.
+
+Action: Replace this placeholder with an SVG file named `token_imperfect.svg` at:
+  visual_design/assets/token_imperfect.svg
+
+Notes: Keep file simple and iconic; a small curl or half-impression should be clearly legible at thumbnail size.

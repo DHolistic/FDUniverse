@@ -1,0 +1,2347 @@
+/* KILN UNIVERSE - Advanced Grid Layout with Orthodox Law Theming */
+
+/* 🔒 STANDARDIZED BANNER STYLES - Slim Edit Page Layout */
+.kiln-header-title {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 50%, 
+        var(--kiln-dark) 100%);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--transformation-gold);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Left Title Section - Inline Layout */
+.left-title-section {
+    flex: 1;
+}
+
+.main-title-inline {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ceramic-cream);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-title-inline a {
+    color: inherit;
+    text-decoration: none;
+    text-shadow: 
+        0 0 15px rgba(74, 144, 226, 0.5),
+        0 0 30px rgba(74, 144, 226, 0.3);
+}
+
+.main-title-inline a:hover {
+    text-shadow: 
+        0 0 25px rgba(74, 144, 226, 0.8),
+        0 0 50px rgba(74, 144, 226, 0.5);
+}
+
+.main-title-inline .consciousness-glyph {
+    font-size: 1rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
+}
+
+/* Right Badge Section - Far Right */
+.right-badge-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.kiln-universe-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+    box-shadow: 0 3px 15px rgba(74, 144, 226, 0.3);
+    text-align: center;
+    min-width: 120px;
+}
+
+/* Grid Foundation with KILN Law Structure - Navigation now fixed positioned */
+.kiln-universe-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "content content"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Chapter Text System - Slim Horizontal with Dropdown Tab */
+/* LOCKED Header Chapter System - Final Positioning */
+.header-chapter-system {
+    position: absolute;
+    top: 70px; /* Positioned at bottom 50px of 120px header */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 85%;
+    max-width: 900px;
+    height: 50px; /* Fixed height within header */
+    /* LOCKED: Perfect chapter system placement - Do not modify */
+}
+
+/* Chapter Text Box - Header Style (Same as KILN Law) */
+.header-chapter-text {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+    transition: all 0.5s var(--transition-ease);
+}
+
+.header-chapter-text.expanded {
+    opacity: 0.95;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Numerical Chapter Tab - Dropdown Style */
+.header-chapter-tab {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background: linear-gradient(135deg, 
+        var(--transformation-gold) 0%, 
+        var(--consciousness-blue) 100%);
+    color: white;
+    width: 50px;
+    height: 35px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--transformation-gold);
+    border-bottom: none;
+    z-index: 25;
+    backdrop-filter: blur(5px);
+}
+
+.header-chapter-tab:hover {
+    transform: translateX(-50%) translateY(-105%);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.header-chapter-tab.active {
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    transform: translateX(-50%) translateY(-95%);
+}
+
+/* Chapter Title Content */
+.chapter-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.chapter-number-display {
+    color: var(--transformation-gold);
+    font-weight: bold;
+}
+
+.chapter-title-text {
+    color: var(--ceramic-cream);
+}
+
+.chapter-subtitle-text {
+    color: var(--consciousness-blue);
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Chapter Navigation Controls */
+.chapter-navigation-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 2rem;
+}
+
+.chapter-nav-btn {
+    background: var(--consciousness-blue);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chapter-nav-btn:hover {
+    background: var(--transformation-gold);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.chapter-nav-label {
+    font-family: var(--title-font);
+    font-size: 0.8rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Update header chapter text to use flexbox layout */
+.header-chapter-text {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+    transition: all 0.5s var(--transition-ease);
+}
+
+.chapter-subtitle-text {
+    color: var(--consciousness-blue);
+    font-style: italic;
+    opacity: 0.9;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Orthodox KILN Law Header with Watermarked Cover Art */
+/* LEGACY HEADER BANNER - Replaced with Standardized Design */
+/*
+.kiln-header {
+    grid-area: header;
+    position: relative;
+    height: 120px;
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.95) 0%, 
+        rgba(231, 76, 60, 0.85) 50%, 
+        rgba(243, 156, 18, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 4px solid var(--transformation-gold);
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+*/
+
+/* Watermarked Cover Art Background */
+/*
+.kiln-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    filter: sepia(30%) hue-rotate(200deg) saturate(150%);
+    z-index: -1;
+}
+
+.kiln-header::after {
+    content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--title-font);
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 2rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+*/
+
+/* LOCKED Header Content Grid - Final Layout */
+/*
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    height: 70px;
+    padding: 0 2.5rem;
+    position: relative;
+    z-index: 10;
+}
+*/
+
+/* Book Tabs - Page Corner Style */
+.book-tabs-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+
+.book-tab {
+    position: relative;
+    background: rgba(44, 24, 16, 0.8);
+    border: 1px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    padding: 0.6rem 1.2rem 0.6rem 1.5rem;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.4s var(--transition-ease);
+    backdrop-filter: blur(5px);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+    border-radius: 8px 8px 0 0;
+    margin-right: 0.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.book-tab.expanded,
+.book-tab:hover,
+.book-tab.active {
+    width: 180px;
+}
+
+.book-tab .tab-text {
+    display: inline-block;
+    position: relative;
+}
+
+.book-tab .tab-text::after {
+    content: attr(data-full-title);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s var(--transition-ease);
+    white-space: nowrap;
+}
+
+.book-tab.expanded .tab-text,
+.book-tab:hover .tab-text,
+.book-tab.active .tab-text {
+    opacity: 0;
+}
+
+.book-tab.expanded .tab-text::after,
+.book-tab:hover .tab-text::after,
+.book-tab.active .tab-text::after {
+    opacity: 1;
+}
+
+.book-tab::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, transparent 50%, var(--transformation-gold) 50%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.book-tab.active {
+    background: rgba(74, 144, 226, 0.9);
+    border-color: var(--transformation-gold);
+    color: var(--ceramic-cream);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+}
+
+.book-tab.teaser {
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.book-tab.teaser::after {
+    content: '...';
+    margin-left: 0.25rem;
+    color: var(--transformation-gold);
+}
+
+.book-tab:hover {
+    background: rgba(74, 144, 226, 0.7);
+    transform: translateY(-1px);
+}
+
+/* LOCKED KILN Universe Logo/Title - Final Typography */
+.kiln-title {
+    font-family: var(--title-font);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--ceramic-cream);
+    text-shadow: 
+        0 0 12px var(--consciousness-blue),
+        0 0 24px var(--consciousness-blue),
+        3px 3px 6px rgba(0, 0, 0, 0.9);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1px;
+    /* LOCKED: Perfect title styling - Do not modify */
+}
+
+.kiln-title::before {
+    content: '◉';
+    color: var(--transformation-gold);
+    font-size: 2.2rem;
+    text-shadow: 0 0 15px var(--transformation-gold);
+    animation: consciousnessGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes consciousnessGlow {
+    0% { 
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Consciousness Codex Link Styling */
+.consciousness-codex-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s var(--transition-ease);
+    position: relative;
+}
+
+.consciousness-codex-link:hover {
+    color: var(--consciousness-blue);
+    text-shadow: 
+        0 0 12px var(--consciousness-blue),
+        0 0 24px var(--consciousness-blue),
+        0 0 36px rgba(74, 144, 226, 0.8),
+        3px 3px 6px rgba(0, 0, 0, 0.9);
+    transform: scale(1.02);
+}
+
+.consciousness-subtitle {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px var(--transformation-gold);
+}
+
+/* Story Selection Dropdown */
+.story-selector {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.story-dropdown {
+    background: rgba(44, 24, 16, 0.9);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    color: var(--ceramic-cream);
+    padding: 0.75rem 1.5rem;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s var(--transition-ease);
+    min-width: 200px;
+}
+
+.story-dropdown:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--transformation-gold);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Translucent Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(44, 24, 16, 0.95);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s var(--transition-ease);
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.story-selector:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Ethereal Hover Effects for Dropdown Items */
+.dropdown-item {
+    padding: 1rem 1.5rem;
+    color: var(--ceramic-cream);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 144, 226, 0.3) 50%, 
+        transparent 100%);
+    transition: left 0.5s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(74, 144, 226, 0.2);
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px var(--transformation-gold);
+}
+
+.dropdown-item:hover::before {
+    left: 100%;
+}
+
+/* Account & User Controls */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* LOCKED User Avatar - Final Design */
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--transformation-gold);
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--authority-red) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* LOCKED: Perfect avatar proportions - Do not modify */
+}
+
+.user-avatar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px var(--transformation-gold);
+    border-width: 4px;
+}
+
+/* Chapter Theme Indicators - Moved to Bottom Center */
+.chapter-theme-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    gap: 1rem;
+    z-index: 50;
+}
+
+.theme-glyph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.page-nav-button {
+    width: 37.5px;
+    height: 37.5px;
+    border: 2px solid;
+    border-radius: 50%;
+    background: transparent;
+    font-family: var(--title-font);
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Previous Button - Red themed with ◉ glyph (DECREASE) */
+.page-nav-button-container:first-child .page-nav-button {
+    border-color: var(--authority-red);
+    color: var(--authority-red);
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.1) 0%, 
+        rgba(231, 76, 60, 0.3) 100%);
+}
+
+.page-nav-button-container:first-child .page-nav-button:hover {
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.3) 0%, 
+        rgba(231, 76, 60, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+.page-nav-button-container:first-child .nav-glyph::before {
+    content: "◉";
+}
+
+/* Next Button - Blue themed with ◦ glyph (INCREASE) */
+.page-nav-button-container:last-child .page-nav-button {
+    border-color: var(--consciousness-blue);
+    color: var(--consciousness-blue);
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(74, 144, 226, 0.3) 100%);
+}
+
+.page-nav-button-container:last-child .page-nav-button:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.3) 0%, 
+        rgba(74, 144, 226, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.page-nav-button-container:last-child .nav-glyph::before {
+    content: "◦";
+}
+
+.page-counter-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 90px;
+    position: relative;
+}
+
+/* Center glyph - Gold themed with ◉ (PRESENT CHAPTER) */
+.page-counter-display::before {
+    content: "◉";
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.6);
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.page-info {
+    font-family: var(--title-font);
+    font-size: 1.125rem;
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-top: 1rem; /* Space for top glyph */
+}
+
+.page-separator {
+    margin: 0 0.375rem;
+    color: var(--transformation-gold);
+}
+
+/* Edits Panel - Bottom Right Expansion - Consistent Sizing */
+.edits-panel {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--authority-red); /* Consistent with other buttons */
+    border-radius: 50%; /* Make it circular like other buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 50px; /* Consistent with theme glyphs */
+    height: 50px; /* Consistent with theme glyphs */
+    transform: translateY(0);
+    transition: all 0.5s var(--transition-ease);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.edits-panel.expanded {
+    height: 400px;
+    width: 300px;
+    border-radius: 20px; /* Rounded when expanded */
+    transform: translateY(-350px);
+    padding: 1.5rem;
+}
+
+.edits-toggle {
+    width: 40px; /* Consistent with theme glyph content */
+    height: 40px; /* Consistent with theme glyph content */
+    border: none;
+    background: transparent;
+    color: var(--authority-red);
+    font-size: 1.2rem; /* Consistent with other buttons */
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.edits-toggle:hover {
+    color: var(--transformation-gold);
+    transform: scale(1.1); /* Consistent hover effect */
+}
+
+.edits-toggle .toggle-glyph::before {
+    content: "⚙";
+    transition: transform 0.5s var(--transition-ease);
+}
+
+.edits-panel.expanded .edits-toggle .toggle-glyph::before {
+    content: "✕";
+    transform: rotate(180deg);
+}
+
+.edits-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.edits-panel.expanded .edits-content {
+    display: flex;
+}
+
+.edits-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.edits-title {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--authority-red);
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.edits-subtitle {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.edits-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.edit-section {
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 10px;
+    padding: 1rem;
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.section-title {
+    font-family: var(--title-font);
+    font-size: 1rem;
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.section-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-option {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.2) 0%, 
+        rgba(74, 144, 226, 0.4) 100%);
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 8px;
+    color: var(--text-light);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+}
+
+.edit-option:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.4) 0%, 
+        rgba(74, 144, 226, 0.6) 100%);
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Expandable Navigation Panel Styles for Center Navigation */
+.page-nav-button-container .nav-panel-content {
+    position: absolute;
+    bottom: calc(100% + 0.375rem); /* Reduced spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 9px; /* Reduced by 25% */
+    padding: 0.75rem; /* Reduced by 25% */
+    min-width: 150px; /* Reduced by 25% */
+    max-width: 187.5px; /* Reduced by 25% */
+    z-index: 200;
+    opacity: 0;
+    transform: translateX(-50%) translateY(7.5px); /* Reduced movement */
+    transition: all 0.3s var(--transition-ease);
+    pointer-events: none;
+    /* Ensure it appears above footer level */
+    bottom: calc(100% + 1rem);
+}
+
+.page-nav-button-container[data-expanded="true"] .nav-panel-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: all;
+}
+
+.page-nav-button-container .panel-header {
+    font-family: var(--title-font);
+    font-size: 0.675rem; /* Reduced by 25% */
+    color: var(--consciousness-blue);
+    font-weight: bold;
+    margin-bottom: 0.5625rem; /* Reduced by 25% */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.375px; /* Reduced by 25% */
+}
+
+.page-nav-button-container .panel-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem; /* Reduced by 25% */
+}
+
+.page-nav-button-container .panel-option {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.2) 0%, 
+        rgba(74, 144, 226, 0.4) 100%);
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 6px; /* Reduced by 25% */
+    color: var(--text-light);
+    padding: 0.375rem 0.5625rem; /* Reduced by 25% */
+    font-family: var(--body-font);
+    font-size: 0.6375rem; /* Reduced by 25% */
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+}
+
+.page-nav-button-container .panel-option:hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.4) 0%, 
+        rgba(74, 144, 226, 0.6) 100%);
+    transform: translateY(-1.5px); /* Reduced by 25% */
+    box-shadow: 0 3px 9px rgba(74, 144, 226, 0.3); /* Reduced by 25% */
+}
+
+.page-nav-button-container .button-label {
+    font-family: var(--body-font);
+    font-size: 0.6rem; /* Reduced by 25% */
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 0.25rem; /* Reduced spacing */
+    opacity: 0.8;
+}
+
+/* OLD NAVIGATION STYLES - COMMENTED OUT
+.navigation-toggle {
+    background: linear-gradient(135deg, 
+        var(--transformation-gold) 0%, 
+        var(--consciousness-blue) 100%);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    position: relative;
+}
+
+.navigation-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.navigation-toggle .toggle-glyph {
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-toggle .toggle-glyph::before {
+    content: '◦';
+    color: white;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.kiln-navigation.expanded .navigation-toggle .toggle-glyph::before {
+    content: '◉';
+    color: var(--transformation-gold);
+    text-shadow: 0 0 6px var(--transformation-gold);
+}
+*/
+
+/* Chapter Display - Hidden when collapsed, top when expanded */
+.chapter-display {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0.5rem;
+    background: rgba(74, 144, 226, 0.2);
+    border-radius: 12px;
+    border: 1px solid var(--consciousness-blue);
+    transition: all 0.3s ease;
+    width: 90%;
+    opacity: 0;
+}
+
+/* Enhanced Chapter Display for Action Scene Panels */
+.chapter-label {
+    font-family: var(--title-font);
+    font-size: 0.7rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.chapter-counter {
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    color: var(--ceramic-cream);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.chapter-title-small {
+    font-size: 0.6rem;
+    color: var(--consciousness-blue);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.kiln-navigation.expanded .chapter-display {
+    display: flex;
+    opacity: 1;
+    animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chapter-label {
+    color: var(--ceramic-cream);
+    font-family: var(--title-font);
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.chapter-counter {
+    color: var(--transformation-gold);
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Navigation Buttons - Vertical Stack when expanded */
+.nav-buttons-section {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.kiln-navigation.expanded .nav-buttons-section {
+    display: flex;
+}
+
+.nav-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    opacity: 0;
+}
+
+.kiln-navigation.expanded .nav-button-container {
+    opacity: 1;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.kiln-navigation.expanded .nav-button-container:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.kiln-navigation.expanded .nav-button-container:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.glyph-nav-button {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-family: var(--title-font);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s var(--transition-ease);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.glyph-nav-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%);
+}
+
+.glyph-nav-button:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.glyph-nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.6);
+}
+
+/* Navigation Glyph Switching System */
+.nav-glyph {
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+}
+
+/* Collapsed state - show placeholder glyphs */
+.kiln-navigation:not(.expanded) .nav-glyph::before {
+    content: attr(data-collapsed);
+    font-family: var(--title-font);
+    font-weight: bold;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Expanded state - show actual navigation glyphs */
+.kiln-navigation.expanded .nav-glyph::before {
+    content: attr(data-expanded);
+    font-family: var(--title-font);
+    text-shadow: 0 0 6px var(--transformation-gold);
+    animation: glyphReveal 0.5s ease;
+}
+
+@keyframes glyphReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(180deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Hide original span content when using data attributes */
+.nav-glyph {
+    font-size: 0;
+}
+
+.nav-glyph::before {
+    font-size: 1.1rem;
+}
+
+/* Button Labels - Hidden when collapsed */
+.button-label {
+    font-size: 0.6rem;
+    color: var(--ceramic-cream);
+    opacity: 0.9;
+    text-align: center;
+    margin-top: 0.25rem;
+    font-family: var(--body-font);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Bottom Section */
+.nav-bottom-section {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.kiln-navigation.expanded .nav-bottom-section {
+    display: flex;
+}
+
+/* Expandable Navigation Panel System */
+.nav-button-container.expandable-nav {
+    position: relative;
+    transition: all 0.4s var(--transition-ease);
+}
+
+.nav-button-container.expandable-nav[data-expanded="true"] {
+    background: rgba(74, 144, 226, 0.15);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border: 1px solid var(--consciousness-blue);
+}
+
+/* Navigation Panel Content */
+.nav-panel-content {
+    position: absolute;
+    right: 120%;
+    top: 0;
+    width: 220px;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    z-index: 1001;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s var(--transition-ease);
+    pointer-events: none;
+}
+
+.nav-panel-content.expanded {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.panel-header {
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    color: var(--transformation-gold);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.75rem 1rem 0.5rem;
+    border-bottom: 1px solid var(--consciousness-blue);
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+.panel-options {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.panel-option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.panel-option:hover {
+    background: rgba(74, 144, 226, 0.3);
+    border-color: var(--transformation-gold);
+    transform: translateX(3px);
+}
+
+.panel-option.active {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+}
+
+/* Enhanced Navigation Buttons for Edit Mode */
+.nav-button-container.expandable-nav .glyph-nav-button:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--transformation-gold);
+    transform: scale(1.05);
+}
+
+.nav-button-container.expandable-nav[data-expanded="true"] .glyph-nav-button {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.4);
+}
+
+/* Panel Toggle Animation */
+@keyframes panelSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.nav-panel-content.expanding {
+    animation: panelSlideIn 0.4s var(--transition-ease);
+}
+
+.kiln-navigation.expanded .nav-bottom-section .nav-button-container:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.kiln-navigation.expanded .nav-bottom-section .nav-button-container:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+/* Therapeutic Mode Button Enhancement */
+.glyph-nav-button.therapeutic-mode {
+    background: linear-gradient(135deg, 
+        var(--transformation-gold) 0%, 
+        var(--consciousness-blue) 50%,
+        #9B59B6 100%);
+    animation: therapeuticGlow 4s ease-in-out infinite alternate;
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.4);
+}
+
+.glyph-nav-button.therapeutic-mode:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 25px rgba(155, 89, 182, 0.7);
+}
+
+@keyframes therapeuticGlow {
+    0% { 
+        box-shadow: 0 4px 20px rgba(155, 89, 182, 0.4);
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+        filter: hue-rotate(30deg);
+    }
+    100% { 
+        box-shadow: 0 4px 20px rgba(74, 144, 226, 0.5);
+        filter: hue-rotate(60deg);
+    }
+}
+
+/* Main Content Area - Enhanced for Chapter Backgrounds */
+.kiln-content {
+    grid-area: content;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 100%);
+    min-height: calc(100vh - 170px); /* Account for header + footer */
+}
+
+/* Dynamic Chapter Background System */
+.chapter-background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chapter-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s var(--transition-ease);
+}
+
+.chapter-background.primary {
+    z-index: 1;
+}
+
+.chapter-background.secondary {
+    z-index: 2;
+}
+
+/* Layered Background System */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1.2s var(--transition-ease);
+}
+
+.bg-layer.base-layer {
+    z-index: 1;
+    opacity: 0.8;
+    filter: sepia(20%) hue-rotate(200deg) saturate(120%);
+}
+
+.bg-layer.atmosphere-layer {
+    z-index: 2;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    background: radial-gradient(ellipse at center, 
+        transparent 0%, 
+        rgba(74, 144, 226, 0.1) 50%, 
+        rgba(44, 24, 16, 0.3) 100%);
+}
+
+.bg-layer.character-layer {
+    z-index: 3;
+    opacity: 0.9;
+    filter: contrast(110%) brightness(105%);
+}
+
+.bg-layer.glyph-layer {
+    z-index: 4;
+    opacity: 0.3;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(243, 156, 18, 0.1) 42px,
+        rgba(243, 156, 18, 0.1) 44px
+    );
+    mix-blend-mode: overlay;
+}
+
+/* Manuscript Text Overlay */
+.manuscript-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s var(--transition-ease);
+}
+
+.manuscript-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.manuscript-frame {
+    background: linear-gradient(135deg, 
+        rgba(245, 245, 220, 0.95) 0%, 
+        rgba(240, 240, 240, 0.9) 100%);
+    border: 3px solid var(--transformation-gold);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(243, 156, 18, 0.2);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.manuscript-frame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+        var(--consciousness-blue), 
+        var(--authority-red), 
+        var(--transformation-gold));
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.manuscript-content {
+    color: var(--kiln-dark);
+    font-family: var(--body-font);
+}
+
+.chapter-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--consciousness-blue);
+}
+
+.chapter-number {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--authority-red);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-title {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--consciousness-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-subtitle {
+    display: block;
+    font-size: 1rem;
+    color: var(--clay-brown);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.manuscript-body {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.opening-paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--kiln-dark);
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+/* Chapter Theme Indicators - Moved to Bottom Center */
+.chapter-theme-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    gap: 1rem;
+    z-index: 50;
+}
+
+.theme-glyph {
+    width: 40px; /* Consistent with other buttons */
+    height: 40px; /* Consistent with other buttons */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-size: 1.2rem; /* Consistent sizing */
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+}
+
+/* Blue theme glyph */
+.theme-glyph:nth-child(1) {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(74, 144, 226, 0.3) 100%);
+    border-color: var(--consciousness-blue);
+    color: var(--consciousness-blue);
+}
+
+.theme-glyph:nth-child(1):hover {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.3) 0%, 
+        rgba(74, 144, 226, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+/* Red theme glyph */
+.theme-glyph:nth-child(2) {
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.1) 0%, 
+        rgba(231, 76, 60, 0.3) 100%);
+    border-color: var(--authority-red);
+    color: var(--authority-red);
+}
+
+.theme-glyph:nth-child(2):hover {
+    background: linear-gradient(135deg, 
+        rgba(231, 76, 60, 0.3) 0%, 
+        rgba(231, 76, 60, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+/* Gold theme glyph */
+.theme-glyph:nth-child(3) {
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.1) 0%, 
+        rgba(243, 156, 18, 0.3) 100%);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+.theme-glyph:nth-child(3):hover {
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.3) 0%, 
+        rgba(243, 156, 18, 0.5) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
+}
+
+.theme-glyph.consciousness {
+    background: rgba(74, 144, 226, 0.2);
+    color: var(--consciousness-blue);
+    border-color: var(--consciousness-blue);
+}
+
+.theme-glyph.authority {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--authority-red);
+    border-color: var(--authority-red);
+}
+
+.theme-glyph.transformation {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--transformation-gold);
+    border-color: var(--transformation-gold);
+}
+
+.theme-glyph:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px currentColor;
+}
+
+.theme-glyph.active {
+    animation: themeGlyphPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes themeGlyphPulse {
+    0% { 
+        box-shadow: 0 0 10px currentColor;
+        transform: scale(1);
+    }
+    100% { 
+        box-shadow: 0 0 25px currentColor;
+        transform: scale(1.05);
+    }
+}
+
+/* Background Controls */
+.background-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 15;
+}
+
+.bg-control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(44, 24, 16, 0.8);
+    border: 2px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-ease);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-control-btn:hover {
+    background: rgba(74, 144, 226, 0.3);
+    border-color: var(--transformation-gold);
+    transform: scale(1.1);
+}
+
+.bg-control-btn.active {
+    background: rgba(243, 156, 18, 0.3);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+/* Chapter-Specific Background Themes */
+.chapter-background[data-story="translators-burden"] .base-layer {
+    filter: sepia(30%) hue-rotate(350deg) saturate(130%);
+}
+
+.chapter-background[data-story="first-void"] .base-layer {
+    filter: sepia(20%) hue-rotate(200deg) saturate(140%);
+}
+
+.chapter-background[data-story="kiln-codex"] .base-layer {
+    filter: sepia(25%) hue-rotate(25deg) saturate(125%);
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 50%, 
+        var(--clay-brown) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.consciousness-loader {
+    text-align: center;
+    color: var(--ceramic-cream);
+}
+
+.loader-glyph {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    color: var(--consciousness-blue);
+    animation: consciousnessGlow 2s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+.loader-text {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    color: var(--transformation-gold);
+    opacity: 0.8;
+}
+
+/* KILN Footer - Enhanced Law Display */
+.kiln-footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        var(--clay-brown) 100%);
+    border-top: 2px solid var(--consciousness-blue);
+    padding: 1.5rem 2rem;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* KILN Law Text - Integrated with Expanded Text */
+.kiln-law-section {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.law-glyph {
+    color: var(--consciousness-blue);
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px var(--consciousness-blue);
+    animation: consciousnessGlow 3s ease-in-out infinite alternate;
+}
+
+.kiln-law-text {
+    font-family: var(--title-font);
+    color: var(--ceramic-cream);
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0.95;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.law-glyph.end {
+    color: var(--transformation-gold);
+    text-shadow: 0 0 8px var(--transformation-gold);
+    position: relative;
+}
+
+/* Water Flowing Glyph Animation at End of Law Text */
+.law-glyph.end::after {
+    content: '〰〰〰';
+    position: absolute;
+    top: -0.5rem;
+    left: 100%;
+    margin-left: 1rem;
+    color: var(--consciousness-blue);
+    font-size: 1.2rem;
+    opacity: 0.6;
+    animation: waterFlowEnd 4s ease-in-out infinite;
+}
+
+@keyframes waterFlowEnd {
+    0%, 100% { 
+        transform: translateX(0) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateX(10px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateX(5px) scale(1.2);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translateX(15px) scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+/* Integrated Expanded Text Content */
+.integrated-text-content {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, 
+        rgba(44, 24, 16, 0.95) 0%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--consciousness-blue);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s var(--transition-ease);
+    z-index: 5;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.integrated-text-content.expanded {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Simple Control Buttons */
+.footer-controls {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.simple-footer-button {
+    background: rgba(74, 144, 226, 0.8);
+    border: 1px solid var(--consciousness-blue);
+    color: var(--ceramic-cream);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.simple-footer-button:hover {
+    background: rgba(74, 144, 226, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.4);
+}
+
+.simple-footer-button.monetization-on {
+    background: rgba(243, 156, 18, 0.8);
+    border-color: var(--transformation-gold);
+}
+
+.simple-footer-button.monetization-on:hover {
+    background: rgba(243, 156, 18, 1);
+}
+
+.simple-footer-button.monetization-off {
+    background: rgba(139, 69, 19, 0.6);
+    border-color: var(--clay-brown);
+    opacity: 0.7;
+}
+
+.simple-footer-button.monetization-off:hover {
+    background: rgba(139, 69, 19, 0.8);
+}
+
+/* Collapsible Text/Chat System */
+.manuscript-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        rgba(44, 24, 16, 0.95) 20%, 
+        rgba(44, 24, 16, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border-top: 3px solid var(--consciousness-blue);
+    border-radius: 20px 20px 0 0;
+    padding: 2rem;
+    transform: translateY(70%);
+    transition: transform 0.5s var(--transition-ease);
+    z-index: 100;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.manuscript-overlay.expanded {
+    transform: translateY(0);
+}
+
+/* Water Symbol Flow Effect */
+.manuscript-text {
+    color: var(--ceramic-cream);
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    position: relative;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(245, 245, 220, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.manuscript-text::before {
+    content: '〰〰〰';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--consciousness-blue);
+    font-size: 1.5rem;
+    opacity: 0.6;
+    animation: waterFlow 4s ease-in-out infinite;
+}
+
+@keyframes waterFlow {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.9;
+    }
+}
+
+/* Expand/Collapse Button */
+.manuscript-toggle {
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, 
+        var(--transformation-gold) 0%, 
+        var(--consciousness-blue) 100%);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.manuscript-toggle:hover {
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+    .kiln-universe-container {
+        grid-template-areas: 
+            "header header"
+            "content navigation"
+            "footer footer";
+        grid-template-columns: 1fr 100px;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .kiln-header {
+        height: 80px;
+    }
+    
+    .kiln-title {
+        font-size: 1.4rem;
+    }
+    
+    .header-content {
+        grid-template-columns: 1fr auto;
+        padding: 0 1rem;
+    }
+    
+    .book-tabs-section {
+        margin-left: 1rem;
+    }
+    
+    .book-tab {
+        padding: 0.4rem 0.8rem 0.4rem 1rem;
+        font-size: 0.8rem;
+        width: 50px;
+    }
+    
+    .book-tab.expanded,
+    .book-tab:hover,
+    .book-tab.active {
+        width: 140px;
+    }
+    
+    /* Responsive Simplified Checklist */
+    .checklist-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .checklist-item-simple {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .checkbox-toggle {
+        font-size: 1rem;
+    }
+    
+    .chapter-lock-status {
+        padding: 1rem;
+    }
+    
+    .lock-message {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Responsive Expandable Navigation */
+    .nav-panel-content {
+        right: 110%;
+        width: 180px;
+    }
+    
+    .panel-option {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .chapter-display {
+        padding: 0.5rem;
+    }
+    
+    .chapter-counter {
+        font-size: 0.8rem;
+    }
+}
+
+/* Enhanced Visual Checklist Styles */
+.checklist-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.checklist-item.critical {
+    border-left-color: var(--authority-red);
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.checklist-item.important {
+    border-left-color: var(--consciousness-blue);
+    background: rgba(74, 144, 226, 0.05);
+}
+
+.checklist-item.complete {
+    border-left-color: var(--transformation-gold);
+    background: rgba(243, 156, 18, 0.1);
+}
+
+/* Simplified Grid Checklist Styles */
+.simple-checklist-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.checklist-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.checklist-item-simple {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(44, 24, 16, 0.6);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 12px;
+    color: var(--ceramic-cream);
+    font-family: var(--body-font);
+    cursor: pointer;
+    transition: all 0.4s var(--transition-ease);
+    backdrop-filter: blur(5px);
+}
+
+.checklist-item-simple:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--transformation-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.checklist-item-simple.completed {
+    background: rgba(243, 156, 18, 0.2);
+    border-color: var(--transformation-gold);
+    color: var(--transformation-gold);
+}
+
+.checkbox-toggle {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--consciousness-blue);
+    min-width: 1.5rem;
+    transition: all 0.3s var(--transition-ease);
+}
+
+.checklist-item-simple.completed .checkbox-toggle {
+    color: var(--transformation-gold);
+}
+
+.item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.checklist-item-simple.completed .item-title {
+    text-shadow: 0 0 10px var(--transformation-gold);
+}
+
+/* Chapter Lock Status */
+.chapter-lock-status {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, 
+        rgba(243, 156, 18, 0.2) 0%, 
+        rgba(74, 144, 226, 0.2) 100%);
+    border: 3px solid var(--transformation-gold);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: canonicalGlow 3s ease-in-out infinite alternate;
+}
+
+.lock-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--transformation-gold);
+    font-family: var(--title-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.lock-glyph {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 10px var(--transformation-gold));
+}
+
+@keyframes canonicalGlow {
+    0% { 
+        box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+    }
+    100% { 
+        box-shadow: 0 0 30px rgba(243, 156, 18, 0.6);
+    }
+}
+
+.checklist-item.important {
+    border-left-color: var(--transformation-gold);
+    background: rgba(243, 156, 18, 0.05);
+}
+
+.checklist-item.complete {
+    border-left-color: var(--consciousness-blue);
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.glyph-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(74, 144, 226, 0.2);
+    border-radius: 6px;
+    border: 1px solid var(--consciousness-blue);
+    transition: all 0.3s ease;
+}
+
+.sacred-glyph {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: var(--consciousness-blue);
+    text-shadow: 0 0 4px var(--consciousness-blue);
+    animation: glyphGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glyphGlow {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; text-shadow: 0 0 8px var(--consciousness-blue); }
+}
+
+.checklist-item.complete .glyph-space {
+    background: rgba(74, 144, 226, 0.4);
+    border-color: var(--transformation-gold);
+}
+
+.checklist-item.complete .sacred-glyph {
+    color: var(--transformation-gold);
+    text-shadow: 0 0 6px var(--transformation-gold);
+}
+
+.canonical-link {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.canonical-link:hover {
+    background: rgba(74, 144, 226, 0.2);
+    transform: translateX(2px);
+}
+
+.canonical-reference-panel {
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(243, 156, 18, 0.05) 100%);
+    border: 1px solid var(--consciousness-blue);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.active-references {
+    font-family: 'Courier New', monospace;
+    background: rgba(44, 24, 16, 0.5);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+    border-left: 3px solid var(--transformation-gold);
+}

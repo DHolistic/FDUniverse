@@ -1,0 +1,13 @@
+{
+  "example_ledger_entry": {
+    "date": "1200-04-13",
+    "clerk": "Joren",
+    "item": "loaves",
+    "recorded_quantity": 23,
+    "actual_quantity": 22,
+    "notes": "intentional miscount: +1 to invite a query in the ledger; serves as a seed trigger"
+  },
+  "schema": {
+    "fields": ["date","clerk","item","recorded_quantity","actual_quantity","notes"]
+  }
+}

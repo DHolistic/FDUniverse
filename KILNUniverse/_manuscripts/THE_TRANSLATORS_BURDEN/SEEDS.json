@@ -1,0 +1,51 @@
+{
+  "book": "THE_TRANSLATOR'S BURDEN",
+  "version": "seeds-1",
+  "seeds": [
+    {
+      "id": "kneading_rhythm",
+      "label": "Kneading Rhythm",
+      "type": "audio/mnemonic",
+      "description": "Three-count kneading rhythm used as a micro-pressure mnemonic.",
+      "suggested_asset": "audio/knead-3beat.mp3",
+      "assigned_protagonist": "Aude",
+      "chapter": 13
+    },
+    {
+      "id": "weaver_stitch",
+      "label": "Weaver Stitch & Fold",
+      "type": "tactile/mnemonic",
+      "description": "Weaver's counting stitch and fold that encodes a short mnemonic.",
+      "suggested_asset": "assets/weaver_stitch.svg",
+      "assigned_protagonist": "Caelen",
+      "chapter": 13
+    },
+    {
+      "id": "maker_token",
+      "label": "Maker Token",
+      "type": "visual/object",
+      "description": "Small imperfect clay token pressed with a half-curl — a hush-note in a ledger seam.",
+      "suggested_asset": "assets/token_imperfect.svg",
+      "assigned_protagonist": "Riva",
+      "chapter": 13
+    },
+    {
+      "id": "ledger_miscount",
+      "label": "Ledger Miscount",
+      "type": "textual/hook",
+      "description": "Baker's ledger miscounted by one to invite a question; ties to accounting seedwork.",
+      "suggested_asset": "data/ledger_miscount.json",
+      "assigned_protagonist": null,
+      "chapter": 13
+    },
+    {
+      "id": "salt_footnote",
+      "label": "Salt Footnote",
+      "type": "textual/hook",
+      "description": "Editorial footnote referencing an odd quantity of salt — a geographic/ritual prompt.",
+      "suggested_asset": "assets/footnote_salt.png",
+      "assigned_protagonist": null,
+      "chapter": 13
+    }
+  ]
+}

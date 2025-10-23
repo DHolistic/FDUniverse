@@ -1,0 +1,26 @@
+{
+  "book": "THE_TRANSLATOR'S BURDEN",
+  "version": "canonical-1",
+  "chapters": [
+    { "number": 1, "title": "The Discovery", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_1_Prose.md", "synopsis": "Methodius finds a pre-Kiln tablet in a hidden chamber; the blue glyphs awaken a new language of thought and begin his secret translation work." },
+    { "number": 2, "title": "The Return", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_2_Prose.md", "synopsis": "Methodius returns to the Archive carrying the tablet's ideas; he develops concealment techniques and begins teaching a small circle led by Cordelia." },
+    { "number": 3, "title": "The Double Life", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_3_Prose.md", "synopsis": "Methodius lives a double life — perfect scribe by day and translator by night — learning the blue grammar and forming a secret network to preserve the knowledge." },
+    { "number": 4, "title": "The Seed Spreads", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_4_Prose.md", "synopsis": "The network plants small pedagogical seeds across the Archive; recruits like Elena begin to awaken through careful, plausible discoveries." },
+    { "number": 5, "title": "The Crackdown", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_5_Prose.md", "synopsis": "Authority conducts a purge; Cordelia is captured, some break, but small acts of preservation scatter seeds that survive the purge." },
+    { "number": 6, "title": "Evolution of Resistance", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_6_Prose.md", "synopsis": "After the purge the network evolves: micro-pressure steganography, distributed custodianship, and more resilient concealment methods." },
+    { "number": 7, "title": "The Authority's Suspicion", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_7_Prose.md", "synopsis": "Authority pivots from suppression to managed awakenings; the network refines its rituals to protect the spirit of discovery." },
+    { "number": 8, "title": "The Underground Emergence", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_8_Prose.md", "synopsis": "Preservation moves into the city: weavers, blacksmiths, bakers embed knowledge into living practices, creating a mobile network." },
+    { "number": 9, "title": "The Network of Networks", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_9_Prose.md", "synopsis": "Regional emissaries connect isolated cells into a continental web where practices, songs, and trades carry encoded knowledge." },
+    { "number": 10, "title": "The Eternal Foundation", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_10_Prose.md", "synopsis": "Delegates build a living codex and sacred vessels; they plant adaptive rituals to prevent fossilization into new control systems." },
+    { "number": 11, "title": "The Immediate Aftermath", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_11_Prose.md", "synopsis": "The Great Archive becomes a distributed seed bank; Methodius organizes discoverable caches designed for future seekers." },
+    { "number": 12, "title": "The Eternal Echo", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_12_Prose.md", "synopsis": "Generations inherit fragmentary mnemonic practices; cultural traditions encode the codex so the knowledge survives without a single keeper." },
+    { "number": 13, "title": "Epilogue — The Invitation & The Seed (Canonical)", "source": "chapters/THE_TRANSLATORS_BURDEN_Chapter_13_Prose.md", "synopsis": "Methodius plants three canonical seeds (kneading rhythm, weaver's knot/fold, imperfect maker's token) designed to be discovered by ordinary hands, seeding Book 1 protagonists and future stewardship." }
+  ],
+  "seeds": [
+    { "id": "kneading_rhythm", "type": "audio/mnemonic", "description": "Three-count kneading rhythm used as a micro-pressure mnemonic.", "suggested_asset": "audio/knead-3beat.mp3", "assigned_protagonist": "Aude", "source_chapter": 13 },
+    { "id": "weaver_stitch", "type": "tactile/mnemonic", "description": "Weaver's counting stitch and fold that encodes a short mnemonic.", "suggested_asset": "assets/weaver_stitch.svg", "assigned_protagonist": "Caelen", "source_chapter": 13 },
+    { "id": "maker_token", "type": "visual/object", "description": "Small imperfect clay token pressed with a half-curl — a hush-note in a ledger seam.", "suggested_asset": "assets/token_imperfect.svg", "assigned_protagonist": "Riva", "source_chapter": 13 },
+    { "id": "ledger_miscount", "type": "textual/hook", "description": "Baker's ledger miscounted by one to invite a question; ties to accounting seedwork.", "suggested_asset": "data/ledger_miscount.json", "assigned_protagonist": null, "source_chapter": 13 },
+    { "id": "salt_footnote", "type": "textual/hook", "description": "Editorial footnote referencing an odd quantity of salt — a geographic/ritual prompt.", "suggested_asset": "assets/footnote_salt.png", "assigned_protagonist": null, "source_chapter": 13 }
+  ]
+}

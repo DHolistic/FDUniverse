@@ -1,0 +1,96 @@
+{
+  "translators-burden": {
+    "id": "translators-burden",
+    "title": "The Translator's Burden",
+    "subtitle": "Orthodox KILN Prequel",
+    "totalChapters": 12,
+    "colorTheme": "authority",
+    "coverArt": null,
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Discovery",
+        "subtitle": "The comfortable lie vs. dangerous truth",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_1_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 2,
+        "title": "Chapter 2",
+        "subtitle": "The Weight Increases",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_2_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 3,
+        "title": "Chapter 3",
+        "subtitle": "The Path Unfolds",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_3_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 4,
+        "title": "Chapter 4",
+        "subtitle": "The Network Revealed",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_4_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 5,
+        "title": "Chapter 5",
+        "subtitle": "The Choice",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_5_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 6,
+        "title": "Chapter 6",
+        "subtitle": "Fifty Years Later",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_6_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 7,
+        "title": "Chapter 7",
+        "subtitle": "Network Expansion",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_7_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 8,
+        "title": "Chapter 8",
+        "subtitle": "Underground Consciousness",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_8_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 9,
+        "title": "Chapter 9",
+        "subtitle": "Survival Adaptation",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_9_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 10,
+        "title": "Chapter 10",
+        "subtitle": "Ultimate Transformation",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_10_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 11,
+        "title": "Chapter 11",
+        "subtitle": "The Sacred Archive",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_11_Script.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 12,
+        "title": "Chapter 12",
+        "subtitle": "The Infinite Bridge",
+        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_12_Script.md",
+        "backgroundImage": null
+      }
+    ]
+  }
+}

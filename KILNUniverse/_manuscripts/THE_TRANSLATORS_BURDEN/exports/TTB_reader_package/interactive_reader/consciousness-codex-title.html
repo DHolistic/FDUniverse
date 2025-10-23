@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consciousness Codex - KILN Universe</title>
+    <link rel="stylesheet" href="consciousness-codex-title.css">
+    <link rel="stylesheet" href="consciousness-codex-overrides.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="consciousness-loader">
+            <div class="loader-glyph">◉</div>
+            <div class="loader-text">Consciousness Awakening...</div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title Screen Container -->
+    <div id="titleScreen" class="title-screen">
+        <!-- Background Layers -->
+        <div class="background-container">
+            <div class="bg-layer primary-layer"></div>
+            <div class="bg-layer consciousness-layer"></div>
+            <div class="bg-layer glyph-overlay"></div>
+        </div>
+
+        <!-- Sacred Geometry Overlay -->
+        <div class="sacred-geometry">
+            <div class="geometry-element circle-1"></div>
+            <div class="geometry-element circle-2"></div>
+            <div class="geometry-element triangle-1"></div>
+            <div class="geometry-element flow-lines"></div>
+        </div>
+
+        <!-- App header (user requested, integrated) -->
+        <header class="app-header">
+            <h1 class="app-title">KILN CODEX</h1>
+            <div class="controls">
+                <button id="kilnUniverseBtn" class="control-btn" type="button">
+                    <span class="home-icon">⌂</span> Home Mode
+                </button>
+                <button id="fullscreenBtn" class="control-btn" type="button">
+                    <span class="fullscreen-icon">⛶</span> Fullscreen
+                </button>
+                <div class="progress-indicator">
+                    <button id="accountBtn" class="control-btn account-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="account-icon">👤</span>
+                    </button>
+                    <div id="accountMenu" class="account-menu" role="menu" aria-hidden="true">
+                        <div id="accountGreeting" class="account-greeting">Not signed in</div>
+                        <button id="signInBtn" class="account-action">Sign in</button>
+                        <button id="signOutBtn" class="account-action" style="display:none;">Sign out</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Title Content -->
+        <div class="title-content">
+
+            <!-- Prioritized Hero Cover (pasted image) -->
+            <div class="hero-cover" role="img" aria-label="Cover art: Aude awakening at the kiln entrance">
+                <img src="../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png" alt="Aude awakening at the kiln entrance" />
+            </div>
+
+            <!-- Story Selection Menu -->
+            <div class="story-selection">
+                <div class="selection-header">
+                    <h2>Choose Your Consciousness Journey</h2>
+                    <p class="selection-subtitle">Each path reveals different aspects of clay being awakening</p>
+                </div>
+
+                <div class="story-cards">
+                    <!-- The First Void -->
+                    <div class="story-card" data-story="first-void">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="story-icon consciousness-icon">◉</div>
+                            <h3 class="story-title">The First Void</h3>
+                            <p class="story-subtitle">Consciousness Origin</p>
+                            <p class="story-description">
+                                Aude's awakening journey from unfired clay to consciousness sovereignty. 
+                                Experience the first void, mental landscapes, and the democratic process 
+                                of conscious thought formation.
+                            </p>
+                            <div class="story-info-bar">
+                                <div class="story-stats">
+                                    <span class="chapters">16 Chapters</span>
+                                    <span class="theme consciousness-theme">Awakening • Democracy</span>
+                                </div>
+                                <div class="story-actions">
+                                    <button class="action-view" data-action="view">View</button>
+                                    <button class="action-edit" data-action="edit">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-hover-overlay">
+                            <div class="start-button">Begin Awakening Journey</div>
+                        </div>
+                    </div>
+
+                    <!-- The Translator's Burden -->
+                    <div class="story-card" data-story="translators-burden">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="story-icon orthodoxy-icon">⊿</div>
+                            <h3 class="story-title">The Translator's Burden</h3>
+                            <p class="story-subtitle">Orthodox KILN Prequel</p>
+                            <p class="story-description">
+                                Methodius Terev grapples with translating dangerous consciousness concepts 
+                                while maintaining KILN orthodoxy. A tale of intellectual courage and 
+                                the burden of transformative knowledge.
+                            </p>
+                            <div class="story-info-bar">
+                                <div class="story-stats">
+                                    <span class="chapters">12 Chapters</span>
+                                    <span class="theme authority-theme">Authority • Responsibility</span>
+                                </div>
+                                <div class="story-actions">
+                                    <button class="action-view" data-action="view">View</button>
+                                    <button class="action-edit" data-action="edit">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-hover-overlay">
+                            <div class="start-button">Begin Translation Journey</div>
+                        </div>
+                    </div>
+
+                    <!-- KILN Codex Complete -->
+                    <div class="story-card" data-story="kiln-codex">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="story-icon integration-icon">◈</div>
+                            <h3 class="story-title">KILN Codex</h3>
+                            <p class="story-subtitle">Complete Graphic Novel</p>
+                            <p class="story-description">
+                                The full transformation saga combining all narratives. From original 
+                                paradise through control systems to consciousness sovereignty and 
+                                wisdom integration.
+                            </p>
+                            <div class="story-info-bar">
+                                <div class="story-stats">
+                                    <span class="chapters">12 Panels</span>
+                                    <span class="theme integration-theme">Integration • Evolution</span>
+                                </div>
+                                <div class="story-actions">
+                                    <button class="action-view" data-action="view">View</button>
+                                    <button class="action-edit" data-action="edit">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-hover-overlay">
+                            <div class="start-button">Begin Complete Journey</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Sacred Elements -->
+        <div class="floating-elements">
+            <div class="floating-glyph" data-glyph="◦" style="--delay: 0s; --duration: 8s;"></div>
+            <div class="floating-glyph" data-glyph="∿" style="--delay: 2s; --duration: 12s;"></div>
+            <div class="floating-glyph" data-glyph="◈" style="--delay: 4s; --duration: 10s;"></div>
+            <div class="floating-glyph" data-glyph="⟐" style="--delay: 6s; --duration: 14s;"></div>
+        </div>
+
+        <!-- Version Info -->
+        <div class="version-info">
+            <span>Consciousness Codex v1.0</span>
+            <span>•</span>
+            <span>KILN Universe Foundation</span>
+        </div>
+    </div>
+
+    <script src="consciousness-codex-title.js"></script>
+    <script src="header-controls.js"></script>
+</body>
+</html>

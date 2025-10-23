@@ -1,0 +1,8 @@
+Placeholder for audio asset: knead-3beat.mp3
+
+Intended use: three-count kneading rhythm mnemonic (audio/mnemonic).
+
+Action: Replace this placeholder with a real MP3 file at the same relative path:
+  visual_design/audio/knead-3beat.mp3
+
+Notes: Recommended sample rate 44.1kHz, mono, ~3-6s duration. Filename must be exactly `knead-3beat.mp3` to match the seed mapping.

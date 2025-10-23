@@ -1,0 +1,62 @@
+{
+  "book": "THE_TRANSLATOR'S BURDEN",
+  "version": "seeds-1-mapped",
+  "generated": "2025-10-23T00:00:00Z",
+  "entries": [
+    {
+      "id": "kneading_rhythm",
+      "suggested_asset": "visual_design/audio/knead-3beat.mp3",
+      "resolved_path": "visual_design/audio/knead-3beat.mp3",
+      "exists": false,
+      "placeholder_created": true,
+      "placeholder_path": "visual_design/audio/knead-3beat.mp3.placeholder.txt",
+      "type": "audio/mnemonic",
+      "assigned_protagonist": "Aude",
+      "chapter": 13
+    },
+    {
+      "id": "weaver_stitch",
+      "suggested_asset": "visual_design/assets/weaver_stitch.svg",
+      "resolved_path": "visual_design/assets/weaver_stitch.svg",
+      "exists": false,
+      "placeholder_created": true,
+      "placeholder_path": "visual_design/assets/weaver_stitch.svg.placeholder.txt",
+      "type": "tactile/mnemonic",
+      "assigned_protagonist": "Caelen",
+      "chapter": 13
+    },
+    {
+      "id": "maker_token",
+      "suggested_asset": "visual_design/assets/token_imperfect.svg",
+      "resolved_path": "visual_design/assets/token_imperfect.svg",
+      "exists": false,
+      "placeholder_created": true,
+      "placeholder_path": "visual_design/assets/token_imperfect.svg.placeholder.txt",
+      "type": "visual/object",
+      "assigned_protagonist": "Riva",
+      "chapter": 13
+    },
+    {
+      "id": "ledger_miscount",
+      "suggested_asset": "visual_design/data/ledger_miscount.json",
+      "resolved_path": "visual_design/data/ledger_miscount.json",
+      "exists": true,
+      "placeholder_created": false,
+      "placeholder_path": "visual_design/data/ledger_miscount.json",
+      "type": "textual/hook",
+      "assigned_protagonist": null,
+      "chapter": 13
+    },
+    {
+      "id": "salt_footnote",
+      "suggested_asset": "visual_design/assets/footnote_salt.png",
+      "resolved_path": "visual_design/assets/footnote_salt.png",
+      "exists": false,
+      "placeholder_created": true,
+      "placeholder_path": "visual_design/assets/footnote_salt.png.placeholder.txt",
+      "type": "textual/hook",
+      "assigned_protagonist": null,
+      "chapter": 13
+    }
+  ]
+}
