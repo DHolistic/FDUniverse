@@ -178,7 +178,7 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     font-family: var(--body-font);
-    font-size: 0.9rem;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
@@ -186,6 +186,8 @@ body {
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    height: 43px;
+    box-sizing: border-box;
 }
 
 .control-btn:hover {
@@ -197,7 +199,8 @@ body {
 
 /* Account button and menu */
 .account-btn {
-    padding: 0.4rem 0.6rem;
+    padding: 0.5rem 1rem;
+    height: 43px;
 }
 
 .account-icon {
@@ -253,6 +256,21 @@ body {
 
 .home-icon {
     font-size: 1.1rem;
+}
+
+.progress-indicator {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    border: 1px solid var(--transformation-gold);
+    height: 43px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 /* Legacy header support */
