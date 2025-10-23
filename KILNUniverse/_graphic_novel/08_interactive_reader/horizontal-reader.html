@@ -15,24 +15,18 @@
     <link rel="stylesheet" href="horizontal-reader.css">
 </head>
 <body>
-    <!-- KILN Header -->
-    <header class="kiln-header-title">
-        <div class="header-title-content">
-            <div class="left-title-section">
-                <h1 class="main-title-inline">
-                    <span class="consciousness-glyph">〰</span>
-                    <span class="consciousness-glyph">◦</span>
-                    <span class="consciousness-glyph">◉</span>
-                    <a href="consciousness-codex-title.html" class="consciousness-codex-link" title="Return to Consciousness Codex Title Screen">
-                        KILN CODEX
-                    </a>
-                    <span class="consciousness-glyph">◉</span>
-                    <span class="consciousness-glyph">◦</span>
-                    <span class="consciousness-glyph">〰</span>
-                </h1>
-            </div>
-            <div class="right-badge-section">
-                <div class="kiln-universe-badge">KILN UNIVERSE</div>
+    <!-- App Header (standardized) -->
+    <header class="app-header">
+        <h1 class="app-title">KILN CODEX</h1>
+        <div class="controls">
+            <button id="kilnUniverseBtn" type="button" class="control-btn">
+                <span class="home-icon">⌂</span> Home Mode
+            </button>
+            <button id="fullscreenBtn" type="button" class="control-btn">
+                <span class="fullscreen-icon">⛶</span> Fullscreen
+            </button>
+            <div class="progress-indicator">
+                <span id="currentScene">DB</span>
             </div>
         </div>
     </header>
@@ -148,5 +142,6 @@
 
     <script src="markdown-loader.js"></script>
     <script src="horizontal-reader.js"></script>
+    <script src="header-controls.js"></script>
 </body>
 </html>

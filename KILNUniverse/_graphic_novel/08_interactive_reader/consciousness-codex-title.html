@@ -39,33 +39,25 @@
             <div class="geometry-element flow-lines"></div>
         </div>
 
-        <!-- 🔒 LOCKED HEADER BANNER - Applied from Main Interface -->
-        <header class="kiln-header-title">
-            <div class="header-title-content">
-                <!-- Left Side: Title Text Box -->
-                <div class="left-title-section">
-                    <div class="title-glyph-row">
-                        <span class="consciousness-glyph">〰</span>
-                        <span class="consciousness-glyph">◦</span>
-                        <span class="consciousness-glyph">◉</span>
-                        <span class="consciousness-glyph">∿</span>
-                        <span class="consciousness-glyph">◈</span>
+        <!-- App header (user requested, integrated) -->
+        <header class="app-header">
+            <h1 class="app-title">KILN CODEX</h1>
+            <div class="controls">
+                <button id="kilnUniverseBtn" class="control-btn" type="button">
+                    <span class="home-icon">⌂</span> Home Mode
+                </button>
+                <button id="fullscreenBtn" class="control-btn" type="button">
+                    <span class="fullscreen-icon">⛶</span> Fullscreen
+                </button>
+                <div class="progress-indicator">
+                    <button id="accountBtn" class="control-btn account-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="account-icon">👤</span>
+                    </button>
+                    <div id="accountMenu" class="account-menu" role="menu" aria-hidden="true">
+                        <div id="accountGreeting" class="account-greeting">Not signed in</div>
+                        <button id="signInBtn" class="account-action">Sign in</button>
+                        <button id="signOutBtn" class="account-action" style="display:none;">Sign out</button>
                     </div>
-                    
-                    <h1 class="main-title">KILN CODEX</h1>
-                    
-                    <div class="title-glyph-row bottom">
-                        <span class="consciousness-glyph">◎</span>
-                        <span class="consciousness-glyph">⟐</span>
-                        <span class="consciousness-glyph">⟆</span>
-                        <span class="consciousness-glyph">⚡</span>
-                        <span class="consciousness-glyph">〰</span>
-                    </div>
-                </div>
-
-                <!-- Right Side: KILN Universe Badge -->
-                <div class="right-badge-section">
-                    <div class="kiln-universe-badge">KILN UNIVERSE</div>
                 </div>
             </div>
         </header>
@@ -183,5 +175,6 @@
     </div>
 
     <script src="consciousness-codex-title.js"></script>
+    <script src="header-controls.js"></script>
 </body>
 </html>

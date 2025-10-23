@@ -41,7 +41,7 @@ body {
 
 .story-info-bar {
     position: fixed;
-    top: 160px; /* Below header (header is 160px tall) */
+    top: 80px; /* Below header (header is 80px tall) */
     left: 0;
     right: 0;
     background: rgba(44, 24, 16, 0.95);
@@ -74,7 +74,7 @@ body {
 
 .horizontal-reader-container {
     position: fixed;
-    top: 230px; /* Below story info bar (160px header + 70px story info) */
+    top: 150px; /* Below story info bar (80px header + 70px story info) */
     left: 0;
     right: 0;
     bottom: 120px; /* Above chapter navigation */
@@ -423,7 +423,7 @@ body {
 
 .back-link-container {
     position: fixed;
-    top: 240px;
+    top: 160px;
     left: 2rem;
     z-index: 1000;
 }
@@ -550,6 +550,7 @@ body {
         gap: 0.5rem;
         padding: 0.75rem 1rem;
         height: auto;
+        top: 70px;
     }
 
     .story-title {
@@ -561,8 +562,12 @@ body {
     }
 
     .horizontal-reader-container {
-        top: 250px;
+        top: 140px;
         bottom: 160px;
+    }
+
+    .back-link-container {
+        top: 145px;
     }
 
     .panel-content {

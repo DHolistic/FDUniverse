@@ -589,6 +589,65 @@ body {
     background: var(--authority-red);
 }
 
+/* Account Menu Styles */
+.account-btn {
+    padding: 0.4rem 0.6rem;
+}
+
+.account-icon {
+    font-size: 1.0rem;
+}
+
+.account-menu {
+    position: absolute;
+    right: 2rem;
+    top: 72px;
+    min-width: 180px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 2000;
+}
+
+.account-greeting {
+    font-size: 0.95rem;
+    color: var(--ceramic-cream);
+    margin-bottom: 0.5rem;
+}
+
+.account-action {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--consciousness-blue);
+    text-align: left;
+    padding: 0.5rem 0.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.account-action:hover {
+    background: rgba(74, 144, 226, 0.06);
+}
+
+.user-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--ceramic-cream);
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+}
+
+.home-icon {
+    font-size: 1.1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .text-container {

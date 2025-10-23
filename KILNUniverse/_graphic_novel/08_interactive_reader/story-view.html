@@ -6,7 +6,7 @@
   <title>Story View - Consciousness Codex</title>
   <link rel="stylesheet" href="consciousness-codex-title.css">
   <style>
-    .view-container { max-width: 1100px; margin: 120px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
+    .view-container { max-width: 1100px; margin: 100px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
     .view-hero { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
     .view-hero img { width: 100%; display:block; }
     .view-meta { margin-top: 1rem; display:flex; gap:1rem; align-items:center; justify-content:space-between; }
@@ -15,7 +15,21 @@
   </style>
 </head>
 <body>
-  <header class="kiln-header-title" aria-hidden="true"></header>
+  <!-- App Header (standardized) -->
+  <header class="app-header">
+    <h1 class="app-title">KILN CODEX</h1>
+    <div class="controls">
+      <button id="kilnUniverseBtn" type="button" class="control-btn">
+        <span class="home-icon">⌂</span> Home Mode
+      </button>
+      <button id="fullscreenBtn" type="button" class="control-btn">
+        <span class="fullscreen-icon">⛶</span> Fullscreen
+      </button>
+      <div class="progress-indicator">
+        <span id="currentScene">DB</span>
+      </div>
+    </div>
+  </header>
   <div class="view-container" id="viewContainer">
     <div id="viewTitle" class="view-title"><h1>Story</h1></div>
     <div class="view-hero"><img id="viewImage" src="" alt="Story artwork"/></div>
@@ -83,5 +97,6 @@
     document.getElementById('readStoryBtn').href = `horizontal-reader.html?story=${id}&chapter=1`;
     document.getElementById('editStoryBtn').href = `story-edit.html?id=${id}`;
   </script>
+  <script src="header-controls.js"></script>
 </body>
 </html>

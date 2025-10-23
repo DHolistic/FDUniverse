@@ -6,7 +6,7 @@
   <title>Story Edit - Consciousness Codex</title>
   <link rel="stylesheet" href="consciousness-codex-title.css">
   <style>
-    .edit-container { max-width: 1100px; margin: 120px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
+    .edit-container { max-width: 1100px; margin: 100px auto 40px; color: var(--ceramic-cream); padding: 2rem; }
     .editor { background: rgba(0,0,0,0.2); padding:1rem; border-radius:8px; min-height:300px; }
     .meta-row { display:flex; gap:1rem; align-items:center; }
     .save-btn { margin-top:1rem; padding:0.5rem 1rem; border-radius:8px; background:var(--consciousness-blue); border:none; color:white; font-weight:700; cursor:pointer; }
@@ -14,7 +14,21 @@
   </style>
 </head>
 <body>
-  <header class="kiln-header-title" aria-hidden="true"></header>
+  <!-- App Header (standardized) -->
+  <header class="app-header">
+    <h1 class="app-title">KILN CODEX</h1>
+    <div class="controls">
+      <button id="kilnUniverseBtn" type="button" class="control-btn">
+        <span class="home-icon">⌂</span> Home Mode
+      </button>
+      <button id="fullscreenBtn" type="button" class="control-btn">
+        <span class="fullscreen-icon">⛶</span> Fullscreen
+      </button>
+      <div class="progress-indicator">
+        <span id="currentScene">DB</span>
+      </div>
+    </div>
+  </header>
   <div class="edit-container">
     <div id="editTitle"><h1>Edit Story</h1></div>
     <div class="meta-row">
@@ -86,5 +100,6 @@
       alert('Saved locally for preview.');
     });
   </script>
+    <script src="header-controls.js"></script>
 </body>
 </html>
