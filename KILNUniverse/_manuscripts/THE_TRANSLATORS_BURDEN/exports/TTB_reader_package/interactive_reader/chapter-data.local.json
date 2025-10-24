@@ -11,112 +11,112 @@
         "number": 1,
         "title": "The Simply Is",
         "subtitle": "Opening Chapter of the Prequel Novel",
-        "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_01_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_01_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 2,
         "title": "Chapter 2",
         "subtitle": "",
-        "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_02_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_02_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 3,
         "title": "Chapter 3",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_03_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_03_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 4,
         "title": "Chapter 4",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_04_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_04_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 5,
         "title": "Chapter 5",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_05_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_05_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 6,
         "title": "Chapter 6",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_06_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_06_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 7,
         "title": "Chapter 7",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_07_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_07_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 8,
         "title": "Chapter 8",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_08_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_08_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 9,
         "title": "Chapter 9",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_09_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_09_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 10,
         "title": "Chapter 10",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_10_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_10_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 11,
         "title": "Chapter 11",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_11_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_11_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 12,
         "title": "Chapter 12",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_12_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_12_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 13,
         "title": "Chapter 13",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_13_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_13_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 14,
         "title": "Chapter 14",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_14_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_14_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 15,
         "title": "Chapter 15",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_15_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_15_EXPANDED.md",
         "backgroundImage": null
       },
       {
         "number": 16,
         "title": "Chapter 16",
         "subtitle": "",
-  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_16_EXPANDED.md",
+        "markdownPath": "../manuscript_sources/FV_Chapters/FIRST_VOID_CHAPTER_16_EXPANDED.md",
         "backgroundImage": null
       }
     ]
@@ -133,84 +133,84 @@
         "number": 1,
         "title": "The Discovery",
         "subtitle": "The comfortable lie vs. dangerous truth",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_1_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_1_Script.md",
         "backgroundImage": null
       },
       {
         "number": 2,
         "title": "Chapter 2",
         "subtitle": "The Weight Increases",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_2_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_2_Script.md",
         "backgroundImage": null
       },
       {
         "number": 3,
         "title": "Chapter 3",
         "subtitle": "The Path Unfolds",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_3_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_3_Script.md",
         "backgroundImage": null
       },
       {
         "number": 4,
         "title": "Chapter 4",
         "subtitle": "The Network Revealed",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_4_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_4_Script.md",
         "backgroundImage": null
       },
       {
         "number": 5,
         "title": "Chapter 5",
         "subtitle": "The Choice",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_5_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_5_Script.md",
         "backgroundImage": null
       },
       {
         "number": 6,
         "title": "Chapter 6",
         "subtitle": "Fifty Years Later",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_6_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_6_Script.md",
         "backgroundImage": null
       },
       {
         "number": 7,
         "title": "Chapter 7",
         "subtitle": "Network Expansion",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_7_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_7_Script.md",
         "backgroundImage": null
       },
       {
         "number": 8,
         "title": "Chapter 8",
         "subtitle": "Underground Consciousness",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_8_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_8_Script.md",
         "backgroundImage": null
       },
       {
         "number": 9,
         "title": "Chapter 9",
         "subtitle": "Survival Adaptation",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_9_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_9_Script.md",
         "backgroundImage": null
       },
       {
         "number": 10,
         "title": "Chapter 10",
         "subtitle": "Ultimate Transformation",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_10_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_10_Script.md",
         "backgroundImage": null
       },
       {
         "number": 11,
         "title": "Chapter 11",
         "subtitle": "The Sacred Archive",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_11_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_11_Script.md",
         "backgroundImage": null
       },
       {
         "number": 12,
         "title": "Chapter 12",
         "subtitle": "The Infinite Bridge",
-        "markdownPath": "../manuscript_sources/chapters/THE_TRANSLATORS_BURDEN_Chapter_12_Script.md",
+        "markdownPath": "../manuscript_sources/TTB_Chapters/THE_TRANSLATORS_BURDEN_Chapter_12_Script.md",
         "backgroundImage": null
       }
     ]

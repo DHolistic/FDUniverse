@@ -34,6 +34,7 @@ body {
     background: var(--kiln-dark);
     min-height: 100vh;
     color: var(--ceramic-cream);
+    scroll-behavior: smooth;
 }
 
 /* Loading Screen */
@@ -121,8 +122,9 @@ body {
 .title-screen {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: visible;
+    overflow-x: hidden;
     opacity: 0;
     transition: opacity 1s var(--sacred-ease) 3s;
 }
@@ -510,6 +512,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 2rem;
+    padding-bottom: 4rem;
     animation: titleContentReveal 2s var(--sacred-ease) 4s both;
 }
 
