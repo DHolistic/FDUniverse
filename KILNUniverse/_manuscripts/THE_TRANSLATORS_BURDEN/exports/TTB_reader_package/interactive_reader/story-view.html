@@ -52,48 +52,68 @@
   </div>
 
   <script>
-    const storyConfigs = (function(){
-      return {
-        'translators-burden': {
-            title: "The Translator's Burden",
-            subtitle: 'Orthodox KILN Prequel',
-            image: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
-            description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
-            chapters: 12
-        },
-        'first-void': {
-            title: 'The First Void',
-            subtitle: 'Consciousness Origin',
-            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
-            description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
-            chapters: 16
-        },
-        'kiln-codex': {
-            title: 'KILN Codex',
-            subtitle: 'Complete Graphic Novel',
-            image: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
-            description: 'The complete transformation saga from paradise through control to sovereignty.',
-            chapters: 12
-        }
-      };
-    })();
-
     function param(name){
       const url = new URL(window.location.href);
       return url.searchParams.get(name);
     }
 
     const id = param('id') || 'first-void';
-    const config = storyConfigs[id] || storyConfigs['first-void'];
+
+    // Try to get config from sessionStorage first (passed from title screen)
+    let config = null;
+    try {
+      const storedConfig = sessionStorage.getItem('storyConfig');
+      if (storedConfig) {
+        config = JSON.parse(storedConfig);
+      }
+    } catch(e) {
+      console.warn('Could not parse stored config:', e);
+    }
+
+    // Fallback to local configs if sessionStorage not available
+    if (!config) {
+      const storyConfigs = {
+        'translators-burden': {
+            title: "The Translator's Burden",
+            subtitle: 'Orthodox KILN Prequel',
+            backgroundImage: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
+            description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
+            chapters: 12,
+            chapterPath: null
+        },
+        'first-void': {
+            title: 'The First Void',
+            subtitle: 'Consciousness Origin',
+            backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
+            description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
+            chapters: 16,
+            chapterPath: '../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV',
+            chapterFiles: Array.from({length: 16}, (_, i) => `FIRST_VOID_CHAPTER_${String(i + 1).padStart(2, '0')}_EXPANDED.md`)
+        },
+        'kiln-codex': {
+            title: 'KILN Codex',
+            subtitle: 'Complete Graphic Novel',
+            backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
+            description: 'The complete transformation saga from paradise through control to sovereignty.',
+            chapters: 12,
+            chapterPath: null
+        }
+      };
+      config = storyConfigs[id] || storyConfigs['first-void'];
+    }
 
     document.getElementById('viewTitle').innerHTML = `<h1>${config.title}</h1>`;
     document.getElementById('viewSubtitle').textContent = config.subtitle;
     document.getElementById('viewChapters').textContent = config.chapters + ' Chapters';
-    document.getElementById('viewImage').src = config.image;
+    document.getElementById('viewImage').src = config.backgroundImage || config.image;
     document.getElementById('viewImage').alt = config.title;
     document.getElementById('viewDescription').textContent = config.description;
 
-    // Set up action buttons
+    // Store config for reader page
+    sessionStorage.setItem('currentStoryConfig', JSON.stringify(config));
+    sessionStorage.setItem('currentStoryId', id);
+
+    // Set up action buttons - both stories use horizontal-reader, just load different chapters
     document.getElementById('readStoryBtn').href = `horizontal-reader.html?story=${id}&chapter=1`;
     document.getElementById('editStoryBtn').href = `story-edit.html?id=${id}`;
   </script>

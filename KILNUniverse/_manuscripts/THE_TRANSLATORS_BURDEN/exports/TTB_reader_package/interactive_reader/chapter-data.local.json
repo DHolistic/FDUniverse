@@ -1,4 +1,126 @@
 {
+  "first-void": {
+    "id": "first-void",
+    "title": "The First Void",
+    "subtitle": "Consciousness Origin",
+    "totalChapters": 16,
+    "colorTheme": "consciousness",
+    "coverArt": null,
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Simply Is",
+        "subtitle": "Opening Chapter of the Prequel Novel",
+        "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_01_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 2,
+        "title": "Chapter 2",
+        "subtitle": "",
+        "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_02_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 3,
+        "title": "Chapter 3",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_03_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 4,
+        "title": "Chapter 4",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_04_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 5,
+        "title": "Chapter 5",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_05_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 6,
+        "title": "Chapter 6",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_06_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 7,
+        "title": "Chapter 7",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_07_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 8,
+        "title": "Chapter 8",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_08_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 9,
+        "title": "Chapter 9",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_09_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 10,
+        "title": "Chapter 10",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_10_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 11,
+        "title": "Chapter 11",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_11_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 12,
+        "title": "Chapter 12",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_12_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 13,
+        "title": "Chapter 13",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_13_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 14,
+        "title": "Chapter 14",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_14_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 15,
+        "title": "Chapter 15",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_15_EXPANDED.md",
+        "backgroundImage": null
+      },
+      {
+        "number": 16,
+        "title": "Chapter 16",
+        "subtitle": "",
+  "markdownPath": "../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV/FIRST_VOID_CHAPTER_16_EXPANDED.md",
+        "backgroundImage": null
+      }
+    ]
+  },
   "translators-burden": {
     "id": "translators-burden",
     "title": "The Translator's Burden",

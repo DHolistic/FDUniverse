@@ -666,17 +666,17 @@ body {
 /* Story info bar - contains stats and actions */
 .story-info-bar {
     position: absolute;
-    bottom: 2.4rem;
-    left: 1.5rem;
-    right: 1.5rem;
+    bottom: 10.4rem;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 0;
+    background: transparent;
+    border: none;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: none;
     z-index: 15;
 }
 
@@ -846,7 +846,7 @@ body {
     line-height: 1.6;
     color: var(--ceramic-cream);
     opacity: 0.9;
-    margin-bottom: 124px;
+    margin-bottom: 332px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -894,7 +894,7 @@ body {
     position: absolute;
     left: 1.5rem;
     right: 1.5rem;
-    bottom: 0.5rem;
+    bottom: 4.5rem;
     background: linear-gradient(135deg,
         rgba(74, 144, 226, 0.95) 0%,
         rgba(243, 156, 18, 0.95) 100%);
@@ -1035,18 +1035,20 @@ body {
 
     .story-description {
         font-size: 0.9rem;
-        margin-bottom: 114px;
+        margin-bottom: 312px;
         -webkit-line-clamp: 4;
     }
 
     .story-info-bar {
-        bottom: 2.25rem;
-        padding: 0.6rem 0.8rem;
+        bottom: 9.5rem;
+        left: 0;
+        right: 0;
+        padding: 0.6rem 0;
         gap: 0.6rem;
     }
 
     .card-hover-overlay {
-        bottom: 0.5rem;
+        bottom: 4.5rem;
         padding: 0.6rem 0.8rem;
         height: 55px;
     }
@@ -1117,15 +1119,15 @@ body {
     .story-description {
         font-size: 0.85rem;
         line-height: 1.5;
-        margin-bottom: 109px;
+        margin-bottom: 302px;
         -webkit-line-clamp: 3;
     }
 
     .story-info-bar {
-        bottom: 2.1rem;
-        left: 1.25rem;
-        right: 1.25rem;
-        padding: 0.5rem 0.75rem;
+        bottom: 9.1rem;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 0;
         gap: 0.5rem;
     }
 
@@ -1158,7 +1160,7 @@ body {
         height: 50px;
         left: 1.25rem;
         right: 1.25rem;
-        bottom: 0.5rem;
+        bottom: 4.5rem;
     }
 
     .start-button {

@@ -14,7 +14,7 @@ class MarkdownLoader {
         const candidates = ['chapter-data.local.json', 'chapter-data.json'];
         for (const file of candidates) {
             try {
-                const response = await fetch(file);
+                const response = await fetch(file, { cache: 'no-store' });
                 if (!response.ok) {
                     // Try next candidate
                     console.warn(`Could not load ${file}: ${response.status} ${response.statusText}`);
@@ -59,7 +59,7 @@ class MarkdownLoader {
      */
     async fetchMarkdown(path) {
         try {
-            const response = await fetch(path);
+            const response = await fetch(path, { cache: 'no-store' });
             if (!response.ok) {
                 throw new Error(`Failed to fetch markdown: ${response.statusText}`);
             }

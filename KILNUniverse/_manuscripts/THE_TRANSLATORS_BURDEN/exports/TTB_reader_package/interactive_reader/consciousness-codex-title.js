@@ -20,7 +20,8 @@ class ConsciousnessCodexTitle {
                 backgroundImage: '../../_canonical_imagery/02_character_archetypes/METHODIUS AWAKENING MOMENT.png',
                 description: 'Methodius Terev navigates the dangerous waters of translating consciousness concepts while maintaining KILN orthodoxy.',
                 theme: 'authority',
-                chapters: 12
+                chapters: 12,
+                chapterPath: null
             },
             'first-void': {
                 title: 'The First Void',
@@ -29,7 +30,9 @@ class ConsciousnessCodexTitle {
                 backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_2850AF_AudeAwakening_Systems_Shattering_v1.0.png',
                 description: 'Aude\'s transformative journey from unfired clay to consciousness sovereignty.',
                 theme: 'consciousness',
-                chapters: 16
+                chapters: 16,
+                chapterPath: '../../../../../_manuscripts/THE_FIRST_VOID/CHAPTERS_TFV',
+                chapterFiles: Array.from({length: 16}, (_, i) => `FIRST_VOID_CHAPTER_${String(i + 1).padStart(2, '0')}_EXPANDED.md`)
             },
             'kiln-codex': {
                 title: 'KILN Codex',
@@ -38,7 +41,8 @@ class ConsciousnessCodexTitle {
                 backgroundImage: '../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png',
                 description: 'The complete transformation saga from paradise through control to sovereignty.',
                 theme: 'integration',
-                chapters: 12
+                chapters: 12,
+                chapterPath: null
             }
         };
 
@@ -295,12 +299,24 @@ class ConsciousnessCodexTitle {
 
     // Open a lightweight story view page that displays artwork and narration
     openStoryView(storyId) {
+        const config = this.storyConfigs[storyId];
+
+        // Store story config in sessionStorage for the view page
+        sessionStorage.setItem('storyConfig', JSON.stringify(config));
+        sessionStorage.setItem('storyId', storyId);
+
         const target = `story-view.html?id=${encodeURIComponent(storyId)}`;
         window.location.href = target;
     }
 
     // Open a lightweight story edit page (template) for immediate script/manuscript placement
     openStoryEdit(storyId) {
+        const config = this.storyConfigs[storyId];
+
+        // Store story config in sessionStorage for the edit page
+        sessionStorage.setItem('storyConfig', JSON.stringify(config));
+        sessionStorage.setItem('storyId', storyId);
+
         const target = `story-edit.html?id=${encodeURIComponent(storyId)}`;
         window.location.href = target;
     }
