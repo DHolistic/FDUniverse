@@ -182,16 +182,22 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                     {panels.map((panel, index) => (
                         <SwiperSlide key={panel.id}>
                             {/* Using existing CSS classes! */}
-                            <div className="chapter-panel" data-type={panel.type}>
+                            <div
+                                className="chapter-panel"
+                                data-type={panel.type}
+                                data-layout={panel.layout}
+                            >
                                 {/* Background image */}
-                                <div
-                                    className="panel-background"
-                                    style={{
-                                        backgroundImage: panel.backgroundImage
-                                            ? `url(${panel.backgroundImage})`
-                                            : 'none'
-                                    }}
-                                />
+                                {panel.type !== 'full-bleed-image' && (
+                                    <div
+                                        className="panel-background"
+                                        style={{
+                                            backgroundImage: panel.backgroundImage
+                                                ? `url(${panel.backgroundImage})`
+                                                : 'none'
+                                        }}
+                                    />
+                                )}
 
                                 {/* Panel content with Framer Motion */}
                                 <motion.div
@@ -203,17 +209,54 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                                         ease: [0.4, 0, 0.2, 1] // Same as existing --transition-ease
                                     }}
                                 >
-                                    <h2>{panel.title}</h2>
-                                    <h3>{panel.subtitle}</h3>
-
-                                    {panel.content.map((paragraph, i) => (
-                                        <p
-                                            key={i}
-                                            className={i === 0 ? 'opening-paragraph' : ''}
-                                        >
-                                            {paragraph}
-                                        </p>
-                                    ))}
+                                    {panel.type === 'full-bleed-image' ? (
+                                        // Full bleed image layout
+                                        <>
+                                            <img
+                                                src={panel.image}
+                                                alt={panel.title}
+                                                className="full-bleed-image"
+                                            />
+                                            {panel.caption && (
+                                                <div className="image-caption">
+                                                    {panel.caption}
+                                                </div>
+                                            )}
+                                        </>
+                                    ) : panel.type === 'text-image-side-by-side' ? (
+                                        // Side-by-side layout
+                                        <>
+                                            <div className="side-by-side-image">
+                                                <img src={panel.image} alt={panel.title} />
+                                            </div>
+                                            <div className="side-by-side-content">
+                                                <h2>{panel.title}</h2>
+                                                {panel.subtitle && <h3>{panel.subtitle}</h3>}
+                                                {panel.content.map((paragraph, i) => (
+                                                    <p
+                                                        key={i}
+                                                        className={i === 0 ? 'opening-paragraph' : ''}
+                                                    >
+                                                        {paragraph}
+                                                    </p>
+                                                ))}
+                                            </div>
+                                        </>
+                                    ) : (
+                                        // Standard text-only or text-and-image layout
+                                        <>
+                                            <h2>{panel.title}</h2>
+                                            {panel.subtitle && <h3>{panel.subtitle}</h3>}
+                                            {panel.content && panel.content.map((paragraph, i) => (
+                                                <p
+                                                    key={i}
+                                                    className={i === 0 ? 'opening-paragraph' : ''}
+                                                >
+                                                    {paragraph}
+                                                </p>
+                                            ))}
+                                        </>
+                                    )}
                                 </motion.div>
 
                                 {/* Progress indicator at bottom of each panel */}
