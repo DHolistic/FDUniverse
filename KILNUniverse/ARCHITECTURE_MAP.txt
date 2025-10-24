@@ -1,0 +1,199 @@
+================================================================================
+                    FDUNIVERSE PROJECT - ARCHITECTURE MAP
+================================================================================
+
+MAIN ENTRY POINT:
+  consciousness-codex-title.html
+         |
+         ├── Title Screen UI
+         ├── Story Selection (3 stories)
+         ├── Account Management
+         └── Navigation to Stories
+
+STORY READING INTERFACES:
+  
+  Option 1: Standard Reader (index.html)
+  ├─ script.js (GraphicNovelReader)
+  ├─ manuscript-loader.js
+  └─ styles.css
+      └─ Two-column layout: Image + Text
+
+  Option 2: Horizontal Reader (horizontal-reader.html)
+  ├─ horizontal-reader.js (HorizontalReader)
+  ├─ markdown-loader.js
+  └─ horizontal-reader.css
+      └─ Horizontal scroll panels
+
+  Option 3: Grid Layout (kiln-grid-index.html)
+  ├─ kiln-grid-controller.js
+  └─ kiln-grid-layout.css
+      └─ Comic panel grid arrangement
+
+  Option 4: Enhanced Platform (enhanced-index.html)
+  ├─ enhanced-reader.js (EnhancedGraphicNovelReader)
+  ├─ platform-system.js
+  └─ enhanced-styles.css
+      └─ Premium features, subscriptions
+
+CONTENT DATA SOURCES:
+
+  chapter-data.json
+  ├─ Story Metadata
+  ├─ Chapter references
+  └─ Relative paths to manuscripts
+
+  _manuscripts/ folder
+  ├─ THE_FIRST_VOID/ (16 chapters - .md files)
+  ├─ THE_TRANSLATORS_BURDEN/ (12+ chapters)
+  ├─ KILN_BOOK_1-5/ (Main series)
+  └─ manuscript_sources/ (Raw content)
+
+IMAGE ASSETS:
+
+  _graphic_novel/06_generated_panels/
+  ├─ Scene 1A - Aude Defience.png
+  ├─ Static Scene 1A - B.png
+  └─ Static Scene 1A C.png
+
+  _canonical_imagery/
+  ├─ 01_landscape_foundation/ (Backgrounds)
+  └─ _canonical_prequel/ (Prequel visuals)
+
+STYLING SYSTEM:
+
+  CSS Variables (defined in root):
+  ├─ Colors: blue (#4A90E2), red (#E74C3C), gold (#F39C12), etc.
+  ├─ Fonts: Cinzel (headers), Crimson Text (body)
+  └─ Animations: 0.8s cubic-bezier easing
+
+  CSS Files:
+  ├─ consciousness-codex-title.css (21KB) - Title screen
+  ├─ styles.css (14KB) - Main reader
+  ├─ horizontal-reader.css (18KB) - Horizontal reader
+  ├─ enhanced-styles.css (22KB) - Platform features
+  └─ kiln-grid-layout.css (56KB) - Comic grid
+
+KEYBOARD NAVIGATION:
+
+  ← → : Navigate scenes/chapters
+  ↑ ↓ : Navigate images
+  Space : Next scene
+  E : Edit mode
+  F : Fullscreen
+  H : Help/shortcuts
+  Esc : Close dialogs
+
+JAVASCRIPT ARCHITECTURE:
+
+  Class-based Components:
+  ├─ GraphicNovelReader (core reader)
+  ├─ HorizontalReader (scrolling)
+  ├─ KilnGridController (comic layout)
+  ├─ EnhancedGraphicNovelReader (platform)
+  ├─ ManuscriptLoader (content loading)
+  ├─ MarkdownLoader (markdown parsing)
+  ├─ KilnUniversePlatform (account/subscriptions)
+  └─ ReviewSystem (review features)
+
+DATA PERSISTENCE:
+
+  localStorage:
+  ├─ User notes
+  ├─ Edit state
+  └─ User preferences
+
+  sessionStorage:
+  └─ Navigation state
+
+  URL Parameters:
+  ├─ ?story=first-void
+  └─ ?chapter=1
+
+BROWSER REQUIREMENTS:
+
+  ✓ Chrome 70+
+  ✓ Firefox 65+
+  ✓ Safari 12+
+  ✓ Edge 79+
+  ✓ JavaScript enabled
+  ✓ Local file access (dev)
+
+FEATURE TIERS:
+
+  Free Tier:
+  ├─ Story selection
+  ├─ Read stories
+  └─ Basic navigation
+
+  Premium Tier:
+  ├─ Multi-story access
+  ├─ Edit mode
+  ├─ Review system
+  └─ Note export
+
+  Master Tier:
+  ├─ All premium features
+  ├─ Collaboration tools
+  └─ Advanced analytics
+
+================================================================================
+                        KEY FILE LOCATIONS
+================================================================================
+
+Primary Location:
+  /home/matt/projects/DProjects/FDUniverse/KILNUniverse/_graphic_novel/08_interactive_reader/
+
+Core Files:
+  consciousness-codex-title.html .......... Main entry point
+  consciousness-codex-title.js ........... Title screen controller
+  consciousness-codex-title.css ......... Title screen styling
+
+  horizontal-reader.html ................. Horizontal scroll interface
+  horizontal-reader.js ................... Horizontal reader controller
+  horizontal-reader.css ................. Horizontal reader styling
+
+  index.html ............................ Basic reader interface
+  script.js ............................ Basic reader logic
+  styles.css .......................... Basic reader styling
+
+  chapter-data.json ..................... Story metadata
+  manuscript-loader.js .................. Content loader
+  markdown-loader.js .................. Markdown parser
+  header-controls.js .................. Header navigation
+
+Styling:
+  enhanced-styles.css .................. Platform features (22KB)
+  kiln-grid-layout.css ................. Comic grid (56KB)
+  kiln-grid-layout.*.css .............. Layout variants (4 files)
+
+Controllers:
+  kiln-grid-controller.js ............... Comic grid system (77KB)
+  platform-system.js ................... Account/subscriptions (17KB)
+  enhanced-reader.js ................... Platform features (40KB)
+
+================================================================================
+                      DEVELOPMENT WORKFLOW
+================================================================================
+
+To make changes:
+  1. Edit HTML/JS/CSS directly in 08_interactive_reader/
+  2. Test in browser: Open HTML file directly or use dev server
+  3. Git commit when ready: git add . && git commit -m "description"
+
+To add content:
+  1. Add manuscript chapters to _manuscripts/ folder
+  2. Update chapter-data.json with chapter references
+  3. Add images to _graphic_novel/06_generated_panels/
+  4. Test in horizontal-reader or basic reader
+
+To modify styling:
+  1. Update CSS custom properties in :root section
+  2. Modify component-specific CSS as needed
+  3. Test responsiveness at multiple viewport sizes
+
+Current Status:
+  Branch: main
+  Recent work: Chapter refactoring, nav edits, grid optimization
+  Next focus: View/edit interface, animation enhancements
+
+================================================================================

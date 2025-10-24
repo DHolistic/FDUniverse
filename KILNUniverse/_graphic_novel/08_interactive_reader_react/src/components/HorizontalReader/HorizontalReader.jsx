@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard, Navigation, Pagination, Lazy, EffectFade } from 'swiper/modules';
+import { Keyboard, Navigation, Pagination } from 'swiper/modules';
 import { motion } from 'framer-motion';
 
 // Import Swiper styles
@@ -127,7 +127,7 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
             {/* SWIPER HORIZONTAL READER (replaces chapter-scroll-wrapper) */}
             <div className="horizontal-reader-container">
                 <Swiper
-                    modules={[Keyboard, Navigation, Pagination, Lazy]}
+                    modules={[Keyboard, Navigation, Pagination]}
                     slidesPerView={1}
                     spaceBetween={0}
 
@@ -150,11 +150,6 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                         renderBullet: (index, className) => {
                             return `<span class="${className} progress-glyph" aria-label="Panel ${index + 1}">◦</span>`;
                         },
-                    }}
-
-                    // Lazy loading images (NEW feature!)
-                    lazy={{
-                        loadPrevNext: true,
                     }}
 
                     // Smooth transitions
