@@ -149,6 +149,7 @@ body {
     flex-shrink: 0;
     overflow-y: auto; /* Allow vertical scrolling within each panel */
     overflow-x: hidden;
+    padding-bottom: 150px; /* Extra space at bottom to clear footer */
 
     /* Custom scrollbar for vertical scroll within panels */
     scrollbar-width: thin;
@@ -213,7 +214,7 @@ body {
 
     /* Paper-like dimensions (US Letter aspect ratio 8.5:11 = 0.773) */
     width: min(850px, 90vw); /* Simulates 8.5" width */
-    min-height: min(1100px, calc(850px / 0.773)); /* Simulates 11" height */
+    min-height: auto; /* Let content determine height */
 
     padding: 4rem 3.5rem; /* Generous padding like a book */
     background: rgba(44, 24, 16, 0.92); /* Slightly more opaque for paper feel */
@@ -224,7 +225,7 @@ body {
         0 20px 60px rgba(0, 0, 0, 0.6),
         0 5px 15px rgba(0, 0, 0, 0.4); /* Multiple shadows for depth */
 
-    /* Centered with top/bottom margins for scrolling */
+    /* Centered with top/bottom margins */
     margin: 2rem auto 3rem auto;
 
     /* Allow content to grow beyond min-height */
