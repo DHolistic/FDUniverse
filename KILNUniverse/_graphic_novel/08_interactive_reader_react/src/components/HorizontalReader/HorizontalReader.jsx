@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Navigation, Pagination } from 'swiper/modules';
 import { motion } from 'framer-motion';
@@ -18,6 +18,17 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
     const [currentPanel, setCurrentPanel] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    // Auto-hide footer state
+    const [footerVisible, setFooterVisible] = useState(true);
+    const hideFooterTimer = useRef(null);
+
+    // Track slide transition state to hide scrollbars during animation
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    // Lightbox state for enlarged images
+    const [lightboxImage, setLightboxImage] = useState(null);
+    const [lightboxCaption, setLightboxCaption] = useState(null);
 
     // Load chapter data
     useEffect(() => {
@@ -43,6 +54,85 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
 
         loadChapter();
     }, [storyId, chapter]);
+
+    // Auto-hide footer after 3 seconds, reset on panel change
+    useEffect(() => {
+        // Show footer when panel changes
+        setFooterVisible(true);
+
+        // Clear existing timer
+        if (hideFooterTimer.current) {
+            clearTimeout(hideFooterTimer.current);
+        }
+
+        // Hide footer after 3 seconds
+        hideFooterTimer.current = setTimeout(() => {
+            setFooterVisible(false);
+        }, 3000);
+
+        return () => {
+            if (hideFooterTimer.current) {
+                clearTimeout(hideFooterTimer.current);
+            }
+        };
+    }, [currentPanel]);
+
+    // Mouse move detection - show footer when mouse near bottom
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const windowHeight = window.innerHeight;
+            const mouseY = e.clientY;
+
+            // Show footer if mouse in bottom 20% of screen
+            if (mouseY > windowHeight * 0.8) {
+                setFooterVisible(true);
+
+                // Reset hide timer
+                if (hideFooterTimer.current) {
+                    clearTimeout(hideFooterTimer.current);
+                }
+
+                hideFooterTimer.current = setTimeout(() => {
+                    setFooterVisible(false);
+                }, 3000);
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    // Show footer on keyboard navigation (arrow keys)
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            // Close lightbox on ESC key
+            if (e.key === 'Escape' && lightboxImage) {
+                setLightboxImage(null);
+                setLightboxCaption(null);
+                return;
+            }
+
+            setFooterVisible(true);
+
+            // Reset hide timer
+            if (hideFooterTimer.current) {
+                clearTimeout(hideFooterTimer.current);
+            }
+
+            hideFooterTimer.current = setTimeout(() => {
+                setFooterVisible(false);
+            }, 3000);
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [lightboxImage]);
 
     if (loading) {
         return (
@@ -95,9 +185,15 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
 
     return (
         <>
-            {/* Header (using existing CSS classes) */}
+            {/* Merged Header - combines app title + story info */}
             <header className="app-header">
-                <h1 className="app-title">KILN CODEX</h1>
+                <div className="app-title-section">
+                    <h1 className="app-title">KILN CODEX</h1>
+                    <span className="header-divider">|</span>
+                    <h2 className="story-title">
+                        {title} Ch.{chapter} <span className="chapter-indicator">[{currentPanel + 1}/{totalPanels}]</span>
+                    </h2>
+                </div>
                 <div className="controls">
                     <button className="control-btn" onClick={() => window.location.href = '/'}>
                         <span className="home-icon">⌂</span> Home
@@ -108,14 +204,6 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                 </div>
             </header>
 
-            {/* Story Info Bar (using existing CSS classes) */}
-            <div className="story-info-bar">
-                <h1 className="story-title">{title}</h1>
-                <span className="chapter-indicator">
-                    Chapter {chapter} • Panel {currentPanel + 1} of {totalPanels}
-                </span>
-            </div>
-
             {/* Back Link (using existing CSS classes) */}
             <div className="back-link-container">
                 <a href="/" className="back-link">
@@ -125,7 +213,7 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
             </div>
 
             {/* SWIPER HORIZONTAL READER (replaces chapter-scroll-wrapper) */}
-            <div className="horizontal-reader-container">
+            <div className={`horizontal-reader-container ${isTransitioning ? 'transitioning' : ''}`}>
                 <Swiper
                     modules={[Keyboard, Navigation, Pagination]}
                     slidesPerView={1}
@@ -160,7 +248,22 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                     touchRatio={1}
                     threshold={5}
 
+                    // Disable mousewheel for slide navigation - allow natural vertical scroll
+                    mousewheel={false}
+
+                    // Only respond to horizontal touch/swipe gestures
+                    touchEventsTarget="container"
+                    touchAngle={45}
+
                     // Callbacks
+                    onSlideChangeTransitionStart={() => {
+                        setIsTransitioning(true);
+                    }}
+
+                    onSlideChangeTransitionEnd={() => {
+                        setIsTransitioning(false);
+                    }}
+
                     onSlideChange={(swiper) => {
                         setCurrentPanel(swiper.activeIndex);
                         console.log(`Panel ${swiper.activeIndex + 1} of ${totalPanels}`);
@@ -215,7 +318,12 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                                             <img
                                                 src={panel.image}
                                                 alt={panel.title}
-                                                className="full-bleed-image"
+                                                className="full-bleed-image clickable-image"
+                                                onClick={() => {
+                                                    setLightboxImage(panel.image);
+                                                    setLightboxCaption(panel.caption || panel.title);
+                                                }}
+                                                title="Click to enlarge"
                                             />
                                             {panel.caption && (
                                                 <div className="image-caption">
@@ -227,7 +335,16 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                                         // Side-by-side layout
                                         <>
                                             <div className="side-by-side-image">
-                                                <img src={panel.image} alt={panel.title} />
+                                                <img
+                                                    src={panel.image}
+                                                    alt={panel.title}
+                                                    className="clickable-image"
+                                                    onClick={() => {
+                                                        setLightboxImage(panel.image);
+                                                        setLightboxCaption(panel.title);
+                                                    }}
+                                                    title="Click to enlarge"
+                                                />
                                             </div>
                                             <div className="side-by-side-content">
                                                 <h2>{panel.title}</h2>
@@ -267,8 +384,8 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                 </Swiper>
             </div>
 
-            {/* Chapter Navigation Bar (using existing CSS classes) */}
-            <div className="chapter-navigation">
+            {/* Chapter Navigation Bar with auto-hide */}
+            <div className={`chapter-navigation ${!footerVisible ? 'hidden' : ''}`}>
                 <button className="nav-button nav-button-prev">
                     <span className="nav-glyph">◀</span> Previous
                 </button>
@@ -301,6 +418,54 @@ export function HorizontalReader({ storyId = 'first-void', chapter = 1 }) {
                         <div className="hint-text">
                             Use arrow keys or swipe to navigate
                         </div>
+                    </div>
+                </motion.div>
+            )}
+
+            {/* Image Lightbox Modal */}
+            {lightboxImage && (
+                <motion.div
+                    className="image-lightbox"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => {
+                        setLightboxImage(null);
+                        setLightboxCaption(null);
+                    }}
+                >
+                    <button
+                        className="lightbox-close"
+                        onClick={() => {
+                            setLightboxImage(null);
+                            setLightboxCaption(null);
+                        }}
+                        aria-label="Close lightbox"
+                    >
+                        ✕
+                    </button>
+                    <motion.div
+                        className="lightbox-content"
+                        initial={{ scale: 0.9, y: 20 }}
+                        animate={{ scale: 1, y: 0 }}
+                        exit={{ scale: 0.9, y: 20 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <img
+                            src={lightboxImage}
+                            alt={lightboxCaption || 'Enlarged image'}
+                            className="lightbox-image"
+                        />
+                        {lightboxCaption && (
+                            <div className="lightbox-caption">
+                                {lightboxCaption}
+                            </div>
+                        )}
+                    </motion.div>
+                    <div className="lightbox-hint">
+                        Click outside image or press ESC to close
                     </div>
                 </motion.div>
             )}
