@@ -1,0 +1,1031 @@
+/* CONSCIOUSNESS CODEX TITLE SCREEN */
+/* KILN Universe Foundation - Sacred Title Experience */
+
+/* CSS Custom Properties */
+:root {
+    /* KILN Universe Color Palette */
+    --consciousness-blue: #4A90E2;
+    --authority-red: #E74C3C;
+    --transformation-gold: #F39C12;
+    --ceramic-cream: #F5F5DC;
+    --clay-brown: #8B4513;
+    --kiln-dark: #2C1810;
+    
+    /* Sacred Typography */
+    --title-font: 'Cinzel', serif;
+    --body-font: 'Crimson Text', serif;
+    
+    /* Animation Easing */
+    --sacred-ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --consciousness-ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--kiln-dark);
+    min-height: 100vh;
+    color: var(--ceramic-cream);
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 50%, 
+        var(--clay-brown) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 1s var(--sacred-ease);
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.consciousness-loader {
+    text-align: center;
+    color: var(--ceramic-cream);
+}
+
+.loader-glyph {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    color: var(--consciousness-blue);
+    margin-bottom: 2rem;
+    animation: consciousnessAwakenPulse 2s ease-in-out infinite;
+}
+
+.loader-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.loader-progress {
+    width: 300px;
+    height: 4px;
+    background: rgba(74, 144, 226, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 50%, 
+        var(--consciousness-blue) 100%);
+    animation: progressFlow 3s ease-out forwards;
+    transform: translateX(-100%);
+}
+
+@keyframes consciousnessAwakenPulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes progressFlow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Title Screen */
+.title-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s var(--sacred-ease) 3s;
+}
+
+.title-screen.visible {
+    opacity: 1;
+}
+
+/* App Header - Clean One-Line Design */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(90deg, var(--authority-red) 0%, var(--clay-brown) 50%, var(--consciousness-blue) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.app-title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.volume-title {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: var(--ceramic-cream);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    height: 43px;
+    box-sizing: border-box;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Account button and menu */
+.account-btn {
+    padding: 0.5rem 1rem;
+    height: 43px;
+}
+
+.account-icon {
+    font-size: 1.0rem;
+}
+
+.account-menu {
+    position: absolute;
+    right: 2rem;
+    top: 72px;
+    min-width: 180px;
+    background: rgba(20,20,20,0.95);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    display: none;
+    z-index: 2000;
+}
+.account-greeting {
+    font-size: 0.95rem;
+    color: var(--ceramic-cream);
+    margin-bottom: 0.5rem;
+}
+
+.account-action {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--consciousness-blue);
+    text-align: left;
+    padding: 0.5rem 0.4rem;
+
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.account-action:hover {
+    background: rgba(74,144,226,0.06);
+}
+
+/* User badge shown in header to display signed-in name */
+.user-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.04);
+    color: var(--ceramic-cream);
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+}
+
+.home-icon {
+    font-size: 1.1rem;
+}
+
+.progress-indicator {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    border: 1px solid var(--transformation-gold);
+    height: 43px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Legacy header support */
+.kiln-header-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(135deg,
+        rgba(44, 24, 16, 0.95) 0%,
+        rgba(139, 69, 19, 0.9) 50%,
+        rgba(44, 24, 16, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 4px solid var(--transformation-gold);
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Watermarked Cover Art Background */
+.kiln-header-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../_canonical_imagery/01_landscape_foundation/LANDSCAPE_BF_OriginalCodex_SpiritualPaths_Natural_v1.0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    filter: sepia(30%) hue-rotate(200deg) saturate(150%);
+    z-index: -1;
+}
+
+/* Sacred Glyph Watermarks */
+.kiln-header-title::after {
+    content: '◉ ◦ ◉ ◦ ◉ ◦ ◉ ◦ ◉';
+    position: absolute;
+    top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--title-font);
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: 2rem;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+    }
+    /* Removed watermark glyphs per lock-in request. Keep rule commented for easy restore if needed. */
+    /* .kiln-header-title::after {
+        content: '\u25c9 \u25e6 \u25c9 \u25e6 \u25c9 \u25e6 \u25c9 \u25e6 \u25c9';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--title-font);
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: 2rem;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+    } */
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Background Layers */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.primary-layer {
+    background: linear-gradient(135deg, 
+        var(--kiln-dark) 0%, 
+        #1a1a1a 25%, 
+        var(--clay-brown) 75%, 
+        var(--kiln-dark) 100%);
+    z-index: 1;
+}
+
+.consciousness-layer {
+    background: radial-gradient(ellipse at center, 
+        rgba(74, 144, 226, 0.15) 0%, 
+        transparent 40%, 
+        rgba(243, 156, 18, 0.1) 80%, 
+        transparent 100%);
+    z-index: 2;
+    animation: consciousnessBreathing 8s ease-in-out infinite;
+}
+
+.glyph-overlay {
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 80% 20%, rgba(243, 156, 18, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 40% 70%, rgba(231, 76, 60, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 75% 80%, rgba(74, 144, 226, 0.1) 2px, transparent 2px);
+    background-size: 150px 150px, 200px 200px, 180px 180px, 220px 220px;
+    z-index: 3;
+    opacity: 0.6;
+    animation: glyphFloat 20s linear infinite;
+}
+
+@keyframes consciousnessBreathing {
+    0%, 100% { 
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes glyphFloat {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(-20px, -20px) rotate(360deg);
+    }
+}
+
+/* Sacred Geometry */
+.sacred-geometry {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.geometry-element {
+    position: absolute;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    right: 10%;
+    animation: rotateClockwise 30s linear infinite;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: 15%;
+    left: 15%;
+    animation: rotateCounterClockwise 25s linear infinite;
+}
+
+.triangle-1 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 10%;
+    border-radius: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: triangleFloat 15s ease-in-out infinite;
+}
+
+.flow-lines {
+    width: 100%;
+    height: 2px;
+    top: 60%;
+    left: 0;
+    border-radius: 0;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(243, 156, 18, 0.3) 20%, 
+        rgba(74, 144, 226, 0.3) 50%, 
+        rgba(231, 76, 60, 0.3) 80%, 
+        transparent 100%);
+    animation: flowPulse 8s ease-in-out infinite;
+}
+
+@keyframes rotateClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounterClockwise {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes triangleFloat {
+    0%, 100% { transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+    50% { transform: translate(-50%, -50%) rotate(45deg) scale(1.1); }
+}
+
+@keyframes flowPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+/* Title Content */
+.title-content {
+    position: relative;
+    z-index: 10;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    animation: titleContentReveal 2s var(--sacred-ease) 4s both;
+}
+
+@keyframes titleContentReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Title Section */
+.left-title-section {
+    text-align: left;
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Right Badge Section */
+.right-badge-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.title-glyph-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.title-glyph-row.bottom {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.consciousness-glyph {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: var(--consciousness-blue);
+    animation: glyphShimmer 4s ease-in-out infinite;
+}
+
+.consciousness-glyph:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.consciousness-glyph:nth-child(even) {
+    animation-delay: 1s;
+}
+
+@keyframes glyphShimmer {
+    0%, 100% { 
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.main-title {
+    font-family: var(--title-font);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--ceramic-cream);
+    text-shadow: 
+        0 0 20px rgba(74, 144, 226, 0.5),
+        0 0 40px rgba(74, 144, 226, 0.3);
+    letter-spacing: 0.15em;
+    margin: 0.5rem 0;
+    animation: titleGlow 6s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px rgba(74, 144, 226, 0.5),
+            0 0 40px rgba(74, 144, 226, 0.3);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px rgba(74, 144, 226, 0.8),
+            0 0 60px rgba(74, 144, 226, 0.5),
+            0 0 90px rgba(243, 156, 18, 0.3);
+    }
+}
+
+.subtitle-container {
+    margin: 1rem 0;
+}
+
+.kiln-universe-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, 
+        var(--consciousness-blue) 0%, 
+        var(--transformation-gold) 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+    text-align: center;
+    min-width: 150px;
+}
+
+/* Story Selection */
+.story-selection {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.selection-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.selection-header h2 {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    color: var(--transformation-gold);
+    margin-bottom: 1rem;
+}
+
+/* Hero cover prioritized visual */
+.hero-cover {
+    width: 80%;
+    max-width: 1000px;
+    margin: 2rem auto 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    overflow: hidden;
+    border: 6px solid rgba(0,0,0,0.35);
+}
+
+.hero-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Story action buttons */
+.story-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.story-actions .action-view,
+.story-actions .action-edit {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.12);
+    color: var(--ceramic-cream);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--title-font);
+    font-weight: 600;
+    transition: all 0.2s var(--sacred-ease);
+}
+
+.story-actions .action-view:hover {
+    background: rgba(74,144,226,0.12);
+    border-color: var(--consciousness-blue);
+}
+
+.story-actions .action-edit:hover {
+    background: rgba(243,156,18,0.12);
+    border-color: var(--transformation-gold);
+}
+
+/* Hide the small subtitle/text box as requested */
+.selection-subtitle {
+    display: none !important;
+}
+
+.story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+/* Story Card */
+.story-card {
+    position: relative;
+    background: linear-gradient(135deg, 
+        rgba(44, 24, 16, 0.9) 0%, 
+        rgba(44, 24, 16, 0.95) 100%);
+    border: 2px solid var(--consciousness-blue);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.4s var(--sacred-ease);
+    overflow: hidden;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--consciousness-blue), 
+        var(--transformation-gold), 
+        var(--authority-red), 
+        var(--consciousness-blue));
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s var(--sacred-ease);
+}
+
+.story-card:hover::before {
+    opacity: 0.6;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px;
+    transition: opacity 0.4s var(--sacred-ease);
+}
+
+.story-card:hover .card-background {
+    opacity: 0.2;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.story-icon {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Disable shimmering glyph animation for locked foundation */
+.consciousness-glyph {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: var(--consciousness-blue);
+    animation: none !important;
+}
+
+.consciousness-glyph:nth-child(odd),
+.consciousness-glyph:nth-child(even) {
+    animation-delay: 0s !important;
+}
+
+.integration-icon {
+    color: var(--transformation-gold);
+}
+
+.story-title {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--ceramic-cream);
+    margin-bottom: 0.5rem;
+}
+
+.story-subtitle {
+    font-size: 1.1rem;
+    color: var(--transformation-gold);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.story-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ceramic-cream);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.story-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.chapters {
+    font-size: 0.9rem;
+    color: var(--consciousness-blue);
+    font-weight: 600;
+}
+
+.theme {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.authority-theme {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--authority-red);
+}
+
+.consciousness-theme {
+    background: rgba(74, 144, 226, 0.2);
+    color: var(--consciousness-blue);
+}
+
+.integration-theme {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--transformation-gold);
+}
+
+/* Card Hover Overlay */
+.card-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.9) 0%, 
+        rgba(243, 156, 18, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s var(--sacred-ease);
+    border-radius: 18px;
+}
+
+.story-card:hover .card-hover-overlay {
+    opacity: 1;
+}
+
+.start-button {
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: all 0.3s var(--sacred-ease);
+}
+
+.start-button:hover {
+    background: white;
+    color: var(--kiln-dark);
+    transform: scale(1.05);
+}
+
+/* Sacred Footer */
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.floating-glyph {
+    position: absolute;
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: var(--consciousness-blue);
+    opacity: 0.3;
+    animation: floatDrift var(--duration, 10s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.floating-glyph::before {
+    content: attr(data-glyph);
+}
+
+@keyframes floatDrift {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(20px, -30px) rotate(90deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-15px, -60px) rotate(180deg);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(-30px, -30px) rotate(270deg);
+        opacity: 0.5;
+    }
+}
+
+/* Version Info */
+.version-info {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: var(--ceramic-cream);
+    opacity: 0.6;
+    z-index: 20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-header {
+        height: 70px;
+        padding: 0 1rem;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .volume-title {
+        font-size: 1rem;
+    }
+
+    .control-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .title-glyph-row {
+        gap: 1rem;
+    }
+
+    .consciousness-glyph {
+        font-size: 1.5rem;
+    }
+
+    .story-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .story-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        height: 60px;
+        padding: 0 0.75rem;
+    }
+
+    .app-title {
+        font-size: 1.2rem;
+    }
+
+    .volume-title {
+        font-size: 0.85rem;
+    }
+
+    .control-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .home-icon {
+        font-size: 0.9rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+    }
+
+    .selection-header h2 {
+        font-size: 2rem;
+    }
+
+    .story-title {
+        font-size: 1.5rem;
+    }
+
+    .title-content {
+        padding: 1rem;
+    }
+}

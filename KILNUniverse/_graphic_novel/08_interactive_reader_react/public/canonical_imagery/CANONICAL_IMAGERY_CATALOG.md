@@ -1,0 +1,1 @@
+../../../_canonical_imagery/CANONICAL_IMAGERY_CATALOG.md

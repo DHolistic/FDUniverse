@@ -1,0 +1,66 @@
+/* Minimal reset - let horizontal-reader.css handle everything */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  background: #2C1810;
+  color: #F5F5DC;
+}
+
+/* Loading screen styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #2C1810 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.consciousness-loader {
+  text-align: center;
+  color: #F5F5DC;
+}
+
+.loader-glyph {
+  font-size: 4rem;
+  color: #4A90E2;
+  animation: pulse 2s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.loader-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
