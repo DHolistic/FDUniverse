@@ -268,6 +268,13 @@ class MarkdownLoader {
             return null;
         }
 
+        // Check if this chapter has variants (multiple versions)
+        if (chapterData.variants && chapterData.variants.length > 0) {
+            console.log(`📚 Loading chapter ${chapterNumber} with ${chapterData.variants.length} variants`);
+            return await this.loadChapterWithVariants(storyId, chapterData);
+        }
+
+        // Standard single-version chapter loading
         const markdown = await this.fetchMarkdown(chapterData.markdownPath);
         if (!markdown) {
             console.error(`Failed to load markdown from ${chapterData.markdownPath}`);
@@ -296,6 +303,64 @@ class MarkdownLoader {
         return {
             chapter: chapterData,
             panels: panels
+        };
+    }
+
+    /**
+     * Load a chapter that has multiple variants (like Chapter 13 with 3 epilogues)
+     */
+    async loadChapterWithVariants(storyId, chapterData) {
+        const allPanels = [];
+
+        for (let i = 0; i < chapterData.variants.length; i++) {
+            const variant = chapterData.variants[i];
+            console.log(`📄 Loading variant ${i + 1}: ${variant.name}`);
+
+            const markdown = await this.fetchMarkdown(variant.markdownPath);
+            if (!markdown) {
+                console.error(`Failed to load variant markdown from ${variant.markdownPath}`);
+                continue;
+            }
+
+            // Create a temporary chapter data object for this variant
+            const variantChapterData = {
+                ...chapterData,
+                title: `${chapterData.title} - ${variant.name}`,
+                subtitle: variant.subtitle,
+                markdownPath: variant.markdownPath
+            };
+
+            // Parse this variant
+            let variantPanels;
+            if (storyId === 'first-void') {
+                variantPanels = this.parseProseChapter(markdown, chapterData.backgroundImage);
+            } else if (storyId === 'translators-burden') {
+                variantPanels = this.parseScriptChapter(markdown, variantChapterData);
+            } else {
+                variantPanels = [{
+                    type: 'text-only',
+                    title: variantChapterData.title,
+                    subtitle: variantChapterData.subtitle,
+                    content: this.simpleMarkdownToHTML(markdown),
+                    backgroundImage: chapterData.backgroundImage
+                }];
+            }
+
+            // Add variant identifier to each panel
+            variantPanels.forEach(panel => {
+                panel.variantName = variant.name;
+                panel.variantIndex = i;
+            });
+
+            allPanels.push(...variantPanels);
+        }
+
+        console.log(`✅ Loaded ${allPanels.length} total panels from ${chapterData.variants.length} variants`);
+
+        return {
+            chapter: chapterData,
+            panels: allPanels,
+            hasVariants: true
         };
     }
 

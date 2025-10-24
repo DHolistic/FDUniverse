@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 9: â€œThe Network of Networksâ€ The first messenger arrived on a rainless morning, the dust of many roads clinging to his cloak. He carried no banner, only a simple knotwork token and a phrase that, when translated into Methodius's ear, felt like a key turning in a lock: â€œWe are not alone.â€ Alexios brought stories from the east—farmers who had learned to read the weather as a communal mind, sailors whose steering taught them rhythm as governance, artisans who stitched social bonds into cloth.
+# Chapter 9: â€œThe Network of Networksâ€ 
+
+The first messenger arrived on a rainless morning, the dust of many roads clinging to his cloak. He carried no banner, only a simple knotwork token and a phrase that, when translated into Methodius's ear, felt like a key turning in a lock: â€œWe are not alone.â€ Alexios brought stories from the east—farmers who had learned to read the weather as a communal mind, sailors whose steering taught them rhythm as governance, artisans who stitched social bonds into cloth.
 
 Each community had found ways to live the codex without announcing it.
 

@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 11: â€œThe Immediate Aftermathâ€ When the codices settled into shelves and the sacred vessels were distributed, the work changed shape again. It became less an act of desperate preservation and more a patient cultivation of future discovery. The Great Archive was born—not as a fortress but as a seed bank for centuries.
+# Chapter 11: â€œThe Immediate Aftermathâ€ 
+
+When the codices settled into shelves and the sacred vessels were distributed, the work changed shape again. It became less an act of desperate preservation and more a patient cultivation of future discovery. The Great Archive was born—not as a fortress but as a seed bank for centuries.
 
 They built the archive to be unremarkable on the surface. The building looked institutional, even pedestrian.
 

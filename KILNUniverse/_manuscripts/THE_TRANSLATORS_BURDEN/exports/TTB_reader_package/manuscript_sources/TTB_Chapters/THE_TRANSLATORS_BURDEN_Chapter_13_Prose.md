@@ -1,4 +1,4 @@
-# THE TRANSLATOR'S BURDEN — Chapter 13: Epilogue Variants (sets up Book 1) Below are two alternative epilogues (A and B). Both intentionally set the stage for Book 1 in the KILN Universe (the KILN-era beginning), not the later â€œFirst Voidâ€ origin — they focus on the Archive, seeded tablets, and the cultural mechanisms that will produce the Book 1 protagonists and conflicts. Variant A — â€œThe Invitationâ€ The archive's doors closed with the same dull thunk they had for decades, but the world within had shifted in ways small and decisive.
+# Chapter 13: Epilogue Variants
 
 Methodius set the last tablet in its rotation and wrote a single line of instruction in its margin: Teach the method; refuse the neat answer. He arranged the tablets so that a patient questioner might find them in years to come.
 

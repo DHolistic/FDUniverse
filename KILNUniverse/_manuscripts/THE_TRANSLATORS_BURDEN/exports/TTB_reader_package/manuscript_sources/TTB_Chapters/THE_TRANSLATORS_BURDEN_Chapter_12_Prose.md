@@ -1,5 +1,4 @@
-```markdown
-# THE TRANSLATOR'S BURDEN — Chapter 12: "The Eternal Echo"
+# Chapter 12: "The Eternal Echo"
 
 The reverberations of the archive were not immediate. They grew like the slow widening rings of a stone dropped into a deep pool: subtle at first, then undeniable. Generations found small fragments—a phrase in a ledger, a song half-remembered, a child's game that taught the line of a ritual—and each fragment carried a spark.
 
@@ -11,7 +10,7 @@ In time the network called its fabric a symphony. The preserved knowledge flowed
 
 When the echo returned to Methodius—small hands discovering a tablet, a scholar writing a note in a marginal line—he felt the translator's burden become a gift. The work had moved from clutching a fragile ember to setting a world in motion where the ember needed no single keeper.
 
-— End of Chapter 12 Draft —
+
 
 Linking Notes:
 - Timeline: Echo development and cultural embedding of preservation practices; consistent with `CANONICAL_KILN_UNIVERSE_FOUNDATION.md` eternal echo descriptions.

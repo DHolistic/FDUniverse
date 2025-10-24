@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 5: â€œThe Crackdownâ€ The morning the archive closed its doors to secrecy, the world smelled like wet ash and iron. Dozens of guards moved in patterns that suggested choreography; nothing was left to chance. Authority glyphs burned on every banner and plaque. The announcement left no room for negotiation: mandatory compliance verification for all personnel. Methodius arrived in the ritual of obedience.
+# Chapter 5: â€œThe Crackdownâ€ 
+
+The morning the archive closed its doors to secrecy, the world smelled like wet ash and iron. Dozens of guards moved in patterns that suggested choreography; nothing was left to chance. Authority glyphs burned on every banner and plaque. The announcement left no room for negotiation: mandatory compliance verification for all personnel. Methodius arrived in the ritual of obedience.
 
 He watched faces change as people processed the new order. Some moved with terror tucked into their shoulders. Others moved with the hollow calm of those who had already learned how to pretend. The scanners were merciless.
 

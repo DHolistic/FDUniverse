@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 10: â€œThe Eternal Foundationâ€ They gathered beneath a sky that never quite promised the same weather twice. Delegates came from gardens and forges, harbors and mountain workshops. Each carried a different accent, a different habit.
+# Chapter 10: â€œThe Eternal Foundationâ€ 
+
+They gathered beneath a sky that never quite promised the same weather twice. Delegates came from gardens and forges, harbors and mountain workshops. Each carried a different accent, a different habit.
 
 Each carried small things—seeds, metal stamps, songs—that were suddenly priceless. The foundation ceremony was not a spectacle but a long, careful conversation.
 

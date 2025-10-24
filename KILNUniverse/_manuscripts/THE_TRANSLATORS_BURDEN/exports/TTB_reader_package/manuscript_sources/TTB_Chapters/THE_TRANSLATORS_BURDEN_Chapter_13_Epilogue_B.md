@@ -1,4 +1,4 @@
-# THE TRANSLATOR'S BURDEN — Chapter 13 Epilogue B: "The Seed"
+# Chapter 13 Epilogue: "The Seed"
 
 Methodius favored small, deliberate misplacements. He favored a craftsman's patience over a revolutionary's fever. A ledger misfiled here, a baker's recipe that miscounts there—these were the holes he drilled in the city's tidy skin so that curiosity might find purchase.
 

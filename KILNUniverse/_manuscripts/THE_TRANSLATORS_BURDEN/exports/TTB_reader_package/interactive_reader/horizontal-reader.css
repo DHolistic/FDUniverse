@@ -191,7 +191,30 @@ body {
     border-radius: 12px;
     border: 2px solid rgba(74, 144, 226, 0.3);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    margin: 0 2rem;
+    margin: 0 2rem 2rem 2rem;
+}
+
+/* Enhanced styling for script format (TTB) */
+
+
+
+.chapter-panel[data-type="image-text"] .panel-content,
+.chapter-panel[data-type="text-only"] .panel-content {
+    max-width: 1300px;
+    min-width: 100vw;
+    min-height: 350px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 2rem 2vw 3.5rem 2vw;
+    padding: 1.2rem 1vw 3.5rem 1vw;
+    border-radius: 28px 28px 20px 20px;
+    margin: 1.2rem auto 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 20;
 }
 
 .panel-content h2 {
@@ -217,6 +240,29 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Enhanced script text styling */
+
+
+.chapter-panel[data-type="image-text"] .panel-content p,
+.chapter-panel[data-type="text-only"] .panel-content p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: rgb(245, 245, 220);
+    font-family: 'Crimson Text', serif;
+    margin-bottom: 1.5rem;
+}
+
+/* Special styling for dialogue in scripts */
+.panel-content p.dialogue {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: var(--transformation-gold);
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(74, 144, 226, 0.5);
+    margin: 1.5rem 0;
+}
+
 .panel-content .opening-paragraph {
     font-size: 1.4rem;
     font-style: italic;
@@ -235,6 +281,7 @@ body {
 .chapter-panel[data-type="text-only"] .panel-content {
     max-width: 1200px;
     padding: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* ==========================================
@@ -243,20 +290,23 @@ body {
 
 .panel-progress {
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1.2rem;
+    padding-top: 2rem;
 }
 
 .progress-glyphs {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.2rem;
     align-items: center;
+    padding-bottom: 1.5rem;
 }
 
 .progress-glyph {
@@ -276,6 +326,59 @@ body {
     color: var(--consciousness-blue);
     font-size: 2rem;
     text-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+}
+
+/* Variant-specific styles */
+.variant-separator {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    color: rgba(74, 144, 226, 0.4);
+    margin: 0 0.5rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.progress-glyph.variant-panel {
+    position: relative;
+}
+
+.progress-glyph.variant-panel[data-variant="0"] {
+    color: rgba(255, 215, 0, 0.4); /* Gold for Epilogue A */
+}
+
+.progress-glyph.variant-panel[data-variant="1"] {
+    color: rgba(138, 43, 226, 0.4); /* Purple for Epilogue B */
+}
+
+.progress-glyph.variant-panel[data-variant="2"] {
+    color: rgba(34, 139, 34, 0.4); /* Green for Prose Version */
+}
+
+.progress-glyph.variant-panel.active[data-variant="0"] {
+    color: var(--transformation-gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.progress-glyph.variant-panel.active[data-variant="1"] {
+    color: #8A2BE2;
+    text-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+}
+
+.progress-glyph.variant-panel.active[data-variant="2"] {
+    color: #228B22;
+    text-shadow: 0 0 20px rgba(34, 139, 34, 0.8);
+}
+
+.progress-glyph.variant-panel:hover[data-variant="0"] {
+    color: rgba(255, 215, 0, 0.7);
+}
+
+.progress-glyph.variant-panel:hover[data-variant="1"] {
+    color: rgba(138, 43, 226, 0.7);
+}
+
+.progress-glyph.variant-panel:hover[data-variant="2"] {
+    color: rgba(34, 139, 34, 0.7);
 }
 
 .progress-text {
@@ -426,6 +529,7 @@ body {
     top: 160px;
     left: 2rem;
     z-index: 1000;
+    margin-bottom: 5rem;
 }
 
 .back-link {
@@ -575,12 +679,30 @@ body {
         margin: 0 1rem;
     }
 
+    /* Enhanced mobile script styling */
+    .chapter-panel[data-type="image-text"] .panel-content {
+        padding: 2rem 1.5rem; /* More padding for scripts on mobile */
+    }
+
     .panel-content h2 {
         font-size: 2rem;
     }
 
     .panel-content p {
         font-size: 1.1rem;
+    }
+
+    /* Enhanced mobile script text */
+    .chapter-panel[data-type="image-text"] .panel-content p {
+        font-size: 1.25rem; /* Larger font for scripts on mobile */
+        line-height: 1.8;
+    }
+
+    /* Enhanced mobile dialogue styling */
+    .panel-content p.dialogue {
+        font-size: 1.3rem;
+        padding-left: 0.75rem;
+        margin: 1rem 0;
     }
 
     .chapter-navigation {

@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 4: â€œThe Seed Spreadsâ€ Surveillance had a rhythm. It moved in measured sweeps, the steady footfalls of guards who believed that constancy was the same as safety. Methodius learned that rhythm as well as any other: the angle of a patrol's head, the length of a lunch break, the silent moments when a desk sat empty long enough to hide an ember. One week after his first interrogation, the archive smelled of polished stone and careful fear. Enforcers took up vantage points in the high galleries. Red glyphs pulsed on plaques like the heartbeat of a machine.
+#  Chapter 4: â€œThe Seed Spreadsâ€ 
+
+Surveillance had a rhythm. It moved in measured sweeps, the steady footfalls of guards who believed that constancy was the same as safety. Methodius learned that rhythm as well as any other: the angle of a patrol's head, the length of a lunch break, the silent moments when a desk sat empty long enough to hide an ember. One week after his first interrogation, the archive smelled of polished stone and careful fear. Enforcers took up vantage points in the high galleries. Red glyphs pulsed on plaques like the heartbeat of a machine.
 
 Methodius sat at his bench and performed the exact small ritual of obedience. He copied, he bowed, he watched. But the blue script was moving. It had teeth now; it had a quiet hunger. A single tiny glyph traced into a margin, considered and left, could plant a question in a colleague's head.
 

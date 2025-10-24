@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 6: â€œEvolution of Resistanceâ€ Three months after the purge, the archive moved with a new, brittle calm. The banners were the same red; the scanners only more numerous. But the people who carried the old truths had changed their methods.
+# Chapter 6: â€œEvolution of Resistanceâ€ 
+
+Three months after the purge, the archive moved with a new, brittle calm. The banners were the same red; the scanners only more numerous. But the people who carried the old truths had changed their methods.
 
 They no longer trusted a single cache or a single keeper. The tablets taught them that survival required division, artistry, and patience. Methodius had learned from loss.
 

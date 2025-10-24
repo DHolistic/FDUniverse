@@ -179,12 +179,34 @@ class HorizontalReader {
         progressGlyphs.innerHTML = '';
 
         const glyphs = ['◦', '◉', '◈', '∿', '⟐', '⚡', '〰', '⟆'];
+        let lastVariantIndex = -1;
 
         for (let i = 0; i < this.totalPanels; i++) {
+            const panelData = this.currentChapterData && this.currentChapterData.panels[i];
+            
+            // Add variant separator if this is a new variant
+            if (panelData && panelData.variantIndex !== undefined && panelData.variantIndex !== lastVariantIndex) {
+                if (lastVariantIndex !== -1) {
+                    // Add separator (except before first variant)
+                    const separator = document.createElement('span');
+                    separator.className = 'variant-separator';
+                    separator.textContent = '|';
+                    progressGlyphs.appendChild(separator);
+                }
+                lastVariantIndex = panelData.variantIndex;
+            }
+
             const glyph = document.createElement('span');
             glyph.className = 'progress-glyph';
             glyph.dataset.panel = i;
             glyph.textContent = glyphs[i % glyphs.length];
+
+            // Add variant class if this panel is part of a variant
+            if (panelData && panelData.variantName) {
+                glyph.classList.add('variant-panel');
+                glyph.dataset.variant = panelData.variantIndex;
+                glyph.title = `${panelData.variantName} - Panel ${i + 1}`;
+            }
 
             if (i === 0) {
                 glyph.classList.add('active');
@@ -203,7 +225,22 @@ class HorizontalReader {
 
     updateProgressText() {
         const progressText = document.getElementById('progressText');
-        progressText.textContent = `Panel ${this.currentPanel + 1} of ${this.totalPanels}`;
+        
+        // Check if current panel has variant information
+        if (this.currentChapterData && this.currentChapterData.panels[this.currentPanel]) {
+            const currentPanelData = this.currentChapterData.panels[this.currentPanel];
+            
+            if (currentPanelData.variantName) {
+                // Show variant info for multi-version chapters
+                progressText.textContent = `${currentPanelData.variantName} - Panel ${this.currentPanel + 1} of ${this.totalPanels}`;
+            } else {
+                // Standard progress text
+                progressText.textContent = `Panel ${this.currentPanel + 1} of ${this.totalPanels}`;
+            }
+        } else {
+            // Fallback
+            progressText.textContent = `Panel ${this.currentPanel + 1} of ${this.totalPanels}`;
+        }
     }
 
     setupEventListeners() {

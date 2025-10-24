@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 7: â€œThe Authority's Suspicionâ€ Surveillance grew like a slow frost, not with a single violent gust but with an inexorable creep. The monitors watched for obvious sparks and found none. What they missed were the steady embers that, given time and care, became a slow, honest fire. Dominus read the charts and felt that chill of discovery that arrives before panic.
+# Chapter 7: â€œThe Authority's Suspicionâ€ 
+
+Surveillance grew like a slow frost, not with a single violent gust but with an inexorable creep. The monitors watched for obvious sparks and found none. What they missed were the steady embers that, given time and care, became a slow, honest fire. Dominus read the charts and felt that chill of discovery that arrives before panic.
 
 Independent scholars tracing pre-KILN governance, translation anomalies, and linguistic curiosities had risen in number. Statistical noise had become a pattern, and patterns demanded attention. Methodius noticed the change the moment the scanners multiplied.
 

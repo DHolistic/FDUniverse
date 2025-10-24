@@ -1,4 +1,4 @@
-# THE TRANSLATOR'S BURDEN — Chapter 13 Epilogue A: "The Invitation"
+# Chapter 13 Epilogue: "The Invitation"
 
 The archive's doors closed with the same dull thunk as they had for decades, and yet the motion inside felt different. Where once Methodius's rotations were a ritual of preservation that existed only to store, they had become a choreography for discovery—an invitation folded into ordinary forms so that a patient reader might find it years on.
 

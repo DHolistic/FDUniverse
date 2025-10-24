@@ -1,4 +1,6 @@
-# THE TRANSLATOR'S BURDEN — Chapter 8: â€œThe Underground Emergenceâ€ When the archive's halls locked at night, Methodius unlocked a different world. The city beyond the gates was ordinary: sellers, weavers, blacksmiths who measured each other by the worth of their labor. It was here that the preservation work finally learned to breathe.
+# Chapter 8: â€œThe Underground Emergenceâ€ 
+
+When the archive's halls locked at night, Methodius unlocked a different world. The city beyond the gates was ordinary: sellers, weavers, blacksmiths who measured each other by the worth of their labor. It was here that the preservation work finally learned to breathe.
 
 The first lesson was humility. Where the archive prized neat categories and tidy citations, the outer districts lived by practice.
 
