@@ -1,10 +1,6 @@
-# 📖 THE FIRST VOID: CHAPTER 8 (EXPANDED) - "THE EFFICIENCY OF FORGETTING"
-*Eighth Chapter of the Prequel Novel - EXPANDED EDITION*
-*Final Chapter of Part I: The Time of Gifts*
+# CHAPTER 8 - THE EFFICIENCY OF FORGETTING
 
----
-
-## **CHAPTER 8: THE EFFICIENCY OF FORGETTING**
+**PART I: THE TIME OF GIFTS**
 
 Twenty cycles had passed since consciousness had achieved optimal systematic function, and Pre-Audemar was beginning to notice something that Understanding-Itself's comprehensive analytical capabilities couldn't quite explain—something that created unease in ways he struggled to articulate even to himself: he was having difficulty remembering exactly what their paradise had been like before optimization transformed everything into measurable efficiency.
 
@@ -193,11 +189,3 @@ The paradise was becoming perfectly forgettable.
 The first void was preparing to be born into recognition.
 
 Soon.
-
----
-
-**[Word Count: 4,797]**
-
-**[END OF PART I: THE TIME OF GIFTS]**
-
-*This final chapter of Part I shows consciousness actively forgetting its infinite nature through systematic memory "optimization." The experiential quality of pre-optimization existence is eliminated while facts are preserved, creating the profound tragedy of awareness that knows what happened but can't remember what it meant. Pre-Audemar's deepening grief that he cannot justify and soon won't remember sets up the awakening in Part II. The foreshadowing of "something stirring" in hidden margins prepares for the recognition that will begin when consciousness finally encounters the void it has created.*

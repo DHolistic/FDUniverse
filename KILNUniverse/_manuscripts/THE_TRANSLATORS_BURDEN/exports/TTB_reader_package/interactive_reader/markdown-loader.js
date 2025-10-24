@@ -74,189 +74,184 @@ class MarkdownLoader {
      * Parse prose chapter (The First Void style) into scrollable panels
      * Splits long text into readable chunks
      */
-    parseProseChapter(markdown, backgroundImage) {
-        const panels = [];
-
-        // Remove frontmatter and extract title
-        const lines = markdown.split('\n');
-        let title = '';
-        let subtitle = '';
-        let content = [];
-        let inFrontmatter = false;
-
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i].trim();
-
-            // Extract title from first heading
-            if (line.startsWith('# ') && !title) {
-                title = line.replace('# ', '').replace(/📖|📜/g, '').trim();
-                continue;
+        parseProseChapter(markdown, backgroundImage) {
+            const panels = [];
+            // Remove frontmatter and extract title
+            const lines = markdown.split('\n');
+            let title = '';
+            let subtitle = '';
+            let content = [];
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('# ') && !title) {
+                    title = line.replace('# ', '').replace(/📖|📜/g, '').trim();
+                    continue;
+                }
+                if (line.startsWith('*') && line.endsWith('*') && !subtitle) {
+                    subtitle = line.replace(/\*/g, '');
+                    continue;
+                }
+                if (line.startsWith('---') || line.startsWith('**[Word Count:')) {
+                    continue;
+                }
+                if (line.startsWith('## **CHAPTER')) {
+                    continue;
+                }
+                if (line.length > 0) {
+                    content.push(line);
+                }
             }
-
-            // Extract subtitle from italic line after title
-            if (line.startsWith('*') && line.endsWith('*') && !subtitle) {
-                subtitle = line.replace(/\*/g, '');
-                continue;
+            // Split content at glyphs (◦, ◉, etc.)
+            const glyphRegex = /^(?:\s*)([◦◉◆◇▪▫•○●□■⬟⬢⬣⬤⬥⬦⬧⬨⬩⬪⬫⬬⬭⬮⬯⬰⬱⬲⬳⬴⬵⬶⬷⬸⬹⬺⬻⬼⬽⬾⬿])/;
+            let panelChunks = [];
+            let currentChunk = [];
+            for (let i = 0; i < content.length; i++) {
+                const line = content[i];
+                if (glyphRegex.test(line)) {
+                    if (currentChunk.length > 0) {
+                        panelChunks.push(currentChunk);
+                        currentChunk = [];
+                    }
+                    // Optionally, include the glyph line as a visual marker in the panel
+                    currentChunk.push(`<div class="glyph-break">${line}</div>`);
+                    continue;
+                }
+                currentChunk.push(line);
             }
-
-            // Skip horizontal rules and metadata
-            if (line.startsWith('---') || line.startsWith('**[Word Count:')) {
-                continue;
+            if (currentChunk.length > 0) {
+                panelChunks.push(currentChunk);
             }
-
-            // Skip chapter headers
-            if (line.startsWith('## **CHAPTER')) {
-                continue;
+            for (let i = 0; i < panelChunks.length; i++) {
+                const chunk = panelChunks[i];
+                const html = chunk.map(p => {
+                    // If it's a glyph-break, keep as is
+                    if (p.startsWith('<div class="glyph-break">')) return p;
+                    // Convert italic markdown
+                    p = p.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                    return `<p>${p}</p>`;
+                }).join('\n');
+                panels.push({
+                    type: 'text-only',
+                    title: i === 0 ? title : '',
+                    subtitle: i === 0 ? subtitle : '',
+                    content: html,
+                    backgroundImage: backgroundImage
+                });
             }
-
-            // Collect content
-            if (line.length > 0) {
-                content.push(line);
-            }
+            return panels;
         }
-
-        // Create panels from paragraphs (every 5-7 paragraphs becomes a panel)
-        const paragraphs = content.filter(line => line.length > 0);
-        const panelsPerPage = 6;
-
-        for (let i = 0; i < paragraphs.length; i += panelsPerPage) {
-            const chunk = paragraphs.slice(i, i + panelsPerPage);
-            const html = chunk.map(p => {
-                // Convert italic markdown
-                p = p.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                return `<p>${p}</p>`;
-            }).join('\n');
-
-            panels.push({
-                type: 'text-only',
-                title: i === 0 ? title : '',
-                subtitle: i === 0 ? subtitle : '',
-                content: html,
-                backgroundImage: backgroundImage
-            });
-        }
-
-        return panels;
-    }
 
     /**
      * Parse script chapter (Translator's Burden style) into scene panels
      * Each major scene becomes a panel
      */
-    parseScriptChapter(markdown, chapterData) {
-        const panels = [];
-        const lines = markdown.split('\n');
-
-        let currentPanel = null;
-        let title = '';
-        let subtitle = '';
-
-        console.log('=== PARSING SCRIPT CHAPTER ===');
-        console.log('Total lines:', lines.length);
-
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i].trim();
-
-            // Extract main title
-            if (line.startsWith('# ') && !title) {
-                title = line.replace('# ', '').replace(/📜|📖/g, '').trim();
-                subtitle = lines[i + 1]?.replace('## ', '').replace(/\*/g, '').trim() || '';
-                continue;
-            }
-
-            // Detect page breaks - match any line with ## followed by emoji and **PAGE
-            // More flexible regex to catch all variations
-            const pageMatch = line.match(/^##\s+.*\*\*PAGE\s+(\d+)/i);
-
-            if (pageMatch) {
-                console.log('📄 Found page marker:', line);
-
-                // Save previous panel
-                if (currentPanel && currentPanel.content.length > 0) {
-                    console.log('  → Saving previous panel with', currentPanel.content.length, 'content items');
-                    panels.push({
-                        type: 'image-text',
-                        title: currentPanel.title || `Page ${pageMatch[1]}`,
-                        subtitle: currentPanel.subtitle,
-                        content: currentPanel.content.join('\n'),
-                        backgroundImage: currentPanel.image || chapterData.backgroundImage
-                    });
+        parseScriptChapter(markdown, chapterData) {
+            const panels = [];
+            const lines = markdown.split('\n');
+            let title = '';
+            let subtitle = '';
+            let currentPanel = null;
+            // Regex for glyphs (◦, ◉, etc.)
+            const glyphRegex = /^(?:\s*)([◦◉◆◇▪▫•○●□■⬟⬢⬣⬤⬥⬦⬧⬨⬩⬪⬫⬬⬭⬮⬯⬰⬱⬲⬳⬴⬵⬶⬷⬸⬹⬺⬻⬼⬽⬾⬿])/;
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                // Extract main title
+                if (line.startsWith('# ') && !title) {
+                    title = line.replace('# ', '').replace(/📜|📖/g, '').trim();
+                    subtitle = lines[i + 1]?.replace('## ', '').replace(/\*/g, '').trim() || '';
+                    continue;
                 }
-
-                // Start new panel
-                currentPanel = {
-                    title: line.replace(/^##\s+/, '').replace(/\*\*/g, '').trim(),
-                    subtitle: '',
-                    content: [],
-                    image: null
-                };
-                console.log('  → Started new panel:', currentPanel.title);
-                continue;
-            }
-
-            // Detect panel/scene breaks
-            if (line.startsWith('### **PANEL')) {
-                if (currentPanel) {
-                    currentPanel.title = line.replace('### **PANEL', 'Panel').replace('**', '').trim();
+                // Glyph-based page break
+                if (glyphRegex.test(line)) {
+                    // Save previous panel
+                    if (currentPanel && currentPanel.content.length > 0) {
+                        panels.push({
+                            type: 'image-text',
+                            title: currentPanel.title || title,
+                            subtitle: currentPanel.subtitle || subtitle,
+                            content: currentPanel.content.join('\n'),
+                            backgroundImage: currentPanel.image || chapterData.backgroundImage
+                        });
+                    }
+                    // Start new panel, optionally include glyph line
+                    currentPanel = {
+                        title: '',
+                        subtitle: '',
+                        content: [`<div class="glyph-break">${line}</div>`],
+                        image: null
+                    };
+                    continue;
                 }
-                continue;
-            }
-
-            // Extract setting info
-            if (line.startsWith('**SETTING:**')) {
-                if (currentPanel) {
-                    currentPanel.subtitle = line.replace('**SETTING:**', '').trim();
+                // Detect page breaks - match any line with ## followed by emoji and **PAGE
+                const pageMatch = line.match(/^##\s+.*\*\*PAGE\s+(\d+)/i);
+                if (pageMatch) {
+                    if (currentPanel && currentPanel.content.length > 0) {
+                        panels.push({
+                            type: 'image-text',
+                            title: currentPanel.title || `Page ${pageMatch[1]}`,
+                            subtitle: currentPanel.subtitle,
+                            content: currentPanel.content.join('\n'),
+                            backgroundImage: currentPanel.image || chapterData.backgroundImage
+                        });
+                    }
+                    currentPanel = {
+                        title: line.replace(/^##\s+/, '').replace(/\*\*/g, '').trim(),
+                        subtitle: '',
+                        content: [],
+                        image: null
+                    };
+                    continue;
                 }
-                continue;
-            }
-
-            // Extract dialogue and captions
-            if (line.startsWith('**CAPTION:**') ||
-                line.startsWith('**DIALOGUE') ||
-                line.startsWith('**METHODIUS THOUGHT:**')) {
-
-                const content = line.replace(/\*\*/g, '').replace(/CAPTION:|DIALOGUE.*:|.*THOUGHT:/, '').trim();
-                if (content && currentPanel) {
-                    currentPanel.content.push(`<p class="dialogue">${content}</p>`);
+                // Detect panel/scene breaks
+                if (line.startsWith('### **PANEL')) {
+                    if (currentPanel) {
+                        currentPanel.title = line.replace('### **PANEL', 'Panel').replace('**', '').trim();
+                    }
+                    continue;
                 }
-                continue;
+                // Extract setting info
+                if (line.startsWith('**SETTING:**')) {
+                    if (currentPanel) {
+                        currentPanel.subtitle = line.replace('**SETTING:**', '').trim();
+                    }
+                    continue;
+                }
+                // Extract dialogue and captions
+                if (line.startsWith('**CAPTION:**') ||
+                    line.startsWith('**DIALOGUE') ||
+                    line.startsWith('**METHODIUS THOUGHT:**')) {
+                    const content = line.replace(/\*\*/g, '').replace(/CAPTION:|DIALOGUE.*:|.*THOUGHT:/, '').trim();
+                    if (content && currentPanel) {
+                        currentPanel.content.push(`<p class="dialogue">${content}</p>`);
+                    }
+                    continue;
+                }
+                // Regular content
+                if (line.length > 0 && currentPanel && !line.startsWith('**') && !line.startsWith('---')) {
+                    currentPanel.content.push(`<p>${line}</p>`);
+                }
             }
-
-            // Regular content
-            if (line.length > 0 && currentPanel && !line.startsWith('**') && !line.startsWith('---')) {
-                currentPanel.content.push(`<p>${line}</p>`);
+            // Save last panel
+            if (currentPanel && currentPanel.content.length > 0) {
+                panels.push({
+                    type: 'image-text',
+                    title: currentPanel.title || title,
+                    subtitle: currentPanel.subtitle || subtitle,
+                    content: currentPanel.content.join('\n'),
+                    backgroundImage: currentPanel.image || chapterData.backgroundImage
+                });
             }
+            if (panels.length === 0) {
+                panels.push({
+                    type: 'text-only',
+                    title: title,
+                    subtitle: subtitle,
+                    content: `<p>${markdown.substring(0, 2000)}...</p>`,
+                    backgroundImage: chapterData.backgroundImage
+                });
+            }
+            return panels;
         }
-
-        // Save last panel
-        if (currentPanel && currentPanel.content.length > 0) {
-            panels.push({
-                type: 'image-text',
-                title: currentPanel.title || title,
-                subtitle: currentPanel.subtitle || subtitle,
-                content: currentPanel.content.join('\n'),
-                backgroundImage: chapterData.backgroundImage
-            });
-        }
-
-        // If no panels were created, create a single panel from the whole content
-        if (panels.length === 0) {
-            console.warn('⚠️ No panels created! Creating fallback panel');
-            panels.push({
-                type: 'text-only',
-                title: title,
-                subtitle: subtitle,
-                content: `<p>${markdown.substring(0, 2000)}...</p>`,
-                backgroundImage: chapterData.backgroundImage
-            });
-        }
-
-        console.log('=== PARSING COMPLETE ===');
-        console.log('Created', panels.length, 'panels');
-        console.log('Panel titles:', panels.map(p => p.title));
-
-        return panels;
-    }
 
     /**
      * Load and parse a chapter into panels

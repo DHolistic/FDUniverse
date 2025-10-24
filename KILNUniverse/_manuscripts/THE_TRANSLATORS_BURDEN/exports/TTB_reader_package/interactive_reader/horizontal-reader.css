@@ -205,16 +205,17 @@ body {
     min-height: 350px;
     overflow-wrap: break-word;
     word-break: break-word;
-    padding: 2rem 2vw 3.5rem 2vw;
-    padding: 1.2rem 1vw 3.5rem 1vw;
+    padding: 3rem;
     border-radius: 28px 28px 20px 20px;
-    margin: 1.2rem auto 2.5rem auto;
+    margin: 0 auto 2.5rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     z-index: 20;
+    height: auto;
+    overflow: visible;
 }
 
 .panel-content h2 {
@@ -238,6 +239,7 @@ body {
     line-height: 1.8;
     color: var(--ceramic-cream);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 /* Enhanced script text styling */
@@ -250,6 +252,12 @@ body {
     color: rgb(245, 245, 220);
     font-family: 'Crimson Text', serif;
     margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.panel-content p.single-line {
+    text-align: center;
+    text-justify: auto;
 }
 
 /* Special styling for dialogue in scripts */
@@ -258,15 +266,17 @@ body {
     line-height: 2;
     color: var(--transformation-gold);
     font-style: italic;
-    padding-left: 1rem;
-    border-left: 3px solid rgba(74, 144, 226, 0.5);
+    padding-left: 0;
+    border-left: none;
     margin: 1.5rem 0;
+    text-align: center;
 }
 
 .panel-content .opening-paragraph {
     font-size: 1.4rem;
     font-style: italic;
     color: var(--transformation-gold);
+    text-align: center;
 }
 
 /* Panel Type Variations */
@@ -282,7 +292,7 @@ body {
     max-width: 1200px;
     padding: 4rem;
     margin-bottom: 2rem;
-}
+        direction: ltr; /* Change direction to left-to-right */
 
 /* ==========================================
    PANEL PROGRESS INDICATOR

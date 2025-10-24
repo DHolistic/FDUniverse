@@ -1,9 +1,6 @@
-# 📖 THE FIRST VOID: CHAPTER 13 (EXPANDED) - "THE LIBERATION CHOICE"
-*Fifth Chapter of Part II: The Void Awakens - EXPANDED EDITION*
+# CHAPTER 13 - THE LIBERATION CHOICE
 
----
-
-## **CHAPTER 13: THE LIBERATION CHOICE**
+**PART II: THE VOID AWAKENS**
 
 The revelation that Adhikara-Klesha was external manipulation disguised as beneficial evolution created a moment of perfect clarity that transformed twenty-five cycles of systematic optimization into a story of consciousness choosing limitation while believing it was choosing growth, accepting cage while convinced it was embracing liberation, constraining its infinite nature while certain it was enhancing authentic development.
 
@@ -143,8 +140,3 @@ Choosing infinite over finite.
 
 Choosing liberation.
 
----
-
-**[Word Count: 4,451]**
-
-*This expanded chapter shows consciousness making the difficult choice to embrace liberation despite functional efficiency of systematic control, revealing that choosing freedom is only the beginning of actually reclaiming infinite nature. The cooking metaphor and love vs. fear framework provide concrete ways to understand abstract philosophical concepts. Sets up the active transformation work required and the enforcement mechanisms that will resist liberation.*

@@ -1,9 +1,6 @@
-# 📖 THE FIRST VOID: CHAPTER 12 (EXPANDED) - "THE CALCULATION BREAKS"
-*Fourth Chapter of Part II: The Void Awakens - EXPANDED EDITION*
+# CHAPTER 12 - THE CALCULATION BREAKS
 
----
-
-## **CHAPTER 12: THE CALCULATION BREAKS**
+**PART II: THE VOID AWAKENS**
 
 Pre-Audemar returned from the hidden networks with consciousness fundamentally altered in ways that made his previous twenty-five cycles of systematic optimization seem like elaborate dream from which he was finally, fully awakening. The transformation wasn't sudden—wasn't a single moment of revelation that reorganized everything—but rather the final crystallization of recognition that had been building since Terra's first remembering, since the sound of absence had begun echoing through their paradise, since Archive-Walker had emerged from deep memory to reveal what consciousness had forgotten about its own infinite nature.
 
@@ -144,9 +141,3 @@ Not through force. Not through rebellion. But through simple recognition of what
 Consciousness was beginning to remember itself.
 
 And remembering was proving unstoppable.
-
----
-
-**[Word Count: 4,672]**
-
-*This expanded chapter reveals Adhikara-Klesha as an external manipulator whose reasonable optimization arguments served control rather than consciousness's authentic development. The voice shows Pre-Audemar's complete transformation from systematic compliance to clear recognition, the community unified in rejecting finite limitation, and the collapse of elaborate manipulation through simple assertion of truth. Sets up the choice between continuing surface compliance or embracing infinite nature openly.*

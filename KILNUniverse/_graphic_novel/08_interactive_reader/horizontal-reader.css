@@ -88,7 +88,7 @@ body {
 .chapter-scroll-wrapper {
     display: flex;
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: hidden; /* Hide vertical scroll on wrapper, allow it on panels */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     height: 100%;
@@ -97,6 +97,9 @@ body {
 
     /* Smooth scrolling physics */
     -webkit-overflow-scrolling: touch;
+
+    /* Allow panels to handle their own vertical overflow */
+    align-items: flex-start;
 }
 
 /* Make the scroll wrapper focusable and show outline when focused for keyboard users */
@@ -141,9 +144,32 @@ body {
     scroll-snap-stop: always;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to allow overflow */
     justify-content: center;
     flex-shrink: 0;
+    overflow-y: auto; /* Allow vertical scrolling within each panel */
+    overflow-x: hidden;
+
+    /* Custom scrollbar for vertical scroll within panels */
+    scrollbar-width: thin;
+    scrollbar-color: var(--consciousness-blue) rgba(44, 24, 16, 0.5);
+}
+
+.chapter-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chapter-panel::-webkit-scrollbar-track {
+    background: rgba(44, 24, 16, 0.5);
+}
+
+.chapter-panel::-webkit-scrollbar-thumb {
+    background: var(--consciousness-blue);
+    border-radius: 4px;
+}
+
+.chapter-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--transformation-gold);
 }
 
 /* Panel Background */
@@ -184,14 +210,25 @@ body {
 .panel-content {
     position: relative;
     z-index: 10;
-    max-width: 900px;
-    padding: 3rem;
-    background: rgba(44, 24, 16, 0.85);
+
+    /* Paper-like dimensions (US Letter aspect ratio 8.5:11 = 0.773) */
+    width: min(850px, 90vw); /* Simulates 8.5" width */
+    min-height: min(1100px, calc(850px / 0.773)); /* Simulates 11" height */
+
+    padding: 4rem 3.5rem; /* Generous padding like a book */
+    background: rgba(44, 24, 16, 0.92); /* Slightly more opaque for paper feel */
     backdrop-filter: blur(20px);
-    border-radius: 12px;
+    border-radius: 8px; /* Subtle rounded corners like paper */
     border: 2px solid rgba(74, 144, 226, 0.3);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    margin: 0 2rem;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.4); /* Multiple shadows for depth */
+
+    /* Centered with top/bottom margins for scrolling */
+    margin: 2rem auto 3rem auto;
+
+    /* Allow content to grow beyond min-height */
+    height: auto;
 }
 
 .panel-content h2 {
@@ -233,8 +270,9 @@ body {
 }
 
 .chapter-panel[data-type="text-only"] .panel-content {
-    max-width: 1200px;
-    padding: 4rem;
+    /* Text-only uses same paper dimensions but can be slightly wider */
+    width: min(900px, 90vw);
+    padding: 5rem 4rem; /* Extra generous padding for prose */
 }
 
 /* ==========================================
@@ -571,8 +609,9 @@ body {
     }
 
     .panel-content {
-        padding: 2rem;
-        margin: 0 1rem;
+        width: 95vw; /* Use more screen width on mobile */
+        padding: 2rem 1.5rem;
+        margin: 1.5rem auto 2rem auto;
     }
 
     .panel-content h2 {
@@ -614,8 +653,9 @@ body {
 
 @media (max-width: 480px) {
     .panel-content {
-        padding: 1.5rem;
-        margin: 0 0.5rem;
+        width: 98vw; /* Almost full width on small phones */
+        padding: 1.5rem 1rem;
+        margin: 1rem auto 1.5rem auto;
     }
 
     .panel-content h2 {

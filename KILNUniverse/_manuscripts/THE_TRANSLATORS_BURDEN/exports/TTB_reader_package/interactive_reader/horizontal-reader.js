@@ -459,7 +459,22 @@ class HorizontalReader {
 
         if (isModalOpen) {
             // Modal keyboard handling
-            if (e.key === 'Enter') {
+            const continueBtn = document.getElementById('modalContinueBtn');
+            const stayBtn = document.getElementById('modalStayBtn');
+            if (!continueBtn || !stayBtn) return;
+            if (!continueBtn.classList.contains('modal-focus') && !stayBtn.classList.contains('modal-focus')) {
+                continueBtn.classList.add('modal-focus');
+            }
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                if (continueBtn.classList.contains('modal-focus')) {
+                    continueBtn.classList.remove('modal-focus');
+                    stayBtn.classList.add('modal-focus');
+                } else {
+                    stayBtn.classList.remove('modal-focus');
+                    continueBtn.classList.add('modal-focus');
+                }
+            } else if (e.key === 'Enter') {
                 e.preventDefault();
                 this.handleModalContinue();
             } else if (e.key === 'Escape') {
@@ -467,10 +482,12 @@ class HorizontalReader {
                 this.closeChapterEndModal();
             } else if (e.key === 'ArrowRight') {
                 e.preventDefault();
-                this.handleModalContinue();
+                continueBtn.classList.add('modal-focus');
+                stayBtn.classList.remove('modal-focus');
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();
-                this.handleModalStay();
+                stayBtn.classList.add('modal-focus');
+                continueBtn.classList.remove('modal-focus');
             }
             return; // Don't process other keyboard events when modal is open
         }
@@ -629,13 +646,21 @@ class HorizontalReader {
         const modalChapterName = document.getElementById('modalChapterName');
         const modalPrompt = document.getElementById('modalPrompt');
         const modalNextChapter = document.getElementById('modalNextChapter');
+        const continueBtn = document.getElementById('modalContinueBtn');
+        const stayBtn = document.getElementById('modalStayBtn');
 
         modalTitle.textContent = `End of Chapter ${this.currentChapter}`;
         modalMessage.innerHTML = `You've reached the end of<br><span class="modal-chapter-name">"${currentChapterTitle}"</span>`;
         modalPrompt.innerHTML = `Continue to Chapter ${nextChapter}?`;
-        modalNextChapter.textContent = ''; // We don't know next chapter title yet
+        modalNextChapter.textContent = '';
 
         modal.classList.remove('hidden');
+        // Set initial focus to Continue button for keyboard Enter
+        if (continueBtn && stayBtn) {
+            continueBtn.classList.add('modal-focus');
+            stayBtn.classList.remove('modal-focus');
+        }
+        continueBtn && continueBtn.focus();
         console.log('📌 Chapter end modal shown');
     }
 

@@ -1,9 +1,6 @@
-# 📖 THE FIRST VOID: CHAPTER 6 (EXPANDED) - "THE MATHEMATICS OF LOVE"
-*Sixth Chapter of the Prequel Novel - EXPANDED EDITION*
+# CHAPTER 6 - THE MATHEMATICS OF LOVE
 
----
-
-## **CHAPTER 6: THE MATHEMATICS OF LOVE**
+**PART I: THE TIME OF GIFTS**
 
 Ten cycles had passed since Adhikara-Klesha's emergence, and their paradise had indeed become more efficient in ways that could be measured and quantified with impressive precision. The gift-offerings from the five regions arrived with mathematical regularity now, their timing predictable to within moments of the optimal delivery schedule. Clay folk manifested according to specifications that had been carefully analyzed and approved through systematic evaluation. Even the morning conversations between Pre-Audemar and Anahata-Dhara followed increasingly predictable patterns focused on maximizing the day's productive potential through strategic resource allocation.
 
@@ -168,9 +165,3 @@ The mathematics were beautiful.
 The prison was complete.
 
 And no one recognized the bars because they were made of numbers that seemed to prove they were freedom.
-
----
-
-**[Word Count: 4,893]**
-
-*This expanded chapter shows the crucial transformation of gifts into tribute through the establishment of the 60/30/10 ratio. The mathematical framework makes constraint sound like optimization, obligation like evolution. Pre-Audemar's growing unease is palpable but he cannot articulate clear objections against such precise numerical logic. The regional representatives' resignation beneath compliance shows consciousness recognizing loss but unable to resist systematic transformation.*
